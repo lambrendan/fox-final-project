@@ -1,5 +1,7 @@
-var routes = require("./routes.js");
+var users = require("./users");
 var args = require('args');
+var favorites = require("./favorites.js");
+var bookmarks = require("./bookmarks.js");
 
 var at = "@fox.com";
 var numSequence = "0123456789"
@@ -38,7 +40,7 @@ function generateRandomPassword() {
 function continuousSignup() {
     email = generateRandomEmail();
     password = generateRandomPassword();
-    routes.signup( email, password, "testUser", "testUser", "1990-01-01", "f")
+    users.signup( email, password, "testUser", "testUser", "1990-01-01", "f")
     .then( function(res) {
         console.log("This is your email: " + email );
         console.log("This is your password: " + password );
@@ -66,11 +68,12 @@ args
     .option('signup', "Signup for an account")
     .option('getFavorites', "Gets a user's favorites")
     .option('getBookmarks', "Get a user's bookmarks")
-    .option('cache', "" )
+    .option('noCache', "" )
+    .option('deleteCache', "")
 
 const flags = args.parse(process.argv);
 
-routes.createUserMap(flags.cache)
+users.createUserMap(flags.noCache)
 
 if( flags.signup ) {
     var email;
@@ -79,7 +82,7 @@ if( flags.signup ) {
         continuousSignup();
     }
     else {
-        routes.signup( flags.email, flags.password, flags.firstName, flags.lastName, flags.birthdate, flags.gender )
+        users.signup( flags.email, flags.password, flags.firstName, flags.lastName, flags.birthdate, flags.gender )
         .then(function(res) {
             console.log(res.body);
         })
@@ -90,26 +93,35 @@ if( flags.signup ) {
     }
 }
 
-// 4 USE CASES 
-
-if( !flags.email ) {
-    continuousSignup();
-}/* 
-else if( flags.email || !flags.password ) {
-    if( userMap[flags.email] ) {
-
+if( !flags.signup && !flags.signin && !flags.delete ) {
+    if( !flags.email ) {
+        continuousSignup();
     }
-    else {
-        signin( )
+    else if( flags.email || !flags.password ) {
+        if( users.userMap[flags.email] ) {
+            users.signin( flags.email, userMap[flags.email].password)
+        }
+        else {
+            var password = generateRandomPassword();
+            users.signup( flags.email, password, "testUser", "testUser", "1990-01-01", "f" )
+            .then(function(res){
+                console.log(res);
+            })
+            .catch(function(err){
+                console.log(err);
+            });
+        }
+    }
+    else if ( flags.email || flags.password ) {
+        users.signup(flags.email, flags.password, "testUser", "testUser", "1990-01-01", "f")
+        .then( function(res) {
+            console.log(res);
+        })
+        .catch(function(err){
+            users.signin( flags.email, flags.password );
+        })
     }
 }
-
-else if ( flags.email || flags.password ) {
-
-}
-*/
-
-
 
 if( flags.signin ) {
     //No password or email entered
@@ -118,7 +130,7 @@ if( flags.signin ) {
     if ( !flags.email ) {
         email = generateRandomEmail();
         password = generateRandomPassword();
-        routes.signup( email, password, "testUser", "testUser", "1990-01-01", "f")
+        users.signup( email, password, "testUser", "testUser", "1990-01-01", "f")
         .then(function(res) {
             console.log(res.body)
             return res;
@@ -133,7 +145,7 @@ if( flags.signin ) {
     else if( flags.email && !flags.password ) {
         email = flags.email;
         password = generateRandomPassword();
-        routes.signup( email, password, "testUser", "testUser", "1990-01-01", "f")
+        users.signup( email, password, "testUser", "testUser", "1990-01-01", "f")
         .then(function(res) {
             console.log(res.body)
             return res;
@@ -149,7 +161,7 @@ if( flags.signin ) {
         email = flags.email;
         password = flags.password;
     }
-    routes.signin( email, password );
+    users.signin( email, password);
 
     if( flags.bookmark ) {
         var bookmarkObject = []
@@ -163,22 +175,22 @@ if( flags.signin ) {
             }
         }
         if( !flags.bookmarksNum ) {
-            routes.createSetBookmarks( email, password, bookmarkObject )
+            users.createSetBookmarks( email, password, bookmarkObject )
         }
         else {
             if( numBookmarks > flags.bookmarksNum ) {
                 throw "You entered too many favorite flags"
             }
-            routes.createSetBookmarks( email, password, bookmarkObject );
+            users.createSetBookmarks( email, password, bookmarkObject );
             var numBookmarksLeft = flags.bookmarksNum - numBookmarks;
             if( numBookmarks > 0 ) {
-                routes.createRandomBookmark( numBookmarksLeft, email, password );
+                users.createRandomBookmark( numBookmarksLeft, email, password );
             }
         }
     }
     else {
         if( flags.bookmarksNum ) {
-            routes.createRandomBookmark( flags.bookmarksNum, email, password );
+            users.createRandomBookmark( flags.bookmarksNum, email, password );
         }
     }
 
@@ -194,29 +206,29 @@ if( flags.signin ) {
         }
         var numFavorites = flags.favorite.length;  
         if( !flags.favoritesNum ) {
-            routes.createSetFavorites( email, password, showCode )
+            users.createSetFavorites( email, password, showCode )
         }
         else {
             if( numFavorites > flags.favoritesNum ) {
                 throw "You entered too many favorite flags"
             }
-            routes.createSetFavorites( email, password, showCode );
+            users.createSetFavorites( email, password, showCode );
             var numFavsLeft = flags.favoritesNum - numFavorites;
             if( numFavsLeft > 0 ) {
-                routes.createRandomFavorites( numFavsLeft, email, password);
+                users.createRandomFavorites( numFavsLeft, email, password);
             }
         }
     }
     else {
         if( flags.favoritesNum ) {
-            routes.createRandomFavorites( flags.favoritesNum, email, password );
+            users.createRandomFavorites( flags.favoritesNum, email, password );
         }
     }
     if( flags.getFavorites ) {
-        routes.grabUserFavorites(email, password );
+        users.grabUserFavorites(email, password );
     }
     if( flags.getBookmarks ) {
-        routes.grabUserBookmarks( email, password );
+        users.grabUserBookmarks( email, password );
     }
 }
 
@@ -224,5 +236,5 @@ if( flags.delete ) {
     if( !flags.email ) {
         throw "Please specify the email for the account that you want to delete"
     }
-    routes.deleteUser( flags.email );
+    users.deleteUser( flags.email );
 }

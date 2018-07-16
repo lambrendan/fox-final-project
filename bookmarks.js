@@ -1,0 +1,209 @@
+var users = require('.//users.js')
+var lists = require("./list.js")
+
+//Body used for bookmark function
+var bookmarksBody = {
+    "uID": "",
+    "bookmark": ""
+}
+
+/* Function to get a user's bookmarks
+ * @param userID - Profile ID of the user
+ * @param myToken - Authorization token for the account 
+ * @return Promise that gets the bookmarks
+ */
+function getBookmarks( userID, myToken ) {
+    const newAuthHeaders = Object.assign({}, users.authHeaders);
+    newAuthHeaders.Authorization = `Bearer ${myToken}`;
+    return got.get('https://api-staging.fox.com/profiles/v3/' + userID + '/bookmarks', {
+        headers: newAuthHeaders,
+        json: true
+    });
+}
+
+/* Function to bookmark a video for the specified user
+ * @param userID - Profile ID of the user
+ * @param myToken - Authorization token for the account 
+ * @param video - Video to be bookmarked
+ * @param seconds - Number of seconds of the video that has been watched
+ * @return Promise that posts a bookmark
+ */
+function bookMarkVideo(userID, myToken, video, seconds ) {
+    const newAuthHeaders = Object.assign({}, users.authHeaders);
+    const newVideo = Object.assign({}, bookmarksBody)
+    newAuthHeaders.Authorization = `Bearer ${myToken}`;
+    newVideo.uID = video;
+    newVideo.bookmark = seconds;
+    return got.post('https://api-staging.fox.com/profiles/v3/' + userID + '/bookmarks', {
+        headers: newAuthHeaders,
+        body: newVideo,
+        json: true
+    });
+}
+
+/* Bookmark a specified number of random videos  
+ * @param numBookmarks - number of videos to bookmark
+ * @param email - email of the specified user
+ * @param password - password of the specified user
+ */
+function createRandomBookmark( numBookmarks, email, password, userMap ) {
+    Promise.all([users.signin( email, password ), lists.getAllShowsList()]).then(function(res) {    
+        var promises = [];
+        var token = res[0].body.accessToken;
+        var userID = res[0].body.profileId;
+        var uIDWatched;
+        var watched;
+
+        var isWatched = users.generateRandomIndex( 2 );
+        //if( userMap[email].videoMa).length >= res[1].body.member.length ) {
+            //throw "You have bookmarked every video already!"
+        //} 
+
+        for (var i = 0; i < numBookmarks; i++) {
+            //USED FOR THE GET SHOWS INDEX - WATCHED 
+            var randomIndex = users.generateRandomIndex( res[1].length );
+            var showIndex = users.generateRandomIndex( res[1][randomIndex].body.member.length );
+            //var finalIndex = checkSameVid( email, showIndex );
+            //if( finalIndex > res[1][randomIndex].body.member.length ) {
+                //throw "Out of bounds!"
+            //}
+           
+            uIDWatched = res[1][randomIndex].body.member[showIndex].uID;
+            while( userMap[email].videoMap.hasOwnProperty(uIDWatched) ) {
+                randomIndex = users.generateRandomIndex( res[1].length );
+                showIndex = users.generateRandomIndex( res[1][randomIndex].body.member.length )
+                uIDWatched = res[1][randomIndex].body.member[showIndex].uID
+            }
+
+            if( isWatched === 0 ) {
+                watched = res[1][randomIndex].body.member[showIndex].durationInSeconds
+            }
+            else {
+                watched = (res[1][randomIndex].body.member[showIndex].durationInSeconds) / 2;
+            }
+            users.userMap[email].videoMap[uIDWatched] = {"showIndex": showIndex, "pageIndex": randomIndex};
+            promises.push(bookMarkVideo(userID, token, uIDWatched, watched ))
+        };
+        return Promise.all(promises)
+    })
+    .then(function(res) {
+        console.log(res)
+    })
+    .catch(function(err) {    
+        console.log(err)
+    })
+}
+
+/* Bookmark a specified video for the user
+ * @param email - email of the specified user
+ * @param password - password of the specified user
+ * @param bookmark - video to be bookmarked
+ */ 
+function createSetBookmarks( email, password, bookmark, userMap ) {
+    for ( var index = 0; index < bookmark.length; index++ ) {
+        if (bookmark[index].hasOwnProperty('showCode')) {
+            Promise.all([users.signin( email, password ), lists.getShowBySeriesList(bookmark[index].showCode)]).then(function(res) {    
+                var token = res[0].body.accessToken;
+                var userID = res[0].body.profileId;
+                var watched;
+                
+                if( bookmark[index].hasOwnProperty('watched') && bookmark[index].watched === true ) {
+                    watched = res[1].body.member[finalIndex].durationInSeconds;
+                } 
+                else {
+                    watched = (res[1].body.member[finalIndex].durationInSeconds) / 2 
+                }
+
+                var showIndex = users.generateRandomIndex( res[1].body.member.length );
+                var uIDWatched = res[1].body.member[showIndex].uID;
+                userMap[email].videoMap[uIDWatched] = {"showIndex": showIndex, "pageIndex": "ShowBySeriesList"};
+                return bookMarkVideo( userID, token, uIDWatched, watched );
+            })
+            .then(function(res) {
+                console.log(res)
+            })
+            .catch(function(err) {    
+                console.log(err)
+            })       
+        }
+        else {
+            var uid = bookmark[index].uID;
+            var isWatched = false;
+            if( bookmark[index].hasOwnProperty('watched') && bookmark[index].watched === true ) {
+                isWatched = true;
+            }
+            Promise.all([users.signin( email, password ), lists.getAllShowsList()]).then(function(res) {   
+                var token = res[0].body.accessToken;
+                var userID = res[0].body.profileId;
+                /*
+                if( Object.keys(userMap[email].videoMap).length >= res[1].body.member.length ) {
+                    throw "You have bookmarked every video already!"
+                } */
+                var showExists = false;
+                var showIndex;
+                var randomIndex
+                var checkBreak = false;
+
+                for( randomIndex = 0; randomIndex < res[1].length; randomIndex++ ) {
+                    for( showIndex = 0; showIndex < res[1][randomIndex].body.member.length; showIndex++ ) {
+                        if( res[1][randomIndex].body.member[showIndex].uID === uid ) {
+                            checkBreak = true;
+                            showExists = true;
+                            break;
+                        }
+                    }
+                    if( checkBreak === true ) {
+                        break;
+                    }
+                }
+
+                if( showExists == false ) {
+                    throw "That video doesn't exist";
+                }
+                var watched = res[1][randomIndex].body.member[showIndex].durationInSeconds;
+                if( isWatched === true ) {
+                    watched = res[1][randomIndex].body.member[showIndex].durationInSeconds;
+                } 
+                else {
+                    watched = (res[1][randomIndex].body.member[showIndex].durationInSeconds) / 2 
+                }
+                users.userMap[email].videoMap[ uid ] = {"showIndex": showIndex, "pageIndex": randomIndex}
+                return bookMarkVideo(userID, token, uid, watched );
+            })
+            .then(function(res) {
+                console.log(res)
+            })
+            .catch(function(err) {    
+                console.log(err)
+            })
+        }
+    } 
+}
+
+/* Function that prints all of the specified user's bookmarks 
+ * @param email - Email of the user to grab bookmarks from
+ * @param password - Password of the user to grab bookmarks from
+ */ 
+function grabUserBookmarks( email, password ) {
+    users.signin( email, password )
+        .then(function(res) {
+            var token = res.body.accessToken;
+            var userID = res.body.profileId;
+            return getBookmarks( userID, token )
+        })
+        .then(function(res) {
+            console.log(res.body);
+        })
+        .catch(function(err) {
+            console.log(err.response.body);
+        })
+        .catch( function(err) {
+            console.log(err.body);
+        });
+}
+
+module.exports = {
+    createRandomBookmark,
+    createSetBookmarks, 
+    grabUserBookmarks
+}

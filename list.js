@@ -1,3 +1,5 @@
+var got = require('got');
+
 /* Helper function to iterate through the pages containing all of the video information
  * @return Promise with an array containing all of the videos
  */ 

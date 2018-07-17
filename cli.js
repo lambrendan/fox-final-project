@@ -2,6 +2,7 @@ var users = require("./users");
 var args = require('args');
 var favorites = require("./favorites.js");
 var bookmarks = require("./bookmarks.js");
+var list = require("./list.js")
 
 let userMap = {};
 
@@ -34,14 +35,17 @@ if( flags.email ) {
     email = flags.email;
     if ( flags.signup ) {
         if( flags.password ) {
+            password = flags.password;
             if ( flags.firstName && flags.lastName && flags.birthdate && flags.gender ) {
                 users.signup( flags.email, flags.password, flags.firstName, flags.lastName, flags.birthdate, flags.gender, userMap )
                 .then(function(res) {
                     var userObj = { 'password': password, 'videoMap': {} };
                     users.addUserToMap( userMap, email, userObj)
+                    users.successfulSignup( email, password ); 
                     console.log(res.body);
                 })
                 .catch( function(err) {
+                    console.log(err);
                     console.log("It didn't work! This is your new info:");
                     var obj = users.continuousSignup( userMap );
                     email = obj.email;
@@ -53,9 +57,10 @@ if( flags.email ) {
                 .then(function(res) {
                     var userObj = { 'password': password, 'videoMap': {} };
                     users.addUserToMap( userMap, email, userObj)
-                    console.log(res.body);
+                    users.successfulSignup( email, password );
                 })
                 .catch( function(err) {
+                    console.log(err.response);
                     console.log("It didn't work! This is your new info:");
                     var obj = users.continuousSignup( userMap );
                     email = obj.email;
@@ -70,9 +75,10 @@ if( flags.email ) {
                 .then(function(res) {
                     var userObj = { 'password': password, 'videoMap': {} };
                     users.addUserToMap( userMap, email, userObj)
-                    console.log(res.body);
+                    users.successfulSignup( email, password );
                 })
                 .catch( function(err) {
+                    console.log(err.response);
                     console.log("It didn't work! This is your new info:");
                     var obj = users.continuousSignup( userMap );
                     email = obj.email;
@@ -84,9 +90,10 @@ if( flags.email ) {
                 .then(function(res) {
                     var userObj = { 'password': password, 'videoMap': {} };
                     users.addUserToMap( userMap, email, userObj)
-                    console.log(res.body);
+                    users.successfulSignup( email, password );
                 })
                 .catch( function(err) {
+                    console.log(err.response);
                     console.log("It didn't work! This is your new info:");
                     var obj = users.continuousSignup( userMap );
                     email = obj.email;
@@ -103,11 +110,12 @@ if( flags.email ) {
             .then(function(res) {
                 var userObj = { 'password': password, 'videoMap': {} };
                 users.addUserToMap( userMap, email, userObj)
-                console.log(res.body)
+                users.successfulSignup( email, password );
                 //return res;
             })
             .catch( function(err) {
                 console.log(err.response.body);
+                console.log("It didn't work! This is your new info:");
                 var obj = users.continuousSignup( userMap );
                 email = obj.email;
                 password = obj.password;
@@ -127,11 +135,12 @@ if( flags.email ) {
                 .then(function(res) {
                     var userObj = { 'password': password, 'videoMap': {} };
                     users.addUserToMap( userMap, email, userObj)
-                    console.log(res.body)
+                    users.successfulSignup( email, password );
                     return res;
                 })
                 .catch( function(err) {
                     console.log(err.response.body);
+                    console.log("It didn't work! This is your new info:");
                     var obj = users.continuousSignup( userMap );
                     email = obj.email;
                     password = obj.password;
@@ -147,10 +156,10 @@ if( flags.email ) {
         users.signin( email, password, userMap );
     }
     else if ( flags.delete ) {
-        if( !flags.email ) {
-            throw "Please specify the email for the account that you want to delete"
+        if( !flags.email || !flags.password ) {
+            throw "Please specify the email and password for the account that you want to delete"
         }
-        users.deleteUser( flags.email, userMap );
+        users.deleteUser( flags.email, flags.password, userMap );
     }
     else {
         email = flags.email;
@@ -159,7 +168,7 @@ if( flags.email ) {
         if( !flags.password ) {
             if( userMap.hasOwnProperty(email) ) {
                 password = userMap[email].password;
-                users.signin( email, password, userMap )
+                users.signin( email, password, userMap );
             }
             else {
                 password = users.generateRandomPassword();
@@ -167,10 +176,11 @@ if( flags.email ) {
                 .then(function(res){
                     var userObj = { 'password': password, 'videoMap': {} };
                     users.addUserToMap( userMap, email, userObj)
-                    console.log(res);
+                    users.successfulSignup( email, password );
                 })
                 .catch(function(err) {
-                    //console.log(err.response);
+                    console.log(err.response);
+                    console.log("It didn't work! This is your new info:");
                     var obj = users.continuousSignup( userMap );
                     email = obj.email;
                     password = obj.password;
@@ -183,7 +193,7 @@ if( flags.email ) {
             .then( function(res) {
                 var userObj = { 'password': password, 'videoMap': {} };
                 users.addUserToMap( userMap, email, userObj)
-                console.log(res);
+                users.successfulSignup( email, password );
             })
             .catch(function(err){
                 console.log( "Couldn't sign-up! Trying to sign-in now");
@@ -194,7 +204,6 @@ if( flags.email ) {
 }
 else {
     var userObject = users.continuousSignup( userMap );
-    console.log(typeof(userObject));
     email = userObject.email;
     password = userObject.password;
 }
@@ -209,6 +218,7 @@ if( flags.bookmark ) {
             bookmarkObject.push(JSON.parse( flags.bookmark[index]));
         }
     }
+    var numBookmarks = bookmarkObject.length;
     if( !flags.bookmarksNum ) {
         bookmarks.createSetBookmarks( email, password, bookmarkObject, userMap )
     }
@@ -239,31 +249,33 @@ if( flags.favorite ) {
             showCode.push(JSON.parse(flags.favorite[index]));
         }
     }
-    var numFavorites = flags.favorite.length;  
+    var numFavorites = showCode.length; 
+    console.log(numFavorites);
+    console.log(flags.favoritesNum ); 
     if( !flags.favoritesNum ) {
-        favorites.createSetFavorites( email, password, showCode )
+        favorites.createSetFavorites( email, password, showCode, userMap )
     }
     else {
         if( numFavorites > flags.favoritesNum ) {
             throw "You entered too many favorite flags"
         }
-        favorites.createSetFavorites( email, password, showCode );
+        favorites.createSetFavorites( email, password, showCode, userMap );
         var numFavsLeft = flags.favoritesNum - numFavorites;
         if( numFavsLeft > 0 ) {
-            favorites.createRandomFavorites( numFavsLeft, email, password);
+            favorites.createRandomFavorites( numFavsLeft, email, password, userMap );
         }
     }
 }
 else {
     if( flags.favoritesNum ) {
-        favorites.createRandomFavorites( flags.favoritesNum, email, password );
+        favorites.createRandomFavorites( flags.favoritesNum, email, password, userMap );
     }
 }
 
 if( flags.getFavorites ) {
-    favorites.grabUserFavorites(email, password );
+    favorites.grabUserFavorites(email, password, userMap );
 }
 if( flags.getBookmarks ) {
-    bookmarks.grabUserBookmarks( email, password );
+    bookmarks.grabUserBookmarks( email, password, userMap );
 }
 

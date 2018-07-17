@@ -1,5 +1,6 @@
 var users = require('.//users.js')
 var lists = require("./list.js")
+var got = require('got')
 
 //Body used for bookmark function
 var bookmarksBody = {
@@ -47,7 +48,7 @@ function bookMarkVideo(userID, myToken, video, seconds ) {
  * @param password - password of the specified user
  */
 function createRandomBookmark( numBookmarks, email, password, userMap ) {
-    Promise.all([users.signin( email, password ), lists.getAllShowsList()]).then(function(res) {    
+    Promise.all([users.signin( email, password, userMap ), lists.getAllShowsList()]).then(function(res) {    
         var promises = [];
         var token = res[0].body.accessToken;
         var userID = res[0].body.profileId;
@@ -81,7 +82,7 @@ function createRandomBookmark( numBookmarks, email, password, userMap ) {
             else {
                 watched = (res[1][randomIndex].body.member[showIndex].durationInSeconds) / 2;
             }
-            users.userMap[email].videoMap[uIDWatched] = {"showIndex": showIndex, "pageIndex": randomIndex};
+            userMap[email].videoMap[uIDWatched] = {"showIndex": showIndex, "pageIndex": randomIndex};
             promises.push(bookMarkVideo(userID, token, uIDWatched, watched ))
         };
         return Promise.all(promises)
@@ -102,7 +103,7 @@ function createRandomBookmark( numBookmarks, email, password, userMap ) {
 function createSetBookmarks( email, password, bookmark, userMap ) {
     for ( var index = 0; index < bookmark.length; index++ ) {
         if (bookmark[index].hasOwnProperty('showCode')) {
-            Promise.all([users.signin( email, password ), lists.getShowBySeriesList(bookmark[index].showCode)]).then(function(res) {    
+            Promise.all([users.signin( email, password,userMap ), lists.getShowBySeriesList(bookmark[index].showCode)]).then(function(res) {    
                 var token = res[0].body.accessToken;
                 var userID = res[0].body.profileId;
                 var watched;
@@ -132,7 +133,7 @@ function createSetBookmarks( email, password, bookmark, userMap ) {
             if( bookmark[index].hasOwnProperty('watched') && bookmark[index].watched === true ) {
                 isWatched = true;
             }
-            Promise.all([users.signin( email, password ), lists.getAllShowsList()]).then(function(res) {   
+            Promise.all([users.signin( email, password, userMap ), lists.getAllShowsList()]).then(function(res) {   
                 var token = res[0].body.accessToken;
                 var userID = res[0].body.profileId;
                 /*
@@ -167,7 +168,7 @@ function createSetBookmarks( email, password, bookmark, userMap ) {
                 else {
                     watched = (res[1][randomIndex].body.member[showIndex].durationInSeconds) / 2 
                 }
-                users.userMap[email].videoMap[ uid ] = {"showIndex": showIndex, "pageIndex": randomIndex}
+                userMap[email].videoMap[ uid ] = {"showIndex": showIndex, "pageIndex": randomIndex}
                 return bookMarkVideo(userID, token, uid, watched );
             })
             .then(function(res) {
@@ -184,18 +185,18 @@ function createSetBookmarks( email, password, bookmark, userMap ) {
  * @param email - Email of the user to grab bookmarks from
  * @param password - Password of the user to grab bookmarks from
  */ 
-function grabUserBookmarks( email, password ) {
-    users.signin( email, password )
+function grabUserBookmarks( email, password, userMap ) {
+    users.signin( email, password, userMap )
         .then(function(res) {
             var token = res.body.accessToken;
             var userID = res.body.profileId;
             return getBookmarks( userID, token )
         })
         .then(function(res) {
-            console.log(res.body);
+            console.log(res);
         })
         .catch(function(err) {
-            console.log(err.response.body);
+            console.log(err);
         })
         .catch( function(err) {
             console.log(err.body);

@@ -1,5 +1,6 @@
 var users = require("./users.js");
 var lists = require("./list.js");
+var got = require('got');
 
 //Body used for favorite function
 var favoritesBody = [];
@@ -43,8 +44,8 @@ function favoriteShow( userID, myToken, show ) {
  * @param email - email of the specified user
  * @param password - password of the specified user
  */
-function createRandomFavorites( numFavs, email, password ) {
-    Promise.all([users.signin( email, password ), lists.getSeriesList()]).then(function(res) {    
+function createRandomFavorites( numFavs, email, password, userMap ) {
+    Promise.all([users.signin( email, password, userMap ), lists.getSeriesList()]).then(function(res) {    
         var promises = [];
         var token = res[0].body.accessToken;
         var userID = res[0].body.profileId;
@@ -70,9 +71,9 @@ function createRandomFavorites( numFavs, email, password ) {
  * @param password - password of the specified user
  * @param showCode - showCode for the video to be favorited
  */
-function createSetFavorites( email, password, showCode ) {
+function createSetFavorites( email, password, showCode, userMap ) {
     var shows = [];
-    users.signin( email, password )
+    users.signin( email, password, userMap )
         .then(function(res) {    
             var promises = [];
             var token = res.body.accessToken;
@@ -96,8 +97,8 @@ function createSetFavorites( email, password, showCode ) {
  * @param email - Email of the user to grab favorites from
  * @param password - Password of the user to grab bookmarks from
  */ 
-function grabUserFavorites( email, password ) {
-    users.signin( email, password )
+function grabUserFavorites( email, password, userMap ) {
+    users.signin( email, password, userMap )
         .then(function(res) {
             var token = res.body.accessToken;
             var userID = res.body.profileId;

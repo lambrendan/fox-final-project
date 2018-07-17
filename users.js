@@ -135,6 +135,11 @@ function generateRandomIndex( size ) {
     var returnIndex = Math.floor( Math.random() * size );
     return returnIndex;
 }
+function successfulSignup( email, password ) {
+    console.log("This is your email: " + email );
+    console.log("This is your password: " + password );
+    console.log( "You've successfully created a new user!" );
+}
 
 // API Functions -------------------------------------------------------------------------------------
 
@@ -161,23 +166,34 @@ function signup ( email, password, firstName, lastName, birthdate, gender, userM
 /* Function to delete a user from the database
  * @param email - Email of the account to be deleted
  */
-function deleteUser( email, userMap ) { 
-    if( userMap[email] ) {
-        var userID = userMap[email].userID;
-        var myToken = userMap[email].myToken;
-    }
-    const newAuthHeaders = Object.assign({}, authHeaders);
-    newAuthHeaders.Authorization = `Bearer ${myToken}`;
-    got.delete('https://api-staging.fox.com/profiles/_latest/'+ userID, {
-        headers: newAuthHeaders,
-        json: true
+function deleteUser( email, password, userMap ) { 
+    signin( email, password, userMap )
+        .then(function(res) {
+            //console.log(res.body.profileId);
+            //console.log(res.body.accessToken);
+            var myToken = res.body.accessToken;
+            var userID = res.body.profileId;
+            const newAuthHeaders = Object.assign({}, authHeaders);
+            newAuthHeaders.Authorization = `Bearer ${myToken}`;
+            return got.delete('https://api-staging.fox.com/profiles/_latest/'+ userID, {
+                headers: newAuthHeaders,
+                json: true
+            })
+        
+        .then(function(res) {
+            delete userMap[email];
+            if (!dontUseCache) {
+                fs.writeFileSync('./cache.json', JSON.stringify(userMap, null, 2));
+            }
+            console.log(res);
+        }) 
+        .catch( function(err) {
+            //console.log(err.response);
+        })
     })
-    .then(function(res) {
-        console.log(res);
-    }) 
-    .catch( function(err) {
-        console.log(err);
-    });
+        .catch( function (err) {
+            console.log(err.response);
+        })
 }
 
 /* Function to sign a user into the fox website
@@ -188,30 +204,40 @@ function deleteUser( email, userMap ) {
 
 function signin ( email, password, userMap ) {
     // If the email exists in the userMap
-    if( userMap[email].hasOwnProperty( "myToken") ) {
-        return Promise.resolve(userMap[email])
-        .then(function(res) {
-            //console.log(res);
-            userMap = updateUserInfo( userMap, email, res.body.accessToken,res.body.profileId, res.body )
-            console.log("Your token is: " + userMap[email].myToken )
-            return res;
-        })
-        .catch( function (err ) {
-            console.log( err);
-        })
+    if( userMap.hasOwnProperty( email ) ){ 
+        if( userMap[email].hasOwnProperty( "myToken" ) ) {
+            return Promise.resolve(userMap[email])
+            .then(function(res) {
+                //console.log(res);
+                userMap = updateUserInfo( userMap, email, res.body.accessToken,res.body.profileId, res.body )
+                //console.log("Your token is: " + userMap[email].myToken )
+                return res;
+            })
+            .catch( function (err ) {
+                console.log( err);
+            })
+        }
+        else {
+            return got.post('https://api-staging.fox.com/profiles/_latest/login', {
+                headers: generalHeader,
+                body: signinBody(email, password),
+                json: true
+            })
+            .then(function(res){
+                //console.log(typeof(res));
+                
+                //var emailObject = { 'myToken': res.body.accessToken, 'userID': res.body.profileId, 'body': res.body, 'password': password, 'videoMap': {} }
+                userMap = updateUserInfo( userMap, email, res.body.accessToken, res.body.profileId, res.body )
+                //addUserToMap( email, emailObject );
+                return res;
+            }).catch( function(err) {
+                console.log( err );
+            });
+        }
     }
-    return got.post('https://api-staging.fox.com/profiles/_latest/login', {
-        headers: generalHeader,
-        body: signinBody(email, password),
-        json: true
-    }).then(function(res){
-        //console.log(res);
-        //var emailObject = { 'myToken': res.body.accessToken, 'userID': res.body.profileId, 'body': res.body, 'password': password, 'videoMap': {} }
-        userMap = updateUserInfo( userMap, email, res.body.accessToken, res.body.profileId, res.body )
-        //addUserToMap( email, emailObject );
-    }).catch( function(err) {
-        console.log( err );
-    });
+    else {
+        throw "This user does not exist"
+    }
 }
 
 /* Function to generate a random email 
@@ -251,9 +277,7 @@ function continuousSignup( userMap ) {
     .then( function(res) {
         var userObj = { 'password': password, 'videoMap': {} };
         addUserToMap( userMap, email, userObj)
-        console.log("This is your email: " + email );
-        console.log("This is your password: " + password );
-        console.log( "You've successfully created a new user!" );
+        successfulSignup( email, password ); 
         return { "email": email, "password": password };
     })
     .catch (function(err) {
@@ -262,6 +286,7 @@ function continuousSignup( userMap ) {
 }
 
 module.exports = { 
+    successfulSignup,
     generalHeader,
     authHeaders,
     signupBody, 

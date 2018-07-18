@@ -179,7 +179,6 @@ function deleteUser( email, password, userMap ) {
                 headers: newAuthHeaders,
                 json: true
             })
-        
         .then(function(res) {
             delete userMap[email];
             if (!dontUseCache) {
@@ -188,7 +187,7 @@ function deleteUser( email, password, userMap ) {
             console.log(res);
         }) 
         .catch( function(err) {
-            //console.log(err.response);
+            console.log(err.response);
         })
     })
         .catch( function (err) {

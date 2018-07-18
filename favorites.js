@@ -2,9 +2,6 @@ var users = require("./users.js");
 var lists = require("./list.js");
 var got = require('got');
 
-//Body used for favorite function
-var favoritesBody = [];
-
 /* Function to get a user's favorite shows
  * @param userID - Profile ID of the user
  * @param myToken - Authorization token for the account 
@@ -29,6 +26,7 @@ function getFavorites( userID, myToken ) {
 function favoriteShow( userID, myToken, show ) {
     const newAuthHeaders = Object.assign({}, users.authHeaders);
     newAuthHeaders.Authorization = `Bearer ${myToken}`;
+    var favoritesBody = [];
     for ( var index = 0; index < show.length; index++ ) {
         favoritesBody.push({'showID': show[index]});
     }
@@ -45,12 +43,12 @@ function favoriteShow( userID, myToken, show ) {
  * @param password - password of the specified user
  */
 function createRandomFavorites( numFavs, email, password, userMap ) {
-    Promise.all([users.signin( email, password, userMap ), lists.getSeriesList()]).then(function(res) {    
+    Promise.all([users.signin( email, password, userMap ), lists.getSeriesList()])
+    .then(function(res) {    
         var promises = [];
         var token = res[0].body.accessToken;
         var userID = res[0].body.profileId;
         var series = [];
-
         for (var i = 0; i < numFavs; i++) { 
             var seriesIndex = users.generateRandomIndex( res[1].body.member.length);
             series.push(res[1].body.member[seriesIndex].showCode);
@@ -59,7 +57,8 @@ function createRandomFavorites( numFavs, email, password, userMap ) {
         return Promise.all(promises)
     })
     .then(function(res) {
-        console.log(res)
+        //console.log(res)
+        return res;
     })
     .catch(function(err) {    
         console.log(err)
@@ -85,7 +84,8 @@ function createSetFavorites( email, password, showCode, userMap ) {
             return Promise.all(promises)
         })
         .then(function(res) {
-            console.log(res)
+            //console.log(res)
+            return res;
         })
         .catch(function(err) {    
             console.log(err)

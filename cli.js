@@ -3,6 +3,7 @@ var args = require('args');
 var favorites = require("./favorites.js");
 var bookmarks = require("./bookmarks.js");
 var list = require("./list.js")
+var file = require("./file.js")
 
 let userMap = {};
 
@@ -22,8 +23,9 @@ args
     .option('signup', "Signup for an account")
     .option('getFavorites', "Gets a user's favorites")
     .option('getBookmarks', "Get a user's bookmarks")
-    .option('noCache', "" )
+    .option('noCache', "Specify whether to include a cache" )
     .option('deleteCache', "")
+    .option('file', "")
 
 const flags = args.parse(process.argv);
 
@@ -202,11 +204,12 @@ if( flags.email ) {
         }
     }
 }
+/*
 else {
     var userObject = users.continuousSignup( userMap );
     email = userObject.email;
     password = userObject.password;
-}
+}*/
 if( flags.bookmark ) {
     var bookmarkObject = []
     var numBookmarks = flags.bookmark.length;
@@ -250,8 +253,6 @@ if( flags.favorite ) {
         }
     }
     var numFavorites = showCode.length; 
-    console.log(numFavorites);
-    console.log(flags.favoritesNum ); 
     if( !flags.favoritesNum ) {
         favorites.createSetFavorites( email, password, showCode, userMap )
     }
@@ -277,5 +278,48 @@ if( flags.getFavorites ) {
 }
 if( flags.getBookmarks ) {
     bookmarks.grabUserBookmarks( email, password, userMap );
+}
+
+if( flags.file ) {
+    var fileObj = file.readAFile( flags.file );
+    var email;
+    var password;
+    var showCode;
+    for( var index = 0; index < fileObj.users.length; index++ ) {
+        showCode = [];
+        if( !fileObj.users[index].hasOwnProperty("email") ) {
+            var randomObj = continuousSignup( userMap );
+            email = randomObj.email;
+            password = randomObj.password;
+        }
+        else {
+            email = fileObj.users[index].email;
+            password = fileObj.users[index].password;
+        }
+        if( fileObj.users[index].hasOwnProperty("favorites")) {
+            for( var favoritesIndex = 0; favoritesIndex < fileObj.users[index].favorites.length; favoritesIndex++) {
+                showCode.push(fileObj.users[index].favorites[favoritesIndex])
+            }
+            var numFavs = showCode.length;
+            if( !fileObj.users[index].hasOwnProperty("numFavorites")) {
+                favorites.createSetFavorites( email, password, showCode, userMap)
+            }
+            else {
+                if( numFavs > fileObj.users[index].numFavorites) {
+                    throw "You entered too many favorites"
+                }
+                favorites.createSetFavorites( email, password, showCode, userMap );
+                var numFavoritesLeft = fileObj.users[index].numFavorites - numFavs;
+                if( numFavoritesLeft > 0 ) {
+                    favorites.createRandomFavorites( numFavoritesLeft, email, password, userMap );
+                }
+            }
+        }
+        if( fileObj.users[index].hasOwnProperty("bookmarks")) {
+            for( var bookmarkIndex = 0; bookmarkIndex < fileObj.users[index].bookmarks.length; bookmarkIndex++) {
+
+            }
+        }
+    }
 }
 

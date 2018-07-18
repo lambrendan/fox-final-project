@@ -204,15 +204,13 @@ if( flags.email ) {
         }
     }
 }
-/*
 else {
     var userObject = users.continuousSignup( userMap );
     email = userObject.email;
     password = userObject.password;
-}*/
+}
 if( flags.bookmark ) {
     var bookmarkObject = []
-    var numBookmarks = flags.bookmark.length;
     if( typeof( flags.bookmark ) == "string" ) {
         bookmarkObject.push( JSON.parse( flags.bookmark) );
     }
@@ -284,19 +282,37 @@ if( flags.file ) {
     var fileObj = file.readAFile( flags.file );
     var email;
     var password;
-    var showCode;
     for( var index = 0; index < fileObj.users.length; index++ ) {
-        showCode = [];
         if( !fileObj.users[index].hasOwnProperty("email") ) {
             var randomObj = continuousSignup( userMap );
             email = randomObj.email;
             password = randomObj.password;
         }
         else {
-            email = fileObj.users[index].email;
-            password = fileObj.users[index].password;
+            if( !fileObj.users[index].hasOwnProperty("password")) {
+                email = fileObj.users[index].email
+                password = users.generateRandomPassword();
+                users.signup( email, password, undefined, undefined, undefined, undefined, userMap )
+                .then(function(res){
+                    var userObj = { 'password': password, 'videoMap': {} };
+                    users.addUserToMap( userMap, email, userObj)
+                    users.successfulSignup( email, password );
+                })
+                .catch(function(err) {
+                    console.log(err.response);
+                    console.log("It didn't work! This is your new info:");
+                    var obj = users.continuousSignup( userMap );
+                    email = obj.email;
+                    password = obj.password;
+                });
+            }
+            else {
+                email = fileObj.users[index].email;
+                password = fileObj.users[index].password;
+            }
         }
         if( fileObj.users[index].hasOwnProperty("favorites")) {
+            var showCode = [];
             for( var favoritesIndex = 0; favoritesIndex < fileObj.users[index].favorites.length; favoritesIndex++) {
                 showCode.push(fileObj.users[index].favorites[favoritesIndex])
             }
@@ -316,10 +332,26 @@ if( flags.file ) {
             }
         }
         if( fileObj.users[index].hasOwnProperty("bookmarks")) {
+            var bookmarkObject = [];
             for( var bookmarkIndex = 0; bookmarkIndex < fileObj.users[index].bookmarks.length; bookmarkIndex++) {
-
+                bookmarkObject.push( fileObj.users[index].bookmarks[bookmarkIndex]);
+            }
+            var numBookmrks = bookmarkObject.length;
+            if( !fileObj.users[index].hasOwnProperty("numBookmarks")) {
+                bookmarks.createSetBookmarks( email, password, bookmarkObject, userMap );
+            }
+            else {
+                if( numBookmrks > fileObj.users[index].numBookmarks ) {
+                    throw "You entered too many bookmarks";
+                }
+                bookmarks.createSetBookmarks( email, password, bookmarkObject, userMap );
+                var numBookmarksLeft = fileObj.users[index].numBookmarks - numBookmrks;
+                if ( numBookmarksLeft > 0 ) {
+                    bookmarks.createRandomBookmark( numBookmarksLeft, email, password, userMap)
+                }
             }
         }
     }
 }
 
+   

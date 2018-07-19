@@ -2,6 +2,7 @@ var users = require("./users.js");
 var lists = require("./list.js");
 var got = require('got');
 
+
 /* Function to get a user's favorite shows
  * @param userID - Profile ID of the user
  * @param myToken - Authorization token for the account 
@@ -30,6 +31,8 @@ function favoriteShow( userID, myToken, show ) {
     for ( var index = 0; index < show.length; index++ ) {
         favoritesBody.push({'showID': show[index]});
     }
+    //console.log(userID + ": " + favoritesBody);
+    //console.log( "userID:" + userID + " favorite:" + show[0] + " "+show[1] + " favoritesLength: " + favoritesBody.length )
     return got.post('https://api-staging.fox.com/profiles/_latest/' + userID + '/favorites', {
         headers: newAuthHeaders,
         body: favoritesBody,
@@ -45,7 +48,7 @@ function favoriteShow( userID, myToken, show ) {
 function createRandomFavorites( numFavs, email, password, userMap ) {
     Promise.all([users.signin( email, password, userMap ), lists.getSeriesList()])
     .then(function(res) {    
-        var promises = [];
+        //var promises = [];
         var token = res[0].body.accessToken;
         var userID = res[0].body.profileId;
         var series = [];
@@ -53,11 +56,12 @@ function createRandomFavorites( numFavs, email, password, userMap ) {
             var seriesIndex = users.generateRandomIndex( res[1].body.member.length);
             series.push(res[1].body.member[seriesIndex].showCode);
         };
-        promises.push(favoriteShow(userID, token, series))
-        return Promise.all(promises)
+        //promises.push(favoriteShow(userID, token, series))
+        //return Promise.all(promises)
+        return favoriteShow(userID, token, series);
     })
     .then(function(res) {
-        //console.log(res)
+        //console.log(res);
         return res;
     })
     .catch(function(err) {    
@@ -71,20 +75,22 @@ function createRandomFavorites( numFavs, email, password, userMap ) {
  * @param showCode - showCode for the video to be favorited
  */
 function createSetFavorites( email, password, showCode, userMap ) {
-    var shows = [];
     users.signin( email, password, userMap )
         .then(function(res) {    
-            var promises = [];
+            //var promises = [];
             var token = res.body.accessToken;
             var userID = res.body.profileId;
+            var shows = [];
             for( var index = 0; index < showCode.length; index++) {
                 shows.push(showCode[index].showCode);
             }
-            promises.push(favoriteShow(userID, token, shows))
-            return Promise.all(promises)
+            
+            return favoriteShow(userID, token, shows)
+            //promises.push(favoriteShow(userID, token, shows))
+            //return Promise.all(promises)
         })
         .then(function(res) {
-            //console.log(res)
+            //console.log(res);
             return res;
         })
         .catch(function(err) {    
@@ -105,7 +111,7 @@ function grabUserFavorites( email, password, userMap ) {
             return getFavorites(userID, token)
         })  
         .then(function(res){
-            console.log(res);
+            console.log(res.body);
         })
         .catch(function(err) {
             console.log(err.response.body);

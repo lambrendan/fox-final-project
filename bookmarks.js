@@ -62,10 +62,6 @@ function createRandomBookmark( numBookmarks, email, password, userMap ) {
             //USED FOR THE GET SHOWS INDEX - WATCHED 
             var randomIndex = users.generateRandomIndex( res[1].length );
             var showIndex = users.generateRandomIndex( res[1][randomIndex].body.member.length );
-            //var finalIndex = checkSameVid( email, showIndex );
-            //if( finalIndex > res[1][randomIndex].body.member.length ) {
-                //throw "Out of bounds!"
-            //}
            
             uIDWatched = res[1][randomIndex].body.member[showIndex].uID;
             while( userMap[email].videoMap.hasOwnProperty(uIDWatched) ) {
@@ -80,7 +76,6 @@ function createRandomBookmark( numBookmarks, email, password, userMap ) {
             else {
                 watched = (res[1][randomIndex].body.member[showIndex].durationInSeconds) / 2;
             }
-            console.log( uIDWatched );
             userMap[email].videoMap[uIDWatched] = {"showIndex": showIndex, "pageIndex": randomIndex};
             promises.push(bookMarkVideo(userID, token, uIDWatched, watched ))
         };
@@ -100,6 +95,7 @@ function createRandomBookmark( numBookmarks, email, password, userMap ) {
  * @param bookmark - video to be bookmarked
  */ 
 function createSetBookmarks( email, password, bookmark, userMap ) {
+    //console.log(bookmark);
     for ( var index = 0; index < bookmark.length; index++ ) {
         if (bookmark[index].hasOwnProperty('showCode')) {
             var isWatched = false;
@@ -110,7 +106,10 @@ function createSetBookmarks( email, password, bookmark, userMap ) {
                 var token = res[0].body.accessToken;
                 var userID = res[0].body.profileId;
                 var watched;
-
+                if( res[1].body.member === undefined || res[1].body.member.length === 0 ) {
+                    console.log(" There is no videos for this show ");
+                    return;
+                }
                 var showIndex = users.generateRandomIndex( res[1].body.member.length );
                 if( isWatched === true ) {
                     watched = res[1].body.member[showIndex].durationInSeconds;
@@ -123,7 +122,7 @@ function createSetBookmarks( email, password, bookmark, userMap ) {
                 return bookMarkVideo( userID, token, uIDWatched, watched );
             })
             .then(function(res) {
-                console.log(res)
+                //console.log(res)
             })
             .catch(function(err) {    
                 console.log(err)
@@ -131,25 +130,25 @@ function createSetBookmarks( email, password, bookmark, userMap ) {
         }
         else {
             var uid = bookmark[index].uID;
+            //console.log( "indexOne" + index + " " + bookmark[index].uID );
+            
             var isWatched = false;
             if( bookmark[index].hasOwnProperty('watched') && bookmark[index].watched === true ) {
                 isWatched = true;
             }
-            Promise.all([users.signin( email, password, userMap ), lists.getAllShowsList()]).then(function(res) {   
+            Promise.all([users.signin( email, password, userMap ), lists.getAllShowsList(), uid]).then(function(res) {   
                 var token = res[0].body.accessToken;
                 var userID = res[0].body.profileId;
-                /*
-                if( Object.keys(userMap[email].videoMap).length >= res[1].body.member.length ) {
-                    throw "You have bookmarked every video already!"
-                } */
                 var showExists = false;
                 var showIndex;
-                var randomIndex
+                var randomIndex;
                 var checkBreak = false;
-
+                //console.log(res[2])
+                //console.log( uid )
+                //console.log( "indexTwo" + index + " " + uid );
                 for( randomIndex = 0; randomIndex < res[1].length; randomIndex++ ) {
                     for( showIndex = 0; showIndex < res[1][randomIndex].body.member.length; showIndex++ ) {
-                        if( res[1][randomIndex].body.member[showIndex].uID === uid ) {
+                        if( res[1][randomIndex].body.member[showIndex].uID === res[2] ) {
                             checkBreak = true;
                             showExists = true;
                             break;
@@ -170,11 +169,12 @@ function createSetBookmarks( email, password, bookmark, userMap ) {
                 else {
                     watched = (res[1][randomIndex].body.member[showIndex].durationInSeconds) / 2 
                 }
-                userMap[email].videoMap[ uid ] = {"showIndex": showIndex, "pageIndex": randomIndex}
-                return bookMarkVideo(userID, token, uid, watched );
+                //console.log( uid )
+                userMap[email].videoMap[ res[2] ] = {"showIndex": showIndex, "pageIndex": randomIndex}
+                return bookMarkVideo(userID, token, res[2], watched );
             })
             .then(function(res) {
-                console.log(res)
+                //console.log(res)
             })
             .catch(function(err) {    
                 console.log(err)

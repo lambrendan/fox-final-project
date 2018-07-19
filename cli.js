@@ -204,11 +204,12 @@ if( flags.email ) {
         }
     }
 }
+/*
 else {
     var userObject = users.continuousSignup( userMap );
     email = userObject.email;
     password = userObject.password;
-}
+}*/
 if( flags.bookmark ) {
     var bookmarkObject = []
     if( typeof( flags.bookmark ) == "string" ) {
@@ -314,7 +315,7 @@ if( flags.file ) {
         if( fileObj.users[index].hasOwnProperty("favorites")) {
             var showCode = [];
             for( var favoritesIndex = 0; favoritesIndex < fileObj.users[index].favorites.length; favoritesIndex++) {
-                showCode.push(fileObj.users[index].favorites[favoritesIndex])
+                showCode.push(fileObj.users[index].favorites[favoritesIndex]);
             }
             var numFavs = showCode.length;
             if( !fileObj.users[index].hasOwnProperty("numFavorites")) {
@@ -327,16 +328,22 @@ if( flags.file ) {
                 favorites.createSetFavorites( email, password, showCode, userMap );
                 var numFavoritesLeft = fileObj.users[index].numFavorites - numFavs;
                 if( numFavoritesLeft > 0 ) {
-                    favorites.createRandomFavorites( numFavoritesLeft, email, password, userMap );
+                    //TODO WHEN KADE COMES BACK
+                    //favorites.createRandomFavorites( numFavoritesLeft, email, password, userMap );
                 }
             }
         }
         if( fileObj.users[index].hasOwnProperty("bookmarks")) {
+            //console.log( "index : " + index )
             var bookmarkObject = [];
             for( var bookmarkIndex = 0; bookmarkIndex < fileObj.users[index].bookmarks.length; bookmarkIndex++) {
                 bookmarkObject.push( fileObj.users[index].bookmarks[bookmarkIndex]);
+                //console.log( "Index: " + bookmarkIndex + "Object: " + fileObj.users[index].bookmarks[bookmarkIndex] )
             }
+            bookmarks.createSetBookmarks( email, password, bookmarkObject, userMap );
+            /*
             var numBookmrks = bookmarkObject.length;
+            
             if( !fileObj.users[index].hasOwnProperty("numBookmarks")) {
                 bookmarks.createSetBookmarks( email, password, bookmarkObject, userMap );
             }
@@ -347,9 +354,10 @@ if( flags.file ) {
                 bookmarks.createSetBookmarks( email, password, bookmarkObject, userMap );
                 var numBookmarksLeft = fileObj.users[index].numBookmarks - numBookmrks;
                 if ( numBookmarksLeft > 0 ) {
-                    bookmarks.createRandomBookmark( numBookmarksLeft, email, password, userMap)
+                    //TODO WHEN KADE COMES BACK
+                    //bookmarks.createRandomBookmark( numBookmarksLeft, email, password, userMap)
                 }
-            }
+            }*/
         }
     }
 }

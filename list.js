@@ -1,3 +1,11 @@
+/* File Header --------------------------------------------------------------------------------------------
+ * Filename:  list.js 
+ * Author: Brendan Lam 
+ * Company: 21st Century Fox
+ * File Description: File that contains the API calls to get the videos and the different series from the 
+ * Fox website.
+ */  
+
 var got = require('got');
 
 /* Helper function to iterate through the pages containing all of the video information

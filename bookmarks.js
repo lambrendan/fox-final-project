@@ -1,3 +1,11 @@
+/* File Header --------------------------------------------------------------------------------------------
+ * Filename:  bookmarks.js 
+ * Author: Brendan Lam 
+ * Company: 21st Century Fox
+ * File Description: File that contains the functions to either bookmark certain videos or bookmark random videos
+ * for a specified user
+ */  
+
 var users = require('.//users.js')
 var lists = require("./list.js")
 var got = require('got')
@@ -54,7 +62,7 @@ function createRandomBookmark( numBookmarks, email, password, userMap ) {
         var watched;
 
         var isWatched = users.generateRandomIndex( 2 );
-        //if( userMap[email].videoMa).length >= res[1].body.member.length ) {
+        //if( userMap[email].videoMap).length >= res[1].body.member.length ) {
             //throw "You have bookmarked every video already!"
         //} 
 
@@ -122,7 +130,8 @@ function createSetBookmarks( email, password, bookmark, userMap ) {
                 return bookMarkVideo( userID, token, uIDWatched, watched );
             })
             .then(function(res) {
-                //console.log(res)
+                console.log(res)
+                return res;
             })
             .catch(function(err) {    
                 console.log(err)

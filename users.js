@@ -1,20 +1,21 @@
-/* File Header ----------------------------------------------------------------------------------------
- * Filename:  users.js 
+/* File Header --------------------------------------------------------------------------------------------
+ * Filename: users.js 
  * Author: Brendan Lam 
  * Company: 21st Century Fox
- * File Description: File that contains all of the API Calls to sign-up, sign-in, delete, favorite, and 
- * bookmark
+ * File Description: File that contains all of the API Calls to sign-up, sign-in, and delete users. It also 
+ * containers helper functions to generate random passwords and users. 
  */ 
 
 const got = require('got');
 const fs = require('fs');
 const key = require('./apikey.js');
 
-// Variables -------------------------------------------------------------------------------------------
+// Variables -----------------------------------------------------------------------------------------------
 
 // Map containing every user registered
 let dontUseCache = false;
 
+// Used for the email to create a user
 var at = "@fox.com";
 var numSequence = "0123456789"
 var charSequence = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
@@ -44,7 +45,7 @@ var authHeaders = {
     'Connection': 'keep-alive'
 };
 
-// Helper functions------------------------------------------------------------------------------------
+// Helper functions----------------------------------------------------------------------------------------
 
 /* Body used for the sign-up function 
  * @param email - Email to be entered
@@ -90,7 +91,7 @@ const createUserMap = (cache) => {
             var userMap = JSON.parse(fs.readFileSync('./cache.json').toString());
             return userMap
         } catch (e) {
-            //console.log(e);
+            console.log(e);
             userMap = {};
         }
     } else {
@@ -140,6 +141,34 @@ function successfulSignup( email, password ) {
     console.log( "You've successfully created a new user!" );
 }
 
+
+/* Function to generate a random email 
+ * @return Randomly generated email
+ */
+function generateRandomEmail() {
+    var randomLength = Math.random() * 15;
+    var email = "foxuser";
+    for ( var i = 0; i < randomLength; i++ ) {
+        var index = Math.floor( Math.random() * numSequence.length );
+        email += charSequence.charAt(index);
+    }
+    email += at;
+    return email;
+}
+ 
+/* Function to generate a random password
+ * @return Randomly generated password
+ */ 
+function generateRandomPassword() {
+    var randomLength = Math.random() * (charSequence.length - 6 ) + 6;
+    var password = "";
+    for ( var i = 0; i < randomLength; i++ ) {
+        var index = Math.floor( Math.random() * charSequence.length );
+        password += charSequence.charAt(index);
+    }
+    return password;
+}
+
 // API Functions -------------------------------------------------------------------------------------
 
 /* Function to sign-up a user
@@ -168,8 +197,6 @@ function signup ( email, password, firstName, lastName, birthdate, gender, userM
 function deleteUser( email, password, userMap ) { 
     signin( email, password, userMap )
         .then(function(res) {
-            //console.log(res.body.profileId);
-            //console.log(res.body.accessToken);
             var myToken = res.body.accessToken;
             var userID = res.body.profileId;
             const newAuthHeaders = Object.assign({}, authHeaders);
@@ -238,32 +265,6 @@ function signin ( email, password, userMap ) {
     }
 }
 
-/* Function to generate a random email 
- * @return Randomly generated email
- */
-function generateRandomEmail() {
-    var randomLength = Math.random() * 15;
-    var email = "foxuser";
-    for ( var i = 0; i < randomLength; i++ ) {
-        var index = Math.floor( Math.random() * numSequence.length );
-        email += charSequence.charAt(index);
-    }
-    email += at;
-    return email;
-}
- 
-/* Function to generate a random password
- * @return Randomly generated password
- */ 
-function generateRandomPassword() {
-    var randomLength = Math.random() * (charSequence.length - 6 ) + 6;
-    var password = "";
-    for ( var i = 0; i < randomLength; i++ ) {
-        var index = Math.floor( Math.random() * charSequence.length );
-        password += charSequence.charAt(index);
-    }
-    return password;
-}
 
 /* Function to find an unused email and sign-up the profile to Fox with 
  * a random password

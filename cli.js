@@ -1,3 +1,11 @@
+/* File Header --------------------------------------------------------------------------------------------
+ * Filename:  CLI.js 
+ * Author: Brendan Lam 
+ * Company: 21st Century Fox
+ * File Description: Main function that parses command-line arguments to perform the indicated actions on 
+ * the Fox website. 
+ */ 
+
 var users = require("./users");
 var args = require('args');
 var favorites = require("./favorites.js");
@@ -26,6 +34,7 @@ args
     .option('noCache', "Specify whether to include a cache" )
     .option('deleteCache', "")
     .option('file', "")
+    .option('getInfo', "")
 
 const flags = args.parse(process.argv);
 
@@ -204,12 +213,11 @@ if( flags.email ) {
         }
     }
 }
-/*
 else {
     var userObject = users.continuousSignup( userMap );
     email = userObject.email;
     password = userObject.password;
-}*/
+}
 if( flags.bookmark ) {
     var bookmarkObject = []
     if( typeof( flags.bookmark ) == "string" ) {
@@ -281,8 +289,6 @@ if( flags.getBookmarks ) {
 
 if( flags.file ) {
     var fileObj = file.readAFile( flags.file );
-    var email;
-    var password;
     for( var index = 0; index < fileObj.users.length; index++ ) {
         if( !fileObj.users[index].hasOwnProperty("email") ) {
             var randomObj = continuousSignup( userMap );
@@ -329,7 +335,7 @@ if( flags.file ) {
                 var numFavoritesLeft = fileObj.users[index].numFavorites - numFavs;
                 if( numFavoritesLeft > 0 ) {
                     //TODO WHEN KADE COMES BACK
-                    //favorites.createRandomFavorites( numFavoritesLeft, email, password, userMap );
+                    favorites.createRandomFavorites( numFavoritesLeft, email, password, userMap );
                 }
             }
         }
@@ -340,8 +346,6 @@ if( flags.file ) {
                 bookmarkObject.push( fileObj.users[index].bookmarks[bookmarkIndex]);
                 //console.log( "Index: " + bookmarkIndex + "Object: " + fileObj.users[index].bookmarks[bookmarkIndex] )
             }
-            bookmarks.createSetBookmarks( email, password, bookmarkObject, userMap );
-            /*
             var numBookmrks = bookmarkObject.length;
             
             if( !fileObj.users[index].hasOwnProperty("numBookmarks")) {
@@ -355,11 +359,12 @@ if( flags.file ) {
                 var numBookmarksLeft = fileObj.users[index].numBookmarks - numBookmrks;
                 if ( numBookmarksLeft > 0 ) {
                     //TODO WHEN KADE COMES BACK
-                    //bookmarks.createRandomBookmark( numBookmarksLeft, email, password, userMap)
+                    bookmarks.createRandomBookmark( numBookmarksLeft, email, password, userMap)
                 }
-            }*/
+            }
         }
     }
 }
+
 
    

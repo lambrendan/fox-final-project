@@ -1,3 +1,11 @@
+/* File Header --------------------------------------------------------------------------------------------
+ * Filename: favorites.js 
+ * Author: Brendan Lam 
+ * Company: 21st Century Fox
+ * File Description: File that contains the functions to either favorite certain shows or favorite 
+ * random shows for a specified user.
+ */ 
+
 var users = require("./users.js");
 var lists = require("./list.js");
 var got = require('got');
@@ -31,8 +39,8 @@ function favoriteShow( userID, myToken, show ) {
     for ( var index = 0; index < show.length; index++ ) {
         favoritesBody.push({'showID': show[index]});
     }
-    //console.log(userID + ": " + favoritesBody);
-    //console.log( "userID:" + userID + " favorite:" + show[0] + " "+show[1] + " favoritesLength: " + favoritesBody.length )
+    console.log(userID + ": " + JSON.stringify(favoritesBody));
+    //console.log( "CREATING BOOKMARKS FOR userID: " + userID + " favorite:" + show[0] + " "+show[1] )
     return got.post('https://api-staging.fox.com/profiles/_latest/' + userID + '/favorites', {
         headers: newAuthHeaders,
         body: favoritesBody,
@@ -61,8 +69,7 @@ function createRandomFavorites( numFavs, email, password, userMap ) {
         return favoriteShow(userID, token, series);
     })
     .then(function(res) {
-        //console.log(res);
-        return res;
+        console.log(res.requestUrl + " and " + JSON.stringify(res.body));
     })
     .catch(function(err) {    
         console.log(err)
@@ -84,14 +91,12 @@ function createSetFavorites( email, password, showCode, userMap ) {
             for( var index = 0; index < showCode.length; index++) {
                 shows.push(showCode[index].showCode);
             }
-            
             return favoriteShow(userID, token, shows)
             //promises.push(favoriteShow(userID, token, shows))
             //return Promise.all(promises)
         })
         .then(function(res) {
-            //console.log(res);
-            return res;
+            console.log(res.requestUrl + " and " + JSON.stringify(res.body));
         })
         .catch(function(err) {    
             console.log(err)

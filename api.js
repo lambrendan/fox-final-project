@@ -11,6 +11,7 @@ var api = express.Router();
 var favorites = require( "./favorites.js");
 var bookmarks = require( "./bookmarks.js");
 var users = require("./users.js");
+var list = require("./list.js");
 
 let userMap =  {};
 userMap = users.createUserMap( false );
@@ -106,4 +107,30 @@ api.post('/bookmarks/:video', function( req, res) {
     
 });
 
+api.get('/shows', function( req, res) {
+    list.getSeriesList()
+    .then( response => {
+        res.json({showList: response.body.member })
+    })
+    .catch( error => {
+        res.json({ success: false, message: "Couldn't get the list"})
+    })
+})
+
+api.get('/videos', function( req, res) {
+    list.getAllShowsList()
+    .then( response => {
+        var videoObj = [];
+        for( var pageIndex = 0; pageIndex < response.length; pageIndex++) {
+            for( showIndex = 0; showIndex < response[pageIndex].body.member.length; showIndex++ ) {
+                var tempObj = { "uID" : response[pageIndex].body.member[showIndex].uID}
+                videoObj.push(tempObj);
+            }
+        }
+        res.json({ videoList: videoObj})
+    })
+    .catch( error => {
+        res.json({ success: false, message: "Couldn't grab the list of videos"})
+    })
+})
 module.exports = api;

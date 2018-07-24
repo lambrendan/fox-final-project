@@ -1,12 +1,35 @@
 import React, { Component } from "react";
-var list = require('./list.js');
+var got = require('got');
 
 class Shows extends Component {
-    state = { shows: [] }
+    state = {shows:[]};
 
     componentDidMount() {
-        list.getSeriesList()
-        .then()
+      got.get("http://localhost:3001/api/shows")
+      .then( (res) =>{
+        var showObject = JSON.parse(res.body)
+        this.setState({ shows: showObject.showList });
+        return;
+      })
+      .catch( function(err){
+        console.log('error:', err);
+      })
+    }
+  
+    render() {
+      return(
+        <div>
+          <h1> Shows </h1>
+            <ul>
+            {
+              this.state.shows.map(function(item, index){
+                return <li key={index}>{item.showCode}</li>
+              })
+            }
+            </ul>
+        </div>
+      )
     }
 }
+export default Shows;
 

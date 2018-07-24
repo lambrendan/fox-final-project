@@ -8,6 +8,16 @@
 
 var got = require('got');
 
+got.get("http://localhost:3001/api/videos")
+        .then( (res) =>{
+            var object = JSON.parse( res.body );
+            console.log(object.videoList);
+        }
+    )
+    .catch( err => {
+        console.log(err);
+    })
+
 /* Helper function to iterate through the pages containing all of the video information
  * @return Promise with an array containing all of the videos
  */ 

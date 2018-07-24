@@ -103,6 +103,10 @@ function createSetFavorites( email, password, showCode, userMap ) {
         })
 }
 
+lists.getSeriesList()
+.then(function(res){
+    console.log(res.body.member)
+})
 
 /* Function that prints all of the specified user's favorites
  * @param email - Email of the user to grab favorites from

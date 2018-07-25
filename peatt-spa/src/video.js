@@ -2,8 +2,8 @@ import React, { Component } from "react";
 var got = require('got');
 
 class Video extends Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = { videos: [] };
     }
 

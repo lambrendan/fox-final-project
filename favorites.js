@@ -82,7 +82,7 @@ function createRandomFavorites( numFavs, email, password, userMap ) {
  * @param showCode - showCode for the video to be favorited
  */
 function createSetFavorites( email, password, showCode, userMap ) {
-    users.signin( email, password, userMap )
+    return users.signin( email, password, userMap )
         .then(function(res) {    
             //var promises = [];
             var token = res.body.accessToken;
@@ -103,11 +103,6 @@ function createSetFavorites( email, password, showCode, userMap ) {
         })
 }
 
-lists.getSeriesList()
-.then(function(res){
-    console.log(res.body.member)
-})
-
 /* Function that prints all of the specified user's favorites
  * @param email - Email of the user to grab favorites from
  * @param password - Password of the user to grab bookmarks from
@@ -121,6 +116,7 @@ function grabUserFavorites( email, password, userMap ) {
         })  
         .then(function(res){
             console.log(res.body);
+            return res;
         })
         .catch(function(err) {
             console.log(err.response.body);

@@ -281,7 +281,7 @@ else {
 }
 
 if( flags.getFavorites ) {
-    favorites.grabUserFavorites(email, password, userMap );
+    favorites.grabUserFavorites(email, password, userMap )
 }
 if( flags.getBookmarks ) {
     bookmarks.grabUserBookmarks( email, password, userMap );

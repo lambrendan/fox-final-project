@@ -112,8 +112,11 @@ const addUserToMap = (userMap, email, userObject) => {
 }
 
 /* Update user in the user map
- * 
- *  
+ * @param userMap - Map to be updated
+ * @param email - Email of the account 
+ * @param myToken - Access Token for the user
+ * @param userID - Profile ID for the user 
+ * @param body - Response body from signing in
  */
 function updateUserInfo ( userMap, email, myToken, userID, body ) {
     userMap[email]['myToken'] = myToken;
@@ -135,12 +138,16 @@ function generateRandomIndex( size ) {
     var returnIndex = Math.floor( Math.random() * size );
     return returnIndex;
 }
+
+/* Helper function that prints messages indicating a successful signup
+ * @param email - Email of the user
+ * @param password - Password of the user
+ */
 function successfulSignup( email, password ) {
     console.log("This is your email: " + email );
     console.log("This is your password: " + password );
     console.log( "You've successfully created a new user!" );
 }
-
 
 /* Function to generate a random email 
  * @return Randomly generated email
@@ -226,14 +233,13 @@ function deleteUser( email, password, userMap ) {
  * @param password - Corresponding password of the account
  * @return Promise object to post user's info to log-in to the account
  */
-
 function signin ( email, password, userMap ) {
     // If the email exists in the userMap
     if( userMap.hasOwnProperty( email ) ){ 
         if( userMap[email].hasOwnProperty( "myToken" ) ) {
             return Promise.resolve(userMap[email])
             .then(function(res) {
-                //console.log(res);
+                console.log(res);
                 userMap = updateUserInfo( userMap, email, res.body.accessToken,res.body.profileId, res.body )
                 //console.log("Your token is: " + userMap[email].myToken )
                 return res;
@@ -268,6 +274,8 @@ function signin ( email, password, userMap ) {
 
 /* Function to find an unused email and sign-up the profile to Fox with 
  * a random password
+ * @param userMap - userMap containing all of the profiles
+ * @return JSON object containing the new email and password for the user
  */  
 function continuousSignup( userMap ) {
     email = generateRandomEmail();

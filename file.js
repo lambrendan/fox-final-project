@@ -8,6 +8,10 @@
 
 var fs = require('fs')
 
+/* Function to read from a file 
+ * @param filename - Name of the file to be read 
+ * @return JSON object containing the information from the file
+ */
 function readAFile( filename ) {
     var obj = JSON.parse(fs.readFileSync( filename ).toString());
     return obj;

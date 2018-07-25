@@ -2,8 +2,7 @@
  * Filename:  api.js 
  * Author: Brendan Lam 
  * Company: 21st Century Fox
- * File Description: File that contains all of the API Calls to sign-up, sign-in, and delete users. It also 
- * containers helper functions to generate random passwords and users. 
+ * File Description: File that contains all of the API endpoints for the PEATT Web API.
  */ 
 
 var express = require('express');
@@ -16,6 +15,10 @@ var list = require("./list.js");
 let userMap =  {};
 userMap = users.createUserMap( false );
 
+/* API route to sign-up a user on the Fox website
+ * @body email - Email of the new user
+ * @body password - Password for the new user
+ */ 
 api.post('/signup', function(req, res) {
     var email;
     var password;
@@ -45,6 +48,10 @@ api.post('/signup', function(req, res) {
     }
 });
 
+/* API route to sign-in into an account from the Fox website
+ * @body email - Email of the new user
+ * @body password - Password for the new user
+ */ 
 api.post('/signin', function(req, res) {
     var email;
     var password;
@@ -81,6 +88,10 @@ api.post('/signin', function(req, res) {
     }
 });
 
+/* API route to delete a user on the Fox website
+ * @body email - Email of the new user
+ * @body password - Password for the new user
+ */ 
 api.post('/delete', function(req, res) {
     if( !req.body.email || !req.body.password ) {
         throw "Please specify the email and password for the account that you want to delete"
@@ -89,17 +100,33 @@ api.post('/delete', function(req, res) {
     res.json({ success: true, message: "User has been deleted"})
 });
 
+
+/* API route to favorite a show 
+ * @body email - Email of the new user
+ * @body password - Password for the new user
+ * @param showCode - Show to be favorited
+ */ 
 api.post('/favorite/:showCode', function( req, res) {
     var showObj = [{"showCode": req.params.showCode}];
     favorites.createSetFavorites( req.body.email, req.body.password, showObj, userMap )
-    res.json({ success: true, "email": req.body.email, "show": req.params.showCode})
+    .then( function( response ) {
+        res.json({ success: true, "email": req.body.email, "show": req.params.showCode})
+    })
+    .catch( function(err){
+        res.json({success: false, message: "Couldn't favorite the video"})
+    })
 });
 
+/* API route to bookmark a show 
+ * @body email - Email of the new user
+ * @body password - Password for the new user
+ * @param video - Video to be bookmarkd
+ */ 
 api.post('/bookmarks/:video', function( req, res) {
     var bookmarkObj = [{"uID": req.params.video, "watched": req.body.watch}]
     bookmarks.createSetBookmarks( req.body.email, req.body.password, bookmarkObj, userMap )
-    .then(function(res){
-        res.json({ success: true, "email": req.body.email, "video": res.body })
+    .then(function(response){
+        res.json({ success: true, "email": req.body.email, "video": response.body })
     })
     .catch( function(err){
         res.json({ succcess: false, message: "Couldn't bookmark the video"})
@@ -107,6 +134,8 @@ api.post('/bookmarks/:video', function( req, res) {
     
 });
 
+/* API route to get a list of all shows 
+ */ 
 api.get('/shows', function( req, res) {
     list.getSeriesList()
     .then( response => {
@@ -117,6 +146,8 @@ api.get('/shows', function( req, res) {
     })
 })
 
+/* API route to get a list of all videos
+ */
 api.get('/videos', function( req, res) {
     list.getAllShowsList()
     .then( response => {

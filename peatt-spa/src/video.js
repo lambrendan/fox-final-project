@@ -8,6 +8,7 @@ class Video extends Component {
     }
 
     componentDidMount() {
+      console.log(this.props)
       got.get("http://localhost:3001/api/videos")
       .then((res) =>{
         var videoObject = JSON.parse(res.body)

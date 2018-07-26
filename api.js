@@ -43,7 +43,8 @@ api.post('/signup', function(req, res) {
                 res.json({ success: true, "email": email, "password": password } );
             })
             .catch(function(err) {
-                res.json({ success: false, message:"Couldn't signup the user"});
+                res.send(err);
+                //res.json({ success: false, message:"Couldn't signup the user"});
             });
     }
 });

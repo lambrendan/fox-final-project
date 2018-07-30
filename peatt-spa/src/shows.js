@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom'
 var got = require('got');
+
 
 class Shows extends Component {
     state = {shows:[]};
@@ -19,11 +21,14 @@ class Shows extends Component {
     render() {
       return(
         <div>
+          <Link to='/home'>Back to home</Link>
+          
           <h1> Shows </h1>
             <ul>
             {
               this.state.shows.map(function(item, index){
-                return <li key={index}>{item.showCode}</li>
+                var url = '/shows/' + item.showCode;
+                return <li key={index}><Link to={url}>{item.showCode}</Link></li>
               })
             }
             </ul>

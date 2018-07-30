@@ -239,7 +239,7 @@ function signin ( email, password, userMap ) {
         if( userMap[email].hasOwnProperty( "myToken" ) ) {
             return Promise.resolve(userMap[email])
             .then(function(res) {
-                console.log(res);
+                //console.log(res);
                 userMap = updateUserInfo( userMap, email, res.body.accessToken,res.body.profileId, res.body )
                 //console.log("Your token is: " + userMap[email].myToken )
                 return res;

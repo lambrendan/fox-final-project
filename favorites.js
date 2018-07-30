@@ -108,7 +108,7 @@ function createSetFavorites( email, password, showCode, userMap ) {
  * @param password - Password of the user to grab bookmarks from
  */ 
 function grabUserFavorites( email, password, userMap ) {
-    users.signin( email, password, userMap )
+    return users.signin( email, password, userMap )
         .then(function(res) {
             var token = res.body.accessToken;
             var userID = res.body.profileId;

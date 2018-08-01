@@ -39,7 +39,6 @@ function favoriteShow( userID, myToken, show ) {
     for ( var index = 0; index < show.length; index++ ) {
         favoritesBody.push({'showID': show[index]});
     }
-    console.log(userID + ": " + JSON.stringify(favoritesBody));
     //console.log( "CREATING BOOKMARKS FOR userID: " + userID + " favorite:" + show[0] + " "+show[1] )
     return got.post('https://api-staging.fox.com/profiles/_latest/' + userID + '/favorites', {
         headers: newAuthHeaders,

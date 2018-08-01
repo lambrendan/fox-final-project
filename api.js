@@ -11,9 +11,19 @@ var favorites = require( "./favorites.js");
 var bookmarks = require( "./bookmarks.js");
 var users = require("./users.js");
 var list = require("./list.js");
+var file = require("./file.js")
 
 let userMap =  {};
 userMap = users.createUserMap( false );
+
+/* API route to parse a JSON object
+ * @body - JSON object to be parsed
+ */
+api.post('/parseJSON', function(req, res) {
+    var obj = { users: JSON.parse(req.body.users) }
+    file.parseJSON(obj, userMap);
+    res.send({ success: true })
+});
 
 /* API route to sign-up a user on the Fox website
  * @body email - Email of the new user
@@ -149,6 +159,23 @@ api.get('/shows', function( req, res) {
 
 /* API route to get a list of all videos
  */
+// api.get('/videos', function( req, res) {
+//     list.getAllShowsList()
+//     .then( response => {
+//         var videoObj = [];
+//         for( var pageIndex = 0; pageIndex < response.length; pageIndex++) {
+//             for( showIndex = 0; showIndex < response[pageIndex].body.member.length; showIndex++ ) {
+//                 var tempObj = { "uID" : response[pageIndex].body.member[showIndex].uID}
+//                 videoObj.push(tempObj);
+//             }
+//         }
+//         res.json({ videoList: videoObj})
+//     })
+//     .catch( error => {
+//         res.json({ success: false, message: "Couldn't grab the list of videos"})
+//     })
+// })
+
 api.get('/videos', function( req, res) {
     list.getAllShowsList()
     .then( response => {
@@ -165,4 +192,5 @@ api.get('/videos', function( req, res) {
         res.json({ success: false, message: "Couldn't grab the list of videos"})
     })
 })
+
 module.exports = api;

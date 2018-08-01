@@ -22,7 +22,6 @@ function pageanate( url, results=[] ) {
     })
         .then( function(res){
             results.push(res);
-            //console.log(res);
             if(res.body.view.next) {
                 return pageanate( res.body.view.next, results ) 
             }
@@ -53,7 +52,6 @@ function getShowsList() {
 function getAllShowsList() {
     return getShowsList().then( function(res){
         return pageanate( res.body.view.first );
-        
     })
     .catch( function(err) {
         console.log(err);
@@ -86,6 +84,7 @@ function getShowBySeriesList( showCode ) {
 }
 
 module.exports = {
+    getShowsList,
     getAllShowsList, 
     getSeriesList, 
     getShowBySeriesList

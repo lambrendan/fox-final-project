@@ -267,7 +267,21 @@ function signin ( email, password, userMap ) {
         }
     }
     else {
-        throw "This user does not exist"
+        console.log("Couldn't sign-in because user doesn't exist! Creating user now: ")
+        return signup( email, password, undefined, undefined, undefined, undefined, userMap )
+            .then(function(res) {
+                var userObj = { 'password': password, 'videoMap': {} };
+                addUserToMap( userMap, email, userObj)
+                successfulSignup( email, password );
+                return res;
+                })
+            .catch( function(err) {
+                console.log(err);
+                console.log("It didn't work! This is your new info:");
+                var obj = continuousSignup( userMap );
+                email = obj.email;
+                password = obj.password;
+                });
     }
 }
 

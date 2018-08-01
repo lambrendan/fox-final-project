@@ -9,12 +9,28 @@ var got = require('got');
 class Video extends Component {
     constructor(props) {
         super(props)
-        this.state = { videos: [], chosenVideos: [], chosenFavorites:[], doneBookmarking: false };
+        this.state = { videos: [], chosenVideos: [], chosenFavorites:[], doneBookmarking: false, page: 1 };
     }
     
-    componentDidMount() {
-      got.get("http://localhost:3001/api/videos")
+
+    pageChange = () => {
+      console.log(this.state.page)
+      got.get("http://localhost:3001/api/videos?page="+this.state.page.toString())
       .then((res) =>{
+        console.log(res.body)
+        var videoObject = JSON.parse(res.body)
+        this.setState({ videos: videoObject.videoList});
+        return;
+      })
+      .catch( function(err){
+        console.log('error:', err);
+      })
+    }
+
+    componentDidMount() {
+      got.get("http://localhost:3001/api/videos?page=1")
+      .then((res) =>{
+        console.log(res.body)
         var videoObject = JSON.parse(res.body)
         this.setState({ videos: videoObject.videoList, chosenFavorites: this.props.shows.favorite });
         return;
@@ -33,19 +49,33 @@ class Video extends Component {
       this.setState({ chosenVideos: this.state.chosenVideos.concat({"uID":uID})})
     }
 
+    handlePageForwardClick = () => {
+      this.setState({ page: this.state.page + 1}, () => {
+        this.pageChange();
+      });
+    }
+
+    handlePageBackwardsClick = () => {
+      this.setState({ page: this.state.page - 1 }, () => {
+        this.pageChange();
+      });  
+    }
+
     render() {
-      console.log(this.state);
+      console.log(this.state)
       if ( this.state.doneBookmarking ) {
         return (
           <div>
             <Redirect to='/signin'/>
-          </div>
+          </div>  
         )
       }
       else {
         return(
           <div>
             <button onClick={this.handleFinish}>Finish</button>
+            <button onClick={this.handlePageForwardClick}>Next Page</button>
+            <button onClick={this.handlePageBackwardsClick}>Previous Page </button>
             <h1> Videos </h1>
               <ul>
               {

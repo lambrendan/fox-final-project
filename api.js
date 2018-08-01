@@ -12,6 +12,7 @@ var bookmarks = require( "./bookmarks.js");
 var users = require("./users.js");
 var list = require("./list.js");
 var file = require("./file.js")
+var got = require('got');
 
 let userMap =  {};
 userMap = users.createUserMap( false );
@@ -177,19 +178,22 @@ api.get('/shows', function( req, res) {
 // })
 
 api.get('/videos', function( req, res) {
-    list.getAllShowsList()
+    return got.get( "https://api-staging.fox.com/fbc-content/v1_5/video?itemsPerPage=200&videoType=fullEpisode&premiumPackage=&page=" + req.query.page.toString(), { 
+        headers: {
+            'apikey': 'DEFAULT' 
+        }, 
+        json: true 
+    })
     .then( response => {
         var videoObj = [];
-        for( var pageIndex = 0; pageIndex < response.length; pageIndex++) {
-            for( showIndex = 0; showIndex < response[pageIndex].body.member.length; showIndex++ ) {
-                var tempObj = { "uID" : response[pageIndex].body.member[showIndex].uID}
-                videoObj.push(tempObj);
-            }
+        for( showIndex = 0; showIndex < response.body.member.length; showIndex++ ) {
+            var tempObj = { "uID" : response.body.member[showIndex].uID}
+            videoObj.push(tempObj);
         }
-        res.json({ videoList: videoObj})
+        res.json({ videoList: videoObj })
     })
     .catch( error => {
-        res.json({ success: false, message: "Couldn't grab the list of videos"})
+        res.json({ success: false, message: "The page you entered doesn't exist"})
     })
 })
 

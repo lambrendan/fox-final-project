@@ -95,7 +95,7 @@ function createSetFavorites( email, password, showCode, userMap ) {
             //return Promise.all(promises)
         })
         .then(function(res) {
-            console.log(res.requestUrl + " and " + JSON.stringify(res.body));
+            //console.log(res.requestUrl + " and " + JSON.stringify(res.body));
         })
         .catch(function(err) {    
             console.log(err)

@@ -30,8 +30,8 @@ class Video extends Component {
     componentDidMount() {
       got.get("http://localhost:3001/api/videos?page=1")
       .then((res) =>{
-        console.log(res.body)
         var videoObject = JSON.parse(res.body)
+        console.log(videoObject.videoList)
         this.setState({ videos: videoObject.videoList, chosenFavorites: this.props.shows.favorite });
         return;
       })
@@ -61,6 +61,35 @@ class Video extends Component {
       });  
     }
 
+    handleSearchBar = event => {
+      if( event.target.value ) {
+        got.get("https://api-staging.fox.com/fbc-content/v1_5/video?videoType=fullEpisode&q=" + event.target.value.toString())
+        .then( res => {
+          var vidObj = []
+          var resObject = JSON.parse(res.body);
+          for( var index = 0; index < resObject.totalItems; index++) {
+            vidObj.push({"uID": resObject.member[index].uID});
+          }
+          this.setState({ videos: vidObj});
+          console.log(this.state.videos)
+        })
+        .catch( err => {
+          console.log(err)
+        })
+      }
+      else {
+        got.get("http://localhost:3001/api/videos?page=1")
+        .then((res) =>{
+          var videoObject = JSON.parse(res.body)
+          this.setState({ videos: videoObject.videoList });
+          return;
+        })
+        .catch( function(err){
+          console.log('error:', err);
+        })
+      }
+    }
+
     render() {
       console.log(this.state)
       if ( this.state.doneBookmarking ) {
@@ -74,8 +103,18 @@ class Video extends Component {
         return(
           <div>
             <button onClick={this.handleFinish}>Finish</button>
-            <button onClick={this.handlePageForwardClick}>Next Page</button>
-            <button onClick={this.handlePageBackwardsClick}>Previous Page </button>
+            <div>
+              <button onClick={this.handlePageForwardClick}>Next Page</button>
+              <button onClick={this.handlePageBackwardsClick}>Previous Page </button>
+            </div>
+            <div className="form-group">
+              <input 
+                className="form-control"
+                type="text"
+                placeholder="Video"
+                onChange={this.handleSearchBar}
+              />
+            </div>
             <h1> Videos </h1>
               <ul>
               {

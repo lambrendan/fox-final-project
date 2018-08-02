@@ -121,12 +121,13 @@ api.post('/delete', function(req, res) {
 api.post('/favorite/:showCode', function( req, res) {
     var showObj = [{"showCode": req.params.showCode}];
     favorites.createSetFavorites( req.body.email, req.body.password, showObj, userMap )
-    .then( function( response ) {
-        res.json({ success: true, "email": req.body.email, "show": req.params.showCode})
-    })
-    .catch( function(err){
-        res.json({success: false, message: "Couldn't favorite the video"})
-    })
+    res.json({ success: true, "email": req.body.email, "show": req.params.showCode});
+    // .then( function( response ) {
+    //     res.json({ success: true, "email": req.body.email, "show": req.params.showCode})
+    // })
+    // .catch( function(err){
+    //     res.json({success: false, message: "Couldn't favorite the video"})
+    // })
 });
 
 /* API route to bookmark a show 
@@ -137,12 +138,13 @@ api.post('/favorite/:showCode', function( req, res) {
 api.post('/bookmarks/:video', function( req, res) {
     var bookmarkObj = [{"uID": req.params.video, "watched": req.body.watch}]
     bookmarks.createSetBookmarks( req.body.email, req.body.password, bookmarkObj, userMap )
-    .then(function(response){
-        res.json({ success: true, "email": req.body.email, "video": response.body })
-    })
-    .catch( function(err){
-        res.json({ succcess: false, message: "Couldn't bookmark the video"})
-    })
+    res.json({ success: true, "email": req.body.email, "video": response.body })
+    // .then(function(response){
+    //     res.json({ success: true, "email": req.body.email, "video": response.body })
+    // })
+    // .catch( function(err){
+    //     res.json({ succcess: false, message: "Couldn't bookmark the video"})
+    // })
     
 });
 
@@ -178,7 +180,7 @@ api.get('/shows', function( req, res) {
 // })
 
 api.get('/videos', function( req, res) {
-    return got.get( "https://api-staging.fox.com/fbc-content/v1_5/video?itemsPerPage=200&videoType=fullEpisode&premiumPackage=&page=" + req.query.page.toString(), { 
+    return got.get( "https://api-staging.fox.com/fbc-content/v1_5/video?itemsPerPage=100&videoType=fullEpisode&premiumPackage=&page=" + req.query.page.toString(), { 
         headers: {
             'apikey': 'DEFAULT' 
         }, 

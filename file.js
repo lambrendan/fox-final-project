@@ -55,8 +55,8 @@ function parseJSON ( jsonObject, userMap ) {
             var showCode = [];
             for( var favoritesIndex = 0; favoritesIndex < jsonObject.users[index].favorites.length; favoritesIndex++) {
                 showCode.push(jsonObject.users[index].favorites[favoritesIndex]);
-
             }
+            console.log(showCode);
             var numFavs = showCode.length;
             if( !jsonObject.users[index].hasOwnProperty("numFavorites")) {
                 favorites.createSetFavorites( email, password, showCode, userMap)
@@ -74,12 +74,12 @@ function parseJSON ( jsonObject, userMap ) {
             }
         }
         if( jsonObject.users[index].hasOwnProperty("bookmarks")) {
-            //console.log( "index : " + index )
             var bookmarkObject = [];
             for( var bookmarkIndex = 0; bookmarkIndex < jsonObject.users[index].bookmarks.length; bookmarkIndex++) {
                 bookmarkObject.push( jsonObject.users[index].bookmarks[bookmarkIndex]);
                 //console.log( "Index: " + bookmarkIndex + "Object: " + fileObj.users[index].bookmarks[bookmarkIndex] )
             }
+            console.log(bookmarkObject);
             var numBookmrks = bookmarkObject.length;
             
             if( !jsonObject.users[index].hasOwnProperty("numBookmarks")) {

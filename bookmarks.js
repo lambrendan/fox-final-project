@@ -104,12 +104,13 @@ function createRandomBookmark( numBookmarks, email, password, userMap ) {
  */ 
 function createSetBookmarks( email, password, bookmark, userMap ) {
     for ( var index = 0; index < bookmark.length; index++ ) {
+        console.log("counter");
         if (bookmark[index].hasOwnProperty('showCode')) {
             var isWatched = false;
             if ( bookmark[index].hasOwnProperty('watched') && bookmark[index].watched === true  ) {
                 isWatched = true;
             }
-            return Promise.all([users.signin( email, password,userMap ), lists.getShowBySeriesList(bookmark[index].showCode)]).then(function(res) {    
+            Promise.all([users.signin( email, password,userMap ), lists.getShowBySeriesList(bookmark[index].showCode)]).then(function(res) {    
                 var token = res[0].body.accessToken;
                 var userID = res[0].body.profileId;
                 var watched;
@@ -129,8 +130,8 @@ function createSetBookmarks( email, password, bookmark, userMap ) {
                 return bookMarkVideo( userID, token, uIDWatched, watched );
             })
             .then(function(res) {
-                console.log(res)
-                return res;
+                //console.log(res)
+                //return res;
             })
             .catch(function(err) {    
                 console.log(err)
@@ -144,7 +145,7 @@ function createSetBookmarks( email, password, bookmark, userMap ) {
             if( bookmark[index].hasOwnProperty('watched') && bookmark[index].watched === true ) {
                 isWatched = true;
             }
-            return Promise.all([users.signin( email, password, userMap ), lists.getAllShowsList(), uid]).then(function(res) {   
+            Promise.all([users.signin( email, password, userMap ), lists.getAllShowsList(), uid]).then(function(res) {   
                 var token = res[0].body.accessToken;
                 var userID = res[0].body.profileId;
                 var showExists = false;
@@ -183,7 +184,7 @@ function createSetBookmarks( email, password, bookmark, userMap ) {
             })
             .then(function(res) {
                 //console.log(res)
-                return res;
+                //return res;
             })
             .catch(function(err) {    
                 console.log(err)
@@ -204,8 +205,9 @@ function grabUserBookmarks( email, password, userMap ) {
             return getBookmarks( userID, token )
         })
         .then(function(res) {
-            return res;     
             console.log(res.body.list);
+            return res;     
+            
         })
         .catch(function(err) {
             console.log(err);

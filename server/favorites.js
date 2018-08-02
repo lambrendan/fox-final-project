@@ -114,7 +114,7 @@ function grabUserFavorites( email, password, userMap ) {
             return getFavorites(userID, token)
         })  
         .then(function(res){
-            console.log(res.body);
+            //console.log(res.body);
             return res;
         })
         .catch(function(err) {

@@ -193,6 +193,7 @@ else {
                     bookmarks.grabUserBookmarks( email, password, userMap )
                     .then( res => {
                         infoObject.bookmarks = res.body;
+                        console.log( infoObject );
                     })
                     .catch( err => {
                         console.log(err)

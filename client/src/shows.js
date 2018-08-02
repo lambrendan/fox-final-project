@@ -48,7 +48,6 @@ class Shows extends Component {
               <ul>
               {
                 this.state.shows.map((item, index) => { 
-                  //var url = '/shows/' + item.showCode;
                   return <li key={index}><button onClick={() => this.handleClick(item.showCode)}>{item.showCode}</button></li>
                 })
               }

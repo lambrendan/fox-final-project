@@ -256,10 +256,7 @@ function signin ( email, password, userMap ) {
             })
             .then(function(res){
                 //console.log(typeof(res));
-                
-                //var emailObject = { 'myToken': res.body.accessToken, 'userID': res.body.profileId, 'body': res.body, 'password': password, 'videoMap': {} }
                 userMap = updateUserInfo( userMap, email, res.body.accessToken, res.body.profileId, res.body )
-                //addUserToMap( email, emailObject );
                 return res;
             }).catch( function(err) {
                 console.log( err );

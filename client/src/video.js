@@ -14,7 +14,6 @@ class Video extends Component {
     
 
     pageChange = () => {
-      console.log(this.state.page)
       got.get("http://localhost:3001/api/videos?page="+this.state.page.toString())
       .then((res) =>{
         console.log(res.body)
@@ -31,7 +30,6 @@ class Video extends Component {
       got.get("http://localhost:3001/api/videos?page=1")
       .then((res) =>{
         var videoObject = JSON.parse(res.body)
-        console.log(videoObject.videoList)
         this.setState({ videos: videoObject.videoList, chosenFavorites: this.props.shows.favorite });
         return;
       })
@@ -71,7 +69,6 @@ class Video extends Component {
             vidObj.push({"uID": resObject.member[index].uID});
           }
           this.setState({ videos: vidObj});
-          console.log(this.state.videos)
         })
         .catch( err => {
           console.log(err)
@@ -119,7 +116,6 @@ class Video extends Component {
               <ul>
               {
                 this.state.videos.map((item, index)=> {
-                  //var url = '/video/' + item.uID;
                   return <li key={index}><button onClick={() => this.handleClick(item.uID)}>{item.uID}</button></li>
                 })
               }

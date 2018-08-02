@@ -32,7 +32,7 @@ class SignIn extends Component {
             json: true
         })
         .then( res => {
-            console.log(res);
+            //console.log(res);
             this.setState({ isSuccess: true})
         })
         .catch ( err => {

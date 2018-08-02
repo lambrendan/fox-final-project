@@ -20,6 +20,11 @@ function readAFile( filename ) {
     return obj;
 }
 
+/* Function that parses a JSON object and performs the indicated
+ * actions
+ * @param jsonObject - Object to be parsed
+ * @param userMap - Map containing all of the user and their information
+ */
 function parseJSON ( jsonObject, userMap ) {
     for( var index = 0; index < jsonObject.users.length; index++ ) {
         if( !jsonObject.users[index].hasOwnProperty("email") ) {
@@ -56,7 +61,6 @@ function parseJSON ( jsonObject, userMap ) {
             for( var favoritesIndex = 0; favoritesIndex < jsonObject.users[index].favorites.length; favoritesIndex++) {
                 showCode.push(jsonObject.users[index].favorites[favoritesIndex]);
             }
-            console.log(showCode);
             var numFavs = showCode.length;
             if( !jsonObject.users[index].hasOwnProperty("numFavorites")) {
                 favorites.createSetFavorites( email, password, showCode, userMap)
@@ -79,7 +83,6 @@ function parseJSON ( jsonObject, userMap ) {
                 bookmarkObject.push( jsonObject.users[index].bookmarks[bookmarkIndex]);
                 //console.log( "Index: " + bookmarkIndex + "Object: " + fileObj.users[index].bookmarks[bookmarkIndex] )
             }
-            console.log(bookmarkObject);
             var numBookmrks = bookmarkObject.length;
             
             if( !jsonObject.users[index].hasOwnProperty("numBookmarks")) {

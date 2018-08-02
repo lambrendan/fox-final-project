@@ -29,8 +29,8 @@ Command Line Tool
 
 ```
 1. Go into the server folder
-2. Run the Tool using node cli.js [options]
-3. Options include: --bookmark:{'uid':video}, --favorite:{'showCode':series}, --numBookmarks, --numFavorites, --email, --password, --signup, --delete, --signin
+2. Run the Tool using node cli [options]
+3. To view all available options, run the tool using the help flag: node cli --help
 
 ```
 

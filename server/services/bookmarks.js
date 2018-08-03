@@ -6,7 +6,7 @@
  * for a specified user
  */  
 
-var users = require('.//users.js')
+var users = require('./users.js')
 var lists = require("./list.js")
 var got = require('got')
 

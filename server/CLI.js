@@ -6,12 +6,11 @@
  * the Fox website. 
  */ 
 
-var users = require("./users");
+var users = require("./services/users");
 var args = require('args');
-var favorites = require("./favorites.js");
-var bookmarks = require("./bookmarks.js");
-var list = require("./list.js")
-var file = require("./file.js")
+var favorites = require("./services/favorites.js");
+var bookmarks = require("./services/bookmarks.js");
+var file = require("./services/file.js")
 
 let userMap = {};
 

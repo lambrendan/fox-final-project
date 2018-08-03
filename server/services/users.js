@@ -8,7 +8,7 @@
 
 const got = require('got');
 const fs = require('fs');
-const key = require('./apikey.js');
+const key = require('../constants/apikey.js');
 
 // Variables -----------------------------------------------------------------------------------------------
 

@@ -7,11 +7,11 @@
 
 var express = require('express');
 var api = express.Router();
-var favorites = require( "./favorites.js");
-var bookmarks = require( "./bookmarks.js");
-var users = require("./users.js");
-var list = require("./list.js");
-var file = require("./file.js")
+var favorites = require( "../services/favorites.js");
+var bookmarks = require( "../services/bookmarks.js");
+var users = require("../services/users.js");
+var list = require("../services/list.js");
+var file = require("../services/file.js")
 var got = require('got');
 
 let userMap =  {};

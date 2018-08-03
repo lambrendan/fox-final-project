@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var api = require("./api.js");
+var api = require("./api/api.js");
 var bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded( { extended: false }));

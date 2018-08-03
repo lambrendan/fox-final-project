@@ -1,4 +1,4 @@
-import { GET_BOOKMARKS, GET_FAVORITES } from "./actions.js"
+import { GET_BOOKMARKS, GET_FAVORITES } from "../actions/actions.js"
 
 
 export default function reduce( state = {}, action ) {

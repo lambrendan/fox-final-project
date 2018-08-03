@@ -9,7 +9,7 @@ var got = require('got');
 class Video extends Component {
     constructor(props) {
         super(props)
-        this.state = { videos: [], chosenVideos: [], chosenFavorites:[], doneBookmarking: false, page: 1 };
+        this.state = { videos: [], chosenVideos: [], chosenFavorites:[], doneBookmarking: false, page: 1, numPages: 0, pageArray: [] };
     }
     
 
@@ -26,11 +26,12 @@ class Video extends Component {
       })
     }
 
-    componentDidMount() {
+    componentWillMount() {
       got.get("http://localhost:3001/api/videos?page=1")
       .then((res) =>{
-        var videoObject = JSON.parse(res.body)
-        this.setState({ videos: videoObject.videoList, chosenFavorites: this.props.shows.favorite });
+        var videoObject = JSON.parse(res.body);
+        var pages = [...Array(videoObject.maxPages).keys()].map( index => index + 1)
+        this.setState({ videos: videoObject.videoList, chosenFavorites: this.props.shows.favorite, numPages: videoObject.maxPages, pageArray: pages });
         return;
       })
       .catch( function(err){
@@ -51,6 +52,12 @@ class Video extends Component {
       this.setState({ page: this.state.page + 1}, () => {
         this.pageChange();
       });
+    }
+
+    handlePageClick = number => {
+      this.setState({ page: number }, () => {
+        this.pageChange();
+      })
     }
 
     handlePageBackwardsClick = () => {
@@ -100,15 +107,20 @@ class Video extends Component {
         return(
           <div>
             <button onClick={this.handleFinish}>Finish</button>
-            <div>
-              <button onClick={this.handlePageForwardClick}>Next Page</button>
+            <div> 
               <button onClick={this.handlePageBackwardsClick}>Previous Page </button>
+              {
+                this.state.pageArray.map((item, index)=> {
+                  return <button key={index} onClick={() => this.handlePageClick(item)}>{item}</button>
+                })
+              }
+              <button onClick={this.handlePageForwardClick}>Next Page</button>
             </div>
             <div className="form-group">
               <input 
                 className="form-control"
                 type="text"
-                placeholder="Video"
+                placeholder="Search Video"
                 onChange={this.handleSearchBar}
               />
             </div>

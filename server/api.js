@@ -180,7 +180,7 @@ api.get('/shows', function( req, res) {
 // })
 
 api.get('/videos', function( req, res) {
-    return got.get( "https://api-staging.fox.com/fbc-content/v1_5/video?itemsPerPage=100&videoType=fullEpisode&premiumPackage=&page=" + req.query.page.toString(), { 
+    return got.get( "https://api-staging.fox.com/fbc-content/v1_5/video?itemsPerPage=200&videoType=fullEpisode&premiumPackage=&page=" + req.query.page.toString(), { 
         headers: {
             'apikey': 'DEFAULT' 
         }, 
@@ -192,7 +192,8 @@ api.get('/videos', function( req, res) {
             var tempObj = { "uID" : response.body.member[showIndex].uID}
             videoObj.push(tempObj);
         }
-        res.json({ videoList: videoObj })
+        var maxPages = Math.ceil((response.body.totalItems / response.body.itemsPerPage ));
+        res.json({ videoList: videoObj, maxPages: maxPages })
     })
     .catch( error => {
         res.json({ success: false, message: "The page you entered doesn't exist"})

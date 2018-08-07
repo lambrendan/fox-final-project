@@ -5,17 +5,16 @@
  * File Description: File that contains all of the API endpoints for the PEATT Web API.
  */ 
 
-var express = require('express');
-var api = express.Router();
-var favorites = require( "../services/favorites.js");
-var bookmarks = require( "../services/bookmarks.js");
-var users = require("../services/users.js");
-var list = require("../services/list.js");
-var file = require("../services/file.js")
-var got = require('got');
+const express = require('express');
+const api = express.Router();
+const favorites = require( "../services/favorites.js");
+const bookmarks = require( "../services/bookmarks.js");
+const users = require("../services/users.js");
+const list = require("../services/list.js");
+const file = require("../services/file.js")
+const got = require('got');
 
-let userMap =  {};
-userMap = users.createUserMap( false );
+let userMap = users.createUserMap( false );
 
 /* API route to parse a JSON object
  * @body - JSON object to be parsed
@@ -31,27 +30,24 @@ api.post('/parseJSON', function(req, res) {
  * @body password - Password for the new user
  */ 
 api.post('/signup', function(req, res) {
-    var email;
-    var password;
-    if( !req.body.email ) {
+    var email, password;
+    if (!req.body.email) {
         var obj = users.continuousSignup( userMap );
         email = obj.email;
         password = obj.password;
-    }
-    else {
+    } else {
         email = req.body.email;
-        if( req.body.password ) { 
-            password = req.body.password;
-        }
-        else {
-            password = users.generateRandomPassword();
-        }
+        req.body.password ? password = req.body.password : password = users.generateRandomPassword();
         users.signup( email, password, undefined, undefined, undefined, undefined, userMap )
             .then(function(response){
                 var userObj = { 'password': password, 'videoMap': {} };
                 users.addUserToMap( userMap, email, userObj)
                 users.successfulSignup( email, password );
-                res.json({ success: true, "email": email, "password": password } );
+                res.json({ 
+                    success: true, 
+                    email, 
+                    password 
+                } );
             })
             .catch(function(err) {
                 res.send(err);
@@ -148,7 +144,8 @@ api.get('/shows', function( req, res) {
     list.getSeriesList()
     .then( response => {
         console.log(response.body.member)
-        res.json({showList: response.body.member})
+        res.append('Access-Control-Allow-Origin', ['*']);
+        res.json({ showList: response.body.member })
     })
     .catch( error => {
         res.json({ success: false, message: "Couldn't get the list"})

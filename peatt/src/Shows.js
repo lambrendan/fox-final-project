@@ -20,7 +20,7 @@ class Shows extends Component {
         return (
           <div>
             <p> {this.state.showCode} </p>
-            <img src={this.state.image} style={{width: 250}}/>
+            <img src={this.state.image} alt="Show Images" style={{width: 250}}/>
             <div>
                 <button onClick={() => this.props.handleClick(this.state.showCode)}>Favorite</button>
             </div>

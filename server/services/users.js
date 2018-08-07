@@ -270,15 +270,22 @@ function signin ( email, password, userMap ) {
                 var userObj = { 'password': password, 'videoMap': {} };
                 addUserToMap( userMap, email, userObj)
                 successfulSignup( email, password );
-                return res;
+                return got.post('https://api-staging.fox.com/profiles/_latest/login', {
+                    headers: generalHeader,
+                    body: signinBody(email, password),
+                    json: true
+                })
+                    .then(function(response){
+                        userMap = updateUserInfo( userMap, email, response.body.accessToken, response.body.profileId, response.body )
+                        return response;
+                    })
+                    .catch( function(error) {
+                        console.log( error );
+                    });
                 })
             .catch( function(err) {
                 console.log(err);
-                console.log("It didn't work! This is your new info:");
-                var obj = continuousSignup( userMap );
-                email = obj.email;
-                password = obj.password;
-                });
+            });
     }
 }
 

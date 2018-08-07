@@ -3,15 +3,17 @@ import { Redirect } from 'react-router-dom';
 import {connect} from "react-redux";
 import { bindActionCreators } from 'redux';
 import * as sessionActions from "../actions/actions.js"
+import VideoList from "./videoList"
+import VideoSearch from "./videoSearch.js"
 var got = require('got');
 
 
 class Video extends Component {
+
     constructor(props) {
         super(props)
         this.state = { videos: [], chosenVideos: [], chosenFavorites:[], doneBookmarking: false, page: 1, numPages: 0, pageArray: [] };
     }
-    
 
     pageChange = () => {
       got.get("http://localhost:3001/api/videos?page="+this.state.page.toString())
@@ -107,7 +109,7 @@ class Video extends Component {
         return(
           <div>
             <button onClick={this.handleFinish}>Finish</button>
-            <div> 
+             {/* <div> 
               <button onClick={this.handlePageBackwardsClick}>Previous Page </button>
               {
                 this.state.pageArray.map((item, index)=> {
@@ -115,7 +117,8 @@ class Video extends Component {
                 })
               }
               <button onClick={this.handlePageForwardClick}>Next Page</button>
-            </div>
+            </div>  */}
+            <VideoSearch pageArray={this.state.pageArray} />
             <div className="form-group">
               <input 
                 className="form-control"
@@ -128,7 +131,8 @@ class Video extends Component {
               <ul>
               {
                 this.state.videos.map((item, index)=> {
-                  return <li key={index}><button onClick={() => this.handleClick(item.uID)}>{item.uID}</button></li>
+                  // return <li key={index}><button onClick={() => this.handleClick(item.uID)}>{item.uID}</button></li>
+                  return <VideoList key={index} title={item.uID} image={item.images.still.FHD} />
                 })
               }
               </ul>

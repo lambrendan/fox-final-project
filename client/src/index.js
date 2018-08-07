@@ -10,7 +10,6 @@ import reduce from './reducers/reducers.js'
 
 const middleware = [thunk];
 
-
 const store = createStore(reduce, applyMiddleware(...middleware));
 
 ReactDOM.render((

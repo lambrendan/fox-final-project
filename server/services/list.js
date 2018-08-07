@@ -62,7 +62,7 @@ function getAllShowsList() {
  * @return Promise that gets all of the series
  */
 function getSeriesList() {
-    return got.get('https://stage.dpp.foxdcg.com/api/published/series?_fields=showCode&itemsPerPage=3000', {
+    return got.get('https://stage.dpp.foxdcg.com/api/published/series?_fields=showCode,images&itemsPerPage=3000', {
         headers: {
             'apikey': 'DEFAULT'
         },

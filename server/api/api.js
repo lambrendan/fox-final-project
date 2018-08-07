@@ -74,8 +74,15 @@ api.post('/signin', function(req, res) {
     }
     else {
         email = req.body.email;
-        if (userMap.hasOwnProperty(email) ) {
-            password = userMap[email].password;       
+        if( req.body.password ) {
+            password = req.body.password
+            users.signin( email, password, userMap )
+            .then( function(response) {
+                res.json({"email": email, "password": password, "accessToken": response.body.accessToken, "userID": response.body.profileId }) 
+            })
+            .catch( function(err ) {
+                res.json({ success: false, message: "Could not sign-into your account. Try again!"})
+            }) 
         }
         else {
             password = users.generateRandomPassword();
@@ -84,19 +91,19 @@ api.post('/signin', function(req, res) {
                 var userObj = { 'password': password, 'videoMap': {} };
                 users.addUserToMap( userMap, email, userObj)
                 users.successfulSignup( email, password );
+                users.signin( email, password, userMap )
+                .then( function(response) {
+                    res.json({"email": email, "password": password, "accessToken": response.body.accessToken, "userID": response.body.profileId}) 
+                })
+                .catch( function(err ) {
+                    res.json({ success: false, message: "Could not sign-into your account. Try again!"})
+                }) 
             })
             .catch( function(err) {
                 console.log(err.response.body);
                 return;
             });
         }
-        users.signin( email, password, userMap )
-        .then( function(response) {
-            res.json({"email": email, "password": password, "accessToken": userMap[email].myToken, "userID": userMap[email].userID }) 
-        })
-        .catch( function(err ) {
-            res.json({ success: false, message: "Could not sign-into your account. Try again!"})
-        }) 
     }
 });
 
@@ -121,13 +128,7 @@ api.post('/delete', function(req, res) {
 api.post('/favorite/:showCode', function( req, res) {
     var showObj = [{"showCode": req.params.showCode}];
     favorites.createSetFavorites( req.body.email, req.body.password, showObj, userMap )
-    res.json({ success: true, "email": req.body.email, "show": req.params.showCode});
-    // .then( function( response ) {
-    //     res.json({ success: true, "email": req.body.email, "show": req.params.showCode})
-    // })
-    // .catch( function(err){
-    //     res.json({success: false, message: "Couldn't favorite the video"})
-    // })
+    res.json({"email": req.body.email, "show": req.params.showCode});
 });
 
 /* API route to bookmark a show 
@@ -138,14 +139,7 @@ api.post('/favorite/:showCode', function( req, res) {
 api.post('/bookmarks/:video', function( req, res) {
     var bookmarkObj = [{"uID": req.params.video, "watched": req.body.watch}]
     bookmarks.createSetBookmarks( req.body.email, req.body.password, bookmarkObj, userMap )
-    res.json({ success: true, "email": req.body.email, "video": response.body })
-    // .then(function(response){
-    //     res.json({ success: true, "email": req.body.email, "video": response.body })
-    // })
-    // .catch( function(err){
-    //     res.json({ succcess: false, message: "Couldn't bookmark the video"})
-    // })
-    
+    res.json({"email": req.body.email, "video": req.params.video })
 });
 
 /* API route to get a list of all shows 
@@ -153,31 +147,13 @@ api.post('/bookmarks/:video', function( req, res) {
 api.get('/shows', function( req, res) {
     list.getSeriesList()
     .then( response => {
-        res.json({showList: response.body.member })
+        console.log(response.body.member)
+        res.json({showList: response.body.member})
     })
     .catch( error => {
         res.json({ success: false, message: "Couldn't get the list"})
     })
 })
-
-/* API route to get a list of all videos
- */
-// api.get('/videos', function( req, res) {
-//     list.getAllShowsList()
-//     .then( response => {
-//         var videoObj = [];
-//         for( var pageIndex = 0; pageIndex < response.length; pageIndex++) {
-//             for( showIndex = 0; showIndex < response[pageIndex].body.member.length; showIndex++ ) {
-//                 var tempObj = { "uID" : response[pageIndex].body.member[showIndex].uID}
-//                 videoObj.push(tempObj);
-//             }
-//         }
-//         res.json({ videoList: videoObj})
-//     })
-//     .catch( error => {
-//         res.json({ success: false, message: "Couldn't grab the list of videos"})
-//     })
-// })
 
 api.get('/videos', function( req, res) {
     return got.get( "https://api-staging.fox.com/fbc-content/v1_5/video?itemsPerPage=200&videoType=fullEpisode&premiumPackage=&page=" + req.query.page.toString(), { 
@@ -189,7 +165,7 @@ api.get('/videos', function( req, res) {
     .then( response => {
         var videoObj = [];
         for( showIndex = 0; showIndex < response.body.member.length; showIndex++ ) {
-            var tempObj = { "uID" : response.body.member[showIndex].uID}
+            var tempObj = { "uID" : response.body.member[showIndex].uID, "images":response.body.member[showIndex].images}
             videoObj.push(tempObj);
         }
         var maxPages = Math.ceil((response.body.totalItems / response.body.itemsPerPage ));

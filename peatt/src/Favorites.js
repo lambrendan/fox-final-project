@@ -47,7 +47,14 @@ class Favorites extends Component {
     }
   
     handleClick = showCode => {
-      this.setState({ chosenShows: this.state.chosenShows.concat({'showCode':showCode})})
+      this.setState({ chosenShows: this.state.chosenShows.concat({'showCode': showCode})}) 
+    }
+
+    handleUnclick = showCode => {
+        let pos = this.state.chosenShows.map( item => { return item.showCode }).indexOf(showCode);
+        let temp = this.state.chosenShows.slice();
+        temp.splice( pos, 1)
+        this.setState({ chosenShows: temp})
     }
 
     handleFinish = () => {
@@ -68,7 +75,7 @@ class Favorites extends Component {
     }
 
     render() {
-        console.log(this.state)
+        console.log(this.state.chosenShows)
         if( this.state.error ) {
             return ( 
                 <div>
@@ -89,7 +96,7 @@ class Favorites extends Component {
                 <ul>
                 {
                     this.state.shows.map((item, index) => { 
-                    return <Shows key={index} showCode={item.showCode} image={item.images.seriesList.FHD} handleClick = {this.handleClick} />
+                    return <Shows key={index} showCode={item.showCode} image={item.images.seriesList.FHD} handleClick = {this.handleClick} handleUnclick = {this.handleUnclick} />
 
                     })
                 }

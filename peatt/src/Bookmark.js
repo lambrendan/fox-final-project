@@ -52,11 +52,25 @@ class Bookmark extends Component {
     }
 
     handleHalfClick = uID => {
-        this.setState({ chosenVideos: this.state.chosenVideos.concat({"uID":uID})})
+        this.setState({ chosenVideos: this.state.chosenVideos.concat({"uID":uID, "watched": false })})
+    }
+
+    handleWatchedUnclick = uID => {
+        var pos = this.state.chosenVideos.findIndex(item => { console.log(item); return item.uID === uID && item.watched === true });
+        let temp = this.state.chosenVideos.slice();
+        temp.splice( pos, 1)
+        this.setState({ chosenVideos: temp})
+    }
+
+    handleHalfUnclick = uID => {
+        var pos = this.state.chosenVideos.findIndex(item => { console.log(item); return item.uID === uID && item.watched === false });
+        let temp = this.state.chosenVideos.slice();
+        temp.splice( pos, 1)
+        this.setState({ chosenVideos: temp})
     }
 
     render() {
-      console.log(this.state)
+      console.log(this.state.chosenVideos)
       if ( this.state.error ) {
         return (
           <div>
@@ -76,7 +90,7 @@ class Bookmark extends Component {
                 <ul>
                 {
                     this.state.videos.map((item, index)=> {
-                        return <Video key={index} uID={item.uID} image={item.images.still.FHD} handleWatchedClick = { this.handleWatchedClick } handleHalfClick = { this.handleHalfClick } />
+                        return <Video key={index} uID={item.uID} image={item.images.still.FHD} handleWatchedClick = { this.handleWatchedClick } handleHalfClick = { this.handleHalfClick } handleWatchedUnclick = {this.handleWatchedUnclick} handleHalfUnclick = {this.handleHalfUnclick}/>
                     })
                 }
                 </ul>

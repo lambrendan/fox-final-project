@@ -6,7 +6,7 @@ class Header extends Component {
         return( 
             <div>
                 <h1> Fox Profile Evaluation Tool </h1>
-                <Link to="/">Restart</Link>
+                <Link to="/" onClick={() => { this.props.resetUser() }}>Restart</Link>
             </div>
         )
     }

@@ -40,6 +40,11 @@ class Favorites extends Component {
     setError = err => {
         this.setState({ error: err})
     }
+
+    pageError = () => {
+        this.setError( false );
+
+    }
   
     handleClick = showCode => {
       this.setState({ chosenShows: this.state.chosenShows.concat({'showCode':showCode})})
@@ -50,12 +55,25 @@ class Favorites extends Component {
       this.props.history.push('/user/home/');
     }
 
+    handleRandomFavorites = () => {
+        got.get("http://localhost:3001/api/favorite/random")
+        .then((res) =>{
+            var parseShow = JSON.parse(res.body);
+            console.log(parseShow);
+            this.setState({ chosenShows: this.state.chosenShows.concat( parseShow )}) 
+        })
+        .catch( function(err){
+            console.log('error:', err);
+        })
+    }
+
     render() {
+        console.log(this.state)
         if( this.state.error ) {
             return ( 
                 <div>
                     <h1> Error Page Doesnt Exist </h1>
-                    <button> Go Back </button>
+                    <button onClick={()=> {this.setError(false)}}> Go Back </button>
                 </div>
             )
         }
@@ -63,13 +81,14 @@ class Favorites extends Component {
             return(
             <div>
                 <button onClick={this.handleFinish}>Finish</button>
+                <button onClick={this.handleRandomFavorites}>Random</button>
+
                 <FavoriteSearch searchShows = { this.searchShows } />
                 <FavoritePage totalPages = {this.state.allShows.length} setShows = {this.setShows} setError = {this.setError} />
                 <h1> Shows </h1>
                 <ul>
                 {
                     this.state.shows.map((item, index) => { 
-                    //return <li key={index}><button onClick={() => this.handleClick(item.showCode)}>{item.showCode}</button></li>
                     return <Shows key={index} showCode={item.showCode} image={item.images.seriesList.FHD} handleClick = {this.handleClick} />
 
                     })

@@ -4,10 +4,15 @@ import Main from "./Main.js"
 import Footer from "./Footer.js"
 import './App.css';
 
+
 class App extends Component {
   constructor( props ) {
     super(props);
-    this.state = { email: "", password:"", bookmark: [], favorites: []}
+    this.state = { email: "", password:"", bookmarks: [], favorites: []}
+  }
+
+  resetUser = () => {
+    this.setState({ email: "", password:"", bookmarks: [], favorites: []})
   }
 
   setUserInfo =  (emailInfo, passwordInfo) => {
@@ -15,7 +20,7 @@ class App extends Component {
   }
 
   setBookmark = bookmarkArray => {
-    this.setState({ bookmark: bookmarkArray })
+    this.setState({ bookmarks: bookmarkArray })
   }
 
   setFavorites = favoriteArray => {
@@ -26,8 +31,8 @@ class App extends Component {
     console.log(this.state)
     return (
       <div className="App">
-        <Header />
-        <Main setUserInfo = {this.setUserInfo} setBookmark = {this.setBookmark} setFavorites = {this.setFavorites} />
+        <Header resetUser = { this.resetUser }/>
+        <Main {...this.state} setUserInfo = {this.setUserInfo} setBookmark = {this.setBookmark} setFavorites = {this.setFavorites} resetUser = {this.resetUser} />
         <Footer />
       </div>
     );

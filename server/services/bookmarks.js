@@ -104,7 +104,6 @@ function createRandomBookmark( numBookmarks, email, password, userMap ) {
  */ 
 function createSetBookmarks( email, password, bookmark, userMap ) {
     for ( var index = 0; index < bookmark.length; index++ ) {
-        console.log("counter");
         if (bookmark[index].hasOwnProperty('showCode')) {
             var isWatched = false;
             if ( bookmark[index].hasOwnProperty('watched') && bookmark[index].watched === true  ) {

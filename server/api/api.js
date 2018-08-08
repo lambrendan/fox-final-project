@@ -21,6 +21,7 @@ userMap = users.createUserMap( false );
  * @body - JSON object to be parsed
  */
 api.post('/parseJSON', function(req, res) {
+    console.log( req.body.users );
     var obj = { users: JSON.parse(req.body.users) }
     file.parseJSON(obj, userMap);
     res.send({ success: true })
@@ -131,6 +132,17 @@ api.post('/favorite/:showCode', function( req, res) {
     res.json({"email": req.body.email, "show": req.params.showCode});
 });
 
+api.get('/favorite/random', (req,res) => { 
+    list.getSeriesList()
+    .then( response => {
+        var seriesIndex = users.generateRandomIndex( response.body.member.length);
+        res.json({ "showCode": response.body.member[seriesIndex].showCode })
+    })
+    .catch( error => {
+        res.json({ success: false, message: "Couldn't get the list"})
+    })
+})
+
 /* API route to bookmark a show 
  * @body email - Email of the new user
  * @body password - Password for the new user
@@ -142,12 +154,38 @@ api.post('/bookmarks/:video', function( req, res) {
     res.json({"email": req.body.email, "video": req.params.video })
 });
 
+api.get('/bookmark/random', ( req, res ) => {
+    console.log(req.query.page);
+    return got.get( "https://api-staging.fox.com/fbc-content/v1_5/video?itemsPerPage=200&videoType=fullEpisode&premiumPackage=&page=" + req.query.page.toString(), { 
+        headers: {
+            'apikey': 'DEFAULT' 
+        }, 
+        json: true 
+    })
+    .then( response => {
+        var randomIndex = users.generateRandomIndex( response.body.member.length );
+        var isWatched = users.generateRandomIndex( 2 );
+        if( isWatched === 0 ) {
+            res.json({ "uID":response.body.member[randomIndex].uID, "watched": true})
+        }
+        else {
+            res.json({ "uID":response.body.member[randomIndex].uID })
+        }
+    })
+    .catch( error => {
+        console.log(error);
+        res.json({ success: false, err: error, message: "Couldn't grab the list"})
+    })
+})
+
+
 /* API route to get a list of all shows 
  */ 
 api.get('/shows', function( req, res) {
     list.getSeriesList()
     .then( response => {
         console.log(response.body.member)
+        //res.append('Access-Control-Allow-Origin', ['*'])
         res.json({showList: response.body.member})
     })
     .catch( error => {

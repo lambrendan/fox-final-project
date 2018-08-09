@@ -1,54 +1,55 @@
-import React, { Component } from "react"
+import React, { Component } from "react";
+
 class FavoritePage extends Component {
-    constructor( props ) {
-        super( props )
-        this.state = { totalPages: 0, pageArray:[], page: 1 };
+    constructor(props) {
+        super(props);
+        this.state = { 
+            totalPages: 0, 
+            pageArray:[], 
+            page: 1 
+        };
     }
 
     checkPages = () => {
-        if( this.state.page > this.props.totalPages || this.state.page <= 0 ) {
+        if (this.state.page > this.props.totalPages || this.state.page <= 0) {
             this.props.setShows(1);
             this.setState({ page: 1})
-            this.props.setError( true );
-        }
-        else {
+            this.props.setError(true);
+        } else {
             this.pageChange();
         }
     }
 
     componentDidMount() {
-        var pages = [...Array(this.props.totalPages).keys()].map( index => index + 1)
-        this.setState({ totalPages: this.props.totalPages, pageArray: pages })
+        this.setState({ 
+            totalPages: this.props.totalPages, 
+            pageArray: [
+                ...Array(this.props.totalPages).keys()
+            ].map(i => i++),
+        });
     }
 
-    pageChange = () => {
-        this.props.setShows( this.state.page )
-    }
+    pageChange = () => this.props.setShows(this.state.page);
 
     handlePageForwardClick = () => {
-        this.setState({ page: this.state.page + 1}, () => {
-          this.checkPages();
-        });
-      }
+        this.setState({ page: this.state.page++ }, () => this.checkPages());
+    }
   
-    handlePageClick = number => {
-        this.setState({ page: number }, () => {
-          this.checkPages();  
-        })
+    handlePageClick = page => {
+        this.setState({ page }, () => this.checkPages())
     }
   
     handlePageBackwardsClick = () => {
-        this.setState({ page: this.state.page - 1 }, () => {
-          this.checkPages();
-        });  
+        this.setState({ page: this.state.page-- }, () => this.checkPages());  
     }
 
     static getDerivedStateFromProps( nextProps, prevState ) {
-        if( nextProps.totalPages !== prevState.totalPages ) {
-            var pages = [...Array(nextProps.totalPages).keys()].map( index => index + 1)
+        if (nextProps.totalPages !== prevState.totalPages) {
             return {
                 totalPages: nextProps.totalPages,
-                pageArray: pages
+                pageArray: [
+                    ...Array(nextProps.totalPages).keys()
+                ].map(i => i++),
             }
         }
         return null;
@@ -57,10 +58,15 @@ class FavoritePage extends Component {
     render() {
         return( 
             <div>
-                <button onClick={this.handlePageBackwardsClick}>Previous Page </button>
+                <button onClick={this.handlePageBackwardsClick}>Previous Page</button>
                 {
-                    this.state.pageArray.map((item, index)=> {
-                    return <button key={index} onClick={() => this.handlePageClick(item)}>{item}</button> })
+                    this.state.pageArray.map((item, index) => 
+                        <button 
+                            key={index} 
+                            onClick={() => this.handlePageClick(item)}>
+                            {item}
+                        </button>
+                    )
                 }
                 <button onClick={this.handlePageForwardClick}>Next Page</button>
             </div>    

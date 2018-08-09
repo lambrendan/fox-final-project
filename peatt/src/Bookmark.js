@@ -100,51 +100,85 @@ class Bookmark extends Component {
             <button onClick={this.handleRandomBookmarks}>Random</button>
             <BookmarkPage numPages = { this.state.numPages } setVideos = { this.setVideos } setError = { this.setError } />
             <BookmarkSearch setVideos = {this.setVideos} />
-            <h1> Videos </h1>
-                <ul>
-                {
-                    this.state.videos.map((item, index)=> {
-                        var watched = false;
-                        var halfWatched = false;
-                        var images;
-                        for( var i = 0; i < this.state.chosenVideos.length; i++ ) {
-                            if( this.state.chosenVideos[i].uID === item.uID ) {
-                                if( this.state.chosenVideos[i].watched === true ) {
-                                    watched = true;
+            <div style={{display: "table", width: "100%"}}>
+                <div style={{display: "table-cell", width: "50%"}}>
+                    <h1> Videos </h1>
+                        <ul>
+                        {
+                            this.state.videos.map((item, index)=> {
+                                var watched = false;
+                                var halfWatched = false;
+                                var images;
+                                for( var i = 0; i < this.state.chosenVideos.length; i++ ) {
+                                    if( this.state.chosenVideos[i].uID === item.uID ) {
+                                        if( this.state.chosenVideos[i].watched === true ) {
+                                            watched = true;
+                                        }
+                                        else {
+                                            halfWatched = true;
+                                        }
+                                        break;
+                                    }
+                                }
+                                if ( !watched || !halfWatched ) {
+                                    for ( var j= 0; j < this.props.bookmarks.length; j ++ ) {
+                                        if( this.props.bookmarks[j].uID === item.uID ) {
+                                            if( this.props.bookmarks[j].watched === true ) {
+                                                watched = true;
+                                            }
+                                            else {
+                                                halfWatched = true;
+                                            }
+                                            break;
+                                        }
+                                    }
+                                }
+
+                                if( Object.keys( item.images).length === 0 && item.images.constructor === Object ) {
+                                    images = blankImage;
                                 }
                                 else {
-                                    halfWatched = true;
+                                    images = item.images.still.FHD
                                 }
-                                break;
-                            }
+                                return <Video key={index} uID={item.uID} image={images} handleWatchedClick = { this.handleWatchedClick } handleHalfClick = { this.handleHalfClick } handleWatchedUnclick = {this.handleWatchedUnclick} handleHalfUnclick = {this.handleHalfUnclick} watched = {watched} halfWatched = {halfWatched}/>
+                            })
                         }
-                        if ( !watched || !halfWatched ) {
-                            for ( var j= 0; j < this.props.bookmarks.length; j ++ ) {
-                                if( this.props.bookmarks[j].uID === item.uID ) {
-                                    if( this.props.bookmarks[j].watched === true ) {
-                                        watched = true;
+                        </ul>
+                    </div>
+                    <div style={{display: "table-cell", width: "50%"}}>
+                        <h2> Bookmarked Videos </h2>
+                        <ul>
+                            {
+                                this.props.bookmarks.map((item, index ) => {
+                                    let isWatched;
+                                    if( item.watched === true ) {
+                                        isWatched = "True"
                                     }
                                     else {
-                                        halfWatched = true;
+                                        isWatched = "False"
                                     }
-                                    break;
-                                }
+                                    return <li key={index} >{item.uID } |  Watched: { isWatched }</li>
+                                })
                             }
-                        }
-
-                        if( Object.keys( item.images).length === 0 && item.images.constructor === Object ) {
-                            images = blankImage;
-                        }
-                        else {
-                            images = item.images.still.FHD
-                        }
-                        return <Video key={index} uID={item.uID} image={images} handleWatchedClick = { this.handleWatchedClick } handleHalfClick = { this.handleHalfClick } handleWatchedUnclick = {this.handleWatchedUnclick} handleHalfUnclick = {this.handleHalfUnclick} watched = {watched} halfWatched = {halfWatched}/>
-                    })
-                }
-                </ul>
+                            {
+                                this.state.chosenVideos.map((item, index ) => {
+                                    let isWatched;
+                                    if( item.watched === true ) {
+                                        isWatched = "True"
+                                    }
+                                    else {
+                                        isWatched = "False"
+                                    }
+                                    return <li key = {index}> {item.uID} | Watched: { isWatched } </li>
+                                })
+                            }
+                        </ul>
+                    </div>
+                </div>
           </div>
         )
       }
     }
 }
 export default Bookmark
+

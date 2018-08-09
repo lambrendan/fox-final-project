@@ -204,6 +204,7 @@ function grabUserBookmarks( email, password, userMap ) {
             return getBookmarks( userID, token )
         })
         .then(function(res) {
+            console.log(res.body.list)
             //console.log(res.body.list);
             return res;     
             

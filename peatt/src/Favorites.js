@@ -93,43 +93,63 @@ class Favorites extends Component {
         }
         else {
             return(
+       
             <div>
                 <button onClick={this.handleFinish}>Finish</button>
                 <button onClick={this.handleRandomFavorites}>Random</button>
 
                 <FavoriteSearch searchShows = { this.searchShows } />
                 <FavoritePage totalPages = {this.state.allShows.length} setShows = {this.setShows} setError = {this.setError} />
-                <h1> Shows </h1>
-                <ul>
-                {
-                    this.state.shows.map((item, index) => { 
-                        var found = false
-                        var images;
-                        for( var i = 0; i < this.state.chosenShows.length; i++ ) {
-                            if( this.state.chosenShows[i].showCode === item.showCode ) {
-                                found = true;
-                                break;
-                            }
-                        }
-                        if ( !found ) {
-                            for ( var j= 0; j < this.props.favorites.length; j ++ ) {
-                                if( this.props.favorites[j].showCode === item.showCode ) {
-                                    found = true;
-                                    break;
-                                } 
-                            }
-                        }
+                <div style={{display: "table", width: "100%"}}>
+                    <div style={{display: "table-cell", width: "50%"}}>
+                        <h1> Shows </h1>
+                        <ul>
+                        {
+                            this.state.shows.map((item, index) => { 
+                                var found = false
+                                var images;
+                                for( var i = 0; i < this.state.chosenShows.length; i++ ) {
+                                    if( this.state.chosenShows[i].showCode === item.showCode ) {
+                                        found = true;
+                                        break;
+                                    }
+                                }
+                                if ( !found ) {
+                                    for ( var j= 0; j < this.props.favorites.length; j ++ ) {
+                                        if( this.props.favorites[j].showCode === item.showCode ) {
+                                            found = true;
+                                            break;
+                                        } 
+                                    }
+                                }
 
-                        if( Object.keys( item.images).length === 0 && item.images.constructor === Object ) {
-                            images = blankImage;
+                                if( Object.keys( item.images).length === 0 && item.images.constructor === Object ) {
+                                    images = blankImage;
+                                }
+                                else {
+                                    images = item.images.seriesList.FHD
+                                }
+                                return <Shows key={index} showCode={item.showCode} image={images} handleClick = {this.handleClick} handleUnclick = {this.handleUnclick} found = {found} />
+                            })
                         }
-                        else {
-                            images = item.images.seriesList.FHD
-                        }
-                        return <Shows key={index} showCode={item.showCode} image={images} handleClick = {this.handleClick} handleUnclick = {this.handleUnclick} found = {found} />
-                    })
-                }
-                </ul>
+                        </ul>
+                    </div>
+                    <div style={{display: "table-cell", width: "50%"}}>
+                        <h2> Favorited Shows </h2>
+                        <ul>
+                            {
+                                this.props.favorites.map((item, index ) => {
+                                    return <li key={index} >{item.showCode }</li>
+                                })
+                            }
+                            {
+                                this.state.chosenShows.map((item, index ) => {
+                                    return <li key = {index}> {item.showCode} </li>
+                                })
+                            }
+                        </ul>
+                    </div>
+                </div>
             </div>
             )
         }

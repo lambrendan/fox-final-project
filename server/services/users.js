@@ -28,6 +28,7 @@ var generalHeader = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
     'Accept': 'application/json, text/plain, */*',
     'Referer': 'https://delta-qa.fox.com/account/',
+    'x-api-key': key.apikey,
     'apikey': key.apikey,
     'Connection': 'keep-alive'
 };
@@ -41,6 +42,7 @@ var authHeaders = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
     'Accept': 'application/json, text/plain, */*',
     'Referer': 'https://delta-qa.fox.com/account/',
+    'x-api-key': key.apikey,
     'apikey': key.apikey,
     'Connection': 'keep-alive'
 };
@@ -190,7 +192,7 @@ function signup ( email, password, firstName, lastName, birthdate, gender, userM
     if ( userMap[email] ) {
          console.log( "User has already been created!")
     }
-    return got.post('https://api-staging.fox.com/profiles/_latest/', {
+    return got.post('https://qa.api2.fox.com/v2.0/register', {
         headers: generalHeader,
         body: signupBody( email, password, firstName, lastName, birthdate, gender ),
         json: true
@@ -249,7 +251,7 @@ function signin ( email, password, userMap ) {
             })
         }
         else {
-            return got.post('https://api-staging.fox.com/profiles/_latest/login', {
+            return got.post('https://qa.api2.fox.com/v2.0/login', {
                 headers: generalHeader,
                 body: signinBody(email, password),
                 json: true
@@ -270,7 +272,7 @@ function signin ( email, password, userMap ) {
                 var userObj = { 'password': password, 'videoMap': {} };
                 addUserToMap( userMap, email, userObj)
                 successfulSignup( email, password );
-                return got.post('https://api-staging.fox.com/profiles/_latest/login', {
+                return got.post('https://qa.api2.fox.com/v2.0/login', {
                     headers: generalHeader,
                     body: signinBody(email, password),
                     json: true

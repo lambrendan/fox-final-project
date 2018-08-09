@@ -27,7 +27,7 @@ class FavoriteSearch extends Component {
             .then( (res) =>{
               var showObject = JSON.parse(res.body)
               var pageObject = showObject.showList.slice(0, 20)
-              this.props.searchShows( pageObject);
+              this.props.searchShows( pageObject );
             })
             .catch( function(err){
               console.log( err);

@@ -15,6 +15,7 @@ class Bookmark extends Component {
     got.get("http://localhost:3001/api/videos?page=1")
         .then((res) =>{
             var videoObject = JSON.parse(res.body);
+            console.log(videoObject)
             this.setState({ videos: videoObject.videoList, numPages: videoObject.maxPages });
         })
         .catch( function(err){
@@ -56,14 +57,14 @@ class Bookmark extends Component {
     }
 
     handleWatchedUnclick = uID => {
-        var pos = this.state.chosenVideos.findIndex(item => { console.log(item); return item.uID === uID && item.watched === true });
+        var pos = this.state.chosenVideos.findIndex(item => { return item.uID === uID && item.watched === true });
         let temp = this.state.chosenVideos.slice();
         temp.splice( pos, 1)
         this.setState({ chosenVideos: temp})
     }
 
     handleHalfUnclick = uID => {
-        var pos = this.state.chosenVideos.findIndex(item => { console.log(item); return item.uID === uID && item.watched === false });
+        var pos = this.state.chosenVideos.findIndex(item => { return item.uID === uID && item.watched === false });
         let temp = this.state.chosenVideos.slice();
         temp.splice( pos, 1)
         this.setState({ chosenVideos: temp})
@@ -85,7 +86,7 @@ class Bookmark extends Component {
             <button onClick={this.handleFinish}>Finish</button>
             <button onClick={this.handleRandomBookmarks}>Random</button>
             <BookmarkPage numPages = { this.state.numPages } setVideos = { this.setVideos } setError = { this.setError } />
-            <BookmarkSearch />
+            <BookmarkSearch setVideos = {this.setVideos} />
             <h1> Videos </h1>
                 <ul>
                 {

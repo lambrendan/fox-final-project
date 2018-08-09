@@ -20,11 +20,19 @@ class App extends Component {
   }
 
   setBookmark = bookmarkArray => {
-    this.setState({ bookmarks: bookmarkArray })
+    this.setState({ bookmarks: this.state.bookmarks.concat(bookmarkArray) })
   }
 
   setFavorites = favoriteArray => {
-    this.setState({ favorites: favoriteArray })
+    this.setState({ favorites: this.state.favorites.concat(favoriteArray )})
+  }
+
+  replaceBookmark = bookmarkArray => {
+    this.setState({ bookmarks: bookmarkArray })
+  }
+
+  replaceFavorites = favoritesArray => {
+    this.setState({ favorites: favoritesArray})
   }
 
   render() {
@@ -32,7 +40,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header resetUser = { this.resetUser }/>
-        <Main {...this.state} setUserInfo = {this.setUserInfo} setBookmark = {this.setBookmark} setFavorites = {this.setFavorites} resetUser = {this.resetUser} />
+        <Main {...this.state} replaceBookmark = {this.replaceBookmark} replaceFavorites= {this.replaceFavorites} setUserInfo = {this.setUserInfo} setBookmark = {this.setBookmark} setFavorites = {this.setFavorites} resetUser = {this.resetUser} />
         <Footer />
       </div>
     );

@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import BookmarkPage from "./BookmarkPage.js"
 import BookmarkSearch from "./BookmarkSearch.js"
 import Video from "./Video.js"
-
+import blankImage from "./noImage.jpg"
 var got = require("got");
 
 class Bookmark extends Component {
@@ -61,13 +61,26 @@ class Bookmark extends Component {
         let temp = this.state.chosenVideos.slice();
         temp.splice( pos, 1)
         this.setState({ chosenVideos: temp})
+        let finalPos = this.props.bookmarks.findIndex( item => { return item.uID === uID && item.watched === true });
+        if( finalPos !== -1 ) {
+            let finalTemp = this.props.bookmarks.slice();
+            finalTemp.splice( finalPos, 1)
+            this.props.replaceBookmark( finalTemp )
+        } 
     }
 
     handleHalfUnclick = uID => {
-        var pos = this.state.chosenVideos.findIndex(item => { return item.uID === uID && item.watched === false });
+        var pos = this.state.chosenVideos.findIndex(item => { return item.uID === uID && ( item.watched === false || !item.hasOwnProperty("watched"))});
         let temp = this.state.chosenVideos.slice();
         temp.splice( pos, 1)
         this.setState({ chosenVideos: temp})
+        let finalPos = this.props.bookmarks.findIndex( item => { return item.uID === uID && ( item.watched === false || !item.hasOwnProperty("watched"))});
+        if( finalPos !== -1 ) {
+            let finalTemp = this.props.bookmarks.slice();
+            finalTemp.splice( finalPos, 1)
+            this.props.replaceBookmark( finalTemp )
+        } 
+        
     }
 
     render() {
@@ -93,6 +106,7 @@ class Bookmark extends Component {
                     this.state.videos.map((item, index)=> {
                         var watched = false;
                         var halfWatched = false;
+                        var images;
                         for( var i = 0; i < this.state.chosenVideos.length; i++ ) {
                             if( this.state.chosenVideos[i].uID === item.uID ) {
                                 if( this.state.chosenVideos[i].watched === true ) {
@@ -104,7 +118,27 @@ class Bookmark extends Component {
                                 break;
                             }
                         }
-                        return <Video key={index} uID={item.uID} image={item.images.still.FHD} handleWatchedClick = { this.handleWatchedClick } handleHalfClick = { this.handleHalfClick } handleWatchedUnclick = {this.handleWatchedUnclick} handleHalfUnclick = {this.handleHalfUnclick} watched = {watched} halfWatched = {halfWatched}/>
+                        if ( !watched || !halfWatched ) {
+                            for ( var j= 0; j < this.props.bookmarks.length; j ++ ) {
+                                if( this.props.bookmarks[j].uID === item.uID ) {
+                                    if( this.props.bookmarks[j].watched === true ) {
+                                        watched = true;
+                                    }
+                                    else {
+                                        halfWatched = true;
+                                    }
+                                    break;
+                                }
+                            }
+                        }
+
+                        if( Object.keys( item.images).length === 0 && item.images.constructor === Object ) {
+                            images = blankImage;
+                        }
+                        else {
+                            images = item.images.still.FHD
+                        }
+                        return <Video key={index} uID={item.uID} image={images} handleWatchedClick = { this.handleWatchedClick } handleHalfClick = { this.handleHalfClick } handleWatchedUnclick = {this.handleWatchedUnclick} handleHalfUnclick = {this.handleHalfUnclick} watched = {watched} halfWatched = {halfWatched}/>
                     })
                 }
                 </ul>

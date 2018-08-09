@@ -64,7 +64,6 @@ class BookmarkPage extends Component {
     }
 
     render() {
-        console.log(this.props)
         return (
             <div>
                 <button onClick={this.handlePageBackwardsClick}>Previous Page </button>

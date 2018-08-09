@@ -14,8 +14,8 @@ class Main extends Component {
                      <Route exact path = '/' component ={ Root }/>
                      <Route exact path = '/user' render = { (props) => <User { ...props} setUserInfo = {this.props.setUserInfo} setBookmark = {this.props.setBookmark} setFavorites={this.props.setFavorites} /> } />
                      <Route exact path='/user/home' render = { (props) => <Home { ...props} email = {this.props.email} password = {this.props.password} favorites={this.props.favorites} bookmarks={this.props.bookmarks} setBookmark = {this.props.setBookmark} setFavorites={this.props.setFavorites} resetUser = {this.props.resetUser}/> } />
-                     <Route path= '/user/home/favorites' render = { (props) => <Favorites { ...props} setFavorites={this.props.setFavorites} /> }/>
-                     <Route path='/user/home/bookmark' render = { (props) => <Bookmark { ...props}  setBookmark = {this.props.setBookmark} /> }/>
+                     <Route path= '/user/home/favorites' render = { (props) => <Favorites { ...props} replaceFavorites= {this.props.replaceFavorites} favorites = {this.props.favorites} setFavorites={this.props.setFavorites} /> }/>
+                     <Route path='/user/home/bookmark' render = { (props) => <Bookmark { ...props} replaceBookmark = {this.props.replaceBookmark} bookmarks = {this.props.bookmarks} setBookmark = {this.props.setBookmark} /> }/>
                 </Switch>
             </div>
         )

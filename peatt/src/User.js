@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
+var got = require("got");
 
 class User extends Component {
     constructor( props ) {
@@ -9,6 +10,18 @@ class User extends Component {
             password: "",
           
         }
+    }
+
+    handleRandom() {
+        got.get("http://localhost:3001/api/random/signup")
+        .then((res) =>{
+            var userObject = JSON.parse(res.body);
+            this.props.setUserInfo( userObject.email, userObject.password );
+            this.props.history.push(`${this.props.match.path}/home`);
+        })
+        .catch( function(err){
+            console.log('error:', err);
+        })
     }
 
     handleClick() {
@@ -45,6 +58,14 @@ class User extends Component {
                         onClick={()=> this.handleClick() }
                     >Enter </button>
                 </div> 
+
+                <div className="form-group">
+                    <button 
+                        className="btn btn-secondary"
+                        type="button" 
+                        onClick={()=> this.handleRandom() }
+                    > Randomize </button>
+                </div>
             </form>
    
         )

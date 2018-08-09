@@ -24,7 +24,7 @@ class BookmarkPage extends Component {
     }
 
     pageChange = page => {
-        got.get("http://localhost:3001/api/videos?page="+ page.toString())
+        got.get(`http://localhost:3001/api/videos?page=${page.toString()}`)
         .then((res) =>{
           var videoObject = JSON.parse(res.body)
           this.props.setVideos(videoObject.videoList);

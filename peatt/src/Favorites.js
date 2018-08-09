@@ -7,7 +7,7 @@ var got = require('got');
 class Favorites extends Component {
     constructor( props ) {
         super( props )
-        this.state = { allShows: [], shows:[], chosenShows: [], doneFavoriting: false, error: false };
+        this.state = { allShows: [], shows:[], chosenShows: [], doneFavoriting: false, error: false, isRandom: false };
     }
 
     componentWillMount() {
@@ -27,6 +27,10 @@ class Favorites extends Component {
       .catch( function(err){
         console.log('error:', err);
       })
+    }
+
+    setIsRandom = boolVal => {
+        this.setState({ isRandom: boolVal })
     }
 
     setShows = page => {
@@ -96,8 +100,14 @@ class Favorites extends Component {
                 <ul>
                 {
                     this.state.shows.map((item, index) => { 
-                    return <Shows key={index} showCode={item.showCode} image={item.images.seriesList.FHD} handleClick = {this.handleClick} handleUnclick = {this.handleUnclick} />
-
+                        var found = false
+                        for( var i = 0; i < this.state.chosenShows.length; i++ ) {
+                            if( this.state.chosenShows[i].showCode === item.showCode ) {
+                                found = true;
+                                break;
+                            }
+                        }
+                        return <Shows key={index} showCode={item.showCode} image={item.images.seriesList.FHD} handleClick = {this.handleClick} handleUnclick = {this.handleUnclick} found = {found} />
                     })
                 }
                 </ul>

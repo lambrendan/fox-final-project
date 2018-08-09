@@ -27,6 +27,12 @@ api.post('/parseJSON', function(req, res) {
     res.send({ success: true })
 });
 
+api.get('/random/signup', function(req, res){
+    let email = users.generateRandomEmail();
+    let password = users.generateRandomPassword();
+    res.send({ "email": email, "password": password })
+})
+
 /* API route to sign-up a user on the Fox website
  * @body email - Email of the new user
  * @body password - Password for the new user

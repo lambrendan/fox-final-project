@@ -3,81 +3,88 @@ import BookmarkPage from "./BookmarkPage.js"
 import BookmarkSearch from "./BookmarkSearch.js"
 import Video from "./Video.js"
 
-var got = require("got");
+let got = require("got");
 
 class Bookmark extends Component {
     constructor(props) {
         super(props)
-        this.state = { videos: [], chosenVideos: [], doneBookmarking: false, numPages: 0, error: false };
+        this.state = { 
+            videos: [], 
+            chosenVideos: [], 
+            doneBookmarking: false, 
+            numPages: 0, 
+            error: false 
+        };
     }
 
     componentWillMount() {
-    got.get("http://localhost:3001/api/videos?page=1")
-        .then((res) =>{
-            var videoObject = JSON.parse(res.body);
-            this.setState({ videos: videoObject.videoList, numPages: videoObject.maxPages });
-        })
-        .catch( function(err){
-            console.log('error:', err);
-        })
+        got.get("http://localhost:3001/api/videos?page=1")
+            .then(res => {
+                let videoObject = JSON.parse(res.body);
+                this.setState({ 
+                    videos: videoObject.videoList, 
+                    numPages: videoObject.maxPages 
+                });
+            })
+            .catch(err => console.error(err));
     }
 
-    setVideos = videosObj => {
-        this.setState({ videos: videosObj })
-    }
+    setVideos = videos => this.setState({ videos });
 
-    setError = err => {
-        this.setState({ error: err })
-    }
+    setError = error => this.setState({ error });
 
     handleRandomBookmarks = () => {
-        var randomPage = Math.floor( Math.random() * this.state.numPages + 1);
+        let randomPage = Math.floor( Math.random() * this.state.numPages + 1);
         got.get("http://localhost:3001/api/bookmark/random?page=" + randomPage.toString())
-        .then((res) =>{
-            var parseVideo = JSON.parse(res.body);
-            this.setState({ chosenVideos: this.state.chosenVideos.concat( parseVideo )}) 
-        })
-        .catch( function(err){
-            console.log('error:', err);
-        })
+            .then(res => this.setState({ chosenVideos: this.state.chosenVideos.concat(JSON.parse(res.body)) }))
+            .catch(err => console.error(err));
     }
 
     handleFinish = () => {
-        this.props.setBookmark( this.state.chosenVideos)
+        this.props.setBookmark(this.state.chosenVideos)
         this.props.history.push('/user/home/');
     }
 
     handleWatchedClick = uID => {
-        this.setState({ chosenVideos: this.state.chosenVideos.concat({"uID":uID, "watched": true })})
+        this.setState({ 
+            chosenVideos: this.state.chosenVideos.concat({ 
+                uID, 
+                watched: true,
+            }),
+        });
     }
 
-    handleHalfClick = uID => {
-        this.setState({ chosenVideos: this.state.chosenVideos.concat({"uID":uID})})
-    }
+    handleHalfClick = uID => this.setState({ chosenVideos: this.state.chosenVideos.concat({ uID })});
 
     render() {
-      console.log(this.state)
-      if ( this.state.error ) {
+      if (this.state.error) {
         return (
           <div>
-                <h1> Error Page Doesnt Exist </h1>
-                <button onClick={() => { this.setError(false)}}> Go Back </button>
+                <h1>Error Page Doesnt Exist</h1>
+                <button onClick={() => this.setError(false)}>Go Back</button>
           </div>  
         )
-      }
-      else {
-        return(
+      } else {
+        return (
           <div>
             <button onClick={this.handleFinish}>Finish</button>
             <button onClick={this.handleRandomBookmarks}>Random</button>
-            <BookmarkPage numPages = { this.state.numPages } setVideos = { this.setVideos } setError = { this.setError } />
+            <BookmarkPage 
+                numPages = { this.state.numPages } 
+                setVideos = { this.setVideos } 
+                setError = { this.setError } />
             <BookmarkSearch />
-            <h1> Videos </h1>
+            <h1>Videos</h1>
                 <ul>
                 {
-                    this.state.videos.map((item, index)=> {
-                        return <Video key={index} uID={item.uID} image={item.images.still.FHD} handleWatchedClick = { this.handleWatchedClick } handleHalfClick = { this.handleHalfClick } />
-                    })
+                    this.state.videos.map((item, index) => 
+                        <Video 
+                            key={index} 
+                            uID={item.uID} 
+                            image={item.images.still.FHD} 
+                            handleWatchedClick = { this.handleWatchedClick } 
+                            handleHalfClick = { this.handleHalfClick } />
+                    )
                 }
                 </ul>
           </div>
@@ -85,4 +92,4 @@ class Bookmark extends Component {
       }
     }
 }
-export default Bookmark
+export default Bookmark;

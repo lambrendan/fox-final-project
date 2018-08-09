@@ -1,21 +1,20 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
-var got = require("got");
+import got from "got";
 
 
 class Home extends Component {
-
     handleComplete() {
-        var infoObject = []
-        var info = { email: this.props.email, password: this.props.password, favorites: this.props.favorites, bookmarks: this.props.bookmarks };
-        infoObject.push( info );
-        var finalObj = JSON.stringify(infoObject);
-        console.log(finalObj)
+        let infoObject = [], info = { 
+            email: this.props.email, 
+            password: this.props.password, 
+            favorites: this.props.favorites, 
+            bookmarks: this.props.bookmarks,
+        };
+        infoObject.push(info);
         got.post("http://localhost:3001/api/parseJSON", {
-            body: {
-                users: finalObj
-            },
-            json: true
+            body: { users: JSON.stringify(infoObject) },
+            json: true,
         })
         .then( res => {
             console.log(res);

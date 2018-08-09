@@ -90,7 +90,20 @@ class Bookmark extends Component {
                 <ul>
                 {
                     this.state.videos.map((item, index)=> {
-                        return <Video key={index} uID={item.uID} image={item.images.still.FHD} handleWatchedClick = { this.handleWatchedClick } handleHalfClick = { this.handleHalfClick } handleWatchedUnclick = {this.handleWatchedUnclick} handleHalfUnclick = {this.handleHalfUnclick}/>
+                        var watched = false;
+                        var halfWatched = false;
+                        for( var i = 0; i < this.state.chosenVideos.length; i++ ) {
+                            if( this.state.chosenVideos[i].uID === item.uID ) {
+                                if( this.state.chosenVideos[i].watched === true ) {
+                                    watched = true;
+                                }
+                                else {
+                                    halfWatched = true;
+                                }
+                                break;
+                            }
+                        }
+                        return <Video key={index} uID={item.uID} image={item.images.still.FHD} handleWatchedClick = { this.handleWatchedClick } handleHalfClick = { this.handleHalfClick } handleWatchedUnclick = {this.handleWatchedUnclick} handleHalfUnclick = {this.handleHalfUnclick} watched = {watched} halfWatched = {halfWatched}/>
                     })
                 }
                 </ul>

@@ -11,10 +11,11 @@ class Shows extends Component {
     }
 
     static getDerivedStateFromProps( nextProps, prevState ) {
-        if( nextProps.showCode !== prevState.showCode ) {
+        if( nextProps.showCode !== prevState.showCode || nextProps.found !== prevState.found) {
             return {
                 showCode: nextProps.showCode,
-                image: nextProps.image
+                image: nextProps.image,
+                isFavorited: nextProps.found
             }
         }
         return null;
@@ -28,17 +29,6 @@ class Shows extends Component {
     handleUnfavoriting( showCode ) {
         this.setState({ isFavorited: false});
         this.props.handleUnclick( showCode );
-    }
-
-    static getDerivedStateFromProps( nextProps, prevState ) {
-        if( nextProps.found !== prevState.found ) {
-            return {
-                showCode: nextProps.showCode,
-                image: nextProps.image,
-                isFavorited: nextProps.found
-            }
-        }
-        return null;
     }
 
     render() {

@@ -6,11 +6,17 @@ class Video extends Component {
         this.state = { uID: props.uID, image: props.image, isWatchedBookmarked: false, isHalfBookmarked: false };
     }
 
+    componentDidMount() {
+        this.setState({isWatchedBookmarked: this.props.watched, isHalfBookmarked: this.props.halfWatched })
+    }
+
     static getDerivedStateFromProps( nextProps, prevState ) {
-        if( nextProps.uID !== prevState.uID) {
+        if( nextProps.uID !== prevState.uID || nextProps.watched !== prevState.watched || nextProps.halfWatched !== prevState.halfWatched ) {
             return {
                 uID: nextProps.uID,
-                image: nextProps.image
+                image: nextProps.image,
+                isWatchedBookmarked: nextProps.watched,
+                isHalfBookmarked: nextProps.halfWatched
             }
         }
         return null;

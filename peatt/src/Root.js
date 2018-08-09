@@ -6,7 +6,7 @@ class Root extends Component {
         return (
             <div>
                 <p> Start by clicking below </p>
-                <Link to='/user'> Start here </Link>
+                <Link to='/user'>Start here</Link>
             </div>
         )
     }

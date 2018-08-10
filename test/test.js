@@ -54,13 +54,147 @@ describe('User', function(){
             })
            
         })
-        
-
-        //Creating a user that already exists
-
     })
 
     describe('Sign-in', function() {
+        var tempUserMap = {
+            "foxuser166@fox.com": {
+                "password": "abcdef",
+                "myToken": "1234",
+                "userID": "569",
+                "body": {
+                    "accessToken": "1234",
+                    "profileId": "569"
+                }
+            },
+            "foxuser168@fox.com": {
+                "password": "abcdef"
+            }
+        }
+        //Sign-in a brand new user with working credentials 
+        it( "Sign-in with a brand new, created user", function() {
+            nock('https://qa.api2.fox.com', {
+                headers: users.generalHeader
+            })
+            .post('/v2.0/login', users.signinBody('foxuser168@fox.com', 'abcdef'))
+            .reply(200, { 
+                accessToken: '12345678',
+                profileId: '678910'
+            })
 
+            email = 'foxuser168@fox.com';
+            password = 'abcdef';
+            return users.signin(email, password, tempUserMap )
+            .then(function(res){
+                expect(res.body.accessToken).to.be.eql('12345678')
+                expect(res.body.profileId).to.equal('678910')
+            })
+        })
+
+        //Sign-in without working credentials
+        it( "Sign-in without a created user", function() {
+            this.timeout(10000)
+            nock('https://qa.api2.fox.com', {
+                headers: users.generalHeader
+            })
+            .post('/v2.0/login', users.signinBody('foxuser188@fox.com', 'abcdef'))
+            .reply(200, { 
+                accessToken: '5ab',
+                profileId: '66b'
+            })
+
+            nock('https://qa.api2.fox.com', {
+                headers: users.generalHeader
+            })
+            .post('/v2.0/register', users.signupBody('foxuser188@fox.com', 'abcdef'))
+            .reply(200, { 
+                accessToken: '5ab',
+                profileId: '66b'
+                
+            })
+
+            email = 'foxuser188@fox.com';
+            password = 'abcdef';
+            return users.signin(email, password, tempUserMap )
+            .then(function(res){
+                expect( res.body.accessToken).to.equal('5ab');
+                expect( res.body.profileId).to.equal('66b');
+            })
+        })
+
+        //Sign-in after already being signed in once
+        it( "Sign-in after being signed in once", function() {
+            email = 'foxuser166@fox.com';
+            password = 'abcdef';
+            return users.signin(email, password, tempUserMap )
+            .then(function(res){
+                expect(res.body.accessToken).to.be.eql('1234')
+                expect(res.body.profileId).to.equal('569')
+            })
+        })
+    })
+    describe('Delete', function(){
+        var tempUserMap = {
+            "foxuser166@fox.com": {
+                "password": "abcdef",
+                "myToken": "1234",
+                "userID": "569",
+                "body": {
+                    "accessToken": "1234",
+                    "profileId": "569"
+                }
+            }
+        }
+
+        //Delete a user that exists
+        it( "Delete a user that does exist", function(){
+            const newAuthHeaders = Object.assign({}, users.authHeaders);
+            newAuthHeaders.Authorization = 'Bearer 569';
+            nock('https://api-staging.fox.com', {
+                headers: newAuthHeaders
+            })
+            .delete('/profiles/_latest/569')
+            .reply(200, { 
+                "success": true,
+                "message": "User has been deleted"                
+            })
+
+            return users.deleteUser("foxuser166@fox.com", "abcdef", tempUserMap )
+            .then( res => {
+                expect(res.body.success).to.be.true
+                expect(res.body.message).to.equal("User has been deleted")    
+            })
+        }) 
+
+        //Delete a user that doesn't exist
+        it( "Delete a user that does not exist", function(){
+            this.timeout(10000)
+            nock('https://qa.api2.fox.com', {
+                headers: users.generalHeader
+            })
+            .post('/v2.0/login', users.signinBody('foxuser188@fox.com', 'abcdef'))
+            .reply(200, { 
+                accessToken: '5ab',
+                profileId: '66b'
+            })
+
+            nock('https://qa.api2.fox.com', {
+                headers: users.generalHeader
+            })
+            .post('/v2.0/register', users.signupBody('foxuser188@fox.com', 'abcdef'))
+            .reply(200, { 
+                accessToken: '5ab',
+                profileId: '66b'
+                
+            })
+
+            email = 'foxuser188@fox.com';
+            password = 'abcdef';
+            return users.delete(email, password, tempUserMap )
+            .then(function(res){
+                expect( res.body.accessToken).to.equal('5ab');
+                expect( res.body.profileId).to.equal('66b');
+            })
+        })
     })
 })

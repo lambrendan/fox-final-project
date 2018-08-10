@@ -10,6 +10,7 @@ var fs = require('fs')
 var users = require("./users");
 var favorites = require("./favorites.js");
 var bookmarks = require("./bookmarks.js");
+let dontUseCache = false;
 
 /* Function to read from a file 
  * @param filename - Name of the file to be read 
@@ -26,8 +27,6 @@ function readAFile( filename ) {
  * @param userMap - Map containing all of the user and their information
  */
 function parseJSON ( jsonObject, userMap ) {
-    
-
     for( var index = 0; index < jsonObject.users.length; index++ ) {
         if( !jsonObject.users[index].hasOwnProperty("email") ) {
             var randomObj = users.continuousSignup( userMap );
@@ -41,7 +40,7 @@ function parseJSON ( jsonObject, userMap ) {
                 users.signup( email, password, undefined, undefined, undefined, undefined, userMap )
                 .then(function(res){
                     var userObj = { 'password': password, 'videoMap': {} };
-                    users.addUserToMap( userMap, email, userObj)
+                    users.addUserToMap( userMap, email, userObj, dontUseCache )
                     users.successfulSignup( email, password );
                 })
                 .catch(function(err) {

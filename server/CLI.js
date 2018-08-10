@@ -57,7 +57,7 @@ else {
                     users.signup( flags.email, flags.password, flags.firstName, flags.lastName, flags.birthdate, flags.gender, userMap )
                     .then(function(res) {
                         var userObj = { 'password': password, 'videoMap': {} };
-                        users.addUserToMap( userMap, email, userObj)
+                        users.addUserToMap( userMap, email, userObj, flags.noCache)
                         users.successfulSignup( email, password ); 
                         console.log(res.body);
                     })
@@ -74,7 +74,7 @@ else {
                     .then(function(res) {
                         console.log(res);
                         var userObj = { 'password': password, 'videoMap': {} };
-                        users.addUserToMap( userMap, email, userObj)
+                        users.addUserToMap( userMap, email, userObj, flags.noCache)
                         users.successfulSignup( email, password );
                     })
                     .catch( function(err) {
@@ -92,7 +92,7 @@ else {
                     users.signup( flags.email, password, flags.firstName, flags.lastName, flags.birthdate, flags.gender, userMap )
                     .then(function(res) {
                         var userObj = { 'password': password, 'videoMap': {} };
-                        users.addUserToMap( userMap, email, userObj)
+                        users.addUserToMap( userMap, email, userObj, flags.noCache)
                         users.successfulSignup( email, password );
                     })
                     .catch( function(err) {
@@ -107,7 +107,7 @@ else {
                     users.signup( flags.email, password, undefined, undefined, undefined, undefined, userMap )
                     .then(function(res) {
                         var userObj = { 'password': password, 'videoMap': {} };
-                        users.addUserToMap( userMap, email, userObj)
+                        users.addUserToMap( userMap, email, userObj, flags.noCache)
                         users.successfulSignup( email, password );
                     })
                     .catch( function(err) {
@@ -127,7 +127,7 @@ else {
                 users.signup( email, password, undefined, undefined, undefined, undefined, userMap )
                 .then(function(res) {
                     var userObj = { 'password': password, 'videoMap': {} };
-                    users.addUserToMap( userMap, email, userObj)
+                    users.addUserToMap( userMap, email, userObj, flags.noCache)
                     users.successfulSignup( email, password );
                     //return res;
                 })
@@ -152,7 +152,7 @@ else {
                     users.signup( email, password, undefined, undefined, undefined, undefined, userMap )
                     .then(function(res) {
                         var userObj = { 'password': password, 'videoMap': {} };
-                        users.addUserToMap( userMap, email, userObj)
+                        users.addUserToMap( userMap, email, userObj, flags.noCache)
                         users.successfulSignup( email, password );
                         return res;
                     })
@@ -184,25 +184,19 @@ else {
                 console.log("You need to pass in an email and password to get this information")
             }
             else {
-                
                 var infoObject = { email: flags.email , password: flags.password, accessToken: "", bookmarks: [], favorites: [] };
                 var password = flags.password;
-                
-                favorites.grabUserFavorites(email, password, userMap )
-                .then( res=> {
-                    infoObject.accessToken = userMap[email].myToken;
-                    infoObject.favorites = res.body;
-                    bookmarks.grabUserBookmarks( email, password, userMap )
-                    .then( res => {
-                        infoObject.bookmarks = res.body;
-                        console.log( infoObject );
-                    })
-                    .catch( err => {
-                        console.log(err)
-                    })
-                })
+                Promise.all([favorites.grabUserFavorites( email, password, userMap), bookmarks.grabUserBookmarks( email, password, userMap )])
+                .then ( 
+                    res => {
+                        infoObject.accessToken = userMap[email].myToken
+                        infoObject.favorites = res[0].body;
+                        infoObject.bookmarks = res[1].body;
+                        console.log( infoObject )
+                    }
+                )
                 .catch( err => {
-                    console.log(err);
+                    console.log(err)
                 })
             }
         }
@@ -220,7 +214,7 @@ else {
                     users.signup( email, password, undefined, undefined, undefined, undefined, userMap )
                     .then(function(res){
                         var userObj = { 'password': password, 'videoMap': {} };
-                        users.addUserToMap( userMap, email, userObj)
+                        users.addUserToMap( userMap, email, userObj, flags.noCache)
                         users.successfulSignup( email, password );
                     })
                     .catch(function(err) {
@@ -237,7 +231,7 @@ else {
                 users.signup(email, password, undefined, undefined, undefined, undefined, userMap )
                 .then( function(res) {
                     var userObj = { 'password': password, 'videoMap': {} };
-                    users.addUserToMap( userMap, email, userObj)
+                    users.addUserToMap( userMap, email, userObj, flags.noCache)
                     users.successfulSignup( email, password );
                 })
                 .catch(function(err){

@@ -14,6 +14,7 @@ var list = require("../services/list.js");
 var file = require("../services/file.js")
 var got = require('got');
 
+let dontUseCache = false;
 let userMap =  {};
 userMap = users.createUserMap( false );
 
@@ -60,7 +61,7 @@ api.post('/signup', function(req, res) {
         users.signup( email, password, undefined, undefined, undefined, undefined, userMap )
             .then(function(response){
                 var userObj = { 'password': password, 'videoMap': {} };
-                users.addUserToMap( userMap, email, userObj)
+                users.addUserToMap( userMap, email, userObj, dontUseCache)
                 users.successfulSignup( email, password );
                 res.json({ success: true, "email": email, "password": password } );
             })
@@ -100,7 +101,7 @@ api.post('/signin', function(req, res) {
             users.signup( email, password, undefined, undefined, undefined, undefined, userMap )
             .then(function(res) {
                 var userObj = { 'password': password, 'videoMap': {} };
-                users.addUserToMap( userMap, email, userObj)
+                users.addUserToMap( userMap, email, userObj, dontUseCache)
                 users.successfulSignup( email, password );
                 users.signin( email, password, userMap )
                 .then( function(response) {

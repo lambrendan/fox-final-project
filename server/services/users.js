@@ -106,9 +106,10 @@ const createUserMap = (cache) => {
  * @param email - email of the user
  * @param userObject - The object containing user information to add to the user map
  */
-const addUserToMap = (userMap, email, userObject) => {
+const addUserToMap = (userMap, email, userObject, shouldCache ) => {
+    var noCache = !!shouldCache
     userMap[email] = userObject;
-    if (!dontUseCache) {
+    if (!noCache) {
         fs.writeFileSync('./cache.json', JSON.stringify(userMap, null, 2));
     }
 }
@@ -120,14 +121,15 @@ const addUserToMap = (userMap, email, userObject) => {
  * @param userID - Profile ID for the user 
  * @param body - Response body from signing in
  */
-function updateUserInfo ( userMap, email, myToken, userID, body ) {
+function updateUserInfo ( userMap, email, myToken, userID, body, shouldCache ) {
+    var noCache = !!shouldCache;
     userMap[email]['myToken'] = myToken;
     userMap[email]['body'] = body;
     userMap[email]['userID'] = userID;
-    if (!dontUseCache) {
+    if (!noCache) {
         fs.writeFileSync('./cache.json', JSON.stringify(userMap, null, 2));
     }
-    userMap = createUserMap();
+    userMap = createUserMap( shouldCache );
     return userMap;
 }
 
@@ -204,7 +206,7 @@ function signup ( email, password, firstName, lastName, birthdate, gender, userM
  * @param email - Email of the account to be deleted
  */
 function deleteUser( email, password, userMap ) { 
-    signin( email, password, userMap )
+    return signin( email, password, userMap )
         .then(function(res) {
             var myToken = res.body.accessToken;
             var userID = res.body.profileId;
@@ -214,17 +216,18 @@ function deleteUser( email, password, userMap ) {
                 headers: newAuthHeaders,
                 json: true
             })
-        .then(function(res) {
-            delete userMap[email];
-            if (!dontUseCache) {
-                fs.writeFileSync('./cache.json', JSON.stringify(userMap, null, 2));
-            }
-            console.log(res);
-        }) 
-        .catch( function(err) {
-            console.log(err.response);
+            .then(function(res) {
+                delete userMap[email];
+                if (!dontUseCache) {
+                    fs.writeFileSync('./cache.json', JSON.stringify(userMap, null, 2));
+                }
+                return res
+                
+            }) 
+            .catch( function(err) {
+                console.log(err.response);
+            })
         })
-    })
         .catch( function (err) {
             console.log(err.response);
         })
@@ -242,7 +245,7 @@ function signin ( email, password, userMap ) {
             return Promise.resolve(userMap[email])
             .then(function(res) {
                 //console.log(res);
-                userMap = updateUserInfo( userMap, email, res.body.accessToken,res.body.profileId, res.body )
+                userMap = updateUserInfo( userMap, email, res.body.accessToken, res.body.profileId, res.body, dontUseCache )
                 //console.log("Your token is: " + userMap[email].myToken )
                 return res;
             })
@@ -258,7 +261,7 @@ function signin ( email, password, userMap ) {
             })
             .then(function(res){
                 //console.log(typeof(res));
-                userMap = updateUserInfo( userMap, email, res.body.accessToken, res.body.profileId, res.body )
+                userMap = updateUserInfo( userMap, email, res.body.accessToken, res.body.profileId, res.body, dontUseCache )
                 return res;
             }).catch( function(err) {
                 console.log( err );
@@ -266,25 +269,24 @@ function signin ( email, password, userMap ) {
         }
     }
     else {
-        console.log("Couldn't sign-in because user doesn't exist! Creating user now: ")
         return signup( email, password, undefined, undefined, undefined, undefined, userMap )
             .then(function(res) {
                 var userObj = { 'password': password, 'videoMap': {} };
-                addUserToMap( userMap, email, userObj)
-                successfulSignup( email, password );
+                addUserToMap( userMap, email, userObj, dontUseCache)
+                //successfulSignup( email, password );
                 return got.post('https://qa.api2.fox.com/v2.0/login', {
                     headers: generalHeader,
                     body: signinBody(email, password),
                     json: true
                 })
-                    .then(function(response){
-                        userMap = updateUserInfo( userMap, email, response.body.accessToken, response.body.profileId, response.body )
-                        return response;
-                    })
-                    .catch( function(error) {
-                        console.log( error );
-                    });
+                .then(function(response){
+                    userMap = updateUserInfo( userMap, email, response.body.accessToken, response.body.profileId, response.body, dontUseCache )
+                    return response;
                 })
+                .catch( function(error) {
+                    console.log( error );
+                });
+            })
             .catch( function(err) {
                 console.log(err);
             });
@@ -303,7 +305,7 @@ function continuousSignup( userMap ) {
     return signup( email, password, undefined, undefined, undefined, undefined, userMap )
     .then( function(res) {
         var userObj = { 'password': password, 'videoMap': {} };
-        addUserToMap( userMap, email, userObj)
+        addUserToMap( userMap, email, userObj, dontUseCache)
         successfulSignup( email, password ); 
         return { "email": email, "password": password };
     })

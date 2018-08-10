@@ -692,5 +692,29 @@
       "lastName": "Test"
     },
     "userID": "NGU4ODNhOTItMGQxNi00YTQxLWE0YmEtNDBmMmUxYWY1ZWFl"
+  },
+  "foxuser160@fox.com": {
+    "password": "abcdef",
+    "videoMap": {}
+  },
+  "foxuser0307@fox.com": {
+    "password": "MTjbymrUN6n2eQp2VqVEgDIhhAsbszHPf9Xw81O1Rhi",
+    "videoMap": {}
+  },
+  "foxuser39350752654590@fox.com": {
+    "password": "RQUL2G2xCDNR1IakmbCV",
+    "videoMap": {}
+  },
+  "foxuser74187748294195@fox.com": {
+    "password": "FtLWqbBzp6HgK7l19vgXSvYnRQVdgQM4Ve",
+    "videoMap": {}
+  },
+  "foxuser126687044185@fox.com": {
+    "password": "xawrcNie0r4Kv8rpLIL7ZwcBWDzzRsbUjdMbLG9qs5",
+    "videoMap": {}
+  },
+  "foxuser131336680@fox.com": {
+    "password": "zDX2bxIfVuh1",
+    "videoMap": {}
   }
 }

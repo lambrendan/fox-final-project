@@ -26,6 +26,8 @@ function readAFile( filename ) {
  * @param userMap - Map containing all of the user and their information
  */
 function parseJSON ( jsonObject, userMap ) {
+    
+
     for( var index = 0; index < jsonObject.users.length; index++ ) {
         if( !jsonObject.users[index].hasOwnProperty("email") ) {
             var randomObj = users.continuousSignup( userMap );

@@ -5,7 +5,7 @@ class BookmarkSearch extends Component {
 
     handleSearchBar = event => {
         if( event.target.value ) {
-          got.get("https://api-staging.fox.com/fbc-content/v1_5/video?videoType=fullEpisode&q=" + event.target.value.toString())
+          got.get("https://api-staging.fox.com/fbc-content/v1_5/video?videoType=fullEpisode&avoidDefaultQuery=true&q=" + event.target.value.toString())
           .then( res => {
             var vidObj = []
             var resObject = JSON.parse(res.body);

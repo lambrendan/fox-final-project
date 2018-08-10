@@ -23,8 +23,12 @@ userMap = users.createUserMap( false );
 api.post('/parseJSON', function(req, res) {
     console.log( req.body.users );
     var obj = { users: JSON.parse(req.body.users) }
-    file.parseJSON(obj, userMap);
-    res.send({ success: true })
+    file.parseJSON(obj, userMap)
+    .then(() => {
+        res.send({ success: true })
+    }).catch(() => {
+        res.send({success: false });
+    });
 });
 
 api.get('/random/signup', function(req, res){

@@ -109,7 +109,7 @@ function createSetBookmarks( email, password, bookmark, userMap ) {
             if ( bookmark[index].hasOwnProperty('watched') && bookmark[index].watched === true  ) {
                 isWatched = true;
             }
-            Promise.all([users.signin( email, password,userMap ), lists.getShowBySeriesList(bookmark[index].showCode)]).then(function(res) {    
+            Promise.all([users.signin( email, password, userMap ), lists.getShowBySeriesList(bookmark[index].showCode)]).then(function(res) {    
                 var token = res[0].body.accessToken;
                 var userID = res[0].body.profileId;
                 var watched;
@@ -129,7 +129,7 @@ function createSetBookmarks( email, password, bookmark, userMap ) {
                 return bookMarkVideo( userID, token, uIDWatched, watched );
             })
             .then(function(res) {
-                //console.log(res)
+                console.log(res)
                 //return res;
             })
             .catch(function(err) {    

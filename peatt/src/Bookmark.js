@@ -107,28 +107,17 @@ class Bookmark extends Component {
                         {
                             this.state.videos.map((item, index)=> {
                                 var watched = false;
-                                var halfWatched = false;
                                 var images;
                                 for( var i = 0; i < this.state.chosenVideos.length; i++ ) {
                                     if( this.state.chosenVideos[i].uID === item.uID ) {
-                                        if( this.state.chosenVideos[i].watched === true ) {
-                                            watched = true;
-                                        }
-                                        else {
-                                            halfWatched = true;
-                                        }
+                                        watched = true;
                                         break;
                                     }
                                 }
-                                if ( !watched || !halfWatched ) {
+                                if ( !watched ) {
                                     for ( var j= 0; j < this.props.bookmarks.length; j ++ ) {
                                         if( this.props.bookmarks[j].uID === item.uID ) {
-                                            if( this.props.bookmarks[j].watched === true ) {
-                                                watched = true;
-                                            }
-                                            else {
-                                                halfWatched = true;
-                                            }
+                                            watched = true;
                                             break;
                                         }
                                     }
@@ -140,7 +129,7 @@ class Bookmark extends Component {
                                 else {
                                     images = item.images.still.FHD
                                 }
-                                return <Video key={index} uID={item.uID} image={images} handleWatchedClick = { this.handleWatchedClick } handleHalfClick = { this.handleHalfClick } handleWatchedUnclick = {this.handleWatchedUnclick} handleHalfUnclick = {this.handleHalfUnclick} watched = {watched} halfWatched = {halfWatched}/>
+                                return <Video key={index} uID={item.uID} image={images} handleWatchedClick = { this.handleWatchedClick } handleHalfClick = { this.handleHalfClick } handleWatchedUnclick = {this.handleWatchedUnclick} handleHalfUnclick = {this.handleHalfUnclick} watched = {watched}/>
                             })
                         }
                         </ul>

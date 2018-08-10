@@ -3,20 +3,19 @@ import React, { Component } from "react";
 class Video extends Component {
     constructor(props) {
         super(props)
-        this.state = { uID: props.uID, image: props.image, isWatchedBookmarked: false, isHalfBookmarked: false };
+        this.state = { uID: props.uID, image: props.image, isWatchedBookmarked: false };
     }
 
     componentDidMount() {
-        this.setState({isWatchedBookmarked: this.props.watched, isHalfBookmarked: this.props.halfWatched })
+        this.setState({isWatchedBookmarked: this.props.watched })
     }
 
     static getDerivedStateFromProps( nextProps, prevState ) {
-        if( nextProps.uID !== prevState.uID || nextProps.watched !== prevState.watched || nextProps.halfWatched !== prevState.halfWatched ) {
+        if( nextProps.uID !== prevState.uID || nextProps.watched !== prevState.watched ) {
             return {
                 uID: nextProps.uID,
                 image: nextProps.image,
                 isWatchedBookmarked: nextProps.watched,
-                isHalfBookmarked: nextProps.halfWatched
             }
         }
         return null;
@@ -33,12 +32,12 @@ class Video extends Component {
     }
 
     handleHalfBookmark( video ) {
-        this.setState({ isHalfBookmarked: true  });
+        this.setState({ isWatchedBookmarked: true  });
         this.props.handleHalfClick( video )
     }
 
     handleHalfUnbookmark( video ) {
-        this.setState({ isHalfBookmarked: false });
+        this.setState({ isWatchedBookmarked: false });
         this.props.handleHalfUnclick( video );
     }
 
@@ -49,12 +48,6 @@ class Video extends Component {
         }
         else {
             watchedButton = <button onClick={() => this.handleWatchedBookmark(this.state.uID)}>Watch</button>
-        }
-
-        if( this.state.isHalfBookmarked ) {
-            halfButton = <button onClick={() => this.handleHalfUnbookmark(this.state.uID)}>Unwatch</button>
-        }
-        else {
             halfButton = <button onClick={() => this.handleHalfBookmark(this.state.uID)}>Partially Watch</button>
 
         }

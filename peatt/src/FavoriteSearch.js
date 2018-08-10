@@ -9,7 +9,7 @@ class FavoriteSearch extends Component {
 
     handleSearchBar = event => {
         if( event.target.value ) {
-          got.get("https://api-staging.fox.com/fbc-content/v1_5/series?q=" + event.target.value.toString())
+          got.get("https://api-staging.fox.com/fbc-content/v1_5/series?avoidDefaultQuery=true&q=" + event.target.value.toString())
           .then( res => {
             var showObj = []
             var resObject = JSON.parse(res.body);

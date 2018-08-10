@@ -72,12 +72,13 @@ else {
                 else {
                     users.signup( flags.email, flags.password, undefined, undefined, undefined, undefined, userMap)
                     .then(function(res) {
+                        console.log(res);
                         var userObj = { 'password': password, 'videoMap': {} };
                         users.addUserToMap( userMap, email, userObj)
                         users.successfulSignup( email, password );
                     })
                     .catch( function(err) {
-                        console.log(err.response);
+                        console.log(err);
                         console.log("It didn't work! This is your new info:");
                         var obj = users.continuousSignup( userMap );
                         email = obj.email;
@@ -183,8 +184,10 @@ else {
                 console.log("You need to pass in an email and password to get this information")
             }
             else {
+                
                 var infoObject = { email: flags.email , password: flags.password, accessToken: "", bookmarks: [], favorites: [] };
                 var password = flags.password;
+                
                 favorites.grabUserFavorites(email, password, userMap )
                 .then( res=> {
                     infoObject.accessToken = userMap[email].myToken;

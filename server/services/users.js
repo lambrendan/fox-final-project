@@ -190,7 +190,7 @@ function generateRandomPassword() {
  */
 function signup ( email, password, firstName, lastName, birthdate, gender, userMap ) {
     if ( userMap[email] ) {
-         console.log( "User has already been created!")
+        return Promise.reject("User has already been created!" )
     }
     return got.post('https://qa.api2.fox.com/v2.0/register', {
         headers: generalHeader,

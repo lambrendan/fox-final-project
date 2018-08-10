@@ -149,7 +149,7 @@ describe('User', function(){
         //Delete a user that exists
         it( "Delete a user that does exist", function(){
             const newAuthHeaders = Object.assign({}, users.authHeaders);
-            newAuthHeaders.Authorization = 'Bearer 569';
+            newAuthHeaders.Authorization = 'Bearer 1234';
             nock('https://api-staging.fox.com', {
                 headers: newAuthHeaders
             })
@@ -172,29 +172,45 @@ describe('User', function(){
             nock('https://qa.api2.fox.com', {
                 headers: users.generalHeader
             })
-            .post('/v2.0/login', users.signinBody('foxuser188@fox.com', 'abcdef'))
+            .post('/v2.0/login', users.signinBody('foxuser190@fox.com', 'abcdef'))
             .reply(200, { 
-                accessToken: '5ab',
-                profileId: '66b'
+                accessToken: '5abcdef',
+                profileId: '66boool'
             })
 
             nock('https://qa.api2.fox.com', {
                 headers: users.generalHeader
             })
-            .post('/v2.0/register', users.signupBody('foxuser188@fox.com', 'abcdef'))
+            .post('/v2.0/register', users.signupBody('foxuser190@fox.com', 'abcdef'))
             .reply(200, { 
-                accessToken: '5ab',
-                profileId: '66b'
+                accessToken: '5abcdef',
+                profileId: '66boool'
                 
             })
+            const newAuthHeaders = Object.assign({}, users.authHeaders);
+            newAuthHeaders.Authorization = 'Bearer 5abcdef';
+            nock('https://api-staging.fox.com', {
+                headers: newAuthHeaders
+            })
+            .delete('/profiles/_latest/66boool')
+            .reply(200, { 
+                "success": true,
+                "message": "User has been deleted"                
+            })
 
-            email = 'foxuser188@fox.com';
+            email = 'foxuser190@fox.com';
             password = 'abcdef';
-            return users.delete(email, password, tempUserMap )
+            return users.deleteUser(email, password, tempUserMap )
             .then(function(res){
-                expect( res.body.accessToken).to.equal('5ab');
-                expect( res.body.profileId).to.equal('66b');
+                expect(res.body.success).to.be.true
+                expect(res.body.message).to.equal("User has been deleted")  
             })
         })
+    })
+})
+
+describe('Favorites', function() {
+    describe('Create Set Favorites', function() {
+        
     })
 })

@@ -166,8 +166,7 @@ api.post('/bookmarks/:video', function( req, res) {
 });
 
 api.get('/bookmark/random', ( req, res ) => {
-    console.log(req.query.page);
-    return got.get( "https://api-staging.fox.com/fbc-content/v1_5/video?itemsPerPage=200&videoType=fullEpisode&premiumPackage=&page=" + req.query.page.toString(), { 
+    return got.get( "https://api-staging.fox.com/fbc-content/v1_5/video?itemsPerPage=100&videoType=fullEpisode&premiumPackage=&page=" + req.query.page.toString(), { 
         headers: {
             'apikey': 'DEFAULT' 
         }, 
@@ -205,7 +204,7 @@ api.get('/shows', function( req, res) {
 })
 
 api.get('/videos', function( req, res) {
-    return got.get( "https://api-staging.fox.com/fbc-content/v1_5/video?itemsPerPage=200&videoType=fullEpisode&premiumPackage=&page=" + req.query.page.toString(), { 
+    return got.get( "https://api-staging.fox.com/fbc-content/v1_5/video?itemsPerPage=100&videoType=fullEpisode&premiumPackage=&page=" + req.query.page.toString(), { 
         headers: {
             'apikey': 'DEFAULT' 
         }, 

@@ -39,7 +39,9 @@ class Root extends Component {
                 </div>
                 <div>
                     <Link to='/user'> 
-                        <button>
+                        <button
+                            className="btn btn-secondary"
+                            type="button">
                             Start here 
                         </button>
                     </Link>

@@ -1,6 +1,8 @@
 .Header{
     background-color: #000000;
+    margin-bottom: 10px;
     height: 100%;
+
 }
 
 .Header-Title {

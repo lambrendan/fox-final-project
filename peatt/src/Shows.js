@@ -38,10 +38,10 @@ class Shows extends Component {
     render() {
         let actionButton;
         if( this.state.isFavorited ) {
-            actionButton = <button onClick={() => this.handleUnfavoriting(this.state.showCode)}>Unfavorite</button>
+            actionButton = <button className= "btn btn-light" type='button'onClick={() => this.handleUnfavoriting(this.state.showCode)}>Unfavorite</button>
         }
         else {
-            actionButton = <button onClick={() => this.handleFavoriting(this.state.showCode)}>Favorite</button>
+            actionButton = <button className= "btn btn-dark" type='button' onClick={() => this.handleFavoriting(this.state.showCode)}>Favorite</button>
         }
         return (
           <div className = "Show-images">  

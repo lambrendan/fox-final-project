@@ -1,4 +1,6 @@
 import React, { Component } from "react"
+import "bootstrap/dist/css/bootstrap.css";
+
 class FavoritePage extends Component {
     constructor( props ) {
         super( props )
@@ -57,12 +59,12 @@ class FavoritePage extends Component {
     render() {
         return( 
             <div>
-                <button onClick={this.handlePageBackwardsClick}>Previous Page </button>
+                <button className= "btn btn-outline-light" type='button' onClick={this.handlePageBackwardsClick}>Previous Page </button>
                 {
                     this.state.pageArray.map((item, index)=> {
-                    return <button key={index} onClick={() => this.handlePageClick(item)}>{item}</button> })
+                    return <button className= "btn btn-outline-light" type='button'  key={index} onClick={() => this.handlePageClick(item)}>{item}</button> })
                 }
-                <button onClick={this.handlePageForwardClick}>Next Page</button>
+                <button className= "btn btn-outline-light" type='button' onClick={this.handlePageForwardClick}>Next Page</button>
             </div>    
         )
     }

@@ -37,12 +37,12 @@ class Home extends Component {
                 <nav> 
                     <div className='Link-Buttons'>
                         <Link className='Link-Favorites' to={`${this.props.match.path}/favorites`}> 
-                            <button className = 'Link-Fav-border'>
+                            <button className="btn btn-outline-light" type="button">
                                 Start Favoriting 
                             </button>
                         </Link>
                         <Link className='Link-Bookmarks'to={`${this.props.match.path}/bookmark`}> 
-                            <button className='Link-Book-border'>
+                            <button className="btn btn-outline-light" type="button">
                                 Start Bookmarking 
                             </button>
                         </Link>
@@ -68,7 +68,7 @@ class Home extends Component {
                     </p>
                 </div>
                 <div>
-                    <button onClick = {()=> {this.sendJson()}} > Done </button>
+                    <button className="btn btn-info" type='button' onClick = {()=> {this.sendJson()}} > Done </button>
                 </div>
             </div>
        

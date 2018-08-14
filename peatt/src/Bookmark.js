@@ -33,6 +33,7 @@ class Bookmark extends Component {
 
     handleRandomBookmarks = () => {
         var randomPage = Math.floor( Math.random() * this.state.numPages + 1);
+        console.log(randomPage);
         got.get("http://localhost:3001/api/bookmark/random?page=" + randomPage.toString())
         .then((res) =>{
             var parseVideo = JSON.parse(res.body);
@@ -70,12 +71,12 @@ class Bookmark extends Component {
     }
 
     render() {
-      console.log(this.state.chosenVideos)
+      console.log(this.state.videos)
       if ( this.state.error ) {
         return (
           <div>
                 <h1 style={{ color: 'white'}}> Error Page Doesnt Exist </h1>
-                <button onClick={() => { this.setError(false)}}> Go Back </button>
+                <button className= "btn btn-light" type='button' onClick={() => { this.setError(false)}}> Go Back </button>
           </div>  
         )
       }
@@ -83,10 +84,10 @@ class Bookmark extends Component {
         return(
           <div>
             <div style={{ marginTop: '10px' ,marginBottom: '10px'}}>
-                <button style={{'fontSize': '16px',}} onClick={this.handleFinish}>Finish</button>
+                <button className= "btn btn-success" type='button' onClick={this.handleFinish}>Finish</button>
             </div>
             <div style={{ marginBottom: '10px'}}>
-                <button style={{'fontSize': '16px'}} onClick={this.handleRandomBookmarks}>Random</button>
+                <button className= "btn btn-secondary" type='button' onClick={this.handleRandomBookmarks}>Random</button>
             </div>
 
           
@@ -128,7 +129,7 @@ class Bookmark extends Component {
                         </ul>
                     </div>
                     <div style={{display: "table-cell", width: "50%"}}>
-                        <h2> Bookmarked Videos </h2>
+                        <h2 style={{ color: 'white'}}> Bookmarked Videos </h2>
                         <ul>
                             {
                                 this.props.bookmarks.map((item, index ) => {

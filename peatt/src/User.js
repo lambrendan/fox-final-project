@@ -40,7 +40,11 @@ class User extends Component {
                 <div>
                     <p className='User-info'> Your email is: {this.state.email}</p>
                     <p className='User-info'> Your password is: {this.state.password} </p>
-                    <button onClick = { () => this.handleContinue() }> Continue </button>
+                    <button className="btn btn-secondary"
+                        type="button"
+                        onClick = { () => this.handleContinue() }> 
+                        Continue 
+                    </button>
                 </div>
             )
         }
@@ -68,7 +72,7 @@ class User extends Component {
                                 
                     <div className="form-group">
                         <button 
-                            className="btn btn-primary"
+                            className="btn btn-secondary"
                             type="button"
                             onClick={()=> this.handleClick() }
                         >Enter </button>
@@ -76,7 +80,7 @@ class User extends Component {
 
                     <div className="form-group">
                         <button 
-                            className="btn btn-secondary"
+                            className="btn btn-light"
                             type="button" 
                             onClick={()=> this.handleRandom() }
                         > Randomize </button>

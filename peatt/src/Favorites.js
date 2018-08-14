@@ -87,7 +87,7 @@ class Favorites extends Component {
             return ( 
                 <div>
                     <h1 style={{ color: 'white'}}> Error Page Doesnt Exist </h1>
-                    <button onClick={()=> {this.setError(false)}}> Go Back </button>
+                    <button className= "btn btn-light" type='button' onClick={()=> {this.setError(false)}}> Go Back </button>
                 </div>
             )
         }
@@ -95,10 +95,10 @@ class Favorites extends Component {
             return(
             <div>
                 <div style={{ marginTop: '10px' ,marginBottom: '10px'}}>
-                    <button style={{'fontSize': '16px',}} onClick={this.handleFinish}>Finish</button>
+                    <button className= "btn btn-success" type='button' onClick={this.handleFinish}>Finish</button>
                 </div>
                 <div style={{ marginBottom: '10px'}}>
-                    <button style={{'fontSize': '16px'}} onClick={this.handleRandomFavorites}>Random</button>
+                    <button className= "btn btn-secondary" type='button' onClick={this.handleRandomFavorites}>Random</button>
                 </div>
 
                 <FavoriteSearch searchShows = { this.searchShows } />

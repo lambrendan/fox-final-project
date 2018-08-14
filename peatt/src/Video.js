@@ -43,11 +43,11 @@ class Video extends Component {
     render() {
         let watchedButton, halfButton;
         if( this.state.isWatchedBookmarked ) {
-            watchedButton = <button onClick={() => this.handleWatchedUnbookmark(this.state.uID)}>Unwatch</button>
+            watchedButton = <button className= "btn btn-light" type='button' onClick={() => this.handleWatchedUnbookmark(this.state.uID)}>Unwatch</button>
         }
         else {
-            watchedButton = <button onClick={() => this.handleWatchedBookmark(this.state.uID)}>Watch</button>
-            halfButton = <button onClick={() => this.handleHalfBookmark(this.state.uID)}>Partially Watch</button>
+            watchedButton = <button className= "btn btn-dark" type='button' onClick={() => this.handleWatchedBookmark(this.state.uID)}>Watch</button>
+            halfButton = <button  className= "btn btn-secondary" type='button' onClick={() => this.handleHalfBookmark(this.state.uID)}>Partially Watch</button>
 
         }
         return (

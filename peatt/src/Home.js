@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
+import "./Home.css"
 var got = require("got");
 
 
@@ -32,17 +33,44 @@ class Home extends Component {
 
     render() {
         return (
-            <nav> 
+            <div>
+                <nav> 
+                    <div className='Link-Buttons'>
+                        <Link className='Link-Favorites' to={`${this.props.match.path}/favorites`}> 
+                            <button className = 'Link-Fav-border'>
+                                Start Favoriting 
+                            </button>
+                        </Link>
+                        <Link className='Link-Bookmarks'to={`${this.props.match.path}/bookmark`}> 
+                            <button className='Link-Book-border'>
+                                Start Bookmarking 
+                            </button>
+                        </Link>
+                    </div>
+                </nav>
                 <div>
-                    <Link to={`${this.props.match.path}/favorites`}> Start Favoriting </Link>
-                </div>
-                <div>
-                    <Link to={`${this.props.match.path}/bookmark`}> Start Bookmarking </Link>
+                    <p className='Home-text'> Email: { this.props.email } </p>
+                    <p className='Home-text'> Password: { this.props.password } </p>
+                    <p className='Home-text'> Favorites:     
+                        {
+                            this.props.favorites.map( (item, index) => {
+                                return <li className='Home-watch' key={index}>{item.showCode}</li>
+                            })
+                        }   
+                    </p>
+                    <p className='Home-text'> Bookmarks:     
+                        {
+                            this.props.bookmarks.map( (item, index) => {
+                                console.log(item);
+                                return <li className='Home-watch' key={index}>{item.uID}</li>
+                            })
+                        }   
+                    </p>
                 </div>
                 <div>
                     <button onClick = {()=> {this.sendJson()}} > Done </button>
                 </div>
-            </nav>
+            </div>
        
         )
     }

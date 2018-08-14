@@ -86,24 +86,27 @@ class Favorites extends Component {
         if( this.state.error ) {
             return ( 
                 <div>
-                    <h1> Error Page Doesnt Exist </h1>
+                    <h1 style={{ color: 'white'}}> Error Page Doesnt Exist </h1>
                     <button onClick={()=> {this.setError(false)}}> Go Back </button>
                 </div>
             )
         }
         else {
             return(
-       
             <div>
-                <button onClick={this.handleFinish}>Finish</button>
-                <button onClick={this.handleRandomFavorites}>Random</button>
+                <div style={{ marginTop: '10px' ,marginBottom: '10px'}}>
+                    <button style={{'fontSize': '16px',}} onClick={this.handleFinish}>Finish</button>
+                </div>
+                <div style={{ marginBottom: '10px'}}>
+                    <button style={{'fontSize': '16px'}} onClick={this.handleRandomFavorites}>Random</button>
+                </div>
 
                 <FavoriteSearch searchShows = { this.searchShows } />
                 <FavoritePage totalPages = {this.state.allShows.length} setShows = {this.setShows} setError = {this.setError} />
                 <div style={{display: "table", width: "100%"}}>
                     <div style={{display: "table-cell", width: "50%"}}>
-                        <h1> Shows </h1>
-                        <ul>
+                        <h1 style={{ color: 'white'}}> Shows </h1>
+                        <ul style = {{padding: '100'}}>
                         {
                             this.state.shows.map((item, index) => { 
                                 var found = false
@@ -129,22 +132,22 @@ class Favorites extends Component {
                                 else {
                                     images = item.images.seriesList.FHD
                                 }
-                                return <Shows key={index} showCode={item.showCode} image={images} handleClick = {this.handleClick} handleUnclick = {this.handleUnclick} found = {found} />
+                                return <li key={index} style = {{margin: 5}} ><Shows key={index} showCode={item.showCode} image={images} handleClick = {this.handleClick} handleUnclick = {this.handleUnclick} found = {found} /> </li>
                             })
                         }
                         </ul>
                     </div>
                     <div style={{display: "table-cell", width: "50%"}}>
-                        <h2> Favorited Shows </h2>
-                        <ul>
+                        <h2 style={{ color: 'white'}}> Favorited Shows </h2>
+                        <ul >
                             {
                                 this.props.favorites.map((item, index ) => {
-                                    return <li key={index} >{item.showCode }</li>
+                                    return <li key={index} style={{ color: 'white'}} >{item.showCode }</li>
                                 })
                             }
                             {
                                 this.state.chosenShows.map((item, index ) => {
-                                    return <li key = {index}> {item.showCode} </li>
+                                    return <li key = {index} style={{ color: 'white'}}> {item.showCode} </li>
                                 })
                             }
                         </ul>

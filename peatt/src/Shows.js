@@ -1,4 +1,8 @@
 import React, { Component } from "react";
+import { Media } from 'react-bootstrap';
+import "bootstrap/dist/css/bootstrap.css";
+import "./Shows.css"
+
 
 class Shows extends Component {
     constructor(props) {
@@ -40,12 +44,18 @@ class Shows extends Component {
             actionButton = <button onClick={() => this.handleFavoriting(this.state.showCode)}>Favorite</button>
         }
         return (
-          <div>
-            <p> {this.state.showCode} </p>
-            <img src={this.state.image} alt="Show Images" style={{width: 250}}/>
-            <div>
-                {actionButton}
-            </div>
+          <div className = "Show-images">  
+            <Media>
+                <Media.Body>
+                    <Media.Heading style={{background: '#06909F', color:'white'}}> {this.state.showCode} </Media.Heading>
+                    <div className="Show-display">
+                        <img src={this.state.image} alt="Show Images" style={{width: 250}}/>
+                    </div>
+                    <div className="Show-display">
+                        {actionButton}
+                    </div>
+                </Media.Body>
+            </Media>
           </div>  
         )
     }

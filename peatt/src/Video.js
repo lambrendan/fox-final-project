@@ -1,16 +1,20 @@
 import React, { Component } from "react";
+import { Media } from 'react-bootstrap';
+import "bootstrap/dist/css/bootstrap.css";
+import "./Video.css"
 
 class Video extends Component {
     constructor(props) {
         super(props)
-        this.state = { uID: props.uID, image: props.image, isWatchedBookmarked: false };
+        this.state = { uID: "", image: "", isWatchedBookmarked: false };
     }
 
     componentDidMount() {
-        this.setState({isWatchedBookmarked: this.props.watched })
+        this.setState({ uID: this.props.uID, image: this.props.image, isWatchedBookmarked: this.props.watched })
     }
 
     static getDerivedStateFromProps( nextProps, prevState ) {
+
         if( nextProps.uID !== prevState.uID || nextProps.watched !== prevState.watched ) {
             return {
                 uID: nextProps.uID,
@@ -36,11 +40,6 @@ class Video extends Component {
         this.props.handleHalfClick( video )
     }
 
-    handleHalfUnbookmark( video ) {
-        this.setState({ isWatchedBookmarked: false });
-        this.props.handleHalfUnclick( video );
-    }
-
     render() {
         let watchedButton, halfButton;
         if( this.state.isWatchedBookmarked ) {
@@ -52,13 +51,19 @@ class Video extends Component {
 
         }
         return (
-          <div>
-            <p> {this.state.uID} </p>
-            <img src={this.state.image} alt="Video Images" style={{width: 250}}/>
-            <div>
-                { watchedButton }
-                { halfButton }
-            </div>
+          <div className='Video-Images'>
+          <Media>
+                <Media.Body>
+                    <Media.Heading style={{background: '#06909F', color:'white', marginBottom: '0'}}> {this.state.uID} </Media.Heading>
+                    <div className="Video-display">
+                        <img src={this.state.image} alt="Video Images" style={{width: 250}}/>
+                    </div>
+                    <div className="Video-display">
+                        { watchedButton }
+                        { halfButton }
+                    </div>
+                </Media.Body>
+            </Media>    
           </div>  
         )
     }

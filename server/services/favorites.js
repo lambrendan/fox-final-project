@@ -39,7 +39,6 @@ function favoriteShow( userID, myToken, show ) {
     for ( var index = 0; index < show.length; index++ ) {
         favoritesBody.push({'showID': show[index]});
     }
-    //console.log( "CREATING BOOKMARKS FOR userID: " + userID + " favorite:" + show[0] + " "+show[1] )
     return got.post('https://api-staging.fox.com/profiles/_latest/' + userID + '/favorites', {
         headers: newAuthHeaders,
         body: favoritesBody,
@@ -53,7 +52,7 @@ function favoriteShow( userID, myToken, show ) {
  * @param password - password of the specified user
  */
 function createRandomFavorites( numFavs, email, password, userMap ) {
-    Promise.all([users.signin( email, password, userMap ), lists.getSeriesList()])
+    return Promise.all([users.signin( email, password, userMap ), lists.getSeriesList()])
     .then(function(res) {    
         //var promises = [];
         var token = res[0].body.accessToken;
@@ -68,7 +67,8 @@ function createRandomFavorites( numFavs, email, password, userMap ) {
         return favoriteShow(userID, token, series);
     })
     .then(function(res) {
-        console.log(res.requestUrl + " and " + JSON.stringify(res.body));
+        //console.log(res.requestUrl + " and " + JSON.stringify(res.body));
+        return res;
     })
     .catch(function(err) {    
         console.log(err)
@@ -95,6 +95,7 @@ function createSetFavorites( email, password, showCode, userMap ) {
             //return Promise.all(promises)
         })
         .then(function(res) {
+            return res
             //console.log(res.requestUrl + " and " + JSON.stringify(res.body));
         })
         .catch(function(err) {    

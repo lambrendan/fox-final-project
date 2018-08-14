@@ -57,30 +57,16 @@ class Bookmark extends Component {
     }
 
     handleWatchedUnclick = uID => {
-        var pos = this.state.chosenVideos.findIndex(item => { return item.uID === uID && item.watched === true });
+        var pos = this.state.chosenVideos.findIndex(item => { return item.uID === uID });
         let temp = this.state.chosenVideos.slice();
         temp.splice( pos, 1)
         this.setState({ chosenVideos: temp})
-        let finalPos = this.props.bookmarks.findIndex( item => { return item.uID === uID && item.watched === true });
+        let finalPos = this.props.bookmarks.findIndex( item => { return item.uID === uID });
         if( finalPos !== -1 ) {
             let finalTemp = this.props.bookmarks.slice();
             finalTemp.splice( finalPos, 1)
             this.props.replaceBookmark( finalTemp )
         } 
-    }
-
-    handleHalfUnclick = uID => {
-        var pos = this.state.chosenVideos.findIndex(item => { return item.uID === uID && ( item.watched === false || !item.hasOwnProperty("watched"))});
-        let temp = this.state.chosenVideos.slice();
-        temp.splice( pos, 1)
-        this.setState({ chosenVideos: temp})
-        let finalPos = this.props.bookmarks.findIndex( item => { return item.uID === uID && ( item.watched === false || !item.hasOwnProperty("watched"))});
-        if( finalPos !== -1 ) {
-            let finalTemp = this.props.bookmarks.slice();
-            finalTemp.splice( finalPos, 1)
-            this.props.replaceBookmark( finalTemp )
-        } 
-        
     }
 
     render() {
@@ -88,7 +74,7 @@ class Bookmark extends Component {
       if ( this.state.error ) {
         return (
           <div>
-                <h1> Error Page Doesnt Exist </h1>
+                <h1 style={{ color: 'white'}}> Error Page Doesnt Exist </h1>
                 <button onClick={() => { this.setError(false)}}> Go Back </button>
           </div>  
         )
@@ -96,14 +82,21 @@ class Bookmark extends Component {
       else {
         return(
           <div>
-            <button onClick={this.handleFinish}>Finish</button>
-            <button onClick={this.handleRandomBookmarks}>Random</button>
-            <BookmarkPage numPages = { this.state.numPages } setVideos = { this.setVideos } setError = { this.setError } />
+            <div style={{ marginTop: '10px' ,marginBottom: '10px'}}>
+                <button style={{'fontSize': '16px',}} onClick={this.handleFinish}>Finish</button>
+            </div>
+            <div style={{ marginBottom: '10px'}}>
+                <button style={{'fontSize': '16px'}} onClick={this.handleRandomBookmarks}>Random</button>
+            </div>
+
+          
             <BookmarkSearch setVideos = {this.setVideos} />
+            <BookmarkPage numPages = { this.state.numPages } setVideos = { this.setVideos } setError = { this.setError } />
+        
             <div style={{display: "table", width: "100%"}}>
                 <div style={{display: "table-cell", width: "50%"}}>
-                    <h1> Videos </h1>
-                        <ul>
+                    <h1 style={{ color: 'white'}}> Videos </h1>
+                        <ul style = {{padding: '100'}}>
                         {
                             this.state.videos.map((item, index)=> {
                                 var watched = false;
@@ -129,7 +122,7 @@ class Bookmark extends Component {
                                 else {
                                     images = item.images.still.FHD
                                 }
-                                return <Video key={index} uID={item.uID} image={images} handleWatchedClick = { this.handleWatchedClick } handleHalfClick = { this.handleHalfClick } handleWatchedUnclick = {this.handleWatchedUnclick} handleHalfUnclick = {this.handleHalfUnclick} watched = {watched}/>
+                                return <li key={index} style = {{margin: 5}}><Video key={index} uID={item.uID} image={images} handleWatchedClick = { this.handleWatchedClick } handleHalfClick = { this.handleHalfClick } handleWatchedUnclick = {this.handleWatchedUnclick} handleHalfUnclick = {this.handleHalfUnclick} watched = {watched}/></li>
                             })
                         }
                         </ul>
@@ -146,7 +139,7 @@ class Bookmark extends Component {
                                     else {
                                         isWatched = "False"
                                     }
-                                    return <li key={index} >{item.uID } |  Watched: { isWatched }</li>
+                                    return <li key={index} style={{ color: 'white'}} >{item.uID } |  Watched: { isWatched }</li>
                                 })
                             }
                             {
@@ -158,7 +151,7 @@ class Bookmark extends Component {
                                     else {
                                         isWatched = "False"
                                     }
-                                    return <li key = {index}> {item.uID} | Watched: { isWatched } </li>
+                                    return <li key = {index} style={{ color: 'white'}}> {item.uID} | Watched: { isWatched } </li>
                                 })
                             }
                         </ul>

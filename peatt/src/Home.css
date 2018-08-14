@@ -1,0 +1,31 @@
+.Link-Buttons {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+.Link-Favorites {
+    padding-left: 1em;
+    padding-right: 2em;
+}
+
+.Link-Bookmarks {
+    padding-left: 2em;
+    padding-right: 1em;
+}
+
+.Link-Fav-border {
+    border: 2px solid #008CBA
+}
+
+.Link-Book-border {
+    border: 2px solid rgb(70, 109, 71)
+}
+
+.Home-text {
+    color: white;
+    border-bottom: solid;
+    border-width: 1px;
+}
+
+.Home-watch {
+    color: white;
+}

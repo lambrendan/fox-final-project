@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
+import "./User.css"
 var got = require("got");
 
 class User extends Component {
@@ -37,8 +38,8 @@ class User extends Component {
         if( this.state.isLoggedIn ) {
             return ( 
                 <div>
-                    <p> Email is: {this.state.email}</p>
-                    <p> Password is: {this.state.password} </p>
+                    <p className='User-info'> Your email is: {this.state.email}</p>
+                    <p className='User-info'> Your password is: {this.state.password} </p>
                     <button onClick = { () => this.handleContinue() }> Continue </button>
                 </div>
             )
@@ -46,7 +47,7 @@ class User extends Component {
         else {
             return (    
                 <form> 
-                    <h2> Register/Sign-In </h2>
+                    <h1 className='User-header'> Register/Sign-In </h1>
                     <div className="form-group">
                         <input 
                             className="form-control"

@@ -1,0 +1,13 @@
+.Header{
+    background-color: #000000;
+    height: 100%;
+}
+
+.Header-Title {
+    font-size: 40px;
+    color: white;
+}
+.Header-button {
+    background-color: white;
+    border: 2px solid black;
+}

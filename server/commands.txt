@@ -1,0 +1,21 @@
+node cli --signup --email=foxuser300@fox.com --password=abcdef
+
+node cli --signup --email=foxuser301@fox.com 
+
+node cli --signup 
+
+node cli
+
+node cli --signin --email=foxuser300@fox.com --password=abcef
+
+node cli --delete --email=foxuser300@fox.com --password=abcdef
+
+node cli --email=foxuser300@fox.com
+
+node cli --email=foxuser300@fox.com --password=abcdef
+
+node cli --email=foxuser300@fox.com --password=abcdef
+
+node cli --email=foxuser300@fox.com --password=abcdef --numBookMarks=4
+
+node cli --email=foxuser300@fox.com --password=abcdef --bookmark={'uID

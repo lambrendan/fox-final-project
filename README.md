@@ -21,15 +21,24 @@ A step by step series of examples that tell you how to get a development env run
 Single Page Application
 
 ```
-1. Go into the server folder and run the server with 'npm start PEATT'
-2. Go into the client folder and run the cleint with 'npm start'
+1. cd into the server folder and run the server with 'npm start PEATT'
+2. cd into the client folder and run the cleint with 'npm start'
+
+```
+
+Web API 
+
+```
+1. cd into the server folder
+2. Run the server with 'npm start PEATT'
+3. Use Postman to run API tests 
 
 ```
 
 Command Line Tool
 
 ```
-1. Go into the server folder
+1. cd into the server folder
 2. Run the Tool using node cli [options]
 3. To view all available options, run the tool using the help flag: node cli --help
 

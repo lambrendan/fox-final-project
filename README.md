@@ -11,7 +11,7 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 ```
-TODO
+npm install got 
 ```
 
 ### Running the Program
@@ -23,6 +23,7 @@ Single Page Application
 ```
 1. Go into the server folder and run the server with 'npm start PEATT'
 2. Go into the client folder and run the cleint with 'npm start'
+
 ```
 
 Command Line Tool

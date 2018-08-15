@@ -3,8 +3,8 @@ import { Switch, Route } from 'react-router-dom'
 import User from "./User.js"
 import Root from "./Root.js"
 import Home from "./Home.js"
-import Favorites from "./Favorites"
-import Bookmark from "./Bookmark"
+import Favorites from "./Favorites/Favorites"
+import Bookmark from "./Bookmarks/Bookmark"
 
 class Main extends Component {
     render() {

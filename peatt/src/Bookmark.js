@@ -84,7 +84,7 @@ class Bookmark extends Component {
         return(
           <div>
             <div style={{ marginTop: '10px' ,marginBottom: '10px'}}>
-                <button className= "btn btn-success" type='button' onClick={this.handleFinish}>Finish</button>
+                <button className= "btn btn-danger" type='button' onClick={this.handleFinish}>Finish</button>
             </div>
             <div style={{ marginBottom: '10px'}}>
                 <button className= "btn btn-secondary" type='button' onClick={this.handleRandomBookmarks}>Random</button>
@@ -130,7 +130,7 @@ class Bookmark extends Component {
                     </div>
                     <div style={{display: "table-cell", width: "50%"}}>
                         <h2 style={{ color: 'white'}}> Bookmarked Videos </h2>
-                        <ul>
+                        <ul style={{ listStyle: 'none' }}>
                             {
                                 this.props.bookmarks.map((item, index ) => {
                                     let isWatched;

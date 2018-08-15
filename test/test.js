@@ -1,17 +1,24 @@
-var assert = require('assert');
+/* File Header --------------------------------------------------------------------------------------------
+ * Filename:  test.js 
+ * Author: Brendan Lam 
+ * Company: 21st Century Fox
+ * File Description: File that contains all of the Unit Tests for the api.
+ */ 
+
 var chai = require('chai');
 var expect = chai.expect;
 var nock = require("nock")
 var users = require('../server/services/users.js')
 var favorites = require('../server/services/favorites.js')
 var bookmarks = require('../server/services/bookmarks.js')
-var file = require('../server/services/file.js')
-var list = require('../server/services/list.js')
 var userMap = users.createUserMap( true );
 
+
+/* Tests for Users 
+ * Description: These tests are focused on sign-up, sign-in, and delete functions
+ */
 describe('User', function(){
     describe('Signup', function() {
-
         //Basic signup
         it( "Creating a user that doesn't already exist", function() {
             nock('https://qa.api2.fox.com', {
@@ -209,6 +216,9 @@ describe('User', function(){
     })
 })
 
+/* Tests for Favorites 
+ * Description: These tests are focused on getFavorites, createSetFavorites, and createRandomFavorites
+ */
 describe('Favorites', function() {
     var tempUserMap = {
         "foxuser12@fox.com": {
@@ -234,6 +244,7 @@ describe('Favorites', function() {
     newAuthHeaders.Authorization = 'Bearer 1234';
 
     describe('Create Set Favorites', function() {
+        //Create a single, specified favorite of a show
         it("Create one favorite", function() {
             this.timeout(10000)
             favBody = [{'showID':'bamboo-eater' }]
@@ -248,7 +259,8 @@ describe('Favorites', function() {
                 expect(res.body).to.be.eql(favBody);
             })
         })
-        
+
+        //Favorite multiple shows
         it("Create multiple favorites", function() {
             this.timeout(10000)
             favBody =[{'showID': 'bamboo-eater'}, {'showID': 'hello-world'}, {'showID': 'fun-with-javascript'}]
@@ -267,6 +279,8 @@ describe('Favorites', function() {
     })
 
     describe( 'Get Favorites', function() {
+
+        //Get a user's favorite with only one show favorited
         it("Get favorites of user with only one favorites", function() {
             nock('https://api-staging.fox.com', {
                 headers: newAuthHeaders
@@ -281,6 +295,7 @@ describe('Favorites', function() {
             })
         })
 
+        //Get a user's favorite with no shows favorited
         it("Get favorites of user with no favorites", function() {
             nock('https://api-staging.fox.com', {
                 headers: newAuthHeaders
@@ -294,6 +309,7 @@ describe('Favorites', function() {
             })
         })
 
+        //Get a user's favorite with multiple shows favorited
         it("Get favorites of user with multiple favorites", function() {
             nock('https://api-staging.fox.com', {
                 headers: newAuthHeaders
@@ -332,6 +348,7 @@ describe('Favorites', function() {
         const newAuthHeaders = Object.assign({}, users.authHeaders);
         newAuthHeaders.Authorization = 'Bearer 1234';   
 
+        //Randomly favorite a show
         it("Create one random favorite", function() {
             nock('https://stage.dpp.foxdcg.com', {
                 headers: {
@@ -361,7 +378,8 @@ describe('Favorites', function() {
                 expect(res.body).to.be.eql(favBody);
             })
         })
-        
+
+        //Randomly favorite multiple shows
         it("Create multiple random favorites", function() {
             this.timeout(10000)
             nock('https://stage.dpp.foxdcg.com', {
@@ -403,6 +421,9 @@ describe('Favorites', function() {
     })
 })
 
+/* Tests for Bookmarks 
+ * Description: These tests are focused on the getBookmark function
+ */
 describe('Bookmarks', function() {
     var tempUserMap = {
         "foxuser12@fox.com": {
@@ -427,152 +448,63 @@ describe('Bookmarks', function() {
     const newAuthHeaders = Object.assign({}, users.authHeaders);
     newAuthHeaders.Authorization = 'Bearer 1234';
 
-    describe( 'Get Bookmarks', function() {
+    describe('Get Bookmarks', function() {
+
+        //Get bookmarks of user with one watched video
         it("Get bookmark of user with only one bookmark", function() {
             nock('https://api-staging.fox.com', {
                 headers: newAuthHeaders
             })
-            .get(`/profiles/_latest/${userID}/favorites`)
+            .get(`/profiles/v3/${userID}/bookmarks`)
             .reply(200, {
-                showCode: "lost-in-the-sauce"
+                uID: "lost-in-the-sauce_02-11"
             })
-            return favorites.grabUserFavorites( 'foxuser12@fox.com', 'abcdef', tempUserMap )
+            return bookmarks.grabUserBookmarks( 'foxuser12@fox.com', 'abcdef', tempUserMap )
             .then( res=> {
-                expect(res.body.showCode).to.equal('lost-in-the-sauce')
+                expect(res.body.uID).to.equal('lost-in-the-sauce_02-11')
             })
         })
 
-        it("Get favorites of user with no bookmarks", function() {
+        //Get bookmarks of user with no watched videos
+        it("Get bookmark of user with no bookmarks", function() {
             nock('https://api-staging.fox.com', {
                 headers: newAuthHeaders
             })
-            .get(`/profiles/_latest/${userID}/favorites`)
+            .get(`/profiles/v3/${userID}/bookmarks`)
             .reply(200, {
             })
-            return favorites.grabUserFavorites( 'foxuser12@fox.com', 'abcdef', tempUserMap )
+            return bookmarks.grabUserBookmarks( 'foxuser12@fox.com', 'abcdef', tempUserMap )
             .then( res=> {
                 expect(res.body).to.be.empty;
             })
         })
 
+        //Get bookmarks of user with many watched videos
         it("Get bookmarks of user with multiple bookmarks", function() {
             nock('https://api-staging.fox.com', {
                 headers: newAuthHeaders
             })
-            .get(`/profiles/_latest/${userID}/favorites`)
+            .get(`/profiles/v3/${userID}/bookmarks`)
             .reply(200, [
                 {
-                    showCode: "lost-in-the-sauce",
+                    uID: "lost-in-the-sauce_02-11",
                 },
                 {
-                    showCode: "cool-dinosaurs"
+                    uID: "cool-dinosaurs_03-12"
                 },
                 {
-                    showCode: "hi-there"
+                    uID: "hi-there_04-15"
                 }
             ])
-            return favorites.grabUserFavorites( 'foxuser12@fox.com', 'abcdef', tempUserMap )
+            return bookmarks.grabUserBookmarks( 'foxuser12@fox.com', 'abcdef', tempUserMap )
             .then( res=> {
-                expect(res.body[0].showCode).to.equal('lost-in-the-sauce')
-                expect(res.body[1].showCode).to.equal('cool-dinosaurs')
-                expect(res.body[2].showCode).to.equal('hi-there');
+                expect(res.body[0].uID).to.equal('lost-in-the-sauce_02-11')
+                expect(res.body[1].uID).to.equal('cool-dinosaurs_03-12')
+                expect(res.body[2].uID).to.equal('hi-there_04-15');
             })
         })
     })
 
-    describe( 'Create random bookmarks', function() {
-        var tempUserMap = {
-            "foxuser12@fox.com": {
-                "password": "abcdef",
-                "myToken": "1234",
-                "userID": "569",
-                "body": {
-                    "accessToken": "1234",
-                    "profileId": "569"
-                }
-            }
-        }
-        nock('https://qa.api2.fox.com', {
-            headers: users.generalHeader
-        })
-        .post('/v2.0/login', users.signinBody('foxuser12@fox.com', 'abcdef'))
-        .reply(200, { 
-            accessToken: '1234',
-            profileId: '569'
-        })
-        userID = '569'
-        const newAuthHeaders = Object.assign({}, users.authHeaders);
-        newAuthHeaders.Authorization = 'Bearer 1234';   
-
-        it("Create one random favorite", function() {
-            nock('https://stage.dpp.foxdcg.com', {
-                headers: {
-                    'apikey': 'DEFAULT'
-                }
-            })
-            .get('/api/published/series?_fields=showCode,images&itemsPerPage=200')
-            .reply(200, {
-                member: [{
-                    "showCode": "hello-mr-guy",
-                    "images": {
-                        "seriesList": {
-                            "FHD": "yo"
-                        }
-                    }
-                }]
-            })
-            favBody =[{'showID':'hello-mr-guy'}]
-            nock('https://api-staging.fox.com', {
-                headers: newAuthHeaders
-            })
-            .post(`/profiles/_latest/${userID}/favorites`, favBody )
-            .reply(200, favBody )
-
-            return favorites.createRandomFavorites(1, 'foxuser12@fox.com', 'abcdef', tempUserMap)
-            .then( res => {
-                expect(res.body).to.be.eql(favBody);
-            })
-        })
-        
-        it("Create multiple random favorites", function() {
-            this.timeout(10000)
-            nock('https://stage.dpp.foxdcg.com', {
-                headers: {
-                    'apikey': 'DEFAULT'
-                }
-            })
-            .get('/api/published/series?_fields=showCode,images&itemsPerPage=200')
-            .reply(200, {
-                member: [{
-                    "showCode": "hello-mr-guy",
-                    "images": {
-                        "seriesList": {
-                            "FHD": "yo"
-                        }
-                    }
-                },
-                {
-                    "showCode": "hello-mr-guy",
-                    "images": {
-                        "seriesList": {
-                            "FHD": "hi"
-                        }
-                    }
-                }]
-            })
-            favBody =[{'showID': 'hello-mr-guy'}, {'showID':'hello-mr-guy'}] 
-            nock('https://api-staging.fox.com', {
-                headers: newAuthHeaders
-            })
-            .post(`/profiles/_latest/${userID}/favorites`, favBody )
-            .reply(200, favBody )
-
-            return favorites.createRandomFavorites(2, 'foxuser12@fox.com', 'abcdef', tempUserMap)
-            .then( res => {
-                expect(res.body.length).to.be.eql(favBody.length)
-            })
-        })
-    })
 })
 
 

@@ -217,6 +217,7 @@ function deleteUser( email, password, userMap ) {
                 json: true
             })
             .then(function(res) {
+                console.log(res);
                 delete userMap[email];
                 if (!dontUseCache) {
                     fs.writeFileSync('./cache.json', JSON.stringify(userMap, null, 2));
@@ -225,11 +226,11 @@ function deleteUser( email, password, userMap ) {
                 
             }) 
             .catch( function(err) {
-                console.log(err.response);
+                console.log(err);
             })
         })
         .catch( function (err) {
-            console.log(err.response);
+            console.log(err);
         })
 }
 
@@ -244,9 +245,7 @@ function signin ( email, password, userMap ) {
         if( userMap[email].hasOwnProperty( "myToken" ) ) {
             return Promise.resolve(userMap[email])
             .then(function(res) {
-                //console.log(res);
                 userMap = updateUserInfo( userMap, email, res.body.accessToken, res.body.profileId, res.body, dontUseCache )
-                //console.log("Your token is: " + userMap[email].myToken )
                 return res;
             })
             .catch( function (err ) {
@@ -260,7 +259,6 @@ function signin ( email, password, userMap ) {
                 json: true
             })
             .then(function(res){
-                //console.log(typeof(res));
                 userMap = updateUserInfo( userMap, email, res.body.accessToken, res.body.profileId, res.body, dontUseCache )
                 return res;
             }).catch( function(err) {
@@ -273,7 +271,6 @@ function signin ( email, password, userMap ) {
             .then(function(res) {
                 var userObj = { 'password': password, 'videoMap': {} };
                 addUserToMap( userMap, email, userObj, dontUseCache)
-                //successfulSignup( email, password );
                 return got.post('https://qa.api2.fox.com/v2.0/login', {
                     headers: generalHeader,
                     body: signinBody(email, password),

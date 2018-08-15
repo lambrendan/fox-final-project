@@ -15,23 +15,27 @@ var file = require("../services/file.js")
 var got = require('got');
 
 let dontUseCache = false;
-let userMap =  {};
-userMap = users.createUserMap( false );
+let userMap = users.createUserMap( false );
 
 /* API route to parse a JSON object
  * @body - JSON object to be parsed
  */
-api.post('/parseJSON', function(req, res) {
-    console.log( req.body.users );
+api.post('/parseJSON', function(req, res) { 
     var obj = { users: JSON.parse(req.body.users) }
-    file.parseJSON(obj, userMap)
-    .then(() => {
-        res.send({ success: true })
-    }).catch(() => {
-        res.send({success: false });
-    });
+    file.parseJSON(obj, userMap);
+    Promise.all([favorites.grabUserFavorites( obj.users[0].email, obj.users[0].password, userMap ), bookmarks.grabUserBookmarks( obj.users[0].email, obj.users[0].password, userMap )])
+    .then( response => {
+        console.log( response[0].body, response[1].body);
+        res.json({ success: true, email: obj.users[0].email, password: obj.users[0].password, favorites: response[0].body, bookmarks: response[1].body })
+    })
+    .catch( error => {
+        res.json({ success: false, message: "Something went wrong"})
+    })
+    
 });
 
+/* API route to randomly generate a user
+ */
 api.get('/random/signup', function(req, res){
     let email = users.generateRandomEmail();
     let password = users.generateRandomPassword();
@@ -67,7 +71,7 @@ api.post('/signup', function(req, res) {
             })
             .catch(function(err) {
                 res.send(err);
-                //res.json({ success: false, message:"Couldn't signup the user"});
+                res.json({ success: false, error: err });
             });
     }
 });
@@ -90,7 +94,7 @@ api.post('/signin', function(req, res) {
             password = req.body.password
             users.signin( email, password, userMap )
             .then( function(response) {
-                res.json({"email": email, "password": password, "accessToken": response.body.accessToken, "userID": response.body.profileId }) 
+                res.json({ success: true, "email": email, "password": password, "accessToken": response.body.accessToken, "userID": response.body.profileId }) 
             })
             .catch( function(err ) {
                 res.json({ success: false, message: "Could not sign-into your account. Try again!"})
@@ -105,7 +109,7 @@ api.post('/signin', function(req, res) {
                 users.successfulSignup( email, password );
                 users.signin( email, password, userMap )
                 .then( function(response) {
-                    res.json({"email": email, "password": password, "accessToken": response.body.accessToken, "userID": response.body.profileId}) 
+                    res.json({success: true, "email": email, "password": password, "accessToken": response.body.accessToken, "userID": response.body.profileId}) 
                 })
                 .catch( function(err ) {
                     res.json({ success: false, message: "Could not sign-into your account. Try again!"})
@@ -143,11 +147,13 @@ api.post('/favorite/:showCode', function( req, res) {
     res.json({"email": req.body.email, "show": req.params.showCode});
 });
 
+/* API route to randomly get a show to favorite
+ */
 api.get('/favorite/random', (req,res) => { 
     list.getSeriesList()
     .then( response => {
         var seriesIndex = users.generateRandomIndex( response.body.member.length);
-        res.json({ "showCode": response.body.member[seriesIndex].showCode })
+        res.json({ success: true, "showCode": response.body.member[seriesIndex].showCode })
     })
     .catch( error => {
         res.json({ success: false, message: "Couldn't get the list"})
@@ -165,6 +171,9 @@ api.post('/bookmarks/:video', function( req, res) {
     res.json({"email": req.body.email, "video": req.params.video })
 });
 
+
+/* API route to get a random video to bookmark
+ */
 api.get('/bookmark/random', ( req, res ) => {
     return got.get( "https://api-staging.fox.com/fbc-content/v1_5/video?itemsPerPage=100&videoType=fullEpisode&premiumPackage=&page=" + req.query.page.toString(), { 
         headers: {
@@ -176,10 +185,10 @@ api.get('/bookmark/random', ( req, res ) => {
         var randomIndex = users.generateRandomIndex( response.body.member.length );
         var isWatched = users.generateRandomIndex( 2 );
         if( isWatched === 0 ) {
-            res.json({ "uID":response.body.member[randomIndex].uID, "watched": true})
+            res.json({ success: true, "uID":response.body.member[randomIndex].uID, "watched": true})
         }
         else {
-            res.json({ "uID":response.body.member[randomIndex].uID })
+            res.json({ success: true, "uID":response.body.member[randomIndex].uID })
         }
     })
     .catch( error => {
@@ -194,15 +203,16 @@ api.get('/bookmark/random', ( req, res ) => {
 api.get('/shows', function( req, res) {
     list.getSeriesList()
     .then( response => {
-        console.log(response.body.member)
         //res.append('Access-Control-Allow-Origin', ['*'])
-        res.json({showList: response.body.member})
+        res.json({ success: true, showList: response.body.member})
     })
     .catch( error => {
         res.json({ success: false, message: "Couldn't get the list"})
     })
 })
 
+/* API route to get a list of all videos
+ */
 api.get('/videos', function( req, res) {
     return got.get( "https://api-staging.fox.com/fbc-content/v1_5/video?itemsPerPage=100&videoType=fullEpisode&premiumPackage=&page=" + req.query.page.toString(), { 
         headers: {
@@ -217,7 +227,7 @@ api.get('/videos', function( req, res) {
             videoObj.push(tempObj);
         }
         var maxPages = Math.ceil((response.body.totalItems / response.body.itemsPerPage ));
-        res.json({ videoList: videoObj, maxPages: maxPages })
+        res.json({ success: true, videoList: videoObj, maxPages: maxPages })
     })
     .catch( error => {
         res.json({ success: false, message: "The page you entered doesn't exist"})

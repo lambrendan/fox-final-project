@@ -197,6 +197,7 @@ function createSetBookmarks( email, password, bookmark, userMap ) {
  * @param password - Password of the user to grab bookmarks from
  */ 
 function grabUserBookmarks( email, password, userMap ) {
+    console.log(email)
     return users.signin( email, password, userMap )
         .then(function(res) {
             var token = res.body.accessToken;
@@ -204,7 +205,6 @@ function grabUserBookmarks( email, password, userMap ) {
             return getBookmarks( userID, token )
         })
         .then(function(res) {
-            console.log(res.body.list)
             //console.log(res.body.list);
             return res;     
             

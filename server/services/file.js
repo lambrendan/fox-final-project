@@ -82,7 +82,6 @@ function parseJSON ( jsonObject, userMap ) {
             var bookmarkObject = [];
             for( var bookmarkIndex = 0; bookmarkIndex < jsonObject.users[index].bookmarks.length; bookmarkIndex++) {
                 bookmarkObject.push( jsonObject.users[index].bookmarks[bookmarkIndex]);
-                //console.log( "Index: " + bookmarkIndex + "Object: " + fileObj.users[index].bookmarks[bookmarkIndex] )
             }
             var numBookmrks = bookmarkObject.length;
             

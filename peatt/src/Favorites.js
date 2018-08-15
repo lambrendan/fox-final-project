@@ -95,7 +95,7 @@ class Favorites extends Component {
             return(
             <div>
                 <div style={{ marginTop: '10px' ,marginBottom: '10px'}}>
-                    <button className= "btn btn-success" type='button' onClick={this.handleFinish}>Finish</button>
+                    <button className= "btn btn-danger" type='button' onClick={this.handleFinish}>Finish</button>
                 </div>
                 <div style={{ marginBottom: '10px'}}>
                     <button className= "btn btn-secondary" type='button' onClick={this.handleRandomFavorites}>Random</button>
@@ -139,7 +139,7 @@ class Favorites extends Component {
                     </div>
                     <div style={{display: "table-cell", width: "50%"}}>
                         <h2 style={{ color: 'white'}}> Favorited Shows </h2>
-                        <ul >
+                        <ul style={{ listStyle: 'none' }} >
                             {
                                 this.props.favorites.map((item, index ) => {
                                     return <li key={index} style={{ color: 'white'}} >{item.showCode }</li>

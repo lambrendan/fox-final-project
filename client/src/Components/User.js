@@ -52,7 +52,7 @@ class User extends Component {
             return (    
                 <form> 
                     <h1 className='User-header'> Register/Sign-In </h1>
-                    <div className="form-group">
+                    <div className="form-group" style={{ paddingLeft: '27em', paddingRight: '27em'}}>
                         <input 
                             className="form-control"
                             type="text"
@@ -61,7 +61,7 @@ class User extends Component {
                         />
                     </div>
 
-                    <div className="form-group">
+                    <div className="form-group" style={{ paddingLeft: '27em', paddingRight: '27em'}}> 
                         <input
                             className="form-control"
                             type="password"

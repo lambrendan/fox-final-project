@@ -28,12 +28,10 @@ args
     .option('delete', "Enter the username")
     .option('signin', "Sign into your account")
     .option('signup', "Signup for an account")
-    .option('getFavorites', "Gets a user's favorites")
-    .option('getBookmarks', "Get a user's bookmarks")
     .option('noCache', "Specify whether to include a cache" )
-    .option('deleteCache', "")
-    .option('file', "")
-    .option('getInfo', "")
+    .option('deleteCache', "Delete the cache")
+    .option('file', "Specify a file to parse")
+    .option('getInfo', "Get the favorites, bookmarks, and user info for a specified user")
 
 const flags = args.parse(process.argv);
 
@@ -45,12 +43,16 @@ var password;
 
 if( flags.file ) {
     var fileObj = file.readAFile( flags.file );
-    file.parseJson(fileObj);
+    file.parseJSON(fileObj, userMap);
 } 
 else {
+
+    //If an email is provided
     if( flags.email ) {
         email = flags.email;
+        //If there is a sign-up flag, signup the user.
         if ( flags.signup ) {
+            //If there is a password flag, use the password to signup
             if( flags.password ) {
                 password = flags.password;
                 if ( flags.firstName && flags.lastName && flags.birthdate && flags.gender ) {
@@ -86,6 +88,7 @@ else {
                     });
                 }
             }
+            //If a password wasn't provided, then randomize the password and signup the email
             else {
                 password = users.generateRandomPassword();
                 if ( flags.firstName && flags.lastName && flags.birthdate && flags.gender ) {
@@ -120,33 +123,16 @@ else {
                 }
             }
         }
+
+        //If there is a sign-in flag
         else if( flags.signin ) {
-            if ( !flags.email ) {
-                email = users.generateRandomEmail();
-                password = users.generateRandomPassword();
-                users.signup( email, password, undefined, undefined, undefined, undefined, userMap )
-                .then(function(res) {
-                    var userObj = { 'password': password, 'videoMap': {} };
-                    users.addUserToMap( userMap, email, userObj, flags.noCache)
-                    users.successfulSignup( email, password );
-                    //return res;
-                })
-                .catch( function(err) {
-                    console.log(err.response.body);
-                    console.log("It didn't work! This is your new info:");
-                    var obj = users.continuousSignup( userMap );
-                    email = obj.email;
-                    password = obj.password;
-                });
-            }
-        
-            //Email entered but no password entered
-            else if( flags.email && !flags.password ) {
-                email = flags.email;
-                if (userMap.hasOwnProperty(email) ) {
+            //If there is no password, look in the usermap to see if the email is in there and sign-in if it is
+            if( !flags.password ) {
+                if ( userMap.hasOwnProperty(email) ) {
                     password = userMap[email].password;     
                     users.signin( email, password, userMap );   
                 }
+                //If there is no email in the usermap, then just sign-up with the email and have a random password
                 else {
                     password = users.generateRandomPassword();
                     users.signup( email, password, undefined, undefined, undefined, undefined, userMap )
@@ -167,14 +153,13 @@ else {
             } 
         
             //Email and password entered 
-            else if ( flags.email && flags.password ) {
-                email = flags.email;
+            else {
                 password = flags.password;
             }
             users.signin( email, password, userMap );
         }
         else if ( flags.delete ) {
-            if( !flags.email || !flags.password ) {
+            if( !flags.password ) {
                 throw "Please specify the email and password for the account that you want to delete"
             }
             users.deleteUser( flags.email, flags.password, userMap );
@@ -191,7 +176,7 @@ else {
                     res => {
                         infoObject.accessToken = userMap[email].myToken
                         infoObject.favorites = res[0].body;
-                        infoObject.bookmarks = res[1].body;
+                        infoObject.bookmarks = res[1].body.list;
                         console.log( infoObject )
                     }
                 )
@@ -242,9 +227,10 @@ else {
         }
     }
     else {
-        var userObject = users.continuousSignup( userMap );
-        email = userObject.email;
-        password = userObject.password;
+        email = users.generateRandomEmail();
+        password = users.generateRandomPassword();
+        console.log("This is your email: " + email);
+        console.log("This is your password: " + password );
     }
     if( flags.bookmark ) {
         var bookmarkObject = []
@@ -265,8 +251,9 @@ else {
                 throw "You entered too many favorite flags"
             }
             bookmarks.createSetBookmarks( email, password, bookmarkObject, userMap );
+         
             var numBookmarksLeft = flags.bookmarksNum - numBookmarks;
-            if( numBookmarks > 0 ) {
+            if( numBookmarksLeft > 0 ) {
                 bookmarks.createRandomBookmark( numBookmarksLeft, email, password, userMap );
             }
         }
@@ -295,11 +282,17 @@ else {
             if( numFavorites > flags.favoritesNum ) {
                 throw "You entered too many favorite flags"
             }
-            favorites.createSetFavorites( email, password, showCode, userMap );
+            
             var numFavsLeft = flags.favoritesNum - numFavorites;
-            if( numFavsLeft > 0 ) {
-                favorites.createRandomFavorites( numFavsLeft, email, password, userMap );
-            }
+            favorites.createSetFavorites( email, password, showCode, userMap )
+            .then( res=> {
+                if( numFavsLeft > 0 ) {
+                    favorites.createRandomFavorites( numFavsLeft, email, password, userMap );
+                }
+            })
+            .catch( err => {
+                console.log(err);
+            })
         }
     }
     else {
@@ -307,14 +300,6 @@ else {
             favorites.createRandomFavorites( flags.favoritesNum, email, password, userMap );
         }
     }
-
-    if( flags.getFavorites ) {
-        favorites.grabUserFavorites(email, password, userMap )
-    }
-    if( flags.getBookmarks ) {
-        bookmarks.grabUserBookmarks( email, password, userMap );
-    }
-
 }
 
 

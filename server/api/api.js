@@ -25,7 +25,6 @@ api.post('/parseJSON', function(req, res) {
     file.parseJSON(obj, userMap);
     Promise.all([favorites.grabUserFavorites( obj.users[0].email, obj.users[0].password, userMap ), bookmarks.grabUserBookmarks( obj.users[0].email, obj.users[0].password, userMap )])
     .then( response => {
-        console.log( response[0].body, response[1].body);
         res.json({ success: true, email: obj.users[0].email, password: obj.users[0].password, favorites: response[0].body, bookmarks: response[1].body })
     })
     .catch( error => {
@@ -190,6 +189,7 @@ api.get('/bookmark/random', ( req, res ) => {
         else {
             res.json({ success: true, "uID":response.body.member[randomIndex].uID })
         }
+        
     })
     .catch( error => {
         console.log(error);

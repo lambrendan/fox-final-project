@@ -34,7 +34,7 @@ class BookmarkSearch extends Component {
 
     render() {
         return (
-            <div className="form-group">
+            <div className="form-group" style={{ paddingLeft: '7em', paddingRight: '7em'}}>
                 <input 
                 className="form-control"
                 type="text"

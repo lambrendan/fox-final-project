@@ -171,7 +171,7 @@ function generateRandomEmail() {
  * @return Randomly generated password
  */ 
 function generateRandomPassword() {
-    var randomLength = Math.random() * (charSequence.length - 6 ) + 6;
+    var randomLength = Math.random() * ( 9 - 6 ) + 6;
     var password = "";
     for ( var i = 0; i < randomLength; i++ ) {
         var index = Math.floor( Math.random() * charSequence.length );
@@ -199,6 +199,13 @@ function signup ( email, password, firstName, lastName, birthdate, gender, userM
         body: signupBody( email, password, firstName, lastName, birthdate, gender ),
         json: true
     })
+    .then( res=> {
+        return res;
+    })
+    .catch( err => {
+        console.log(err)
+        return err;
+    })
     
 }
 
@@ -212,7 +219,7 @@ function deleteUser( email, password, userMap ) {
             var userID = res.body.profileId;
             const newAuthHeaders = Object.assign({}, authHeaders);
             newAuthHeaders.Authorization = `Bearer ${myToken}`;
-            return got.delete('https://api-staging.fox.com/profiles/_latest/'+ userID, {
+            return got.delete('https://qa.api2.fox.com/v2.0/profiles/'+ userID, {
                 headers: newAuthHeaders,
                 json: true
             })

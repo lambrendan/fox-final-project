@@ -41,11 +41,20 @@ function bookMarkVideo(userID, myToken, video, seconds ) {
     newAuthHeaders.Authorization = `Bearer ${myToken}`;
     newVideo.uID = video;
     newVideo.bookmark = seconds;
-    return got.post('https://api-staging.fox.com/profiles/v3/' + userID + '/bookmarks', {
+    //console.log(newVideo);
+    return got.post('http://foxprofile-staging.us-east-1.elasticbeanstalk.com/' + userID + '/bookmarks', {
         headers: newAuthHeaders,
         body: newVideo,
         json: true
-    });
+    })
+    .then( res=>{
+        //console.log(res.body)
+        return res;
+    })
+    .catch( err => {
+        console.log(err);
+        return err;
+    })
 }
 
 /* Bookmark a specified number of random videos  
@@ -62,15 +71,11 @@ function createRandomBookmark( numBookmarks, email, password, userMap ) {
         var watched;
 
         var isWatched = users.generateRandomIndex( 2 );
-        //if( userMap[email].videoMap).length >= res[1].body.member.length ) {
-            //throw "You have bookmarked every video already!"
-        //} 
-
+     
         for (var i = 0; i < numBookmarks; i++) {
             //USED FOR THE GET SHOWS INDEX - WATCHED 
             var randomIndex = users.generateRandomIndex( res[1].length );
             var showIndex = users.generateRandomIndex( res[1][randomIndex].body.member.length );
-           
             uIDWatched = res[1][randomIndex].body.member[showIndex].uID;
             while( userMap[email].videoMap.hasOwnProperty(uIDWatched) ) {
                 randomIndex = users.generateRandomIndex( res[1].length );
@@ -129,7 +134,7 @@ function createSetBookmarks( email, password, bookmark, userMap ) {
                 return bookMarkVideo( userID, token, uIDWatched, watched );
             })
             .then(function(res) {
-                console.log(res)
+                //console.log(res)
                 //return res;
             })
             .catch(function(err) {    
@@ -151,9 +156,6 @@ function createSetBookmarks( email, password, bookmark, userMap ) {
                 var showIndex;
                 var randomIndex;
                 var checkBreak = false;
-                //console.log(res[2])
-                //console.log( uid )
-                //console.log( "indexTwo" + index + " " + uid );
                 for( randomIndex = 0; randomIndex < res[1].length; randomIndex++ ) {
                     for( showIndex = 0; showIndex < res[1][randomIndex].body.member.length; showIndex++ ) {
                         if( res[1][randomIndex].body.member[showIndex].uID === res[2] ) {
@@ -197,7 +199,6 @@ function createSetBookmarks( email, password, bookmark, userMap ) {
  * @param password - Password of the user to grab bookmarks from
  */ 
 function grabUserBookmarks( email, password, userMap ) {
-    console.log(email)
     return users.signin( email, password, userMap )
         .then(function(res) {
             var token = res.body.accessToken;

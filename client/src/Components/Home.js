@@ -29,6 +29,7 @@ class Home extends Component {
     sendJson = () => {
         this.handleComplete();
         this.props.resetUser();
+        this.props.history.push( '/' )
     }
 
     render() {
@@ -49,23 +50,28 @@ class Home extends Component {
                     </div>
                 </nav>
                 <div>
-                    <p className='Home-text'> Email: { this.props.email } </p>
-                    <p className='Home-text'> Password: { this.props.password } </p>
-                    <p className='Home-text'> Favorites:     
+                    <p>
+                        <span className='Home-text'> Email:</span>
+                        <span className='Home-watch'> { this.props.email } </span>
+                    </p>
+                    <p>
+                        <span className='Home-text'> Password:</span>
+                        <span className='Home-watch'> { this.props.password } </span>
+                    </p>
+                    <p className='Home-text'> Favorites: </p>
                         {
                             this.props.favorites.map( (item, index) => {
                                 return <li className='Home-watch' key={index}>{item.showCode}</li>
-                            })
+                            })  
                         }   
-                    </p>
-                    <p className='Home-text'> Bookmarks:     
+                    <p> </p>
+                    <p className='Home-text'> Bookmarks: </p>    
                         {
                             this.props.bookmarks.map( (item, index) => {
-                                console.log(item);
                                 return <li className='Home-watch' key={index}>{item.uID}</li>
                             })
                         }   
-                    </p>
+                    <p> </p>
                 </div>
                 <div>
                     <button className="btn btn-info" type='button' onClick = {()=> {this.sendJson()}} > Done </button>

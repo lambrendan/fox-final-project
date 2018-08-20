@@ -891,7 +891,16 @@
   },
   "foxuser3@fox.com": {
     "password": "mttSp5AzvcmwR5BdjAyBAVyIfZd2q8d7detDmW0Wp7z43ZAe575aSYocYr",
-    "videoMap": {},
+    "videoMap": {
+      "the-gifted_01_09": {
+        "showIndex": 4,
+        "pageIndex": "ShowBySeriesList"
+      },
+      "hitler-youth_the-nazi-child-army": {
+        "showIndex": 1,
+        "pageIndex": "ShowBySeriesList"
+      }
+    },
     "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6NGIzODI0MDctMjQzMi00YTNkLThkYjYtMzM2M2E4MDA1OTFkIiwidWlkIjoiTkdJek9ESTBNRGN0TWpRek1pMDBZVE5rTFRoa1lqWXRNek0yTTJFNE1EQTFPVEZrIiwic2lkIjoiNWNlNGUzZjUtNGZkYS00MzRmLWJjZDItZTI0M2FiNTk0ZTQyIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1ODA3ODE1LCJqdGkiOiJmYmE5NzczNS0wZWRmLTRlNDUtOGVmYi1mOGViY2U5ODRiZTMiLCJpYXQiOjE1MzQyNzE4MTV9.SLkfO4TBtbPaHquRtz0wcOby5QS6LBtZ-8ev7slBcAnJNPKEXMlKgbpNywcNtBQomfqgGx7ueBREx3KQCKa7mPybh4cxWnhLBzCLMSivks3RfaTJqABcdHH0xps3rvEnZ3ZqTSeptp37vNp-dcaidLrhGhgTDZJ96-HrlqKohpzt88vxmc1D_rPzUdkjMgi1DdeHtfGDx_q9045xZTmbkTF8usxodFxENBJuj19WEqKEaGmPGx26V3cv_htnDx00A0pKIR2LRh8sovHdOa0st70RI-6m1Pex2oiNpwE21CLmV9iIOZOC_v8TEtxDEyvcJKe1RdkoEh-l7EQ1LqnrAw",
     "body": {
       "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6NGIzODI0MDctMjQzMi00YTNkLThkYjYtMzM2M2E4MDA1OTFkIiwidWlkIjoiTkdJek9ESTBNRGN0TWpRek1pMDBZVE5rTFRoa1lqWXRNek0yTTJFNE1EQTFPVEZrIiwic2lkIjoiNWNlNGUzZjUtNGZkYS00MzRmLWJjZDItZTI0M2FiNTk0ZTQyIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1ODA3ODE1LCJqdGkiOiJmYmE5NzczNS0wZWRmLTRlNDUtOGVmYi1mOGViY2U5ODRiZTMiLCJpYXQiOjE1MzQyNzE4MTV9.SLkfO4TBtbPaHquRtz0wcOby5QS6LBtZ-8ev7slBcAnJNPKEXMlKgbpNywcNtBQomfqgGx7ueBREx3KQCKa7mPybh4cxWnhLBzCLMSivks3RfaTJqABcdHH0xps3rvEnZ3ZqTSeptp37vNp-dcaidLrhGhgTDZJ96-HrlqKohpzt88vxmc1D_rPzUdkjMgi1DdeHtfGDx_q9045xZTmbkTF8usxodFxENBJuj19WEqKEaGmPGx26V3cv_htnDx00A0pKIR2LRh8sovHdOa0st70RI-6m1Pex2oiNpwE21CLmV9iIOZOC_v8TEtxDEyvcJKe1RdkoEh-l7EQ1LqnrAw",
@@ -1356,8 +1365,1582 @@
     "password": "cq8PGqiVEUj33EI4EW0HnzmIN4HuC3uTNaNVF",
     "videoMap": {}
   },
-  "foxuser1@fox.com":{
+  "foxuser1@fox.com": {
+    "password": "abcdef",
+    "videoMap": {
+      "masterchef_09_07": {
+        "showIndex": 6,
+        "pageIndex": "ShowBySeriesList"
+      }
+    },
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6YjBiNDVlMWQtNDNjZi00MjYxLTlmYmMtYjJkOWVmZWMzODA3IiwidWlkIjoiWWpCaU5EVmxNV1F0TkROalppMDBNall4TFRsbVltTXRZakprT1dWbVpXTXpPREEzIiwic2lkIjoiMWQ1NjNkZmYtMGMxYi00YWNiLWFkMDktMGRhM2VjNGJmZDg2Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1ODg4OTE4LCJqdGkiOiIwMTI0ODEyNS1iMWZjLTQ0YjQtYjY3OC02ZGU5ZGE1MTg1MTYiLCJpYXQiOjE1MzQzNTI5MTh9.sXeFdscCxCczcapdvLNKendD-K7DEUJpJNiUdZFsTBKr7n3t_7F37Uc8ZauZkNbPZ90vkmp9_b40xLiTjQWg5kp-hZoWilbYodcyEYjZLLyKHCA_OgyKge9Z3hHK023gIYf_7GFCCEvLZUvlX44AyuhVDXDsGgw9loVJriKiVUgPqa4q07IJNijMkjoEizmYyVxO7POdqTpk1qQaEgzO5OY127zRT1fkGTij3yqO6uqBJsYpd1bVLyCQ_N2cA0dVEDISfvvwsN9VxhYu161LuvM3bSQQpHDNq2HizHlSSuXJSs1JHiBOAMGW5BbHK8c_IMFdQhEQSC_3jlRh-OPaJg",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6YjBiNDVlMWQtNDNjZi00MjYxLTlmYmMtYjJkOWVmZWMzODA3IiwidWlkIjoiWWpCaU5EVmxNV1F0TkROalppMDBNall4TFRsbVltTXRZakprT1dWbVpXTXpPREEzIiwic2lkIjoiMWQ1NjNkZmYtMGMxYi00YWNiLWFkMDktMGRhM2VjNGJmZDg2Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1ODg4OTE4LCJqdGkiOiIwMTI0ODEyNS1iMWZjLTQ0YjQtYjY3OC02ZGU5ZGE1MTg1MTYiLCJpYXQiOjE1MzQzNTI5MTh9.sXeFdscCxCczcapdvLNKendD-K7DEUJpJNiUdZFsTBKr7n3t_7F37Uc8ZauZkNbPZ90vkmp9_b40xLiTjQWg5kp-hZoWilbYodcyEYjZLLyKHCA_OgyKge9Z3hHK023gIYf_7GFCCEvLZUvlX44AyuhVDXDsGgw9loVJriKiVUgPqa4q07IJNijMkjoEizmYyVxO7POdqTpk1qQaEgzO5OY127zRT1fkGTij3yqO6uqBJsYpd1bVLyCQ_N2cA0dVEDISfvvwsN9VxhYu161LuvM3bSQQpHDNq2HizHlSSuXJSs1JHiBOAMGW5BbHK8c_IMFdQhEQSC_3jlRh-OPaJg",
+      "tokenExpiration": 1565888918000,
+      "profileId": "YjBiNDVlMWQtNDNjZi00MjYxLTlmYmMtYjJkOWVmZWMzODA3",
+      "deviceId": null,
+      "email": "foxuser1@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:b0b45e1d-43cf-4261-9fbc-b2d9efec3807",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 165.254.134.190",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "YjBiNDVlMWQtNDNjZi00MjYxLTlmYmMtYjJkOWVmZWMzODA3"
+  },
+  "foxuser650@fox.com": {
+    "password": "abcdef",
+    "videoMap": {},
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6YTc0ZmMyZWEtNzRiOS00ZmZlLTk0NGYtY2IxZTJhMGQ5MmNjIiwidWlkIjoiWVRjMFptTXlaV0V0TnpSaU9TMDBabVpsTFRrME5HWXRZMkl4WlRKaE1HUTVNbU5qIiwic2lkIjoiYzE0MWUzYWEtZGYxYy00OTA4LWEwNWItYWVjNzEyYjMyNWU2Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1ODkyMjY1LCJqdGkiOiI0OWI4MWNhOS03YTRiLTRhZjgtYTViZC0zYjIxMDEyNWRiOWYiLCJpYXQiOjE1MzQzNTYyNjV9.kGWJxyJ24p-EPfFjwq8rL33it_A9CWXQtcJObXQJXQmOrQNBBy3TjXS7gfl8lYXJrFc-7GfmJpiDX2a1LTttKtQqEuW3Jr3F5V6iogIULkLAaUe6VgcF6L0bwakOTtgYo3f_vLCoyiHL1W9s_vINrjVea1Z1Faj9w1O2cy2U6XsRGYzalKBFKKgmmRcbYQVz3Cex9gsubgEth8S9TwxVB83wXoqv1ysW0nbXu0QKQavVG7YgVBrHU0WZYdJCL3x1e3QLiZ1MS6EfFwSwuJ-G5WbLi_E8uDQQq0EnfXZz71IJpO3dlDdyT17YtOQtfWNZdwLUL2nlm3Rdlm3IHhSzTg",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6YTc0ZmMyZWEtNzRiOS00ZmZlLTk0NGYtY2IxZTJhMGQ5MmNjIiwidWlkIjoiWVRjMFptTXlaV0V0TnpSaU9TMDBabVpsTFRrME5HWXRZMkl4WlRKaE1HUTVNbU5qIiwic2lkIjoiYzE0MWUzYWEtZGYxYy00OTA4LWEwNWItYWVjNzEyYjMyNWU2Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1ODkyMjY1LCJqdGkiOiI0OWI4MWNhOS03YTRiLTRhZjgtYTViZC0zYjIxMDEyNWRiOWYiLCJpYXQiOjE1MzQzNTYyNjV9.kGWJxyJ24p-EPfFjwq8rL33it_A9CWXQtcJObXQJXQmOrQNBBy3TjXS7gfl8lYXJrFc-7GfmJpiDX2a1LTttKtQqEuW3Jr3F5V6iogIULkLAaUe6VgcF6L0bwakOTtgYo3f_vLCoyiHL1W9s_vINrjVea1Z1Faj9w1O2cy2U6XsRGYzalKBFKKgmmRcbYQVz3Cex9gsubgEth8S9TwxVB83wXoqv1ysW0nbXu0QKQavVG7YgVBrHU0WZYdJCL3x1e3QLiZ1MS6EfFwSwuJ-G5WbLi_E8uDQQq0EnfXZz71IJpO3dlDdyT17YtOQtfWNZdwLUL2nlm3Rdlm3IHhSzTg",
+      "tokenExpiration": 1565892265000,
+      "profileId": "YTc0ZmMyZWEtNzRiOS00ZmZlLTk0NGYtY2IxZTJhMGQ5MmNj",
+      "deviceId": null,
+      "email": "foxuser650@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:a74fc2ea-74b9-4ffe-944f-cb1e2a0d92cc",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 65.158.114.231",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "YTc0ZmMyZWEtNzRiOS00ZmZlLTk0NGYtY2IxZTJhMGQ5MmNj"
+  },
+  "foxuser5123@fox.com": {
+    "password": "abcdef",
+    "videoMap": {},
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6YzEwOTAxNjUtOWMzZi00MDlmLWFhYzMtNTNiNzUwYjJlOTkxIiwidWlkIjoiWXpFd09UQXhOalV0T1dNelppMDBNRGxtTFdGaFl6TXROVE5pTnpVd1lqSmxPVGt4Iiwic2lkIjoiNDk4MjNkZTItZjQzZC00MTllLTkwNjYtNTc3NDliMTk2NTE3Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1ODk0MTQxLCJqdGkiOiI5ZjMwZjgzZi0wOTM5LTQzOTctOWE1Zi04MjI0ZmM3MzE0Y2QiLCJpYXQiOjE1MzQzNTgxNDF9.dgRFUFNjdz0oh36dq4SD1XACjqaVNDykuLIfpVSfBySI-p5OCyLj2KqlbckGS517L-qQGHHO_gsm7FpbOXpHm8U9oWjHKnd7VWx4s_ovvW0POKsYUcA3esQDPTBK2udOpU4bdXRclQANB5BYjtdLvYJSIr0BDagvuQNY6OLRNCc0SC6oxwaJl_LnEtyLBYpOwy_76P_rCY1mFqiR0N-RvtnhnGsxGMUEDiWpiMN-ikEYKBLadQl1m79onkJPj30rvXhKb5uruuVoTBETyLA2XFU3HL8gs4qxdSyvXACqlsJdWb6_HPNn2AyhKtSUT8AgZdzWpX1MclXc6lRPtXxfgQ",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6YzEwOTAxNjUtOWMzZi00MDlmLWFhYzMtNTNiNzUwYjJlOTkxIiwidWlkIjoiWXpFd09UQXhOalV0T1dNelppMDBNRGxtTFdGaFl6TXROVE5pTnpVd1lqSmxPVGt4Iiwic2lkIjoiNDk4MjNkZTItZjQzZC00MTllLTkwNjYtNTc3NDliMTk2NTE3Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1ODk0MTQxLCJqdGkiOiI5ZjMwZjgzZi0wOTM5LTQzOTctOWE1Zi04MjI0ZmM3MzE0Y2QiLCJpYXQiOjE1MzQzNTgxNDF9.dgRFUFNjdz0oh36dq4SD1XACjqaVNDykuLIfpVSfBySI-p5OCyLj2KqlbckGS517L-qQGHHO_gsm7FpbOXpHm8U9oWjHKnd7VWx4s_ovvW0POKsYUcA3esQDPTBK2udOpU4bdXRclQANB5BYjtdLvYJSIr0BDagvuQNY6OLRNCc0SC6oxwaJl_LnEtyLBYpOwy_76P_rCY1mFqiR0N-RvtnhnGsxGMUEDiWpiMN-ikEYKBLadQl1m79onkJPj30rvXhKb5uruuVoTBETyLA2XFU3HL8gs4qxdSyvXACqlsJdWb6_HPNn2AyhKtSUT8AgZdzWpX1MclXc6lRPtXxfgQ",
+      "tokenExpiration": 1565894141000,
+      "profileId": "YzEwOTAxNjUtOWMzZi00MDlmLWFhYzMtNTNiNzUwYjJlOTkx",
+      "deviceId": null,
+      "email": "foxuser5123@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:c1090165-9c3f-409f-aac3-53b750b2e991",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 165.254.16.94",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "YzEwOTAxNjUtOWMzZi00MDlmLWFhYzMtNTNiNzUwYjJlOTkx"
+  },
+  "foxuser5122@fox.com": {
+    "password": "abcdef",
+    "videoMap": {},
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6ODE2ZGViMmYtZjQ1MC00ZjIyLWI4MDQtMTBlMjU1ZjA3YTgwIiwidWlkIjoiT0RFMlpHVmlNbVl0WmpRMU1DMDBaakl5TFdJNE1EUXRNVEJsTWpVMVpqQTNZVGd3Iiwic2lkIjoiN2E3Nzc0NWUtOTZhYS00N2YxLWE2YjktZTg1NTIzMDBlZmY5Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1ODk0NDkxLCJqdGkiOiIzMTliNTFjOS03OWYxLTQ0MDktODRiOC05NTdmMDZkZmVkNTQiLCJpYXQiOjE1MzQzNTg0OTF9.NfWv7p_lr0ikfxw_OdHPjatW-vAqTUlCRuzHAK1n3_0qL_7KAAyVpiVdQe9RhGDOOetjd6l1IIw4Fx6_fASGSfTs6DQsxYeNSegEz2Np4BPhhws5573snLU9U3FLAdlqr8q069D4Itlgd1AEawpBXanWbQuwRNT6YEeQaN7p3Z8FTfQrYNsHKXXXduYIRjowSfytmnCKKqsSqkbObII6UjVB8HxMEnuo_qkQ3D63ofmd7MhqHCflySaqDcCFZSDj0VJzVXlaYIG3Kgt0YH-FtztxEbxPywM7Z-hzAzlZuh2Eop3CQj_G1V6ZDP5JD-0x8_L0dLUqV_AQWNcMnaYClA",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6ODE2ZGViMmYtZjQ1MC00ZjIyLWI4MDQtMTBlMjU1ZjA3YTgwIiwidWlkIjoiT0RFMlpHVmlNbVl0WmpRMU1DMDBaakl5TFdJNE1EUXRNVEJsTWpVMVpqQTNZVGd3Iiwic2lkIjoiN2E3Nzc0NWUtOTZhYS00N2YxLWE2YjktZTg1NTIzMDBlZmY5Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1ODk0NDkxLCJqdGkiOiIzMTliNTFjOS03OWYxLTQ0MDktODRiOC05NTdmMDZkZmVkNTQiLCJpYXQiOjE1MzQzNTg0OTF9.NfWv7p_lr0ikfxw_OdHPjatW-vAqTUlCRuzHAK1n3_0qL_7KAAyVpiVdQe9RhGDOOetjd6l1IIw4Fx6_fASGSfTs6DQsxYeNSegEz2Np4BPhhws5573snLU9U3FLAdlqr8q069D4Itlgd1AEawpBXanWbQuwRNT6YEeQaN7p3Z8FTfQrYNsHKXXXduYIRjowSfytmnCKKqsSqkbObII6UjVB8HxMEnuo_qkQ3D63ofmd7MhqHCflySaqDcCFZSDj0VJzVXlaYIG3Kgt0YH-FtztxEbxPywM7Z-hzAzlZuh2Eop3CQj_G1V6ZDP5JD-0x8_L0dLUqV_AQWNcMnaYClA",
+      "tokenExpiration": 1565894491000,
+      "profileId": "ODE2ZGViMmYtZjQ1MC00ZjIyLWI4MDQtMTBlMjU1ZjA3YTgw",
+      "deviceId": null,
+      "email": "foxuser5122@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:816deb2f-f450-4f22-b804-10e255f07a80",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 165.254.16.94, 23.54.19.117",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "ODE2ZGViMmYtZjQ1MC00ZjIyLWI4MDQtMTBlMjU1ZjA3YTgw"
+  },
+  "foxuser5124@fox.com": {
+    "password": "abcdef",
+    "videoMap": {},
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6Y2Y5ZmFkYmQtM2I4NS00MTFhLWFhYjgtODc3Y2E2NjU3NTgyIiwidWlkIjoiWTJZNVptRmtZbVF0TTJJNE5TMDBNVEZoTFdGaFlqZ3RPRGMzWTJFMk5qVTNOVGd5Iiwic2lkIjoiNDMwZDUwYmItMDQ2Ny00ODNmLTg1ZmQtNDNlNGNlMjJmMTA4Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1ODk0NTA1LCJqdGkiOiJiMTY5YWJlOS1mMDZlLTQ2MTgtYmQ4NC02ODUzNTNmY2FmYWIiLCJpYXQiOjE1MzQzNTg1MDV9.f3AzOWqMUXh-Bg7JXl4uTjpBSeSaqLgsg3DQbrP_-VU7Mqptfl9xdA-5YYxZec-BXHR6CAWbjzlqKtHIcsvrWYzJenBKtiHnXgHvNkzZdyk4YTNPdC4-JfRzxOyhYMfsPEQuBVMMnmHwcs7EU0SIlMu1n3Q-Y7ErSdzY9mCQtksec9MUNiQDjVv3OEmjCpWIGH2LP1b08dwM0xAgS7p5-YMM3kSkxR32d2W0PfSrzI0UeNqqoniEQ2G1WdNRTOH2sfdbulnGiMzMGQJyZxe-PEgzmqSIIG8QKWPRWKMQPJX5KrmtDc_-TckubzGE1idqanLT9a3Y7lffOuHRiyN7lg",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6Y2Y5ZmFkYmQtM2I4NS00MTFhLWFhYjgtODc3Y2E2NjU3NTgyIiwidWlkIjoiWTJZNVptRmtZbVF0TTJJNE5TMDBNVEZoTFdGaFlqZ3RPRGMzWTJFMk5qVTNOVGd5Iiwic2lkIjoiNDMwZDUwYmItMDQ2Ny00ODNmLTg1ZmQtNDNlNGNlMjJmMTA4Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1ODk0NTA1LCJqdGkiOiJiMTY5YWJlOS1mMDZlLTQ2MTgtYmQ4NC02ODUzNTNmY2FmYWIiLCJpYXQiOjE1MzQzNTg1MDV9.f3AzOWqMUXh-Bg7JXl4uTjpBSeSaqLgsg3DQbrP_-VU7Mqptfl9xdA-5YYxZec-BXHR6CAWbjzlqKtHIcsvrWYzJenBKtiHnXgHvNkzZdyk4YTNPdC4-JfRzxOyhYMfsPEQuBVMMnmHwcs7EU0SIlMu1n3Q-Y7ErSdzY9mCQtksec9MUNiQDjVv3OEmjCpWIGH2LP1b08dwM0xAgS7p5-YMM3kSkxR32d2W0PfSrzI0UeNqqoniEQ2G1WdNRTOH2sfdbulnGiMzMGQJyZxe-PEgzmqSIIG8QKWPRWKMQPJX5KrmtDc_-TckubzGE1idqanLT9a3Y7lffOuHRiyN7lg",
+      "tokenExpiration": 1565894505000,
+      "profileId": "Y2Y5ZmFkYmQtM2I4NS00MTFhLWFhYjgtODc3Y2E2NjU3NTgy",
+      "deviceId": null,
+      "email": "foxuser5124@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:cf9fadbd-3b85-411a-aab8-877ca6657582",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 165.254.16.94, 23.54.19.117",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "Y2Y5ZmFkYmQtM2I4NS00MTFhLWFhYjgtODc3Y2E2NjU3NTgy"
+  },
+  "foxuser5120@fox.com": {
+    "password": "abcdef",
+    "videoMap": {},
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6YzA0YmU5NWYtMjAwYi00ZmI5LTlkNzktMzNhYjk1MjQwYTQ1IiwidWlkIjoiWXpBMFltVTVOV1l0TWpBd1lpMDBabUk1TFRsa056a3RNek5oWWprMU1qUXdZVFExIiwic2lkIjoiYjZmMDYyNWYtNTliMC00YTk2LWJmYzEtMjA2MDhhMWI5MTIyIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1ODk1MTY0LCJqdGkiOiJiZTgyOTRjNi0zYWJlLTRkMzItYTBmZC01YTBmOWJjZjE4YTYiLCJpYXQiOjE1MzQzNTkxNjR9.Nt8JFMidUL5hVXXZtAOrFEzvrOskftm4BGxaq4-Or_NGAhq4H16Z6OuLM9rr8Er1QhVas_H7JDBzR_PdqcFfhfnlVHZ-K7hJMtauk2ZCIBScDOwY4d6kuhn-9PGY76yBewxSn3wVPdNsXP73D9ivxqVmH5NVWjZVD9VDatL-lKFTJFssEHS6XJLJ87U3jxaPvXOALXc8Jh4s75e93c3C_w3a5nG6NA0wVYrxXuJxYk4BeYW4xYzxtRHUkGXNiWpGiA2DkGzatQgvRLeJY26_dMcDI5Q5c46vuOjORNXfqmVQ4YNhkSmvBeNnhAl3AsfniRWIsni4lqI6Gl03X3XffQ",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6YzA0YmU5NWYtMjAwYi00ZmI5LTlkNzktMzNhYjk1MjQwYTQ1IiwidWlkIjoiWXpBMFltVTVOV1l0TWpBd1lpMDBabUk1TFRsa056a3RNek5oWWprMU1qUXdZVFExIiwic2lkIjoiYjZmMDYyNWYtNTliMC00YTk2LWJmYzEtMjA2MDhhMWI5MTIyIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1ODk1MTY0LCJqdGkiOiJiZTgyOTRjNi0zYWJlLTRkMzItYTBmZC01YTBmOWJjZjE4YTYiLCJpYXQiOjE1MzQzNTkxNjR9.Nt8JFMidUL5hVXXZtAOrFEzvrOskftm4BGxaq4-Or_NGAhq4H16Z6OuLM9rr8Er1QhVas_H7JDBzR_PdqcFfhfnlVHZ-K7hJMtauk2ZCIBScDOwY4d6kuhn-9PGY76yBewxSn3wVPdNsXP73D9ivxqVmH5NVWjZVD9VDatL-lKFTJFssEHS6XJLJ87U3jxaPvXOALXc8Jh4s75e93c3C_w3a5nG6NA0wVYrxXuJxYk4BeYW4xYzxtRHUkGXNiWpGiA2DkGzatQgvRLeJY26_dMcDI5Q5c46vuOjORNXfqmVQ4YNhkSmvBeNnhAl3AsfniRWIsni4lqI6Gl03X3XffQ",
+      "tokenExpiration": 1565895164000,
+      "profileId": "YzA0YmU5NWYtMjAwYi00ZmI5LTlkNzktMzNhYjk1MjQwYTQ1",
+      "deviceId": null,
+      "email": "foxuser5120@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:c04be95f-200b-4fb9-9d79-33ab95240a45",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 165.254.16.94",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "YzA0YmU5NWYtMjAwYi00ZmI5LTlkNzktMzNhYjk1MjQwYTQ1"
+  },
+  "foxuser5119@fox.com": {
+    "password": "abcdef",
+    "videoMap": {},
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6YjAwZTQ1NDAtNWM5ZC00MDA5LWFkNTYtNDMyNDhkYTk5MWUwIiwidWlkIjoiWWpBd1pUUTFOREF0TldNNVpDMDBNREE1TFdGa05UWXRORE15TkRoa1lUazVNV1V3Iiwic2lkIjoiM2MyYTI1MTQtNDk5Yi00Mzg2LWExYjktOTEwZWIyNDRmYTk4Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1ODk1MzAyLCJqdGkiOiIwNzAwMzc5OC04ODc3LTRmZDItODMwNy03OTI3MjdmNTcyYzciLCJpYXQiOjE1MzQzNTkzMDJ9.TqpXVEHUM9aQL8jV2UMNKiviexO4lNp62uP9dSacjKuKarR2wS5_Pg-T3rqRlorOlNRGdYnFshNSDkgv3G68Y8BpufU0rNs2BUJ6PkGeNe4f-zJ0CKqeelvelfPAiOkzy7LoRU88SxcNrsZJPXPqf377Mt3bHonPtJf-DpElOgn-UVFyt-y7F4dJs2Uul-LI5Q1h2PhExbw7whX6iX8NHEhOAPafvfbHpJKx4fyUXaOMAdUn_y-49P58Cd6AoUUIT9x4N96IspXcGXoFrnB5VOF4CJx-2RRenKgF66fy3J8SpJMbU1INMEzwnrSYeF7kgYLRw_avGdMMMr_mPEzKiA",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6YjAwZTQ1NDAtNWM5ZC00MDA5LWFkNTYtNDMyNDhkYTk5MWUwIiwidWlkIjoiWWpBd1pUUTFOREF0TldNNVpDMDBNREE1TFdGa05UWXRORE15TkRoa1lUazVNV1V3Iiwic2lkIjoiM2MyYTI1MTQtNDk5Yi00Mzg2LWExYjktOTEwZWIyNDRmYTk4Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1ODk1MzAyLCJqdGkiOiIwNzAwMzc5OC04ODc3LTRmZDItODMwNy03OTI3MjdmNTcyYzciLCJpYXQiOjE1MzQzNTkzMDJ9.TqpXVEHUM9aQL8jV2UMNKiviexO4lNp62uP9dSacjKuKarR2wS5_Pg-T3rqRlorOlNRGdYnFshNSDkgv3G68Y8BpufU0rNs2BUJ6PkGeNe4f-zJ0CKqeelvelfPAiOkzy7LoRU88SxcNrsZJPXPqf377Mt3bHonPtJf-DpElOgn-UVFyt-y7F4dJs2Uul-LI5Q1h2PhExbw7whX6iX8NHEhOAPafvfbHpJKx4fyUXaOMAdUn_y-49P58Cd6AoUUIT9x4N96IspXcGXoFrnB5VOF4CJx-2RRenKgF66fy3J8SpJMbU1INMEzwnrSYeF7kgYLRw_avGdMMMr_mPEzKiA",
+      "tokenExpiration": 1565895302000,
+      "profileId": "YjAwZTQ1NDAtNWM5ZC00MDA5LWFkNTYtNDMyNDhkYTk5MWUw",
+      "deviceId": null,
+      "email": "foxuser5119@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:b00e4540-5c9d-4009-ad56-43248da991e0",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 165.254.16.94",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "YjAwZTQ1NDAtNWM5ZC00MDA5LWFkNTYtNDMyNDhkYTk5MWUw"
+  },
+  "foxuser5115@fox.com": {
+    "password": "abcdef",
+    "videoMap": {},
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6YzBjMTcxNDctMWM5NS00YTQzLTg1NDktMWY0YmQ2YmRmM2MyIiwidWlkIjoiWXpCak1UY3hORGN0TVdNNU5TMDBZVFF6TFRnMU5Ea3RNV1kwWW1RMlltUm1NMk15Iiwic2lkIjoiMzE2ZjBiNGEtMjU2Ni00YzEwLWI2NDItZjFjODZjYjkxNGI4Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1ODk1NDQyLCJqdGkiOiJjYmFkZWI1Yy1lNWNjLTQ1MGYtYjk0OS0zZGM1ZmQwOGRlNDAiLCJpYXQiOjE1MzQzNTk0NDJ9.SgnGs5pfGQqUdvFglrsjIaH4X1gY5YWSUHf39QHuDsjvvyG1eI0CTlvJcuraASfUuCWVnMzxs2qSXHhNGhmn38EssRUl7-b35HPclL7wyfwomo_NT-7Jc-OYNqTxF6EzD5zBq1NOX1KMdLvm0XYw_aGWQwyzFJL-fmKcfRb_0jRkD-fQPF6zu1KRNwlqkxGM0CLObLLSdAuisb_moXzgyv_STV50z3ncLMgFfIMiBMSi1nYlFB86e7F_yR5iCwk1Y49yDVjsmW5JgcJqZg4PlhKzYHsQQtHpfH6bVapbIKLUMlBs4DfPNi1dVAgRMGokkVTHtFrdkgrpk7yo_KkwXQ",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6YzBjMTcxNDctMWM5NS00YTQzLTg1NDktMWY0YmQ2YmRmM2MyIiwidWlkIjoiWXpCak1UY3hORGN0TVdNNU5TMDBZVFF6TFRnMU5Ea3RNV1kwWW1RMlltUm1NMk15Iiwic2lkIjoiMzE2ZjBiNGEtMjU2Ni00YzEwLWI2NDItZjFjODZjYjkxNGI4Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1ODk1NDQyLCJqdGkiOiJjYmFkZWI1Yy1lNWNjLTQ1MGYtYjk0OS0zZGM1ZmQwOGRlNDAiLCJpYXQiOjE1MzQzNTk0NDJ9.SgnGs5pfGQqUdvFglrsjIaH4X1gY5YWSUHf39QHuDsjvvyG1eI0CTlvJcuraASfUuCWVnMzxs2qSXHhNGhmn38EssRUl7-b35HPclL7wyfwomo_NT-7Jc-OYNqTxF6EzD5zBq1NOX1KMdLvm0XYw_aGWQwyzFJL-fmKcfRb_0jRkD-fQPF6zu1KRNwlqkxGM0CLObLLSdAuisb_moXzgyv_STV50z3ncLMgFfIMiBMSi1nYlFB86e7F_yR5iCwk1Y49yDVjsmW5JgcJqZg4PlhKzYHsQQtHpfH6bVapbIKLUMlBs4DfPNi1dVAgRMGokkVTHtFrdkgrpk7yo_KkwXQ",
+      "tokenExpiration": 1565895442000,
+      "profileId": "YzBjMTcxNDctMWM5NS00YTQzLTg1NDktMWY0YmQ2YmRmM2My",
+      "deviceId": null,
+      "email": "foxuser5115@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:c0c17147-1c95-4a43-8549-1f4bd6bdf3c2",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 165.254.16.94",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "YzBjMTcxNDctMWM5NS00YTQzLTg1NDktMWY0YmQ2YmRmM2My"
+  },
+  "foxuser5116@fox.com": {
+    "password": "abcdef",
+    "videoMap": {},
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6YTE2Yjg1NzYtMWQ4Zi00OTFjLTkwMTctMjBjY2IyZmJiMjlhIiwidWlkIjoiWVRFMllqZzFOell0TVdRNFppMDBPVEZqTFRrd01UY3RNakJqWTJJeVptSmlNamxoIiwic2lkIjoiMDQ4YTZmNGUtMGJjYy00ODkwLThlZWItNWNjYTJhZDAxNWU5Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1ODk2MDM3LCJqdGkiOiI1MDk0ZjI1Yi1hOWFlLTQwZWEtYTViYS1lNGVlODFiZDQ2MTEiLCJpYXQiOjE1MzQzNjAwMzd9.NZNAw6P-xxBwI4-1jZxOBgdDd4GYgTUUzFWuFP2X-CRkmPWAbCKdI5PoQAxNMBmja0REbUEqH5afx4TIGwHrqf-vkDiIRFyF3TBN3AxC0_B96FlWGClZnaRV1kWZl0kawbC0ldeFXn1uweZ5EKly1ZLjnUAaaS4htp2NUiE6ZyUMIcSwbMkO86pJcz_FjVi_KlKNiMCiiOTRHpzBfY3zCQip_RbUce8c-X8X_L2HJbm2EaOlcF_t9a5HLlrHKYRV39d1e763oCgCzaowKiQOWSdPIURnyQ_0E2BqnB2brnT7eGTJaUa9YalEFuxZ6jeaCtKfZti5pts82J8PfGbgiA",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6YTE2Yjg1NzYtMWQ4Zi00OTFjLTkwMTctMjBjY2IyZmJiMjlhIiwidWlkIjoiWVRFMllqZzFOell0TVdRNFppMDBPVEZqTFRrd01UY3RNakJqWTJJeVptSmlNamxoIiwic2lkIjoiMDQ4YTZmNGUtMGJjYy00ODkwLThlZWItNWNjYTJhZDAxNWU5Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1ODk2MDM3LCJqdGkiOiI1MDk0ZjI1Yi1hOWFlLTQwZWEtYTViYS1lNGVlODFiZDQ2MTEiLCJpYXQiOjE1MzQzNjAwMzd9.NZNAw6P-xxBwI4-1jZxOBgdDd4GYgTUUzFWuFP2X-CRkmPWAbCKdI5PoQAxNMBmja0REbUEqH5afx4TIGwHrqf-vkDiIRFyF3TBN3AxC0_B96FlWGClZnaRV1kWZl0kawbC0ldeFXn1uweZ5EKly1ZLjnUAaaS4htp2NUiE6ZyUMIcSwbMkO86pJcz_FjVi_KlKNiMCiiOTRHpzBfY3zCQip_RbUce8c-X8X_L2HJbm2EaOlcF_t9a5HLlrHKYRV39d1e763oCgCzaowKiQOWSdPIURnyQ_0E2BqnB2brnT7eGTJaUa9YalEFuxZ6jeaCtKfZti5pts82J8PfGbgiA",
+      "tokenExpiration": 1565896037000,
+      "profileId": "YTE2Yjg1NzYtMWQ4Zi00OTFjLTkwMTctMjBjY2IyZmJiMjlh",
+      "deviceId": null,
+      "email": "foxuser5116@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:a16b8576-1d8f-491c-9017-20ccb2fbb29a",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 165.254.16.94, 23.35.98.92",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "YTE2Yjg1NzYtMWQ4Zi00OTFjLTkwMTctMjBjY2IyZmJiMjlh"
+  },
+  "foxuser5113@fox.com": {
+    "password": "abcdef",
+    "videoMap": {},
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6Y2IwMWM1MDQtNTc2NC00YTUxLTg1NjItNzI3MjVmMzg4ZDcwIiwidWlkIjoiWTJJd01XTTFNRFF0TlRjMk5DMDBZVFV4TFRnMU5qSXROekkzTWpWbU16ZzRaRGN3Iiwic2lkIjoiMzE5MTU1M2EtMWQ2Ny00ZWFiLTlkODQtNjAwNjYxNTk5NDEzIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1ODk2MzYwLCJqdGkiOiJhMTAzYmMwZi00NDM2LTRiODUtOTQ3NS1kNzZkMTJjZjQ1OTMiLCJpYXQiOjE1MzQzNjAzNjB9.qmOrmL3N2iyjGL7fK2o9gk354VrAFtbJRBBXIQGdvYNFqbC4p4TRaEU2G8c8LD_vdbd1vN3sYmi42ENUDPctc8v6ACMbdMDbC6YB41x72nfrshul6pSwfA-D0d2b1JTc4Hm4rFQ6kkSYxz8urId879OZ9t5NjkVFO0wwsqtPWls1z0aqDa0Uh93NLjILkAtdhi3Y6W4VqmJiK2ajwg0oh4Fx39lVNFWzoi7WY1_oNsh2yE1mvvvOouoUgjKbxEvv3_zjKFD10ejXpJhGC08I32UmesSnoRjlcEsVzKzELHodqJjexKxkXsV6pYXfeMK2dKc-UupOg6wivLta1LPlAg",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6Y2IwMWM1MDQtNTc2NC00YTUxLTg1NjItNzI3MjVmMzg4ZDcwIiwidWlkIjoiWTJJd01XTTFNRFF0TlRjMk5DMDBZVFV4TFRnMU5qSXROekkzTWpWbU16ZzRaRGN3Iiwic2lkIjoiMzE5MTU1M2EtMWQ2Ny00ZWFiLTlkODQtNjAwNjYxNTk5NDEzIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1ODk2MzYwLCJqdGkiOiJhMTAzYmMwZi00NDM2LTRiODUtOTQ3NS1kNzZkMTJjZjQ1OTMiLCJpYXQiOjE1MzQzNjAzNjB9.qmOrmL3N2iyjGL7fK2o9gk354VrAFtbJRBBXIQGdvYNFqbC4p4TRaEU2G8c8LD_vdbd1vN3sYmi42ENUDPctc8v6ACMbdMDbC6YB41x72nfrshul6pSwfA-D0d2b1JTc4Hm4rFQ6kkSYxz8urId879OZ9t5NjkVFO0wwsqtPWls1z0aqDa0Uh93NLjILkAtdhi3Y6W4VqmJiK2ajwg0oh4Fx39lVNFWzoi7WY1_oNsh2yE1mvvvOouoUgjKbxEvv3_zjKFD10ejXpJhGC08I32UmesSnoRjlcEsVzKzELHodqJjexKxkXsV6pYXfeMK2dKc-UupOg6wivLta1LPlAg",
+      "tokenExpiration": 1565896360000,
+      "profileId": "Y2IwMWM1MDQtNTc2NC00YTUxLTg1NjItNzI3MjVmMzg4ZDcw",
+      "deviceId": null,
+      "email": "foxuser5113@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:cb01c504-5764-4a51-8562-72725f388d70",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 165.254.16.94, 23.35.98.92",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "Y2IwMWM1MDQtNTc2NC00YTUxLTg1NjItNzI3MjVmMzg4ZDcw"
+  },
+  "foxuser5111@fox.com": {
+    "password": "abcdef",
+    "videoMap": {},
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6ZTdkOGQ4NTYtN2RiNi00MjBkLWFkMjAtZmQ3OTJiNjU3MTExIiwidWlkIjoiWlRka09HUTROVFl0TjJSaU5pMDBNakJrTFdGa01qQXRabVEzT1RKaU5qVTNNVEV4Iiwic2lkIjoiNWFmMmZmZmQtYWYwOC00M2RhLWFiYmMtMWY1MjYxZDcxZmMyIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1ODk2NTMxLCJqdGkiOiJjYTA5MzA4OC1lZDU5LTRjOGQtOTdkYS0xYjUwODU1M2UxY2EiLCJpYXQiOjE1MzQzNjA1MzF9.EBfhxYRjBfz81ZIb5pNrI82Rx_DWpz-xM_lZc7Sa94Hv_1JX7nu3jLH8JvPdrJWuaofntetfISLYJ54o_17y994wpR0jvkVctnx1HMQcuOM8vTHgRBHeCBgROokIjw4I55tqFwU9MnrsnoJEiC3DMw2cZIztOrUGoXNiUHwaDd-D6hzIbHoDbYjxOaN5kFVDlBlEFZVoEoLdINo5iTmWAD06Qs72VK-k0pIverl9niWmrjGgD057DlTEW6EydPQ_ALAjABI9m7juMawj8lYu7duONdcC2rmR2PXyIvMq7V27DkCSKcVRW76DYn9XF7zWZLz-u7H0JiQhKrJWwebKXQ",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6ZTdkOGQ4NTYtN2RiNi00MjBkLWFkMjAtZmQ3OTJiNjU3MTExIiwidWlkIjoiWlRka09HUTROVFl0TjJSaU5pMDBNakJrTFdGa01qQXRabVEzT1RKaU5qVTNNVEV4Iiwic2lkIjoiNWFmMmZmZmQtYWYwOC00M2RhLWFiYmMtMWY1MjYxZDcxZmMyIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1ODk2NTMxLCJqdGkiOiJjYTA5MzA4OC1lZDU5LTRjOGQtOTdkYS0xYjUwODU1M2UxY2EiLCJpYXQiOjE1MzQzNjA1MzF9.EBfhxYRjBfz81ZIb5pNrI82Rx_DWpz-xM_lZc7Sa94Hv_1JX7nu3jLH8JvPdrJWuaofntetfISLYJ54o_17y994wpR0jvkVctnx1HMQcuOM8vTHgRBHeCBgROokIjw4I55tqFwU9MnrsnoJEiC3DMw2cZIztOrUGoXNiUHwaDd-D6hzIbHoDbYjxOaN5kFVDlBlEFZVoEoLdINo5iTmWAD06Qs72VK-k0pIverl9niWmrjGgD057DlTEW6EydPQ_ALAjABI9m7juMawj8lYu7duONdcC2rmR2PXyIvMq7V27DkCSKcVRW76DYn9XF7zWZLz-u7H0JiQhKrJWwebKXQ",
+      "tokenExpiration": 1565896531000,
+      "profileId": "ZTdkOGQ4NTYtN2RiNi00MjBkLWFkMjAtZmQ3OTJiNjU3MTEx",
+      "deviceId": null,
+      "email": "foxuser5111@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:e7d8d856-7db6-420d-ad20-fd792b657111",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 165.254.16.94, 23.35.98.126",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "ZTdkOGQ4NTYtN2RiNi00MjBkLWFkMjAtZmQ3OTJiNjU3MTEx"
+  },
+  "foxuser511@fox.com": {
+    "password": "abcdef",
+    "videoMap": {},
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6NWViYjg4N2ItYWQ3Zi00OGFkLWE3MzgtOGRmYjU0NGYzNWNiIiwidWlkIjoiTldWaVlqZzROMkl0WVdRM1ppMDBPR0ZrTFdFM016Z3RPR1JtWWpVME5HWXpOV05pIiwic2lkIjoiNWI4YjQ1YTQtMGY0OS00MzM2LTkyNTUtN2VlZmY2YWRkNmFlIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1ODk3MTc2LCJqdGkiOiIxZDA5ZjVlNi0yMzY4LTQ3OGQtYTBjNS1iYTE1NGFmODE4NTQiLCJpYXQiOjE1MzQzNjExNzZ9.gDON6LKZWbVO1uo85QZ32r3Q0ILQbV_N91BAT1wDqwfJtTo47rHol0PWGjwgpw9IfVVE17i7wcyzPr80q7a8MZRnvq3EvdDnN1yFQqWLxfZud76_tXk-csuSSh-Td6XkbWtOpU7YtpUNWZm7j9-Hlpr1IUTBVZ4hD68nw0LXmmqlh9DXud7Pj_6RV_i43g2KaUQRNxNrGvW2CNJuDI8-sat885I5iDRU24iMkyOAJqiearl88kNhlHTaQ26KJyae9JeH1KzF7igs7EYVUg79f666-2twm31EX9edj-4G3zPUE0XX0asSi42k03qYNYEfY3MHl66_0gw94TP7Gu1nxQ",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6NWViYjg4N2ItYWQ3Zi00OGFkLWE3MzgtOGRmYjU0NGYzNWNiIiwidWlkIjoiTldWaVlqZzROMkl0WVdRM1ppMDBPR0ZrTFdFM016Z3RPR1JtWWpVME5HWXpOV05pIiwic2lkIjoiNWI4YjQ1YTQtMGY0OS00MzM2LTkyNTUtN2VlZmY2YWRkNmFlIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1ODk3MTc2LCJqdGkiOiIxZDA5ZjVlNi0yMzY4LTQ3OGQtYTBjNS1iYTE1NGFmODE4NTQiLCJpYXQiOjE1MzQzNjExNzZ9.gDON6LKZWbVO1uo85QZ32r3Q0ILQbV_N91BAT1wDqwfJtTo47rHol0PWGjwgpw9IfVVE17i7wcyzPr80q7a8MZRnvq3EvdDnN1yFQqWLxfZud76_tXk-csuSSh-Td6XkbWtOpU7YtpUNWZm7j9-Hlpr1IUTBVZ4hD68nw0LXmmqlh9DXud7Pj_6RV_i43g2KaUQRNxNrGvW2CNJuDI8-sat885I5iDRU24iMkyOAJqiearl88kNhlHTaQ26KJyae9JeH1KzF7igs7EYVUg79f666-2twm31EX9edj-4G3zPUE0XX0asSi42k03qYNYEfY3MHl66_0gw94TP7Gu1nxQ",
+      "tokenExpiration": 1565897176000,
+      "profileId": "NWViYjg4N2ItYWQ3Zi00OGFkLWE3MzgtOGRmYjU0NGYzNWNi",
+      "deviceId": null,
+      "email": "foxuser511@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:5ebb887b-ad7f-48ad-a738-8dfb544f35cb",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 63.243.242.85",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "NWViYjg4N2ItYWQ3Zi00OGFkLWE3MzgtOGRmYjU0NGYzNWNi"
+  },
+  "foxuser50001@fox.com": {
+    "password": "abcdef",
+    "videoMap": {},
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6OWYxYTQyMWYtMmI1NC00YWU3LTg0ZjktMzdiMjc5ZjUwZGMwIiwidWlkIjoiT1dZeFlUUXlNV1l0TW1JMU5DMDBZV1UzTFRnMFpqa3RNemRpTWpjNVpqVXdaR013Iiwic2lkIjoiNjgzNTJmZjktY2YyMi00M2RiLWEwN2ItMjBkODRkNmVjNWYyIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1ODk3NTQ4LCJqdGkiOiIxZWUxOWE1YS1iOTBjLTRhMTItOTJiZS1kZGM2OWFiNDg3ZGMiLCJpYXQiOjE1MzQzNjE1NDh9.s0XsCOCuY1LUcGpMmMiF7d9xKnli2po6r4_KBXskXlQNXKt_Y9rQou4JvCSTNKhmhHGg3R9NMq0tqx1oH1e3Jx94gApwr9XBrs5onpl2KrG6w7vQnr5frc3EeOkqexjCabXhEc9hO-dy6gpBalpUmwYthK5uzL6Z0mv70-WZnKnNx33OfJgIFiYy8yT7NIkmOTfbP3LIW29vMYwMQ11NsuvMuuKgkcBwSbTWtaxP_eFhsIXGTpAGFwE5HxP_r4iEfW_aMbGYPkBgun92vVpvh5L6-CAj7VSHosMN8J8IY3vgC-41Td1GB-6gEv7CeIbsGTVekYJmXbJVsDpKVly_ZQ",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6OWYxYTQyMWYtMmI1NC00YWU3LTg0ZjktMzdiMjc5ZjUwZGMwIiwidWlkIjoiT1dZeFlUUXlNV1l0TW1JMU5DMDBZV1UzTFRnMFpqa3RNemRpTWpjNVpqVXdaR013Iiwic2lkIjoiNjgzNTJmZjktY2YyMi00M2RiLWEwN2ItMjBkODRkNmVjNWYyIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1ODk3NTQ4LCJqdGkiOiIxZWUxOWE1YS1iOTBjLTRhMTItOTJiZS1kZGM2OWFiNDg3ZGMiLCJpYXQiOjE1MzQzNjE1NDh9.s0XsCOCuY1LUcGpMmMiF7d9xKnli2po6r4_KBXskXlQNXKt_Y9rQou4JvCSTNKhmhHGg3R9NMq0tqx1oH1e3Jx94gApwr9XBrs5onpl2KrG6w7vQnr5frc3EeOkqexjCabXhEc9hO-dy6gpBalpUmwYthK5uzL6Z0mv70-WZnKnNx33OfJgIFiYy8yT7NIkmOTfbP3LIW29vMYwMQ11NsuvMuuKgkcBwSbTWtaxP_eFhsIXGTpAGFwE5HxP_r4iEfW_aMbGYPkBgun92vVpvh5L6-CAj7VSHosMN8J8IY3vgC-41Td1GB-6gEv7CeIbsGTVekYJmXbJVsDpKVly_ZQ",
+      "tokenExpiration": 1565897548000,
+      "profileId": "OWYxYTQyMWYtMmI1NC00YWU3LTg0ZjktMzdiMjc5ZjUwZGMw",
+      "deviceId": null,
+      "email": "foxuser50001@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:9f1a421f-2b54-4ae7-84f9-37b279f50dc0",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 65.158.114.231",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "OWYxYTQyMWYtMmI1NC00YWU3LTg0ZjktMzdiMjc5ZjUwZGMw"
+  },
+  "foxuser5008@fox.com": {
+    "password": "abcdef",
+    "videoMap": {
+      "the-simpsons_11_01": {
+        "showIndex": 93,
+        "pageIndex": 9
+      }
+    },
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6MjBiM2YzNTEtOWMwOC00NTg0LWJiN2QtZjI1N2Y0MTE2YTA1IiwidWlkIjoiTWpCaU0yWXpOVEV0T1dNd09DMDBOVGcwTFdKaU4yUXRaakkxTjJZME1URTJZVEExIiwic2lkIjoiZDQ5OGQ4NjItZTc5ZC00YmZlLThjZjYtZjEyZjM2ZjMxOWRjIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1ODk5OTI3LCJqdGkiOiJhYzRjMjliYi0wZmE1LTRhOGItOGY0Ny01NDA5NDllNmNjMDAiLCJpYXQiOjE1MzQzNjM5Mjd9.r2Z5G7Di3Ul0oQ5_5EEDbcgL-Pk1I2YTzu_xUfysc3wREyCioydDMqgTUGlom5pr7kT9tfWUwDxg1M0vSHvJswjaH4OlmZ06adb4mPV6oK04pLEwJz9vCdA9GYQh3PusLhI7owOp8xvAOfG05vLstBIpsB3Z2cY17ISMDsLgdn-2zPiymkwcOQIAJ_jIY5KuzkknYj37BSuB7ehhNq_YoBDTOEwdRpcx2yFwUaIygcsJpc3yVmaMpkaMrr5y_3nlThcTznbP64LXRlgT78k9TMwbQ840G96z59z59c0TNt8iLHbzvEQUS8ZPTr5y2ub6mOqR_pC0c2kFp10JwfJlnQ",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6MjBiM2YzNTEtOWMwOC00NTg0LWJiN2QtZjI1N2Y0MTE2YTA1IiwidWlkIjoiTWpCaU0yWXpOVEV0T1dNd09DMDBOVGcwTFdKaU4yUXRaakkxTjJZME1URTJZVEExIiwic2lkIjoiZDQ5OGQ4NjItZTc5ZC00YmZlLThjZjYtZjEyZjM2ZjMxOWRjIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1ODk5OTI3LCJqdGkiOiJhYzRjMjliYi0wZmE1LTRhOGItOGY0Ny01NDA5NDllNmNjMDAiLCJpYXQiOjE1MzQzNjM5Mjd9.r2Z5G7Di3Ul0oQ5_5EEDbcgL-Pk1I2YTzu_xUfysc3wREyCioydDMqgTUGlom5pr7kT9tfWUwDxg1M0vSHvJswjaH4OlmZ06adb4mPV6oK04pLEwJz9vCdA9GYQh3PusLhI7owOp8xvAOfG05vLstBIpsB3Z2cY17ISMDsLgdn-2zPiymkwcOQIAJ_jIY5KuzkknYj37BSuB7ehhNq_YoBDTOEwdRpcx2yFwUaIygcsJpc3yVmaMpkaMrr5y_3nlThcTznbP64LXRlgT78k9TMwbQ840G96z59z59c0TNt8iLHbzvEQUS8ZPTr5y2ub6mOqR_pC0c2kFp10JwfJlnQ",
+      "tokenExpiration": 1565899927000,
+      "profileId": "MjBiM2YzNTEtOWMwOC00NTg0LWJiN2QtZjI1N2Y0MTE2YTA1",
+      "deviceId": null,
+      "email": "foxuser5008@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:20b3f351-9c08-4584-bb7d-f257f4116a05",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 65.158.114.231, 23.54.19.117",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "MjBiM2YzNTEtOWMwOC00NTg0LWJiN2QtZjI1N2Y0MTE2YTA1"
+  },
+  "foxuser22697@fox.com": {
+    "password": "mf09CuT3jVvdVMQDc0VUFKu5LtkxWaeanYL55",
+    "videoMap": {}
+  },
+  "undefined": {
+    "videoMap": {}
+  },
+  "foxuser29@fox.com": {
+    "password": "p1dv7krSkhoLU0zn3cLQdwOuEK0KVrudp9bQak1ctakUV7DqE6sABAUD2erX",
+    "videoMap": {},
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6MDkzYzFmYjctOTdkMy00YTIxLWExNzEtMDk2OGI4ZjhjMmI5IiwidWlkIjoiTURrell6Rm1ZamN0T1Rka015MDBZVEl4TFdFeE56RXRNRGsyT0dJNFpqaGpNbUk1Iiwic2lkIjoiMjU3ZGM0Y2YtMjZkNy00YjljLTgxZWEtMGU2YTc4Y2RiMjM5Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTA0ODE2LCJqdGkiOiI2MGZhMTZiNy0yOGM1LTQzYzMtOGEyMC1kYmZkN2M5NTM3MTYiLCJpYXQiOjE1MzQzNjg4MTZ9.Hivq81tLdz-e56rVOQYm_FYWYx8ltlg7du4dVWoqSMvS4X7XCiaDhBNk6a-H8S-wUYxOqWMuzy-IMlZdKlllRrpybnkzGEDME-iWq8n0liqpA3xqIXy2lMO9cNVGOK7T3c3PbaU3IAg1yPrYvZwHi74DrW1jOTE95__3wKKvAqnYG_rQnjJhPfAR1kGeVQkzLecLZDIwl2xJqufKRncuSBknENbuoGrkavdI5-OE6vlf-b0gcGG5NoOcZVyQZWo-iG34u9vVnMyOEM0TH-sKufNLiRorvgxU3fASwzU73fY9QE7AlhU5WNhlkE2Ct-2K4R6pwopvcH_sdEArz1c0MQ",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6MDkzYzFmYjctOTdkMy00YTIxLWExNzEtMDk2OGI4ZjhjMmI5IiwidWlkIjoiTURrell6Rm1ZamN0T1Rka015MDBZVEl4TFdFeE56RXRNRGsyT0dJNFpqaGpNbUk1Iiwic2lkIjoiMjU3ZGM0Y2YtMjZkNy00YjljLTgxZWEtMGU2YTc4Y2RiMjM5Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTA0ODE2LCJqdGkiOiI2MGZhMTZiNy0yOGM1LTQzYzMtOGEyMC1kYmZkN2M5NTM3MTYiLCJpYXQiOjE1MzQzNjg4MTZ9.Hivq81tLdz-e56rVOQYm_FYWYx8ltlg7du4dVWoqSMvS4X7XCiaDhBNk6a-H8S-wUYxOqWMuzy-IMlZdKlllRrpybnkzGEDME-iWq8n0liqpA3xqIXy2lMO9cNVGOK7T3c3PbaU3IAg1yPrYvZwHi74DrW1jOTE95__3wKKvAqnYG_rQnjJhPfAR1kGeVQkzLecLZDIwl2xJqufKRncuSBknENbuoGrkavdI5-OE6vlf-b0gcGG5NoOcZVyQZWo-iG34u9vVnMyOEM0TH-sKufNLiRorvgxU3fASwzU73fY9QE7AlhU5WNhlkE2Ct-2K4R6pwopvcH_sdEArz1c0MQ",
+      "tokenExpiration": 1565904816000,
+      "profileId": "MDkzYzFmYjctOTdkMy00YTIxLWExNzEtMDk2OGI4ZjhjMmI5",
+      "deviceId": null,
+      "email": "foxuser29@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:093c1fb7-97d3-4a21-a171-0968b8f8c2b9",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 198.172.88.195",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "MDkzYzFmYjctOTdkMy00YTIxLWExNzEtMDk2OGI4ZjhjMmI5"
+  },
+  "foxuser583766@fox.com": {
+    "password": "aTSUXde",
+    "videoMap": {}
+  },
+  "foxuser588565@fox.com": {
+    "password": "p7r2suG9u4pZTHk7uLIf1JPkksTtXIJ9lPRNA31vTz",
+    "videoMap": {},
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6MjgxNGQ4NjUtYjU0ZS00YzAyLWJiNWYtMGIzMmEwMmQ3OTE1IiwidWlkIjoiTWpneE5HUTROalV0WWpVMFpTMDBZekF5TFdKaU5XWXRNR0l6TW1Fd01tUTNPVEUxIiwic2lkIjoiYzIyNDIyOGUtZWU3My00NzY5LTgxNzYtNGVhZjYyOTYzNWRkIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTAxNDYzLCJqdGkiOiIzMmM5MGNjNi1iZDJkLTRjMmItYTgxNC0xOTA4NmU2YTA1OTYiLCJpYXQiOjE1MzQzNjU0NjN9.qwPW0GlE5GAwyEG9qowJBB8BvZ3VSCYOcGUgUlGbsQ8yuY5E3CKEwP0nHPZ9XJ4XWMp5Bgcp5XbBM3ovVKNOA1e7kWaFXuGZoOmTw83BDeKkkpkmBUDxigyv6hPpJAXdwZSYS14p8eKVK7eqdTS1ZJCVFXhMXfRMVo75rnNbxp6P5dBibAn-gHIwgKkooeX3s4DyYusTCfOX-oHQ7H29lJeb3NNszY--EMUIkYEQ5l_gNXQwC7vOPQ2JIpfZaoPexpVIY7c3MfHoT77ktV5A03NbHZJp8yH30E_StEWKo-KZ0LcwXPX_CFLFnYIJXRLA0XtDh1fgfF1VYgDE9Bq4Xg",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6MjgxNGQ4NjUtYjU0ZS00YzAyLWJiNWYtMGIzMmEwMmQ3OTE1IiwidWlkIjoiTWpneE5HUTROalV0WWpVMFpTMDBZekF5TFdKaU5XWXRNR0l6TW1Fd01tUTNPVEUxIiwic2lkIjoiYzIyNDIyOGUtZWU3My00NzY5LTgxNzYtNGVhZjYyOTYzNWRkIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTAxNDYzLCJqdGkiOiIzMmM5MGNjNi1iZDJkLTRjMmItYTgxNC0xOTA4NmU2YTA1OTYiLCJpYXQiOjE1MzQzNjU0NjN9.qwPW0GlE5GAwyEG9qowJBB8BvZ3VSCYOcGUgUlGbsQ8yuY5E3CKEwP0nHPZ9XJ4XWMp5Bgcp5XbBM3ovVKNOA1e7kWaFXuGZoOmTw83BDeKkkpkmBUDxigyv6hPpJAXdwZSYS14p8eKVK7eqdTS1ZJCVFXhMXfRMVo75rnNbxp6P5dBibAn-gHIwgKkooeX3s4DyYusTCfOX-oHQ7H29lJeb3NNszY--EMUIkYEQ5l_gNXQwC7vOPQ2JIpfZaoPexpVIY7c3MfHoT77ktV5A03NbHZJp8yH30E_StEWKo-KZ0LcwXPX_CFLFnYIJXRLA0XtDh1fgfF1VYgDE9Bq4Xg",
+      "tokenExpiration": 1565901463000,
+      "profileId": "MjgxNGQ4NjUtYjU0ZS00YzAyLWJiNWYtMGIzMmEwMmQ3OTE1",
+      "deviceId": null,
+      "email": "foxuser588565@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:2814d865-b54e-4c02-bb5f-0b32a02d7915",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 165.254.134.190",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "MjgxNGQ4NjUtYjU0ZS00YzAyLWJiNWYtMGIzMmEwMmQ3OTE1"
+  },
+  "foxuser369@fox.com": {
+    "password": "k5UUcwe7O40CEU",
+    "videoMap": {},
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6Y2Y5ODhhYjUtNTA5YS00NDRkLWJlYjUtNmUyNjVmZTRlYmFlIiwidWlkIjoiWTJZNU9EaGhZalV0TlRBNVlTMDBORFJrTFdKbFlqVXRObVV5TmpWbVpUUmxZbUZsIiwic2lkIjoiNjRkYjRhMTUtZTRlOS00MmRjLWFkZmYtNzNjODNhMTkwYTAyIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTAxNTEwLCJqdGkiOiI2MGI2NTZhZS02ZTExLTRkOGMtOWMxYi1iMjFiYTY4NGUxZWIiLCJpYXQiOjE1MzQzNjU1MTB9.e68fzQYzgb39UOd0RsSIT3yiLOite3HEP1Mpn1PIAbwbKJ0gHVmNjS0Ki_T_3wDog9gLOlNUlJ3gpVQLAs7Pm3qYrpHYJkKKxEeFTyr10TtrsvP9s6g3WKQV8nzWeu5zsKv2P-7jRstmUmBwLIemlkWHTfUfZDwXA7whgnTvZs6xmHJtkCte2zaM8iShNVlzfScsurZb0Dx_OWDL2-dZMBpwoBfQIbijP45jyQpD5MDwDAi2IE1n-VwKrNs3dwQC99jbQlUltMtsjy28zA7X_ya2G2-wC5enrDed9Nn2FpC4PYnjG2kFxT4yh5_vU_uyytwaYW_W4LPzPBbkY7PreQ",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6Y2Y5ODhhYjUtNTA5YS00NDRkLWJlYjUtNmUyNjVmZTRlYmFlIiwidWlkIjoiWTJZNU9EaGhZalV0TlRBNVlTMDBORFJrTFdKbFlqVXRObVV5TmpWbVpUUmxZbUZsIiwic2lkIjoiNjRkYjRhMTUtZTRlOS00MmRjLWFkZmYtNzNjODNhMTkwYTAyIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTAxNTEwLCJqdGkiOiI2MGI2NTZhZS02ZTExLTRkOGMtOWMxYi1iMjFiYTY4NGUxZWIiLCJpYXQiOjE1MzQzNjU1MTB9.e68fzQYzgb39UOd0RsSIT3yiLOite3HEP1Mpn1PIAbwbKJ0gHVmNjS0Ki_T_3wDog9gLOlNUlJ3gpVQLAs7Pm3qYrpHYJkKKxEeFTyr10TtrsvP9s6g3WKQV8nzWeu5zsKv2P-7jRstmUmBwLIemlkWHTfUfZDwXA7whgnTvZs6xmHJtkCte2zaM8iShNVlzfScsurZb0Dx_OWDL2-dZMBpwoBfQIbijP45jyQpD5MDwDAi2IE1n-VwKrNs3dwQC99jbQlUltMtsjy28zA7X_ya2G2-wC5enrDed9Nn2FpC4PYnjG2kFxT4yh5_vU_uyytwaYW_W4LPzPBbkY7PreQ",
+      "tokenExpiration": 1565901510000,
+      "profileId": "Y2Y5ODhhYjUtNTA5YS00NDRkLWJlYjUtNmUyNjVmZTRlYmFl",
+      "deviceId": null,
+      "email": "foxuser369@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:cf988ab5-509a-444d-beb5-6e265fe4ebae",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 165.254.134.190",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "Y2Y5ODhhYjUtNTA5YS00NDRkLWJlYjUtNmUyNjVmZTRlYmFl"
+  },
+  "foxuser395790590633825@fox.com": {
+    "password": "3YuT7KHKmZ80DpWwfiG",
+    "videoMap": {},
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6NjA4ODJlNDEtZjhiNC00OTQ2LWE3M2ItZjUyOWVmYjhjMjk4IiwidWlkIjoiTmpBNE9ESmxOREV0WmpoaU5DMDBPVFEyTFdFM00ySXRaalV5T1dWbVlqaGpNams0Iiwic2lkIjoiZDcyYjExYjAtY2M3Ny00NTIwLTgxYjUtNTMzNTFhNDU4ZDFmIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTAxODYzLCJqdGkiOiJjNGFmZjI2Yi01NjlkLTRjOWMtOWUyOC03ZTI5MTE1MDhjYmYiLCJpYXQiOjE1MzQzNjU4NjN9.fnIrWKShpK8PZbTTN48CLDkrtCMDptGRLZwJAvTnCiH4L5OVYyzXjyAeJSL7Yp708_o0iHoSuzgrEiwNgcc9BF4E3ElGRkzX5BEDdOIvE4ZPIjVFkGsSgiRysuMohn--1SuZN_wIqfkuE8DZNORCg5SA-M4r3z3y6UFyk1-5uJvDE1Kq4t-hyT-8l17JB7YbyopzhzEnBDd-N9ewOSszZ2MVyusZ2HSpITVBVg-PEgoNmXqUrAVeIqSJInJSxqnnGonDzur6MWKV6XyQfA7xIjISt1KnNuPOsg9rzIavhFeYMRJlARY-5cpkcZVLU2L_VepEXK-kZWWoaHWaIzwZkQ",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6NjA4ODJlNDEtZjhiNC00OTQ2LWE3M2ItZjUyOWVmYjhjMjk4IiwidWlkIjoiTmpBNE9ESmxOREV0WmpoaU5DMDBPVFEyTFdFM00ySXRaalV5T1dWbVlqaGpNams0Iiwic2lkIjoiZDcyYjExYjAtY2M3Ny00NTIwLTgxYjUtNTMzNTFhNDU4ZDFmIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTAxODYzLCJqdGkiOiJjNGFmZjI2Yi01NjlkLTRjOWMtOWUyOC03ZTI5MTE1MDhjYmYiLCJpYXQiOjE1MzQzNjU4NjN9.fnIrWKShpK8PZbTTN48CLDkrtCMDptGRLZwJAvTnCiH4L5OVYyzXjyAeJSL7Yp708_o0iHoSuzgrEiwNgcc9BF4E3ElGRkzX5BEDdOIvE4ZPIjVFkGsSgiRysuMohn--1SuZN_wIqfkuE8DZNORCg5SA-M4r3z3y6UFyk1-5uJvDE1Kq4t-hyT-8l17JB7YbyopzhzEnBDd-N9ewOSszZ2MVyusZ2HSpITVBVg-PEgoNmXqUrAVeIqSJInJSxqnnGonDzur6MWKV6XyQfA7xIjISt1KnNuPOsg9rzIavhFeYMRJlARY-5cpkcZVLU2L_VepEXK-kZWWoaHWaIzwZkQ",
+      "tokenExpiration": 1565901863000,
+      "profileId": "NjA4ODJlNDEtZjhiNC00OTQ2LWE3M2ItZjUyOWVmYjhjMjk4",
+      "deviceId": null,
+      "email": "foxuser395790590633825@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:60882e41-f8b4-4946-a73b-f529efb8c298",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 165.254.134.190, 63.243.230.22",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "NjA4ODJlNDEtZjhiNC00OTQ2LWE3M2ItZjUyOWVmYjhjMjk4"
+  },
+  "foxuser945@fox.com": {
+    "password": "abcdef",
+    "videoMap": {},
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6ZGYzNjcwMzEtNjdhZC00N2IxLTkxZGMtMjhjMmQ5Y2NlMDZhIiwidWlkIjoiWkdZek5qY3dNekV0TmpkaFpDMDBOMkl4TFRreFpHTXRNamhqTW1RNVkyTmxNRFpoIiwic2lkIjoiN2EwODZhM2QtMDQxYy00MjMxLWEzMGEtOGNkMWRhOTQxZTdhIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTAzNDI0LCJqdGkiOiJjOWE2ZDRhMy04MzJlLTQxN2ItYWUzOS02OGZmZjdhNTY0ZDUiLCJpYXQiOjE1MzQzNjc0MjR9.DBQpjn5c8TrbymUFBD4Hc8AgPlwcWWBs_Zlly_4qEfTojt6_OajLYfXCOxc-KzZsXp8Yj2b0seEt6Rb5eDquvhNsz412a1yKjGhdBKLIFdiaUTzQZAiDvOCixslC3Z63NYm_IfEfmVDM3MBehziSh3QNcbifCQwq_zdvV1tCuq8VlBpkm3TfmKGJriVtQjqHWftnZZLfXoygY2LEgZmL5icezQAyKy8Su6puWfAZEkcqas0HYU5Dg8PD4L12phapYMkGGdut60HzzV-NSJwYGmZh_5slgYJiWo-CI12VmTuHqYdhPtJ7TYGTvM9HYauasdFPqLbpMpZSx7D8NKUBlw",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6ZGYzNjcwMzEtNjdhZC00N2IxLTkxZGMtMjhjMmQ5Y2NlMDZhIiwidWlkIjoiWkdZek5qY3dNekV0TmpkaFpDMDBOMkl4TFRreFpHTXRNamhqTW1RNVkyTmxNRFpoIiwic2lkIjoiN2EwODZhM2QtMDQxYy00MjMxLWEzMGEtOGNkMWRhOTQxZTdhIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTAzNDI0LCJqdGkiOiJjOWE2ZDRhMy04MzJlLTQxN2ItYWUzOS02OGZmZjdhNTY0ZDUiLCJpYXQiOjE1MzQzNjc0MjR9.DBQpjn5c8TrbymUFBD4Hc8AgPlwcWWBs_Zlly_4qEfTojt6_OajLYfXCOxc-KzZsXp8Yj2b0seEt6Rb5eDquvhNsz412a1yKjGhdBKLIFdiaUTzQZAiDvOCixslC3Z63NYm_IfEfmVDM3MBehziSh3QNcbifCQwq_zdvV1tCuq8VlBpkm3TfmKGJriVtQjqHWftnZZLfXoygY2LEgZmL5icezQAyKy8Su6puWfAZEkcqas0HYU5Dg8PD4L12phapYMkGGdut60HzzV-NSJwYGmZh_5slgYJiWo-CI12VmTuHqYdhPtJ7TYGTvM9HYauasdFPqLbpMpZSx7D8NKUBlw",
+      "tokenExpiration": 1565903424000,
+      "profileId": "ZGYzNjcwMzEtNjdhZC00N2IxLTkxZGMtMjhjMmQ5Y2NlMDZh",
+      "deviceId": null,
+      "email": "foxuser945@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:df367031-67ad-47b1-91dc-28c2d9cce06a",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 165.254.134.190",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "ZGYzNjcwMzEtNjdhZC00N2IxLTkxZGMtMjhjMmQ5Y2NlMDZh"
+  },
+  "foxuser946@fox.com": {
+    "password": "abcdef",
+    "videoMap": {
+      "skip-and-shannon-undisputed_20180815": {
+        "showIndex": 1,
+        "pageIndex": 0
+      },
+      "the-herd-with-colin-cowherd_20180815": {
+        "showIndex": 0,
+        "pageIndex": 0
+      },
+      "the-simpsons_14_01": {
+        "showIndex": 166,
+        "pageIndex": 8
+      },
+      "the-simpsons_14_02": {
+        "showIndex": 165,
+        "pageIndex": 8
+      }
+    },
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6ZjQwOTI1OWQtZjdkNy00NjRjLTllZmYtOTUwYjUxYmNjZmI0IiwidWlkIjoiWmpRd09USTFPV1F0Wmpka055MDBOalJqTFRsbFptWXRPVFV3WWpVeFltTmpabUkwIiwic2lkIjoiODJmOTE4MTMtYzQzZi00NmU2LWE2ZjUtZWI0YTU3NTdiZTk3Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTA0OTU0LCJqdGkiOiI0NGQ1ZWMwZS1jZDkxLTQ2NWMtYjVlMS03OWM4MGMwZTgyNDkiLCJpYXQiOjE1MzQzNjg5NTR9.d2RM_s1wgChCMC8U_6R0nBdcVFotghXyG9nUcuL6y63M8RMO1-2g3iPHH99nKcZzQihoqTl-BJ2jbP351c6PLaw8fKz__gaVxs7BSXGnF81AcqRGSVSZDODPsNwH3jPOKI4SCfgkSR6NAN8vw6FqtZXKT0sw958JdSSk16Xbl6z9cf006N7CgIpFGXrKHm-wkFyBBMHPoxr_tXk0xzkHKss4_2kccf_04nTyu98GJfvqSkGLsos8EhBmt7XMN_jxJTCUJ52nlJt6ZRvQL9bkRpGlSUZFfZTf93f-gHywR1wPfyE_NuLKQ2sj0GwXAa_sKP55AjMLheCSCK2NQli9nw",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6ZjQwOTI1OWQtZjdkNy00NjRjLTllZmYtOTUwYjUxYmNjZmI0IiwidWlkIjoiWmpRd09USTFPV1F0Wmpka055MDBOalJqTFRsbFptWXRPVFV3WWpVeFltTmpabUkwIiwic2lkIjoiODJmOTE4MTMtYzQzZi00NmU2LWE2ZjUtZWI0YTU3NTdiZTk3Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTA0OTU0LCJqdGkiOiI0NGQ1ZWMwZS1jZDkxLTQ2NWMtYjVlMS03OWM4MGMwZTgyNDkiLCJpYXQiOjE1MzQzNjg5NTR9.d2RM_s1wgChCMC8U_6R0nBdcVFotghXyG9nUcuL6y63M8RMO1-2g3iPHH99nKcZzQihoqTl-BJ2jbP351c6PLaw8fKz__gaVxs7BSXGnF81AcqRGSVSZDODPsNwH3jPOKI4SCfgkSR6NAN8vw6FqtZXKT0sw958JdSSk16Xbl6z9cf006N7CgIpFGXrKHm-wkFyBBMHPoxr_tXk0xzkHKss4_2kccf_04nTyu98GJfvqSkGLsos8EhBmt7XMN_jxJTCUJ52nlJt6ZRvQL9bkRpGlSUZFfZTf93f-gHywR1wPfyE_NuLKQ2sj0GwXAa_sKP55AjMLheCSCK2NQli9nw",
+      "tokenExpiration": 1565904954000,
+      "profileId": "ZjQwOTI1OWQtZjdkNy00NjRjLTllZmYtOTUwYjUxYmNjZmI0",
+      "deviceId": null,
+      "email": "foxuser946@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:f409259d-f7d7-464c-9eff-950b51bccfb4",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 198.172.88.195, 204.2.158.116",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "ZjQwOTI1OWQtZjdkNy00NjRjLTllZmYtOTUwYjUxYmNjZmI0"
+  },
+  "foxuser059@fox.com": {
+    "password": "XHuw7tg6ErZmtbsLwwpdwpxHDsAI4wWF0Nx9tMT2l804",
+    "videoMap": {},
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6YWI1ZTRiNWItMjVmMy00MjRhLTljZDYtZDQ2MjA1ODljZTI1IiwidWlkIjoiWVdJMVpUUmlOV0l0TWpWbU15MDBNalJoTFRsalpEWXRaRFEyTWpBMU9EbGpaVEkxIiwic2lkIjoiZjczZTQ1YWQtYzIwYy00NzY0LWE0NzktMTg3NzQ4NzMxYjU1Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTA4MjI2LCJqdGkiOiJjMjUxNmU1My01OTg4LTQxNWEtOTg4NC02ODdlZjQzNzRiNjkiLCJpYXQiOjE1MzQzNzIyMjZ9.UC0FaD3ckBqVLrHkXpLtEMKUlau7gjqrjK2UiErgek7XxmFpS6ZSYS6Up_1ka6i3y-LHqe14RhNYGppQjq9DKQm2W6ueMxaULYAVWwpWMOZbBYFEIyhxRcjZFRmE7dNJFDZoLk7zCRx9xjCUKWpB-rksQ4AFuvZIN2boH5Qxd0aUcWyySU11tJJzu_8Sdbv06tIaBulN14aNT6LtBsigFpv0pilL7lXT8aewJ9gdta8I0cFXhig3kAp3sbn9P9utI7wOX01bs2dAD1o_AeaCci4YT36dT3sos6FME66LOX5EnayjxLzAOnmhFlkt5CiFLYN9oa1jO29TEpnaZ-VoVA",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6YWI1ZTRiNWItMjVmMy00MjRhLTljZDYtZDQ2MjA1ODljZTI1IiwidWlkIjoiWVdJMVpUUmlOV0l0TWpWbU15MDBNalJoTFRsalpEWXRaRFEyTWpBMU9EbGpaVEkxIiwic2lkIjoiZjczZTQ1YWQtYzIwYy00NzY0LWE0NzktMTg3NzQ4NzMxYjU1Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTA4MjI2LCJqdGkiOiJjMjUxNmU1My01OTg4LTQxNWEtOTg4NC02ODdlZjQzNzRiNjkiLCJpYXQiOjE1MzQzNzIyMjZ9.UC0FaD3ckBqVLrHkXpLtEMKUlau7gjqrjK2UiErgek7XxmFpS6ZSYS6Up_1ka6i3y-LHqe14RhNYGppQjq9DKQm2W6ueMxaULYAVWwpWMOZbBYFEIyhxRcjZFRmE7dNJFDZoLk7zCRx9xjCUKWpB-rksQ4AFuvZIN2boH5Qxd0aUcWyySU11tJJzu_8Sdbv06tIaBulN14aNT6LtBsigFpv0pilL7lXT8aewJ9gdta8I0cFXhig3kAp3sbn9P9utI7wOX01bs2dAD1o_AeaCci4YT36dT3sos6FME66LOX5EnayjxLzAOnmhFlkt5CiFLYN9oa1jO29TEpnaZ-VoVA",
+      "tokenExpiration": 1565908226000,
+      "profileId": "YWI1ZTRiNWItMjVmMy00MjRhLTljZDYtZDQ2MjA1ODljZTI1",
+      "deviceId": null,
+      "email": "foxuser059@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:ab5e4b5b-25f3-424a-9cd6-d4620589ce25",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 165.254.134.190",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "YWI1ZTRiNWItMjVmMy00MjRhLTljZDYtZDQ2MjA1ODljZTI1"
+  },
+  "foxuser0@fox.com": {
+    "password": "wS7QV3nZNAk6ahAjkT8pGiTIoc92DMUTFByc3",
+    "videoMap": {
+      "skip-and-shannon-undisputed_20180815": {
+        "showIndex": 1,
+        "pageIndex": 0
+      },
+      "the-herd-with-colin-cowherd_20180815": {
+        "showIndex": 0,
+        "pageIndex": 0
+      }
+    },
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6ZTBiZDE4MmUtMzgzZC00MjI0LWE0MmQtODBjYWI4YjY0ZGQ5IiwidWlkIjoiWlRCaVpERTRNbVV0TXpnelpDMDBNakkwTFdFME1tUXRPREJqWVdJNFlqWTBaR1E1Iiwic2lkIjoiNDI5MTlkYTUtMmFlZC00OTVkLWFjYzYtOThlYmY0NTY5NWE2Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTExODcwLCJqdGkiOiJlMzRlNjkzYy0zYmU4LTQzN2MtOThjMC1jM2ViMDJlMjRmZTEiLCJpYXQiOjE1MzQzNzU4NzB9.ZKzza0ok3o9oVx9d4J_fOI2_TETzfepW0n_s5qMfSz0osfYEKZ0iNSwiiG45H_H9lDtioj6l-nxLG5eGtW9BrsZ54SjutXNqtNWpuf4_y5dHgmu9moqq3znVMtszH7ye0Cpbik0_e_74zg99413n95rK-bgs19hhM-H48NOEkn_sWJ22EDkt7h8JiHNLdg9QFjyVuf8FikrgasBa8cePxA0JWOpUcWIEUPYd83_VGOivnof8zTsKzSLz4-1V-VheL8d-pOWeqG-w7LJxCfiAHWHUHbNczFVgyDO9QRBXfIpCd3WPjEiwaywpfh_GBahgRaTb-b0lxFvl2UFyiWVNFg",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6ZTBiZDE4MmUtMzgzZC00MjI0LWE0MmQtODBjYWI4YjY0ZGQ5IiwidWlkIjoiWlRCaVpERTRNbVV0TXpnelpDMDBNakkwTFdFME1tUXRPREJqWVdJNFlqWTBaR1E1Iiwic2lkIjoiNDI5MTlkYTUtMmFlZC00OTVkLWFjYzYtOThlYmY0NTY5NWE2Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTExODcwLCJqdGkiOiJlMzRlNjkzYy0zYmU4LTQzN2MtOThjMC1jM2ViMDJlMjRmZTEiLCJpYXQiOjE1MzQzNzU4NzB9.ZKzza0ok3o9oVx9d4J_fOI2_TETzfepW0n_s5qMfSz0osfYEKZ0iNSwiiG45H_H9lDtioj6l-nxLG5eGtW9BrsZ54SjutXNqtNWpuf4_y5dHgmu9moqq3znVMtszH7ye0Cpbik0_e_74zg99413n95rK-bgs19hhM-H48NOEkn_sWJ22EDkt7h8JiHNLdg9QFjyVuf8FikrgasBa8cePxA0JWOpUcWIEUPYd83_VGOivnof8zTsKzSLz4-1V-VheL8d-pOWeqG-w7LJxCfiAHWHUHbNczFVgyDO9QRBXfIpCd3WPjEiwaywpfh_GBahgRaTb-b0lxFvl2UFyiWVNFg",
+      "tokenExpiration": 1565911870000,
+      "profileId": "ZTBiZDE4MmUtMzgzZC00MjI0LWE0MmQtODBjYWI4YjY0ZGQ5",
+      "deviceId": null,
+      "email": "foxuser0@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:e0bd182e-383d-4224-a42d-80cab8b64dd9",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 198.172.88.195, 23.35.98.126",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "ZTBiZDE4MmUtMzgzZC00MjI0LWE0MmQtODBjYWI4YjY0ZGQ5"
+  },
+  "": {
+    "password": "",
+    "videoMap": {}
+  },
+  "foxuser410725100@fox.com": {
+    "password": "hsMINiePE3ye1yruR4ls260pTurBf1Cx",
+    "videoMap": {},
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6MzUwMGVjODItZTk0My00MzdjLTkzOWUtMTVlMmM3ZTI2ZDkwIiwidWlkIjoiTXpVd01HVmpPREl0WlRrME15MDBNemRqTFRrek9XVXRNVFZsTW1NM1pUSTJaRGt3Iiwic2lkIjoiN2ZlZDZhZjktM2RhMC00NzM1LTgzNWYtYTZmNjJmNjlkMGEwIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTE1NDY5LCJqdGkiOiJmOTU1YWVjZC05MmNkLTQ1YjYtYWI5My0zN2RlZmYyMGZiYjUiLCJpYXQiOjE1MzQzNzk0Njl9.dXNLxw48ojxdrKV0lZQtfERP3dCUsSzUi0qyzs_6bUctVWMGwBE9qs4tgsbv7secjxa6FhnA3BF7lZjnC1ym5ZVCKFFohkY86kan0kUrpt5Ot6piv1ln47HNWbShkY2JZs3T0nwYakbxY5yFnggByEAXv7JZXE7m1l3QDBuxwdNkoGkRFCyyxfi5wyWQVzmG21fyHi__bpadQnxqZel57f7jgabqYjWoa4bydttpvK3MGrjG_HcTtxVcmuwg_9-aaWuVQGT-2TeThsCfhZkgyE2YuTTrpFA7ACJm8PkIEQd5guY-BVOBRAvuUp_qLgFUxr9mAJeiqlWOX69xPF5Txw",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6MzUwMGVjODItZTk0My00MzdjLTkzOWUtMTVlMmM3ZTI2ZDkwIiwidWlkIjoiTXpVd01HVmpPREl0WlRrME15MDBNemRqTFRrek9XVXRNVFZsTW1NM1pUSTJaRGt3Iiwic2lkIjoiN2ZlZDZhZjktM2RhMC00NzM1LTgzNWYtYTZmNjJmNjlkMGEwIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTE1NDY5LCJqdGkiOiJmOTU1YWVjZC05MmNkLTQ1YjYtYWI5My0zN2RlZmYyMGZiYjUiLCJpYXQiOjE1MzQzNzk0Njl9.dXNLxw48ojxdrKV0lZQtfERP3dCUsSzUi0qyzs_6bUctVWMGwBE9qs4tgsbv7secjxa6FhnA3BF7lZjnC1ym5ZVCKFFohkY86kan0kUrpt5Ot6piv1ln47HNWbShkY2JZs3T0nwYakbxY5yFnggByEAXv7JZXE7m1l3QDBuxwdNkoGkRFCyyxfi5wyWQVzmG21fyHi__bpadQnxqZel57f7jgabqYjWoa4bydttpvK3MGrjG_HcTtxVcmuwg_9-aaWuVQGT-2TeThsCfhZkgyE2YuTTrpFA7ACJm8PkIEQd5guY-BVOBRAvuUp_qLgFUxr9mAJeiqlWOX69xPF5Txw",
+      "tokenExpiration": 1565915469000,
+      "profileId": "MzUwMGVjODItZTk0My00MzdjLTkzOWUtMTVlMmM3ZTI2ZDkw",
+      "deviceId": null,
+      "email": "foxuser410725100@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:3500ec82-e943-437c-939e-15e2c7e26d90",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 165.254.134.190, 23.35.98.92",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "MzUwMGVjODItZTk0My00MzdjLTkzOWUtMTVlMmM3ZTI2ZDkw"
+  },
+  "foxuser769931@fox.com": {
+    "password": "YEV2sdH",
+    "videoMap": {
+      "barkfest_04_03": {
+        "showIndex": 199,
+        "pageIndex": 3
+      },
+      "the-herd-with-colin-cowherd_20180815": {
+        "showIndex": 2,
+        "pageIndex": 0
+      },
+      "trials-of-the-wild_falkland-island-invasion": {
+        "showIndex": 1,
+        "pageIndex": 0
+      },
+      "barkfest_04_02": {
+        "showIndex": 0,
+        "pageIndex": 4
+      }
+    },
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6MGQwMzlmOWUtNzUwZC00NDQyLWJkYjYtODBkMjkxYjIzODFhIiwidWlkIjoiTUdRd016bG1PV1V0TnpVd1pDMDBORFF5TFdKa1lqWXRPREJrTWpreFlqSXpPREZoIiwic2lkIjoiOGJhMGVjOTUtNzU3MC00ODQ2LTlhOTQtNzQyODFmNjA5YmEzIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTE3MzQ4LCJqdGkiOiJlZTc5MWIwYi1mYjkwLTRhYzMtOWRjNi1kNDdhODYzYWU2NDgiLCJpYXQiOjE1MzQzODEzNDh9.QPnmHECXVoRh9NQCcKDq4WaLyTfK2qA_ilp9zBtahYFjBMoaeT7QKE4xkQCA4JxZvycSgxDp1CFDP9MM1Goqn2UmLF6UTKbshRM9rw0oZE6PL-cWsYyA0aAfvw8UiKKik7pidAwYumrpl52SThmVPTOUs0fHfYcw67y4gWD2hVEjIAma3ZvAbJAc4N0m3IUQNRew5jEwXYg8XsaEQg9oMUzbG7OOvmhSwnuilw_WBG9pd2h4YwbmffwAYDSeuOUVBxWb9bV9izxKw81kog3XRtOSUFEF_MMCW_8t9U6HSHbcSn8WDZcEc6grXZKb6MRjQC0S9c3AkdziX4oncTkSYA",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6MGQwMzlmOWUtNzUwZC00NDQyLWJkYjYtODBkMjkxYjIzODFhIiwidWlkIjoiTUdRd016bG1PV1V0TnpVd1pDMDBORFF5TFdKa1lqWXRPREJrTWpreFlqSXpPREZoIiwic2lkIjoiOGJhMGVjOTUtNzU3MC00ODQ2LTlhOTQtNzQyODFmNjA5YmEzIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTE3MzQ4LCJqdGkiOiJlZTc5MWIwYi1mYjkwLTRhYzMtOWRjNi1kNDdhODYzYWU2NDgiLCJpYXQiOjE1MzQzODEzNDh9.QPnmHECXVoRh9NQCcKDq4WaLyTfK2qA_ilp9zBtahYFjBMoaeT7QKE4xkQCA4JxZvycSgxDp1CFDP9MM1Goqn2UmLF6UTKbshRM9rw0oZE6PL-cWsYyA0aAfvw8UiKKik7pidAwYumrpl52SThmVPTOUs0fHfYcw67y4gWD2hVEjIAma3ZvAbJAc4N0m3IUQNRew5jEwXYg8XsaEQg9oMUzbG7OOvmhSwnuilw_WBG9pd2h4YwbmffwAYDSeuOUVBxWb9bV9izxKw81kog3XRtOSUFEF_MMCW_8t9U6HSHbcSn8WDZcEc6grXZKb6MRjQC0S9c3AkdziX4oncTkSYA",
+      "tokenExpiration": 1565917348000,
+      "profileId": "MGQwMzlmOWUtNzUwZC00NDQyLWJkYjYtODBkMjkxYjIzODFh",
+      "deviceId": null,
+      "email": "foxuser769931@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:0d039f9e-750d-4442-bdb6-80d291b2381a",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 65.158.114.231, 23.35.98.126",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "MGQwMzlmOWUtNzUwZC00NDQyLWJkYjYtODBkMjkxYjIzODFh"
+  },
+  "foxuser4444444": {
     "password": "abcdef",
     "videoMap": {}
+  },
+  "foxuser4444444@fox.com": {
+    "password": "abcdef",
+    "videoMap": {},
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6ZDA3YjM4OTMtNGZlNS00NTAzLTkyMWMtZmE2OTdlODg0YWM0IiwidWlkIjoiWkRBM1lqTTRPVE10TkdabE5TMDBOVEF6TFRreU1XTXRabUUyT1RkbE9EZzBZV00wIiwic2lkIjoiNzc3YjkxM2QtNWQ0Yy00MGFhLWFiZmItYmY2MGQ2OTM1MGJiIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTc3OTk5LCJqdGkiOiI4ZTc2YjdiYi1mNDg5LTQ5NTctOWU4ZS0xNGQ2M2ZmOTVmOWMiLCJpYXQiOjE1MzQ0NDE5OTl9.TZ9Q8c3QyqTPkhCSpiI__iIZS5mah283EpWbJdMagVpDFLFeFNspoeLQFgr96z1OGigPU-ZukbkyeEJb3IQISYId_v8peh4mV8i3CyNoWCCRSjoFS1v22ZUvLjM6R0z7RiCqlr1bKMF9Ru4hk9-bwIs6X30JgAc8-sZnTYHEEshWiTjdFvQNP9Eds7smC7xdU692len8wzxQTYTPdyVRWZYnYlOFzO2vnXiiR2BC7x_qGX7WUuSrMOO8EdaD1pXFGseTYC4F9b-WjHAZTgFJbpsZ2ZIzf1gartdWgSmdsjSs6dEhYPKh-vcdN_yweB2D_S4HmeGZxpOoYqzGkbidpg",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6ZDA3YjM4OTMtNGZlNS00NTAzLTkyMWMtZmE2OTdlODg0YWM0IiwidWlkIjoiWkRBM1lqTTRPVE10TkdabE5TMDBOVEF6TFRreU1XTXRabUUyT1RkbE9EZzBZV00wIiwic2lkIjoiNzc3YjkxM2QtNWQ0Yy00MGFhLWFiZmItYmY2MGQ2OTM1MGJiIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTc3OTk5LCJqdGkiOiI4ZTc2YjdiYi1mNDg5LTQ5NTctOWU4ZS0xNGQ2M2ZmOTVmOWMiLCJpYXQiOjE1MzQ0NDE5OTl9.TZ9Q8c3QyqTPkhCSpiI__iIZS5mah283EpWbJdMagVpDFLFeFNspoeLQFgr96z1OGigPU-ZukbkyeEJb3IQISYId_v8peh4mV8i3CyNoWCCRSjoFS1v22ZUvLjM6R0z7RiCqlr1bKMF9Ru4hk9-bwIs6X30JgAc8-sZnTYHEEshWiTjdFvQNP9Eds7smC7xdU692len8wzxQTYTPdyVRWZYnYlOFzO2vnXiiR2BC7x_qGX7WUuSrMOO8EdaD1pXFGseTYC4F9b-WjHAZTgFJbpsZ2ZIzf1gartdWgSmdsjSs6dEhYPKh-vcdN_yweB2D_S4HmeGZxpOoYqzGkbidpg",
+      "tokenExpiration": 1565977999000,
+      "profileId": "ZDA3YjM4OTMtNGZlNS00NTAzLTkyMWMtZmE2OTdlODg0YWM0",
+      "deviceId": null,
+      "email": "foxuser4444444@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:d07b3893-4fe5-4503-921c-fa697e884ac4",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 165.254.16.94, 23.3.105.225",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "ZDA3YjM4OTMtNGZlNS00NTAzLTkyMWMtZmE2OTdlODg0YWM0"
+  },
+  "foxuser444444@fox.com": {
+    "password": "abcdef",
+    "videoMap": {},
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6NDQwZTY0YmItNTFjMS00MWFmLThmMmEtMjEyYWFlZGJkMTEwIiwidWlkIjoiTkRRd1pUWTBZbUl0TlRGak1TMDBNV0ZtTFRobU1tRXRNakV5WVdGbFpHSmtNVEV3Iiwic2lkIjoiYjY5ZDY1ZGYtMDhhZC00YmUzLWJhYTMtNjg5ZmI0NDE0MWZlIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTc4MDA2LCJqdGkiOiI3M2UzYjI4OC03N2RmLTQxZDQtYmQ5Zi0yZmQ2ZTgwZmRjMTgiLCJpYXQiOjE1MzQ0NDIwMDZ9.ZkES68ugrGqsjESWa91bBW1D1pHZZmDiaN_Sy6M1ccwqa2Lai47Nu0A7Wm6t4x9fSjglg6XMgNu9RpEikW0IPXXpmfvveQeT96JBtb0nJxK505cRRKLwbYzoRJc_qZ33D6pePDQvQeKIfKlAiK4Qj4JGZVb015yV34B78DgLYFsC6WF3_fPzt7375-sG4kPWE_otyGNk32UsBS4Tj5i_VmQN7ZNysqZLqSVuuUpLheNX_MQfnNWU40MLxk-77XB_dT9o2PSqOkiqpdkzE0IVx1P0amA6VpXGCKJOP6a5YdVxIKWo95bf-0foWu8rrqgC2d75ES0hGFkYkbr5nM5QpA",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6NDQwZTY0YmItNTFjMS00MWFmLThmMmEtMjEyYWFlZGJkMTEwIiwidWlkIjoiTkRRd1pUWTBZbUl0TlRGak1TMDBNV0ZtTFRobU1tRXRNakV5WVdGbFpHSmtNVEV3Iiwic2lkIjoiYjY5ZDY1ZGYtMDhhZC00YmUzLWJhYTMtNjg5ZmI0NDE0MWZlIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTc4MDA2LCJqdGkiOiI3M2UzYjI4OC03N2RmLTQxZDQtYmQ5Zi0yZmQ2ZTgwZmRjMTgiLCJpYXQiOjE1MzQ0NDIwMDZ9.ZkES68ugrGqsjESWa91bBW1D1pHZZmDiaN_Sy6M1ccwqa2Lai47Nu0A7Wm6t4x9fSjglg6XMgNu9RpEikW0IPXXpmfvveQeT96JBtb0nJxK505cRRKLwbYzoRJc_qZ33D6pePDQvQeKIfKlAiK4Qj4JGZVb015yV34B78DgLYFsC6WF3_fPzt7375-sG4kPWE_otyGNk32UsBS4Tj5i_VmQN7ZNysqZLqSVuuUpLheNX_MQfnNWU40MLxk-77XB_dT9o2PSqOkiqpdkzE0IVx1P0amA6VpXGCKJOP6a5YdVxIKWo95bf-0foWu8rrqgC2d75ES0hGFkYkbr5nM5QpA",
+      "tokenExpiration": 1565978006000,
+      "profileId": "NDQwZTY0YmItNTFjMS00MWFmLThmMmEtMjEyYWFlZGJkMTEw",
+      "deviceId": null,
+      "email": "foxuser444444@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:440e64bb-51c1-41af-8f2a-212aaedbd110",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 165.254.16.94",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "NDQwZTY0YmItNTFjMS00MWFmLThmMmEtMjEyYWFlZGJkMTEw"
+  },
+  "foxuser824@fox.com": {
+    "password": "abcdef",
+    "videoMap": {
+      "mom_02_02": {
+        "showIndex": 101,
+        "pageIndex": 5
+      },
+      "the-x-files_10_04": {
+        "showIndex": 101,
+        "pageIndex": 6
+      },
+      "the-simpsons_25_13": {
+        "showIndex": 45,
+        "pageIndex": 7
+      },
+      "big-cat-week_killer-queen": {
+        "showIndex": 180,
+        "pageIndex": 4
+      },
+      "mom_02_03": {
+        "showIndex": 101,
+        "pageIndex": 5
+      }
+    },
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6ZDAxYTA0M2MtNzdmNS00YjI2LTk1MmEtY2FiMzUxNzExNTZmIiwidWlkIjoiWkRBeFlUQTBNMk10TnpkbU5TMDBZakkyTFRrMU1tRXRZMkZpTXpVeE56RXhOVFptIiwic2lkIjoiMjdjOWMyOWMtYTVkZi00NWI0LTk0ZDItNzlhNGY2YmM5M2NkIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTc4MTI0LCJqdGkiOiJiNDQ5YzQ0Mi0xZjYyLTRhMWYtOWY2Yy1lYjZmNGRjYmUwMTMiLCJpYXQiOjE1MzQ0NDIxMjR9.RHwbts2w3xe7BM9Ke7mSA_UHdwPb_hRXRc2MgyO54CUJTVTOPHmuvTensmYjLKUFhHzoqPksnSWxKqtwN8DTwFISMVSjrBLEWt8O2Qm3RBekWTVL0h-qvcy_VA2ZD4NsJJ_1JqAxdhuZZ9DJnCtVUdYKCm7a5yaBQs1kmheoGOwZnwLAZZEfMYLpLkSXTp9GkIPAhr5nmWu8BYdgMzMWFDsEgVDkLxwmK25kZvAbGNnliwHxPTWxC5yycRoV_Fv6QkyOrdaoaEwBOJW4sLQwsroPareTfRQM8o11pUj6lpPUwGI2baqMM-YPHedJORQi2SKT2f-7lL4qWrHXjQur7Q",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6ZDAxYTA0M2MtNzdmNS00YjI2LTk1MmEtY2FiMzUxNzExNTZmIiwidWlkIjoiWkRBeFlUQTBNMk10TnpkbU5TMDBZakkyTFRrMU1tRXRZMkZpTXpVeE56RXhOVFptIiwic2lkIjoiMjdjOWMyOWMtYTVkZi00NWI0LTk0ZDItNzlhNGY2YmM5M2NkIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTc4MTI0LCJqdGkiOiJiNDQ5YzQ0Mi0xZjYyLTRhMWYtOWY2Yy1lYjZmNGRjYmUwMTMiLCJpYXQiOjE1MzQ0NDIxMjR9.RHwbts2w3xe7BM9Ke7mSA_UHdwPb_hRXRc2MgyO54CUJTVTOPHmuvTensmYjLKUFhHzoqPksnSWxKqtwN8DTwFISMVSjrBLEWt8O2Qm3RBekWTVL0h-qvcy_VA2ZD4NsJJ_1JqAxdhuZZ9DJnCtVUdYKCm7a5yaBQs1kmheoGOwZnwLAZZEfMYLpLkSXTp9GkIPAhr5nmWu8BYdgMzMWFDsEgVDkLxwmK25kZvAbGNnliwHxPTWxC5yycRoV_Fv6QkyOrdaoaEwBOJW4sLQwsroPareTfRQM8o11pUj6lpPUwGI2baqMM-YPHedJORQi2SKT2f-7lL4qWrHXjQur7Q",
+      "tokenExpiration": 1565978124000,
+      "profileId": "ZDAxYTA0M2MtNzdmNS00YjI2LTk1MmEtY2FiMzUxNzExNTZm",
+      "deviceId": null,
+      "email": "foxuser824@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:d01a043c-77f5-4b26-952a-cab35171156f",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 165.254.16.94",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "ZDAxYTA0M2MtNzdmNS00YjI2LTk1MmEtY2FiMzUxNzExNTZm"
+  },
+  "foxuser8@fox.com": {
+    "password": "abcdef",
+    "videoMap": {
+      "trials-of-the-wild_falkland-island-invasion": {
+        "showIndex": 5,
+        "pageIndex": 0
+      },
+      "star_02_15": {
+        "showIndex": 101,
+        "pageIndex": 2
+      },
+      "empire_04_15": {
+        "showIndex": 102,
+        "pageIndex": 2
+      },
+      "gotham_04_20": {
+        "showIndex": 100,
+        "pageIndex": 2
+      }
+    },
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6Mjk3NGVlY2QtNDc1Zi00ZjNiLWEzNDktY2E2MzA1NjdhNWRkIiwidWlkIjoiTWprM05HVmxZMlF0TkRjMVppMDBaak5pTFdFek5Ea3RZMkUyTXpBMU5qZGhOV1JrIiwic2lkIjoiNTUwYzNmNjYtOGMwYy00OGRiLWIyNTYtYWZhM2I5MzEwMzA1Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTc4MzAyLCJqdGkiOiI0YWI3MjFlYy1jN2FiLTQ0MzEtYWQxOS04Nzk2YzRhODU1NGMiLCJpYXQiOjE1MzQ0NDIzMDJ9.a-QYujXXBq8nbbbksaaXgCWYNpE7hHCTWjN26PG7bIIgKRdUPtAQv2Q5EVoyG0x-NzXmFIqiW9t31yYMwSoIwp0TQCBWf257r3W0Jg1oYUSiq6LsPgLPB7N6h9ZPK0G2fZqp95iCFCFl3I4KRzO9gwVQFCO0ahcQqEtzs9BrUiM3yj2UOjsIUHriBoo9D0mWqbwTOBOpR4gY8ca91C-H4vtzBFJyoJrsUxsjp9BBJ41KyloQjaEFxSqYxJeuMOgBc8KpfHNWK-8YvT9vRJIrTZhyeZW5Ac2dnmbYAS0_Rj33Vv2BaqZ6PxTHAkdGSe9PKFROPJO6EoPWN5dR_JKb1w",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6Mjk3NGVlY2QtNDc1Zi00ZjNiLWEzNDktY2E2MzA1NjdhNWRkIiwidWlkIjoiTWprM05HVmxZMlF0TkRjMVppMDBaak5pTFdFek5Ea3RZMkUyTXpBMU5qZGhOV1JrIiwic2lkIjoiNTUwYzNmNjYtOGMwYy00OGRiLWIyNTYtYWZhM2I5MzEwMzA1Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTc4MzAyLCJqdGkiOiI0YWI3MjFlYy1jN2FiLTQ0MzEtYWQxOS04Nzk2YzRhODU1NGMiLCJpYXQiOjE1MzQ0NDIzMDJ9.a-QYujXXBq8nbbbksaaXgCWYNpE7hHCTWjN26PG7bIIgKRdUPtAQv2Q5EVoyG0x-NzXmFIqiW9t31yYMwSoIwp0TQCBWf257r3W0Jg1oYUSiq6LsPgLPB7N6h9ZPK0G2fZqp95iCFCFl3I4KRzO9gwVQFCO0ahcQqEtzs9BrUiM3yj2UOjsIUHriBoo9D0mWqbwTOBOpR4gY8ca91C-H4vtzBFJyoJrsUxsjp9BBJ41KyloQjaEFxSqYxJeuMOgBc8KpfHNWK-8YvT9vRJIrTZhyeZW5Ac2dnmbYAS0_Rj33Vv2BaqZ6PxTHAkdGSe9PKFROPJO6EoPWN5dR_JKb1w",
+      "tokenExpiration": 1565978302000,
+      "profileId": "Mjk3NGVlY2QtNDc1Zi00ZjNiLWEzNDktY2E2MzA1NjdhNWRk",
+      "deviceId": null,
+      "email": "foxuser8@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:2974eecd-475f-4f3b-a349-ca630567a5dd",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 165.254.16.94, 23.35.98.92",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "Mjk3NGVlY2QtNDc1Zi00ZjNiLWEzNDktY2E2MzA1NjdhNWRk"
+  },
+  "foxuser107@fox.com": {
+    "password": "abcdef",
+    "videoMap": {},
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6NmNjOWZjMGYtYWE5Yi00YmE2LTg1Y2YtZmRlNmZmN2RmMjQwIiwidWlkIjoiTm1Oak9XWmpNR1l0WVdFNVlpMDBZbUUyTFRnMVkyWXRabVJsTm1abU4yUm1NalF3Iiwic2lkIjoiYTk3NGRjYjktOWRjYS00YjJjLWExMmUtNzgxMTM2ZDI2OThmIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTgxNjgwLCJqdGkiOiI4YzQyNTZiZi05NWViLTRhOTAtYTg5YS00NmMwNTQwMzc1N2YiLCJpYXQiOjE1MzQ0NDU2ODB9.iZqulcl23SVf4-tRQLmlSrN899PCevp1ONijN1aC3YuZf3uZwai4QP1qUunZWT6P6J8MocNWGy_N80yMu5bjOKDzzyiDq0KDOBKZuchnGVhEghS3bJPg6dccXxEZSE2WjpNfv6IVym6M2lxJYk4M3lYV5xqepYg9RIG7Rrg7Hfrz09u3vUYC1KoeQB9oIEWzqKAZDvTq41DcQXYLnBtonvllU4PWAXKxOCiwGAxrt0brXzZ8rqbNdO4hfyFUHTV0m0x0WqNeNlH6cgrfiyPtuyJORcDZBq2HNpN7U9BBWSVFvbJX3iw1wx-4z-5oIV3fCRnGv2nse2Cv5cd0P7uQ3w",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6NmNjOWZjMGYtYWE5Yi00YmE2LTg1Y2YtZmRlNmZmN2RmMjQwIiwidWlkIjoiTm1Oak9XWmpNR1l0WVdFNVlpMDBZbUUyTFRnMVkyWXRabVJsTm1abU4yUm1NalF3Iiwic2lkIjoiYTk3NGRjYjktOWRjYS00YjJjLWExMmUtNzgxMTM2ZDI2OThmIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTgxNjgwLCJqdGkiOiI4YzQyNTZiZi05NWViLTRhOTAtYTg5YS00NmMwNTQwMzc1N2YiLCJpYXQiOjE1MzQ0NDU2ODB9.iZqulcl23SVf4-tRQLmlSrN899PCevp1ONijN1aC3YuZf3uZwai4QP1qUunZWT6P6J8MocNWGy_N80yMu5bjOKDzzyiDq0KDOBKZuchnGVhEghS3bJPg6dccXxEZSE2WjpNfv6IVym6M2lxJYk4M3lYV5xqepYg9RIG7Rrg7Hfrz09u3vUYC1KoeQB9oIEWzqKAZDvTq41DcQXYLnBtonvllU4PWAXKxOCiwGAxrt0brXzZ8rqbNdO4hfyFUHTV0m0x0WqNeNlH6cgrfiyPtuyJORcDZBq2HNpN7U9BBWSVFvbJX3iw1wx-4z-5oIV3fCRnGv2nse2Cv5cd0P7uQ3w",
+      "tokenExpiration": 1565981680000,
+      "profileId": "NmNjOWZjMGYtYWE5Yi00YmE2LTg1Y2YtZmRlNmZmN2RmMjQw",
+      "deviceId": null,
+      "email": "foxuser107@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:6cc9fc0f-aa9b-4ba6-85cf-fde6ff7df240",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 128.177.98.241, 23.35.98.126",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "NmNjOWZjMGYtYWE5Yi00YmE2LTg1Y2YtZmRlNmZmN2RmMjQw"
+  },
+  "foxuser04@fox.com": {
+    "password": "abcdef",
+    "videoMap": {
+      "masterchef_09_06": {
+        "showIndex": 7,
+        "pageIndex": "ShowBySeriesList"
+      }
+    },
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6NTZkOGZjM2EtOTBjOS00ODQxLThhY2QtMGUyZGVkM2Y1ODIyIiwidWlkIjoiTlRaa09HWmpNMkV0T1RCak9TMDBPRFF4TFRoaFkyUXRNR1V5WkdWa00yWTFPREl5Iiwic2lkIjoiZWZiNDUzOGQtMzlmNC00NGRmLWFiM2UtMTZjNzY4ZjA4ZTQzIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTgyMDAwLCJqdGkiOiIyYTRhZjRjNC1mOTZhLTQ1OWMtODE5Yi1jMGJiZjZiZjZhOGYiLCJpYXQiOjE1MzQ0NDYwMDB9.UoNw2t_nIhHMeg8gjD9lv5-2R-ENF-BZ_7kSQ5x4XhqCym1cyNmyo2PbFi-6bo0ViJGpdC6HDDmly-kyoIvKTsIkusL0g-EHXxfHAbVpk92wLvsStU5X8h8CJ8M96bj6cPPzv1hIzWW6Cwiu8cuW3OZs_8xL1oHaSxQVNdq8cAg6_zBwxiHLhTZGgL6YUxUQp3VbO1xR-pXw5NXIZSmAxCTKe1CdfKhaPinovmTp1dOZPTlghgvAhW4K4H2xOXAC24ZNKlrPc9AfNyx4DRMFSSjcqrNn_pW2YPTZv4q3mXy7bp9diCbBiIJ7FprbsGStKxoVDH5O1hDya8mHl2vb8w",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6NTZkOGZjM2EtOTBjOS00ODQxLThhY2QtMGUyZGVkM2Y1ODIyIiwidWlkIjoiTlRaa09HWmpNMkV0T1RCak9TMDBPRFF4TFRoaFkyUXRNR1V5WkdWa00yWTFPREl5Iiwic2lkIjoiZWZiNDUzOGQtMzlmNC00NGRmLWFiM2UtMTZjNzY4ZjA4ZTQzIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTgyMDAwLCJqdGkiOiIyYTRhZjRjNC1mOTZhLTQ1OWMtODE5Yi1jMGJiZjZiZjZhOGYiLCJpYXQiOjE1MzQ0NDYwMDB9.UoNw2t_nIhHMeg8gjD9lv5-2R-ENF-BZ_7kSQ5x4XhqCym1cyNmyo2PbFi-6bo0ViJGpdC6HDDmly-kyoIvKTsIkusL0g-EHXxfHAbVpk92wLvsStU5X8h8CJ8M96bj6cPPzv1hIzWW6Cwiu8cuW3OZs_8xL1oHaSxQVNdq8cAg6_zBwxiHLhTZGgL6YUxUQp3VbO1xR-pXw5NXIZSmAxCTKe1CdfKhaPinovmTp1dOZPTlghgvAhW4K4H2xOXAC24ZNKlrPc9AfNyx4DRMFSSjcqrNn_pW2YPTZv4q3mXy7bp9diCbBiIJ7FprbsGStKxoVDH5O1hDya8mHl2vb8w",
+      "tokenExpiration": 1565982000000,
+      "profileId": "NTZkOGZjM2EtOTBjOS00ODQxLThhY2QtMGUyZGVkM2Y1ODIy",
+      "deviceId": null,
+      "email": "foxuser04@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:56d8fc3a-90c9-4841-8acd-0e2ded3f5822",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 128.177.98.241, 23.35.98.92",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "NTZkOGZjM2EtOTBjOS00ODQxLThhY2QtMGUyZGVkM2Y1ODIy"
+  },
+  "foxuser05@fox.com": {
+    "password": "abcdef",
+    "videoMap": {
+      "genius_picasso-chapter-one": {
+        "showIndex": 9,
+        "pageIndex": "ShowBySeriesList"
+      }
+    },
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6NDgwNDE4MmUtNjNjNS00NjkxLWE3NDAtNDAxNWE4MDdiZDE4IiwidWlkIjoiTkRnd05ERTRNbVV0TmpOak5TMDBOamt4TFdFM05EQXROREF4TldFNE1EZGlaREU0Iiwic2lkIjoiNmFkOWNiYWItMzFlNi00NmRkLThlZWUtNDU3MDk5MGMyZDJiIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTgyMDAwLCJqdGkiOiJlNDg3NDYzMi1lZDg2LTQ2NzctOWE4Yi05ZDc1NWVjODgzMzkiLCJpYXQiOjE1MzQ0NDYwMDB9.GfknhQ1GLu2ARrYAYjMTXhBPrRxJnCrKcnu0GEiW3cvVXGl_N62clZMKoHb3kf1rLu2BgBR8fsy78N9V-MS72YcBxftkj8BHM6bjvqr8PoK8oEUyvnNCoAHmD4iV8s1vqVZp51oUWJlAC-ZNslWG6h1nB2wLnfcDJLA8ftCSKIznm1JjMmuxOD8Pvvyqpe8uXDw4-DVL5dv_1wPbuv24xDzjKQGvQhCEEIwCMlFyN9-WhdLVdZsx8oxQ2MWeGpOkRhSRCoJtaMKuB1MocZpqe6UUZC2HQBMb4eFcsDKvveOeaz6fBdhGdUaGM9cUIsW1lTUghVPd004PfPXif78NpA",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6NDgwNDE4MmUtNjNjNS00NjkxLWE3NDAtNDAxNWE4MDdiZDE4IiwidWlkIjoiTkRnd05ERTRNbVV0TmpOak5TMDBOamt4TFdFM05EQXROREF4TldFNE1EZGlaREU0Iiwic2lkIjoiNmFkOWNiYWItMzFlNi00NmRkLThlZWUtNDU3MDk5MGMyZDJiIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTgyMDAwLCJqdGkiOiJlNDg3NDYzMi1lZDg2LTQ2NzctOWE4Yi05ZDc1NWVjODgzMzkiLCJpYXQiOjE1MzQ0NDYwMDB9.GfknhQ1GLu2ARrYAYjMTXhBPrRxJnCrKcnu0GEiW3cvVXGl_N62clZMKoHb3kf1rLu2BgBR8fsy78N9V-MS72YcBxftkj8BHM6bjvqr8PoK8oEUyvnNCoAHmD4iV8s1vqVZp51oUWJlAC-ZNslWG6h1nB2wLnfcDJLA8ftCSKIznm1JjMmuxOD8Pvvyqpe8uXDw4-DVL5dv_1wPbuv24xDzjKQGvQhCEEIwCMlFyN9-WhdLVdZsx8oxQ2MWeGpOkRhSRCoJtaMKuB1MocZpqe6UUZC2HQBMb4eFcsDKvveOeaz6fBdhGdUaGM9cUIsW1lTUghVPd004PfPXif78NpA",
+      "tokenExpiration": 1565982000000,
+      "profileId": "NDgwNDE4MmUtNjNjNS00NjkxLWE3NDAtNDAxNWE4MDdiZDE4",
+      "deviceId": null,
+      "email": "foxuser05@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:4804182e-63c5-4691-a740-4015a807bd18",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 128.177.98.241, 23.35.98.126",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "NDgwNDE4MmUtNjNjNS00NjkxLWE3NDAtNDAxNWE4MDdiZDE4"
+  },
+  "foxuser06@fox.com": {
+    "password": "abcdef",
+    "videoMap": {
+      "hitler-youth_child-armys-last-stand": {
+        "showIndex": 0,
+        "pageIndex": "ShowBySeriesList"
+      },
+      "the-gifted_01_13": {
+        "showIndex": 0,
+        "pageIndex": "ShowBySeriesList"
+      }
+    },
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6MzA3NDM1YzItYTE2Yy00MDQ4LWE1MzItYTJjNTFiOGRhMzUxIiwidWlkIjoiTXpBM05ETTFZekl0WVRFMll5MDBNRFE0TFdFMU16SXRZVEpqTlRGaU9HUmhNelV4Iiwic2lkIjoiM2JmYjM2Y2EtODBkYS00MTAxLTkxYjEtMTRkNGEwYWJlMmE0Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTgyMDAwLCJqdGkiOiI0MzVmYWZkZS1jNzQ1LTQwYzUtYWM2ZC00ODQ2MzNiZGUyYjciLCJpYXQiOjE1MzQ0NDYwMDB9.C3sWxxpnjegAhmaR7cjG2ThnDzHuvp0gpgLWbAWmaTnpxrAajnBrBf_5IkxjXcBbwHSmwglPAwbqD0o-0_v-C9DmdMzjdDWF9dQpcLHQh5L-6OZrR3dAR0rWHkntCEwMPGfgLtTIyU14kOfP0j-w8hBVLxAvkpFKt3zdYj56uA18TQ4_csf7tZYK6NOETam6xIvOdvz84UZf11adWa7bHZzkOJDTa60knK8xHA2NWpX_lTDA9oRQ_u-CC024PhqjD5iJA8hydrjkNwYCw3D92pdXHyjXWUDTVbGGdmhSrmHs8e8MEoNOpd8ho-jZhl67EuPB7TgUe3ORGlWaH49hMg",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6MzA3NDM1YzItYTE2Yy00MDQ4LWE1MzItYTJjNTFiOGRhMzUxIiwidWlkIjoiTXpBM05ETTFZekl0WVRFMll5MDBNRFE0TFdFMU16SXRZVEpqTlRGaU9HUmhNelV4Iiwic2lkIjoiM2JmYjM2Y2EtODBkYS00MTAxLTkxYjEtMTRkNGEwYWJlMmE0Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTgyMDAwLCJqdGkiOiI0MzVmYWZkZS1jNzQ1LTQwYzUtYWM2ZC00ODQ2MzNiZGUyYjciLCJpYXQiOjE1MzQ0NDYwMDB9.C3sWxxpnjegAhmaR7cjG2ThnDzHuvp0gpgLWbAWmaTnpxrAajnBrBf_5IkxjXcBbwHSmwglPAwbqD0o-0_v-C9DmdMzjdDWF9dQpcLHQh5L-6OZrR3dAR0rWHkntCEwMPGfgLtTIyU14kOfP0j-w8hBVLxAvkpFKt3zdYj56uA18TQ4_csf7tZYK6NOETam6xIvOdvz84UZf11adWa7bHZzkOJDTa60knK8xHA2NWpX_lTDA9oRQ_u-CC024PhqjD5iJA8hydrjkNwYCw3D92pdXHyjXWUDTVbGGdmhSrmHs8e8MEoNOpd8ho-jZhl67EuPB7TgUe3ORGlWaH49hMg",
+      "tokenExpiration": 1565982000000,
+      "profileId": "MzA3NDM1YzItYTE2Yy00MDQ4LWE1MzItYTJjNTFiOGRhMzUx",
+      "deviceId": null,
+      "email": "foxuser06@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:307435c2-a16c-4048-a532-a2c51b8da351",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 128.177.98.241, 23.35.98.92",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "MzA3NDM1YzItYTE2Yy00MDQ4LWE1MzItYTJjNTFiOGRhMzUx"
+  },
+  "foxuser2@fox.com": {
+    "password": "abcdef",
+    "videoMap": {
+      "genius_picasso-chapter-one": {
+        "showIndex": 9,
+        "pageIndex": "ShowBySeriesList"
+      }
+    },
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6MTFhODM2NTUtNmQxMi00YjdiLWJhZDYtZmQyZjgzYzc4ZTY3IiwidWlkIjoiTVRGaE9ETTJOVFV0Tm1ReE1pMDBZamRpTFdKaFpEWXRabVF5Wmpnell6YzRaVFkzIiwic2lkIjoiY2QwMDNiNGYtNTBjNC00ZWVlLWI1NTAtNDk2OTJhMzhkNTk3Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTgyMjI2LCJqdGkiOiJjN2UzYTk1NC0xNTc0LTQ4YjAtYTZiYi02MGZhZjg2NGQ5Y2EiLCJpYXQiOjE1MzQ0NDYyMjZ9.Mbt_QOkMWDD4GVf-mOAlhLrPUQ375yf3PGBghahtl4OFznu-Ys3dLZ-nbmqCUDwv7jD6RfZMhLGs8WYQMAFB50ZQVUrCLgN767u5zrgbE8fgD7JX8A77XfZy58L1ph7Y4r5TNqNuBb4kS_PJb_PMGamVCsUaYg0vGE8tyY5BL0AMJSqutPwlU6yYmF8lVepDGMEVWgDkwp7xeewCgnT7zQhxEBWzTOC_SXwKw11WJvJJQwgCNj_NhmZltbJKKR7CAeDjOq5BpyGnTN9H063tP8BtGeEcLTIh16Bx9fLcZW6ZVV_hGhclvcW7lWlKwI_R0E4gnGRK-qUS18ibi9llHQ",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6MTFhODM2NTUtNmQxMi00YjdiLWJhZDYtZmQyZjgzYzc4ZTY3IiwidWlkIjoiTVRGaE9ETTJOVFV0Tm1ReE1pMDBZamRpTFdKaFpEWXRabVF5Wmpnell6YzRaVFkzIiwic2lkIjoiY2QwMDNiNGYtNTBjNC00ZWVlLWI1NTAtNDk2OTJhMzhkNTk3Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTgyMjI2LCJqdGkiOiJjN2UzYTk1NC0xNTc0LTQ4YjAtYTZiYi02MGZhZjg2NGQ5Y2EiLCJpYXQiOjE1MzQ0NDYyMjZ9.Mbt_QOkMWDD4GVf-mOAlhLrPUQ375yf3PGBghahtl4OFznu-Ys3dLZ-nbmqCUDwv7jD6RfZMhLGs8WYQMAFB50ZQVUrCLgN767u5zrgbE8fgD7JX8A77XfZy58L1ph7Y4r5TNqNuBb4kS_PJb_PMGamVCsUaYg0vGE8tyY5BL0AMJSqutPwlU6yYmF8lVepDGMEVWgDkwp7xeewCgnT7zQhxEBWzTOC_SXwKw11WJvJJQwgCNj_NhmZltbJKKR7CAeDjOq5BpyGnTN9H063tP8BtGeEcLTIh16Bx9fLcZW6ZVV_hGhclvcW7lWlKwI_R0E4gnGRK-qUS18ibi9llHQ",
+      "tokenExpiration": 1565982226000,
+      "profileId": "MTFhODM2NTUtNmQxMi00YjdiLWJhZDYtZmQyZjgzYzc4ZTY3",
+      "deviceId": null,
+      "email": "foxuser2@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:11a83655-6d12-4b7b-bad6-fd2f83c78e67",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 128.177.98.241, 23.35.98.92",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "MTFhODM2NTUtNmQxMi00YjdiLWJhZDYtZmQyZjgzYzc4ZTY3"
+  },
+  "foxuser7479@fox.com": {
+    "password": "4BRpFvD",
+    "videoMap": {},
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6YmQxNjI2NDctYTc0Ny00OTc5LTk1NDctYWY5OGE1YjExYTBjIiwidWlkIjoiWW1ReE5qSTJORGN0WVRjME55MDBPVGM1TFRrMU5EY3RZV1k1T0dFMVlqRXhZVEJqIiwic2lkIjoiY2UyNGJmMzUtNzVjOS00Mjc4LTgxMGUtZTI0NTQ3M2RkNjk5Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTgyNDc0LCJqdGkiOiIxNTE0Zjc4NS03NWU3LTQxNTItOWVjMS03YTMzM2E1YzYwNDgiLCJpYXQiOjE1MzQ0NDY0NzR9.NaI-znRun8BPGbYL_D86BU6BnpJcHd7lbEBrqdb05CRuYcdcMuwYTuBC4SUyuLZHEsFAwKB160GpRvcfq8icEjhnCQ9sA1jzeLXUXIEgVVzAp-26BqBtLBKC7LOQGSt4CqDRMQpgMuxUrtw9QpkpGRV0M9xGGrVfPpdWyCJda4j13OfBDaifI3l7YkB3U9IKxpgwlVeU20weCafjzzHrfZvl0AQHyHWdE215BWgTukYl5QBTu35JZD848yokj8CyuJjGXbinVwpWTtCcyWZCghu0_GlvOoi13WeHssWOO3ZNnBTBrQA7-2LAy9W6llxbTifRH-LhnWJmPwwpm1l4Gw",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6YmQxNjI2NDctYTc0Ny00OTc5LTk1NDctYWY5OGE1YjExYTBjIiwidWlkIjoiWW1ReE5qSTJORGN0WVRjME55MDBPVGM1TFRrMU5EY3RZV1k1T0dFMVlqRXhZVEJqIiwic2lkIjoiY2UyNGJmMzUtNzVjOS00Mjc4LTgxMGUtZTI0NTQ3M2RkNjk5Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTgyNDc0LCJqdGkiOiIxNTE0Zjc4NS03NWU3LTQxNTItOWVjMS03YTMzM2E1YzYwNDgiLCJpYXQiOjE1MzQ0NDY0NzR9.NaI-znRun8BPGbYL_D86BU6BnpJcHd7lbEBrqdb05CRuYcdcMuwYTuBC4SUyuLZHEsFAwKB160GpRvcfq8icEjhnCQ9sA1jzeLXUXIEgVVzAp-26BqBtLBKC7LOQGSt4CqDRMQpgMuxUrtw9QpkpGRV0M9xGGrVfPpdWyCJda4j13OfBDaifI3l7YkB3U9IKxpgwlVeU20weCafjzzHrfZvl0AQHyHWdE215BWgTukYl5QBTu35JZD848yokj8CyuJjGXbinVwpWTtCcyWZCghu0_GlvOoi13WeHssWOO3ZNnBTBrQA7-2LAy9W6llxbTifRH-LhnWJmPwwpm1l4Gw",
+      "tokenExpiration": 1565982474000,
+      "profileId": "YmQxNjI2NDctYTc0Ny00OTc5LTk1NDctYWY5OGE1YjExYTBj",
+      "deviceId": null,
+      "email": "foxuser7479@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:bd162647-a747-4979-9547-af98a5b11a0c",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 128.177.98.241, 23.3.105.225",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "YmQxNjI2NDctYTc0Ny00OTc5LTk1NDctYWY5OGE1YjExYTBj"
+  },
+  "foxuser1a@fox.com": {
+    "password": "abcdef",
+    "videoMap": {
+      "first-things-first-with-cris-carter-and-nick-wright_20180816": {
+        "showIndex": 0,
+        "pageIndex": 0
+      },
+      "mlb-whiparound_20180815": {
+        "showIndex": 1,
+        "pageIndex": 0
+      },
+      "gordon-ramsays-24-hours-to-hell-and-back_01_08": {
+        "showIndex": 2,
+        "pageIndex": 0
+      },
+      "the-resident_01_05": {
+        "showIndex": 157,
+        "pageIndex": 3
+      },
+      "hitler-youth_child-armys-last-stand": {
+        "showIndex": 169,
+        "pageIndex": 2
+      },
+      "the-last-man-on-earth_04_18": {
+        "showIndex": 79,
+        "pageIndex": 2
+      },
+      "the-x-files_02_19": {
+        "showIndex": 99,
+        "pageIndex": 10
+      }
+    },
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6YTIwMDY1ZjgtOTc1OS00YWFhLWE4MzEtZDgxOGYwMmNjMGE1IiwidWlkIjoiWVRJd01EWTFaamd0T1RjMU9TMDBZV0ZoTFdFNE16RXRaRGd4T0dZd01tTmpNR0UxIiwic2lkIjoiMGI0NDliNzctM2QyMC00ZmRhLTkzNTMtYWIyMTJhM2FiNTE0Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTgzMjA1LCJqdGkiOiIxOTQzZDdkOC1mZjE4LTQwODQtOTFkOS0zNjVkOTMwMzE4MTgiLCJpYXQiOjE1MzQ0NDcyMDV9.WbLeBz6U6-4Kl1mXzlT-Xftrgqskq6cl4j6hbvVTiFPVNCWfLjgJexm0hEL4rCSbXClnlpVGKh2p-dyQFZYz8ocQ8QQLh7kXBBfqTAblT5gHYQ1imM26r8-5LQoBGoWzJNWdus5N1iJoI9VD04s6ii9utYjSOyU7feMz7u0x7kFt7xNS5S5QZQVqh12Pm4n4jN_77sqN5b4MdNI8Nuw-4ZMRBwMbO4eI39GjRUEHVN_SDp1V90V4yxdajxGJqQ6KE-yVH9Kr14VpABqStqh3Tv3ux3HlMUS2mX3l5zvLHMWg4oeDDnevjgQ0eVOi9U3ztw7LyoJrxcshLvDff26fMg",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6YTIwMDY1ZjgtOTc1OS00YWFhLWE4MzEtZDgxOGYwMmNjMGE1IiwidWlkIjoiWVRJd01EWTFaamd0T1RjMU9TMDBZV0ZoTFdFNE16RXRaRGd4T0dZd01tTmpNR0UxIiwic2lkIjoiMGI0NDliNzctM2QyMC00ZmRhLTkzNTMtYWIyMTJhM2FiNTE0Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTgzMjA1LCJqdGkiOiIxOTQzZDdkOC1mZjE4LTQwODQtOTFkOS0zNjVkOTMwMzE4MTgiLCJpYXQiOjE1MzQ0NDcyMDV9.WbLeBz6U6-4Kl1mXzlT-Xftrgqskq6cl4j6hbvVTiFPVNCWfLjgJexm0hEL4rCSbXClnlpVGKh2p-dyQFZYz8ocQ8QQLh7kXBBfqTAblT5gHYQ1imM26r8-5LQoBGoWzJNWdus5N1iJoI9VD04s6ii9utYjSOyU7feMz7u0x7kFt7xNS5S5QZQVqh12Pm4n4jN_77sqN5b4MdNI8Nuw-4ZMRBwMbO4eI39GjRUEHVN_SDp1V90V4yxdajxGJqQ6KE-yVH9Kr14VpABqStqh3Tv3ux3HlMUS2mX3l5zvLHMWg4oeDDnevjgQ0eVOi9U3ztw7LyoJrxcshLvDff26fMg",
+      "tokenExpiration": 1565983205000,
+      "profileId": "YTIwMDY1ZjgtOTc1OS00YWFhLWE4MzEtZDgxOGYwMmNjMGE1",
+      "deviceId": null,
+      "email": "foxuser1a@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:a20065f8-9759-4aaa-a831-d818f02cc0a5",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 128.177.98.241, 23.35.98.126",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "YTIwMDY1ZjgtOTc1OS00YWFhLWE4MzEtZDgxOGYwMmNjMGE1"
+  },
+  "foxuser1aa@fox.com": {
+    "password": "abcdef",
+    "videoMap": {
+      "genius_picasso-chapter-five": {
+        "showIndex": 5,
+        "pageIndex": "ShowBySeriesList"
+      }
+    },
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6N2YyYjIxNDAtNDUyZC00NDk0LWFjNmEtZTYwNDVlNzgzMmY3IiwidWlkIjoiTjJZeVlqSXhOREF0TkRVeVpDMDBORGswTFdGak5tRXRaVFl3TkRWbE56Z3pNbVkzIiwic2lkIjoiMzNiYjY5YjMtZThmMi00YTFhLWIzYWEtMzRjNjkxNjUyMTk4Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTg0MzQ5LCJqdGkiOiJjZmI1YzdjNy0zZTM4LTRiMzQtOTMzYy0zNDRlZjcxNDRjNDQiLCJpYXQiOjE1MzQ0NDgzNDl9.TuGEJjTdde0iPiWNI4gw_nNdnUtO6OBTI294wqdK62mtYxWVZHxwGEDGJ7KZtYRl_URxzazqvM1Ndnz2_5S5yk-9yYtRaRoRQ5PD6mzXb_k2E1OXvw6rKkfsPgp6Wqve1c_ZesVkVFk3gc_MSK_OFILzQP42qByJp_v3vqDPBmuYQvxI2nTiNe5f8dQf8L8uDGEAbLCkJcSh-Gh4be2-Ytc-HJsQs6BRgGk5dXcqcnN_q7tHxv_q6HNbhxqijpezKu6G10hmdlp6vHJRQ_uzNK82J6YVeClsGhiidavLubLrGtPvfpUjp3U6gti0FLai3X_SUqoUt0ZLUGtE0IYM9g",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6N2YyYjIxNDAtNDUyZC00NDk0LWFjNmEtZTYwNDVlNzgzMmY3IiwidWlkIjoiTjJZeVlqSXhOREF0TkRVeVpDMDBORGswTFdGak5tRXRaVFl3TkRWbE56Z3pNbVkzIiwic2lkIjoiMzNiYjY5YjMtZThmMi00YTFhLWIzYWEtMzRjNjkxNjUyMTk4Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTg0MzQ5LCJqdGkiOiJjZmI1YzdjNy0zZTM4LTRiMzQtOTMzYy0zNDRlZjcxNDRjNDQiLCJpYXQiOjE1MzQ0NDgzNDl9.TuGEJjTdde0iPiWNI4gw_nNdnUtO6OBTI294wqdK62mtYxWVZHxwGEDGJ7KZtYRl_URxzazqvM1Ndnz2_5S5yk-9yYtRaRoRQ5PD6mzXb_k2E1OXvw6rKkfsPgp6Wqve1c_ZesVkVFk3gc_MSK_OFILzQP42qByJp_v3vqDPBmuYQvxI2nTiNe5f8dQf8L8uDGEAbLCkJcSh-Gh4be2-Ytc-HJsQs6BRgGk5dXcqcnN_q7tHxv_q6HNbhxqijpezKu6G10hmdlp6vHJRQ_uzNK82J6YVeClsGhiidavLubLrGtPvfpUjp3U6gti0FLai3X_SUqoUt0ZLUGtE0IYM9g",
+      "tokenExpiration": 1565984349000,
+      "profileId": "N2YyYjIxNDAtNDUyZC00NDk0LWFjNmEtZTYwNDVlNzgzMmY3",
+      "deviceId": null,
+      "email": "foxuser1aa@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:7f2b2140-452d-4494-ac6a-e6045e7832f7",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 128.177.98.241, 23.35.98.92",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "N2YyYjIxNDAtNDUyZC00NDk0LWFjNmEtZTYwNDVlNzgzMmY3"
+  },
+  "foxuser2aa@fox.com": {
+    "password": "abcdef",
+    "videoMap": {},
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6MmJiODhjM2UtNGQ3Yy00MTk2LThjYzctMDNkMTFhODhmNTYwIiwidWlkIjoiTW1KaU9EaGpNMlV0TkdRM1l5MDBNVGsyTFRoall6Y3RNRE5rTVRGaE9EaG1OVFl3Iiwic2lkIjoiYThkOGQyMDMtNGExOC00ZjlkLWI1YjMtYWM4MDRkZGU1ZGVhIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTg0MzgzLCJqdGkiOiJjODc3NjM0NS1kNjFlLTQ5ODgtYmFkZC1mZWRiMjg5YWE2OWQiLCJpYXQiOjE1MzQ0NDgzODN9.I1Zmrq9b2my_5ZRcXbqDUdcojLdS_TPZevPSwjOu3W0iG6zdBOhpSm8No61I6na9cFte1HU-ox5zg02rYPFweHE_ssCL_FWdJf4yPgw2W1qyNpilgWsLQd57t84v-6V6XPXUoG_pMSf3s3fM33QMZVqy-UN0kHOXuWFp63J0OoaaeD0TnKWyi2r8M_DbSFrn3JEAu_Ip9VH407E20OrsYvwX0j2PxYIWLWKCgWqarpGxkDEOK6nQrP2Lgp71fdHT8Q9chFV-I9xqH_NQn4yYVozLyOEenF8ZHl_e0gn-9ig9SF9jZtcc52CSC40M9SUB2uDokm9UQE5d7ufyK3qm4Q",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6MmJiODhjM2UtNGQ3Yy00MTk2LThjYzctMDNkMTFhODhmNTYwIiwidWlkIjoiTW1KaU9EaGpNMlV0TkdRM1l5MDBNVGsyTFRoall6Y3RNRE5rTVRGaE9EaG1OVFl3Iiwic2lkIjoiYThkOGQyMDMtNGExOC00ZjlkLWI1YjMtYWM4MDRkZGU1ZGVhIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTg0MzgzLCJqdGkiOiJjODc3NjM0NS1kNjFlLTQ5ODgtYmFkZC1mZWRiMjg5YWE2OWQiLCJpYXQiOjE1MzQ0NDgzODN9.I1Zmrq9b2my_5ZRcXbqDUdcojLdS_TPZevPSwjOu3W0iG6zdBOhpSm8No61I6na9cFte1HU-ox5zg02rYPFweHE_ssCL_FWdJf4yPgw2W1qyNpilgWsLQd57t84v-6V6XPXUoG_pMSf3s3fM33QMZVqy-UN0kHOXuWFp63J0OoaaeD0TnKWyi2r8M_DbSFrn3JEAu_Ip9VH407E20OrsYvwX0j2PxYIWLWKCgWqarpGxkDEOK6nQrP2Lgp71fdHT8Q9chFV-I9xqH_NQn4yYVozLyOEenF8ZHl_e0gn-9ig9SF9jZtcc52CSC40M9SUB2uDokm9UQE5d7ufyK3qm4Q",
+      "tokenExpiration": 1565984383000,
+      "profileId": "MmJiODhjM2UtNGQ3Yy00MTk2LThjYzctMDNkMTFhODhmNTYw",
+      "deviceId": null,
+      "email": "foxuser2aa@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:2bb88c3e-4d7c-4196-8cc7-03d11a88f560",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 128.177.98.241, 23.35.98.92",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "MmJiODhjM2UtNGQ3Yy00MTk2LThjYzctMDNkMTFhODhmNTYw"
+  },
+  "foxuser3aa@fox.com": {
+    "password": "abcdef",
+    "videoMap": {
+      "hitler-youth_child-armys-last-stand": {
+        "showIndex": 0,
+        "pageIndex": "ShowBySeriesList"
+      },
+      "the-gifted_01_05": {
+        "showIndex": 8,
+        "pageIndex": "ShowBySeriesList"
+      }
+    },
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6OTgxZjdhMDMtZDUwOS00ZDI4LTgxODEtZWY1NmUyMzIyZDZkIiwidWlkIjoiT1RneFpqZGhNRE10WkRVd09TMDBaREk0TFRneE9ERXRaV1kxTm1VeU16SXlaRFprIiwic2lkIjoiNWQwODM5NDMtOTRiMi00NmE4LTg2ZjQtOTIzYjBlNTk2MGIxIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTg0NTY3LCJqdGkiOiIzZDM0MDU3Yy0wOGE1LTQ2YWMtODFiNy03NGZlZGQ4NDJjODAiLCJpYXQiOjE1MzQ0NDg1Njd9.B8ky_FOKD0bSg46XQl081Et13c_XToBHUSgTexeH3SEEvVsueHoH3sm4Z6o0D-Q0CM4RbVwKtR8QE1VKN4iKIf4zBn3J8QePaTpGgOBh3rEmEs-jTZQEFxR-Fj5P4cm2oH5M0geA1phrZp-ef5hDTqrA_njsMmButzf0gtaMb4c2AYoGfzDvhm35kU9ZQd0We_415n-1d5Fb95sH0O4mgbjEkXIMIdMsYFvgW5mX5_Dt5q4RdPNp4OnC-RSUaWk3dOll9NzFaiW8PvnygsVK27fr5niywWrbRs1gVOHyGN7YLSH0TpmS-zkB-A0r-oHv_3BlKTlyX7WMFejM14bMQg",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6OTgxZjdhMDMtZDUwOS00ZDI4LTgxODEtZWY1NmUyMzIyZDZkIiwidWlkIjoiT1RneFpqZGhNRE10WkRVd09TMDBaREk0TFRneE9ERXRaV1kxTm1VeU16SXlaRFprIiwic2lkIjoiNWQwODM5NDMtOTRiMi00NmE4LTg2ZjQtOTIzYjBlNTk2MGIxIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTg0NTY3LCJqdGkiOiIzZDM0MDU3Yy0wOGE1LTQ2YWMtODFiNy03NGZlZGQ4NDJjODAiLCJpYXQiOjE1MzQ0NDg1Njd9.B8ky_FOKD0bSg46XQl081Et13c_XToBHUSgTexeH3SEEvVsueHoH3sm4Z6o0D-Q0CM4RbVwKtR8QE1VKN4iKIf4zBn3J8QePaTpGgOBh3rEmEs-jTZQEFxR-Fj5P4cm2oH5M0geA1phrZp-ef5hDTqrA_njsMmButzf0gtaMb4c2AYoGfzDvhm35kU9ZQd0We_415n-1d5Fb95sH0O4mgbjEkXIMIdMsYFvgW5mX5_Dt5q4RdPNp4OnC-RSUaWk3dOll9NzFaiW8PvnygsVK27fr5niywWrbRs1gVOHyGN7YLSH0TpmS-zkB-A0r-oHv_3BlKTlyX7WMFejM14bMQg",
+      "tokenExpiration": 1565984567000,
+      "profileId": "OTgxZjdhMDMtZDUwOS00ZDI4LTgxODEtZWY1NmUyMzIyZDZk",
+      "deviceId": null,
+      "email": "foxuser3aa@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:981f7a03-d509-4d28-8181-ef56e2322d6d",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 128.177.98.241, 204.237.188.83",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "OTgxZjdhMDMtZDUwOS00ZDI4LTgxODEtZWY1NmUyMzIyZDZk"
+  },
+  "foxuser2a@fox.com": {
+    "password": "abcdef",
+    "videoMap": {
+      "masterchef_09_05": {
+        "showIndex": 8,
+        "pageIndex": "ShowBySeriesList"
+      }
+    },
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6YmRlZmEzMTUtOGI1OC00M2EyLThlMjYtOTRmZGY4MTY3ODczIiwidWlkIjoiWW1SbFptRXpNVFV0T0dJMU9DMDBNMkV5TFRobE1qWXRPVFJtWkdZNE1UWTNPRGN6Iiwic2lkIjoiMGE1ZTBkODItNGY5ZS00NjJmLTk0MWMtYmQ1MDgxZTc2NzlmIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTg3MDgwLCJqdGkiOiI3MmY5Y2VlZS1iMDQ0LTQ0MjMtODFjYy1hN2Y3Mjc5ZDRjYmQiLCJpYXQiOjE1MzQ0NTEwODB9.htw_jkEDmstcM7bsY5ZVvKju6U8knwk2gy1-xN6T57taKe4Ey_3Q64GsQJgWtfUit743XInalW-k7ufCSPkQZuxuL4wXT16lL2UbnX-B3A1rGn_vXL5oZB4nlDqRN709GrjSjm8R4G7pTvKgBTmh8c__Ce_SbSx1L26ve23wT2Y6elsFLGGUaOR-3mZjLIXt8dfL24B9NAN0a3I2RllbKxGTSWKJJUPPsxLitx2xIVdYl7eb7hIcDPhh-GJ-udhbIvOBIlm5_5EsJh_RFvv2sk5flXsw31AMhjJHiZq7M5iFxey8G3CQxYpuXL85OFrUWSEja2q7IZawTMKKuMuoFA",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6YmRlZmEzMTUtOGI1OC00M2EyLThlMjYtOTRmZGY4MTY3ODczIiwidWlkIjoiWW1SbFptRXpNVFV0T0dJMU9DMDBNMkV5TFRobE1qWXRPVFJtWkdZNE1UWTNPRGN6Iiwic2lkIjoiMGE1ZTBkODItNGY5ZS00NjJmLTk0MWMtYmQ1MDgxZTc2NzlmIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTg3MDgwLCJqdGkiOiI3MmY5Y2VlZS1iMDQ0LTQ0MjMtODFjYy1hN2Y3Mjc5ZDRjYmQiLCJpYXQiOjE1MzQ0NTEwODB9.htw_jkEDmstcM7bsY5ZVvKju6U8knwk2gy1-xN6T57taKe4Ey_3Q64GsQJgWtfUit743XInalW-k7ufCSPkQZuxuL4wXT16lL2UbnX-B3A1rGn_vXL5oZB4nlDqRN709GrjSjm8R4G7pTvKgBTmh8c__Ce_SbSx1L26ve23wT2Y6elsFLGGUaOR-3mZjLIXt8dfL24B9NAN0a3I2RllbKxGTSWKJJUPPsxLitx2xIVdYl7eb7hIcDPhh-GJ-udhbIvOBIlm5_5EsJh_RFvv2sk5flXsw31AMhjJHiZq7M5iFxey8G3CQxYpuXL85OFrUWSEja2q7IZawTMKKuMuoFA",
+      "tokenExpiration": 1565987080000,
+      "profileId": "YmRlZmEzMTUtOGI1OC00M2EyLThlMjYtOTRmZGY4MTY3ODcz",
+      "deviceId": null,
+      "email": "foxuser2a@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:bdefa315-8b58-43a2-8e26-94fdf8167873",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 165.254.51.141",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "YmRlZmEzMTUtOGI1OC00M2EyLThlMjYtOTRmZGY4MTY3ODcz"
+  },
+  "foxuser4518@fox.com": {
+    "password": "lBqGv0JbH",
+    "videoMap": {},
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6NWI4MDYwYWYtYzg2ZC00MjY1LWJiM2MtZDdlNjhkOTA4Y2ZiIiwidWlkIjoiTldJNE1EWXdZV1l0WXpnMlpDMDBNalkxTFdKaU0yTXRaRGRsTmpoa09UQTRZMlppIiwic2lkIjoiODAwOWRiYWYtNTc2OS00ZTRmLWJiN2ItZjRlYTkxMGU0YzBlIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTg3ODk3LCJqdGkiOiIxM2E1YTgxYi03NWJmLTRhY2ItYTdkMC1hZDVkMTgyZDk4ZDYiLCJpYXQiOjE1MzQ0NTE4OTd9.MtsYj_8IKT6uTRDt90gEMpXwXrBrcY6DzuzaMNis6Kyj0FBp_cHYbMxrh-fpdam2Y5FkAREzwxCKY5HzM_7FdyOP-PO7ADETRMt10eleXpKBCLKe8PN40SuFX2_BK4YzHOzZpPLTs2MWVv7C7stgn16-l9OnPdTnLKDPjYSE9XPmPeKvTZSRBs9PEtvnAFb7qH8Uait6zVmKyV3ZGTUMAYOk8LzOfInFVlDXfeGW9ppxecJ1yWcQUk6GOtkenq-2GNsQ5FdyEydpFdEuhNorq9l8vmFtlhWt6bCWTG2RGfJHcbBvWjRqObT3spd0nGdFg5Ya1WZxsd9VDBol0XWnmA",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6NWI4MDYwYWYtYzg2ZC00MjY1LWJiM2MtZDdlNjhkOTA4Y2ZiIiwidWlkIjoiTldJNE1EWXdZV1l0WXpnMlpDMDBNalkxTFdKaU0yTXRaRGRsTmpoa09UQTRZMlppIiwic2lkIjoiODAwOWRiYWYtNTc2OS00ZTRmLWJiN2ItZjRlYTkxMGU0YzBlIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTg3ODk3LCJqdGkiOiIxM2E1YTgxYi03NWJmLTRhY2ItYTdkMC1hZDVkMTgyZDk4ZDYiLCJpYXQiOjE1MzQ0NTE4OTd9.MtsYj_8IKT6uTRDt90gEMpXwXrBrcY6DzuzaMNis6Kyj0FBp_cHYbMxrh-fpdam2Y5FkAREzwxCKY5HzM_7FdyOP-PO7ADETRMt10eleXpKBCLKe8PN40SuFX2_BK4YzHOzZpPLTs2MWVv7C7stgn16-l9OnPdTnLKDPjYSE9XPmPeKvTZSRBs9PEtvnAFb7qH8Uait6zVmKyV3ZGTUMAYOk8LzOfInFVlDXfeGW9ppxecJ1yWcQUk6GOtkenq-2GNsQ5FdyEydpFdEuhNorq9l8vmFtlhWt6bCWTG2RGfJHcbBvWjRqObT3spd0nGdFg5Ya1WZxsd9VDBol0XWnmA",
+      "tokenExpiration": 1565987897000,
+      "profileId": "NWI4MDYwYWYtYzg2ZC00MjY1LWJiM2MtZDdlNjhkOTA4Y2Zi",
+      "deviceId": null,
+      "email": "foxuser4518@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:5b8060af-c86d-4265-bb3c-d7e68d908cfb",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 165.254.51.141, 23.35.98.126",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "NWI4MDYwYWYtYzg2ZC00MjY1LWJiM2MtZDdlNjhkOTA4Y2Zi"
+  },
+  "foxuser47@fox.com": {
+    "password": "ZpwzEvCch",
+    "videoMap": {},
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6YzVkZDFkMjQtOWY3OS00ZmVhLTg3YWYtOWMzMWNhMmZiZDU1IiwidWlkIjoiWXpWa1pERmtNalF0T1dZM09TMDBabVZoTFRnM1lXWXRPV016TVdOaE1tWmlaRFUxIiwic2lkIjoiNDI0NTg0MzMtNDA1Ni00YzVlLWJkMGItMTc3ZGFhYmE5ODQ1Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTg3OTUyLCJqdGkiOiI5NWY4ZjVkNy04Mzg1LTQ3ZjQtYWIxYy04NWQ2OTNmYzMyODYiLCJpYXQiOjE1MzQ0NTE5NTJ9.iX8YkmvojOJBN0UQCkDdIQZlCBkBm368lvwDI1GalmDrSgZiEg055iC79cNZzOQph_jPQRMIuA3wy6kMX8BTc27YqxwokSc4wQR2nn7YfUPwzcZ1RRT39r1z2hFcw5bNdh0hwHFekFG1H7aLYMiDCvJYVHN9lcqGCuInenuRyr35OihVxWlVi4w3UB3XeB1H4HH7BR9WD4DgX2LpUlX-ve2nu-a6axmputo3yYykLv8IfUjs6Z8XcYJH1k2t-ELoJi4NTc2DY4lED44RNuMSjkERHJIMKDxiPJabtLSC8zeLujQWDn2CVqr1UY3OlQv5Sr1_jS7fua3BCbN2_CuJUA",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6YzVkZDFkMjQtOWY3OS00ZmVhLTg3YWYtOWMzMWNhMmZiZDU1IiwidWlkIjoiWXpWa1pERmtNalF0T1dZM09TMDBabVZoTFRnM1lXWXRPV016TVdOaE1tWmlaRFUxIiwic2lkIjoiNDI0NTg0MzMtNDA1Ni00YzVlLWJkMGItMTc3ZGFhYmE5ODQ1Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTg3OTUyLCJqdGkiOiI5NWY4ZjVkNy04Mzg1LTQ3ZjQtYWIxYy04NWQ2OTNmYzMyODYiLCJpYXQiOjE1MzQ0NTE5NTJ9.iX8YkmvojOJBN0UQCkDdIQZlCBkBm368lvwDI1GalmDrSgZiEg055iC79cNZzOQph_jPQRMIuA3wy6kMX8BTc27YqxwokSc4wQR2nn7YfUPwzcZ1RRT39r1z2hFcw5bNdh0hwHFekFG1H7aLYMiDCvJYVHN9lcqGCuInenuRyr35OihVxWlVi4w3UB3XeB1H4HH7BR9WD4DgX2LpUlX-ve2nu-a6axmputo3yYykLv8IfUjs6Z8XcYJH1k2t-ELoJi4NTc2DY4lED44RNuMSjkERHJIMKDxiPJabtLSC8zeLujQWDn2CVqr1UY3OlQv5Sr1_jS7fua3BCbN2_CuJUA",
+      "tokenExpiration": 1565987952000,
+      "profileId": "YzVkZDFkMjQtOWY3OS00ZmVhLTg3YWYtOWMzMWNhMmZiZDU1",
+      "deviceId": null,
+      "email": "foxuser47@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:c5dd1d24-9f79-4fea-87af-9c31ca2fbd55",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 165.254.51.141, 23.35.98.92",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "YzVkZDFkMjQtOWY3OS00ZmVhLTg3YWYtOWMzMWNhMmZiZDU1"
+  },
+  "foxuser1a": {
+    "password": "abcdef",
+    "videoMap": {}
+  },
+  "foxuser1446@fox.com": {
+    "password": "abcdef",
+    "videoMap": {},
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6YjU2ZmM1OGQtZmM2Mi00ODE5LTkwYjAtYjU3ZmQwYjgxZTU5IiwidWlkIjoiWWpVMlptTTFPR1F0Wm1NMk1pMDBPREU1TFRrd1lqQXRZalUzWm1Rd1lqZ3haVFU1Iiwic2lkIjoiYTliMTQ0MWItODVjOS00MmI4LTkwY2MtNzRjZGU0OGY0NmJlIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTkxMzgyLCJqdGkiOiJmYmMyYmJmMy03NjMxLTQwNjktOGZjMC1jNWM1ZGMxNDMzNTgiLCJpYXQiOjE1MzQ0NTUzODJ9.P8-ZlBphWxwJVxlGLQOBR2ZO7n6Ko75Umlf2rU2UfO3qZK39Pxz6sUWDsXXKd_0dL4H2JoVN20ht5Hhd6HMenKGCo23PYJb6hJRPKmZHP9mS_EoOSvOTacC6gxHazFj4VHzFKOPfKHoUydMk4OvVN8tCoEhMR-D7iDXSklMsLPoKru0FsUQOnHhei2wm2lhGrCgZ0G3UJnHwv4HTl8pt2_NYaIZC6gwhac4sGvfeX_26t0OyCwqCwGSCrjp33chHe8_Ec2Ze7esu-3iqItn7zdKxLCDHPgn75a_jRYDoWiDUdLuT0FNIvImDjCw4Cz-PYoAH9hgvrJOey-aDSAnv1A",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6YjU2ZmM1OGQtZmM2Mi00ODE5LTkwYjAtYjU3ZmQwYjgxZTU5IiwidWlkIjoiWWpVMlptTTFPR1F0Wm1NMk1pMDBPREU1TFRrd1lqQXRZalUzWm1Rd1lqZ3haVFU1Iiwic2lkIjoiYTliMTQ0MWItODVjOS00MmI4LTkwY2MtNzRjZGU0OGY0NmJlIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTkxMzgyLCJqdGkiOiJmYmMyYmJmMy03NjMxLTQwNjktOGZjMC1jNWM1ZGMxNDMzNTgiLCJpYXQiOjE1MzQ0NTUzODJ9.P8-ZlBphWxwJVxlGLQOBR2ZO7n6Ko75Umlf2rU2UfO3qZK39Pxz6sUWDsXXKd_0dL4H2JoVN20ht5Hhd6HMenKGCo23PYJb6hJRPKmZHP9mS_EoOSvOTacC6gxHazFj4VHzFKOPfKHoUydMk4OvVN8tCoEhMR-D7iDXSklMsLPoKru0FsUQOnHhei2wm2lhGrCgZ0G3UJnHwv4HTl8pt2_NYaIZC6gwhac4sGvfeX_26t0OyCwqCwGSCrjp33chHe8_Ec2Ze7esu-3iqItn7zdKxLCDHPgn75a_jRYDoWiDUdLuT0FNIvImDjCw4Cz-PYoAH9hgvrJOey-aDSAnv1A",
+      "tokenExpiration": 1565991382000,
+      "profileId": "YjU2ZmM1OGQtZmM2Mi00ODE5LTkwYjAtYjU3ZmQwYjgxZTU5",
+      "deviceId": null,
+      "email": "foxuser1446@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:b56fc58d-fc62-4819-90b0-b57fd0b81e59",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 165.254.51.141",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "YjU2ZmM1OGQtZmM2Mi00ODE5LTkwYjAtYjU3ZmQwYjgxZTU5"
+  },
+  "foxuser45e@fox.com": {
+    "password": "abcdef",
+    "videoMap": {
+      "2018-fifa-world-cup_08_06": {
+        "showIndex": 0,
+        "pageIndex": 1
+      },
+      "the-herd-with-colin-cowherd_20180816": {
+        "showIndex": 0,
+        "pageIndex": 0
+      },
+      "mlb-whiparound_20180815": {
+        "showIndex": 2,
+        "pageIndex": 0
+      },
+      "mike-molly_03_17": {
+        "showIndex": 95,
+        "pageIndex": 7
+      },
+      "first-things-first-with-cris-carter-and-nick-wright_20180816": {
+        "showIndex": 1,
+        "pageIndex": 0
+      }
+    },
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6NTA2NjdmZGEtOTg1Mi00MDA5LTlhNDEtZjE0MTkzYmVjNWI2IiwidWlkIjoiTlRBMk5qZG1aR0V0T1RnMU1pMDBNREE1TFRsaE5ERXRaakUwTVRrelltVmpOV0kyIiwic2lkIjoiMDQ4Zjg5ZDEtYTcxZS00OTRhLWEwY2EtMjUxOTVhYzM3NDBmIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTkyMzU3LCJqdGkiOiI3YWNhMDgzZS1mNjhiLTQwN2QtYmQzMS1kNWY2YWMwZmI1ZDIiLCJpYXQiOjE1MzQ0NTYzNTd9.XjY15mFuEgfTpz0jRJbgMLnipVA6NTEfzstzLjEAOUMIQBqcIDnaz7HSZ5WlWf952AFAaIN5Jbmu2qrTGZfZfdIfNeCV6UvwCbTIW-Fe_faI4hF0cFbda_bEnbHNhJUNv-7CgXDIp5c9mdFoN8kZA_u9rd-cBDE9OdNndLa5ljHBvrsMJj01pGgoiuNygd31xWYX3DDnfZYjXOx88eCHCiymyjRevT7pzn7_ZfYKXZ4sTxfES_J7Bj06bVDmWCLhCmoLeAo7undP0IKaEdQ2OIEEB6ozDmdvWlHJqa4c_xeouh1iH5jOTSmriShg3S6dX7EDrXjFbxeY1MQF3zQX3g",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6NTA2NjdmZGEtOTg1Mi00MDA5LTlhNDEtZjE0MTkzYmVjNWI2IiwidWlkIjoiTlRBMk5qZG1aR0V0T1RnMU1pMDBNREE1TFRsaE5ERXRaakUwTVRrelltVmpOV0kyIiwic2lkIjoiMDQ4Zjg5ZDEtYTcxZS00OTRhLWEwY2EtMjUxOTVhYzM3NDBmIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTkyMzU3LCJqdGkiOiI3YWNhMDgzZS1mNjhiLTQwN2QtYmQzMS1kNWY2YWMwZmI1ZDIiLCJpYXQiOjE1MzQ0NTYzNTd9.XjY15mFuEgfTpz0jRJbgMLnipVA6NTEfzstzLjEAOUMIQBqcIDnaz7HSZ5WlWf952AFAaIN5Jbmu2qrTGZfZfdIfNeCV6UvwCbTIW-Fe_faI4hF0cFbda_bEnbHNhJUNv-7CgXDIp5c9mdFoN8kZA_u9rd-cBDE9OdNndLa5ljHBvrsMJj01pGgoiuNygd31xWYX3DDnfZYjXOx88eCHCiymyjRevT7pzn7_ZfYKXZ4sTxfES_J7Bj06bVDmWCLhCmoLeAo7undP0IKaEdQ2OIEEB6ozDmdvWlHJqa4c_xeouh1iH5jOTSmriShg3S6dX7EDrXjFbxeY1MQF3zQX3g",
+      "tokenExpiration": 1565992357000,
+      "profileId": "NTA2NjdmZGEtOTg1Mi00MDA5LTlhNDEtZjE0MTkzYmVjNWI2",
+      "deviceId": null,
+      "email": "foxuser45e@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:50667fda-9852-4009-9a41-f14193bec5b6",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 165.254.51.141, 23.3.105.223",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "NTA2NjdmZGEtOTg1Mi00MDA5LTlhNDEtZjE0MTkzYmVjNWI2"
+  },
+  "foxuser99999@fox.com": {
+    "password": "abcdef",
+    "videoMap": {
+      "primal-survivor_blistering-heights": {
+        "showIndex": 152,
+        "pageIndex": 3
+      },
+      "mlb-whiparound_20180815": {
+        "showIndex": 3,
+        "pageIndex": 0
+      },
+      "bobs-burgers_08_10": {
+        "showIndex": 99,
+        "pageIndex": 3
+      },
+      "first-things-first-with-cris-carter-and-nick-wright_20180816": {
+        "showIndex": 2,
+        "pageIndex": 0
+      },
+      "the-herd-with-colin-cowherd_20180816": {
+        "showIndex": 0,
+        "pageIndex": 0
+      }
+    },
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6NjgxYzE1MjAtMjM4YS00MjIxLTliMDgtODI1MmMwYWY3M2Q3IiwidWlkIjoiTmpneFl6RTFNakF0TWpNNFlTMDBNakl4TFRsaU1EZ3RPREkxTW1Nd1lXWTNNMlEzIiwic2lkIjoiOTI0ZWMwYTUtNzFiZS00ZTZkLTg2YzgtM2NlZDRiNjU2Y2U3Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTk0Mzk2LCJqdGkiOiJjNzUzYzlkZi0xNjUzLTQ0NGMtYTNjMS00OTJiOGNmNTM4MTIiLCJpYXQiOjE1MzQ0NTgzOTZ9.XvS87gHGKAhV_sbcEqudn3HDU7b2wsvAgNkAVT2JQWuCnsUJk3-ovcbD-IF7w4l6NG3PALzOWCbJv-RwQZtsuE6LifHq149KoYDhZVm2o9lbHURm047VIyg68dP_HnQRKSmIgTBQyqzGFuKWHvwBY5WiHbdM54LsxswSown494ii7kxCjyO7E1qbN51SVWJAQDvFnJzZCZXdGH9Zwr78oTOAOCDRpsuxuqUpA63pXM0zNlERMaE8smyTSSrfv4qxTtd8OT-vUjfOm7NHmkc4AQi4tGwft2HjQpjyDCoNQUTdcFIIk7mJ9jdGIIIWC-NoRR1DeGgRKdF3C-CUioTxMg",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6NjgxYzE1MjAtMjM4YS00MjIxLTliMDgtODI1MmMwYWY3M2Q3IiwidWlkIjoiTmpneFl6RTFNakF0TWpNNFlTMDBNakl4TFRsaU1EZ3RPREkxTW1Nd1lXWTNNMlEzIiwic2lkIjoiOTI0ZWMwYTUtNzFiZS00ZTZkLTg2YzgtM2NlZDRiNjU2Y2U3Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTk0Mzk2LCJqdGkiOiJjNzUzYzlkZi0xNjUzLTQ0NGMtYTNjMS00OTJiOGNmNTM4MTIiLCJpYXQiOjE1MzQ0NTgzOTZ9.XvS87gHGKAhV_sbcEqudn3HDU7b2wsvAgNkAVT2JQWuCnsUJk3-ovcbD-IF7w4l6NG3PALzOWCbJv-RwQZtsuE6LifHq149KoYDhZVm2o9lbHURm047VIyg68dP_HnQRKSmIgTBQyqzGFuKWHvwBY5WiHbdM54LsxswSown494ii7kxCjyO7E1qbN51SVWJAQDvFnJzZCZXdGH9Zwr78oTOAOCDRpsuxuqUpA63pXM0zNlERMaE8smyTSSrfv4qxTtd8OT-vUjfOm7NHmkc4AQi4tGwft2HjQpjyDCoNQUTdcFIIk7mJ9jdGIIIWC-NoRR1DeGgRKdF3C-CUioTxMg",
+      "tokenExpiration": 1565994396000,
+      "profileId": "NjgxYzE1MjAtMjM4YS00MjIxLTliMDgtODI1MmMwYWY3M2Q3",
+      "deviceId": null,
+      "email": "foxuser99999@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:681c1520-238a-4221-9b08-8252c0af73d7",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 165.254.51.141, 23.54.19.149",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "NjgxYzE1MjAtMjM4YS00MjIxLTliMDgtODI1MmMwYWY3M2Q3"
+  },
+  "foxuser6554@fox.com": {
+    "password": "RzqxUTBTC",
+    "videoMap": {},
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6OTAyZTJmNGMtNDEwNS00ZmMyLThhYTMtYTc1ZDhmYjU2NGY4IiwidWlkIjoiT1RBeVpUSm1OR010TkRFd05TMDBabU15TFRoaFlUTXRZVGMxWkRobVlqVTJOR1k0Iiwic2lkIjoiOWIwOGFmN2MtMzU4Mi00NzZiLWE4MTUtY2Q1OWYwMmU3M2Q3Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTk5NjY3LCJqdGkiOiIwYjNjNzUwZS1mNjEwLTQ5YWItOTEzMi0wYTViY2MwNzQxNTQiLCJpYXQiOjE1MzQ0NjM2Njd9.RI8QyQ7VPKwgMNVabRjG82528Csp0CMFiScvfFUWgUrEyaR8WiiyRzthl9nTDoqd8NZyFOK55bwKA6H6IFmOzR212EACc8xy0FJWwl8vIbquIbIuoVd9qrtCAfN0Q3F3-HyLEdHeYdnJC5ss3sZuW846RAC7DyzAovuyYL5MlHjNAlQ82iaQcaOEUciruK8woWQW_WHhyp5esDVdzxwrJ0m0UE91dj54CpcmbQWI7edDz291iKdp3m7Utx8juJBMpp2IW-Apc0-h2HGoTgBQsQvlAzcj00-z5OEsgJQhzqlId4ebbZlj1Xw8ywH5ZCSBxPTg7Rmoji9KAREFvM34qg",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6OTAyZTJmNGMtNDEwNS00ZmMyLThhYTMtYTc1ZDhmYjU2NGY4IiwidWlkIjoiT1RBeVpUSm1OR010TkRFd05TMDBabU15TFRoaFlUTXRZVGMxWkRobVlqVTJOR1k0Iiwic2lkIjoiOWIwOGFmN2MtMzU4Mi00NzZiLWE4MTUtY2Q1OWYwMmU3M2Q3Iiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY1OTk5NjY3LCJqdGkiOiIwYjNjNzUwZS1mNjEwLTQ5YWItOTEzMi0wYTViY2MwNzQxNTQiLCJpYXQiOjE1MzQ0NjM2Njd9.RI8QyQ7VPKwgMNVabRjG82528Csp0CMFiScvfFUWgUrEyaR8WiiyRzthl9nTDoqd8NZyFOK55bwKA6H6IFmOzR212EACc8xy0FJWwl8vIbquIbIuoVd9qrtCAfN0Q3F3-HyLEdHeYdnJC5ss3sZuW846RAC7DyzAovuyYL5MlHjNAlQ82iaQcaOEUciruK8woWQW_WHhyp5esDVdzxwrJ0m0UE91dj54CpcmbQWI7edDz291iKdp3m7Utx8juJBMpp2IW-Apc0-h2HGoTgBQsQvlAzcj00-z5OEsgJQhzqlId4ebbZlj1Xw8ywH5ZCSBxPTg7Rmoji9KAREFvM34qg",
+      "tokenExpiration": 1565999667000,
+      "profileId": "OTAyZTJmNGMtNDEwNS00ZmMyLThhYTMtYTc1ZDhmYjU2NGY4",
+      "deviceId": null,
+      "email": "foxuser6554@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:902e2f4c-4105-4fc2-8aa3-a75d8fb564f8",
+      "dma": "803",
+      "ipAddress": "216.205.224.64, 165.254.51.141, 23.35.98.126",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "OTAyZTJmNGMtNDEwNS00ZmMyLThhYTMtYTc1ZDhmYjU2NGY4"
   }
 }

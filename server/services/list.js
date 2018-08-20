@@ -50,7 +50,8 @@ function getShowsList() {
  * @return Promise with an array containing all of the videos
  */
 function getAllShowsList() {
-    return getShowsList().then( function(res){
+    return getShowsList()
+    .then( function(res){
         return pageanate( res.body.view.first );
     })
     .catch( function(err) {

@@ -54,52 +54,48 @@ function parseJSON ( jsonObject, userMap ) {
             else {
                 email = jsonObject.users[index].email;
                 password = jsonObject.users[index].password;
-                users.signin( email, password, userMap );
             }
         }
+        let oldEmail = email;
+        let oldPassword = password;
+        let prevIndex = index;
+        let promise = [];
         if( jsonObject.users[index].hasOwnProperty("favorites")) {
             var showCode = [];
             for( var favoritesIndex = 0; favoritesIndex < jsonObject.users[index].favorites.length; favoritesIndex++) {
                 showCode.push(jsonObject.users[index].favorites[favoritesIndex]);
             }
-            var numFavs = showCode.length;
-            if( !jsonObject.users[index].hasOwnProperty("numFavorites")) {
-                favorites.createSetFavorites( email, password, showCode, userMap)
-            }
-            else {
-                if( numFavs > jsonObject.users[index].numFavorites) {
-                    throw "You entered too many favorites"
-                }
-                favorites.createSetFavorites( email, password, showCode, userMap );
-                var numFavoritesLeft = jsonObject.users[index].numFavorites - numFavs;
-                if( numFavoritesLeft > 0 ) {
-                    //TODO WHEN KADE COMES BACK
-                    favorites.createRandomFavorites( numFavoritesLeft, email, password, userMap );
-                }
-            }
+            promise.push(favorites.createSetFavorites( email, password, showCode, userMap));
         }
         if( jsonObject.users[index].hasOwnProperty("bookmarks")) {
             var bookmarkObject = [];
             for( var bookmarkIndex = 0; bookmarkIndex < jsonObject.users[index].bookmarks.length; bookmarkIndex++) {
                 bookmarkObject.push( jsonObject.users[index].bookmarks[bookmarkIndex]);
             }
-            var numBookmrks = bookmarkObject.length;
-            
-            if( !jsonObject.users[index].hasOwnProperty("numBookmarks")) {
-                bookmarks.createSetBookmarks( email, password, bookmarkObject, userMap );
-            }
-            else {
-                if( numBookmrks > jsonObject.users[index].numBookmarks ) {
-                    throw "You entered too many bookmarks";
-                }
-                bookmarks.createSetBookmarks( email, password, bookmarkObject, userMap );
-                var numBookmarksLeft = jsonObject.users[index].numBookmarks - numBookmrks;
-                if ( numBookmarksLeft > 0 ) {
-                    //TODO WHEN KADE COMES BACK
-                    bookmarks.createRandomBookmark( numBookmarksLeft, email, password, userMap)
-                }
-            }
+            promise.push(bookmarks.createSetBookmarks( email, password, bookmarkObject, userMap ));
         }
+        Promise.all(promise)
+
+        // Promise.all([ users.signin(email, password, userMap), prevIndex, oldEmail, oldPassword])
+        // .then( res=> {
+        //     if( jsonObject.users[res[1]].hasOwnProperty("favorites")) {
+        //         var showCode = [];
+        //         for( var favoritesIndex = 0; favoritesIndex < jsonObject.users[res[1]].favorites.length; favoritesIndex++) {
+        //             showCode.push(jsonObject.users[res[1]].favorites[favoritesIndex]);
+        //         }
+        //         favorites.createSetFavorites( email, password, showCode, userMap)
+        //     }
+        //     if( jsonObject.users[res[1]].hasOwnProperty("bookmarks")) {
+        //         var bookmarkObject = [];
+        //         for( var bookmarkIndex = 0; bookmarkIndex < jsonObject.users[res[1]].bookmarks.length; bookmarkIndex++) {
+        //             bookmarkObject.push( jsonObject.users[res[1]].bookmarks[bookmarkIndex]);
+        //         }
+        //         bookmarks.createSetBookmarks( email, password, bookmarkObject, userMap );
+        //     }
+        // })
+        // .catch( err=> {
+        //     console.log(err);
+        // })   
     }
 }
 

@@ -1,0 +1,24 @@
+{
+  "name": "peatt",
+  "version": "1.0.0",
+  "description": "Profile tool to help developers, testers, and product managers at 21st Century Fox simulate the behavior of users.",
+  "dependencies": {
+    "args": "^5.0.0",
+    "body-parser": "^1.18.3",
+    "concurrently": "^3.6.1",
+    "create-react-app": "^1.5.2",
+    "express": "^4.16.3",
+    "got": "^8.3.2",
+    "nodemon": "^1.18.3",
+    "redux": "^4.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  },
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && node server.js",
+    "client": "cd client && npm start",
+    "test": "mocha"
+  }
+}

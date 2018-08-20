@@ -22,10 +22,11 @@
 
 .Home-text {
     color: white;
-    border-bottom: dotted;
-    border-width: 1px;
+    font-size: 18px;
+    text-decoration: underline;
 }
 
 .Home-watch {
     color: white;
+    text-decoration: none;
 }

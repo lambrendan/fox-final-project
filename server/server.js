@@ -7,8 +7,7 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded( { extended: false }));
 app.use(bodyParser.json());
 
-
-app.use('/static', express.static(path.join(__dirname, 'build')))
+app.use( express.static('../client/build'))
 
 app.use('/api', api );
 app.listen( 3001, '0.0.0.0');

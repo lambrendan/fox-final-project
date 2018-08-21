@@ -41,7 +41,7 @@ function bookMarkVideo(userID, myToken, video, seconds ) {
     newAuthHeaders.Authorization = `Bearer ${myToken}`;
     newVideo.uID = video;
     newVideo.bookmark = seconds;
-    //console.log(newVideo);
+    console.log(newVideo);
     return got.post('http://foxprofile-staging.us-east-1.elasticbeanstalk.com/' + userID + '/bookmarks', {
         headers: newAuthHeaders,
         body: newVideo,

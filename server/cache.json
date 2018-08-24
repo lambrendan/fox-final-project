@@ -2942,5 +2942,35 @@
       "lastName": "Test"
     },
     "userID": "OTAyZTJmNGMtNDEwNS00ZmMyLThhYTMtYTc1ZDhmYjU2NGY4"
+  },
+  "foxuserlol@fox.com": {
+    "password": "abcdef",
+    "videoMap": {},
+    "myToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6YjM0NDBhNDUtNGYxYS00N2JkLThhYTQtZWU2ZWM3OGE4MzQyIiwidWlkIjoiWWpNME5EQmhORFV0TkdZeFlTMDBOMkprTFRoaFlUUXRaV1UyWldNM09HRTRNelF5Iiwic2lkIjoiZTBmOWNiNTUtOWUzZS00MjQyLWE0YWEtMjdiZjExNTYyZmRmIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY2NDk3MzcxLCJqdGkiOiJlYjYxZmI2ZS0yYmNjLTQzM2EtYTU3Ni0wNGI4NWVlYzVmMDMiLCJpYXQiOjE1MzQ5NjEzNzF9.TWaDqtS3fDHkNf5blgarb2smKW05rN0SIhh8o63MU2_NUUOYsi4cqd8YxCTIbUHspPxVgC95KXl-GcWKaAivKqBG6XOtL5HpOMlGqkx5AEvjczL78pkgaA_cUvzxqeorBgT3Z82PId9Axv_lbnwn-wf-GxQtuniGy-GT9rMzYj2GbbcdsrowbnlMb1OluuA5zcLiy6YS5_ePKAWNnjRGW2qU_yC6hETVOVymnpsfgoSDKyuZ2xUei7qq3ACw2smdewAOo7zPDK3bCGgL5PQkooPu-rYtI23pSq9mhBAHqpMD07QJt331YQZT8DSYFHLhXH7otp30RBUl9thNsug4ow",
+    "body": {
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlE1QVdrc1dIVmEiLCJ0eXAiOiJKV1QifQ.eyJwaWQiOiJ1cy13ZXN0LTI6YjM0NDBhNDUtNGYxYS00N2JkLThhYTQtZWU2ZWM3OGE4MzQyIiwidWlkIjoiWWpNME5EQmhORFV0TkdZeFlTMDBOMkprTFRoaFlUUXRaV1UyWldNM09HRTRNelF5Iiwic2lkIjoiZTBmOWNiNTUtOWUzZS00MjQyLWE0YWEtMjdiZjExNTYyZmRmIiwic2RjIjoidXMtd2VzdC0yIiwiYXR5cGUiOiJpZGVudGl0eSIsImR0eXBlIjoid2ViIiwidXR5cGUiOiJlbWFpbCIsImRpZCI6IiIsIm12cGRpZCI6IiIsInZlciI6MiwiZXhwIjoxNTY2NDk3MzcxLCJqdGkiOiJlYjYxZmI2ZS0yYmNjLTQzM2EtYTU3Ni0wNGI4NWVlYzVmMDMiLCJpYXQiOjE1MzQ5NjEzNzF9.TWaDqtS3fDHkNf5blgarb2smKW05rN0SIhh8o63MU2_NUUOYsi4cqd8YxCTIbUHspPxVgC95KXl-GcWKaAivKqBG6XOtL5HpOMlGqkx5AEvjczL78pkgaA_cUvzxqeorBgT3Z82PId9Axv_lbnwn-wf-GxQtuniGy-GT9rMzYj2GbbcdsrowbnlMb1OluuA5zcLiy6YS5_ePKAWNnjRGW2qU_yC6hETVOVymnpsfgoSDKyuZ2xUei7qq3ACw2smdewAOo7zPDK3bCGgL5PQkooPu-rYtI23pSq9mhBAHqpMD07QJt331YQZT8DSYFHLhXH7otp30RBUl9thNsug4ow",
+      "tokenExpiration": 1566497371000,
+      "profileId": "YjM0NDBhNDUtNGYxYS00N2JkLThhYTQtZWU2ZWM3OGE4MzQy",
+      "deviceId": null,
+      "email": "foxuserlol@fox.com",
+      "accountType": "identity",
+      "userType": "email",
+      "brand": "fox",
+      "platform": "delta_foxnow_web_en-US",
+      "isVerified": false,
+      "newsLetter": true,
+      "hasSocialLogin": false,
+      "hasEmail": true,
+      "device": "web",
+      "viewerId": "us-west-2:b3440a45-4f1a-47bd-8aa4-ee6ec78a8342",
+      "dma": "803",
+      "ipAddress": "216.205.224.64",
+      "userAgent": "AmazonAPIGateway_gjgstudw7k",
+      "birthdate": "1990-01-01T00:00:00.000Z",
+      "gender": "f",
+      "firstName": "User",
+      "lastName": "Test"
+    },
+    "userID": "YjM0NDBhNDUtNGYxYS00N2JkLThhYTQtZWU2ZWM3OGE4MzQy"
   }
 }

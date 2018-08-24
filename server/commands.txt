@@ -1,0 +1,60 @@
+node cli --signup --email=foxuser300@fox.com --password=abcdef
+
+node cli --signup --email=foxuser301@fox.com
+
+node cli --signin --email=foxuser300@fox.com
+
+node cli --signin --email=foxuser302@fox.com
+
+node cli --signin --email=foxuser300@fox.com --password=abcdef
+
+node cli --delete --email=foxuser300@fox.com --password=abcdef
+
+--email=foxuser300@fox.com --password=abcdef
+
+--email=foxuser303@fox.com
+
+--email=foxuser300@fox.com --password=abcdef 
+--bookmarksNum=4
+
+--email=foxuser400@fox.com --password=abcdef
+--bookmark={"uID":"masterchef_09_12", "watched":"true"}
+
+--email=foxuser400@fox.com --password=abcdef
+--bookmark={"uID":"masterchef_09_11"} --bookmarksNum=5 --favoritesNum=4 --favorite={"showCode":"21-jump-street_2012"}
+
+--email=foxuser500@fox.com --password=abcdef
+--bookmark={"uID":"masterchef_09_10"} --bookmark={"uID": "the-mick_02_06"} 
+
+--email=foxuser450@fox.com --password=abcdef
+--bookmark={"showCode": "the-simpsons"}
+
+--email=foxuser300@fox.com --password=abcdef
+--favorite={"showCode": "the-simpsons"}
+
+--email=foxuser400@fox.com --password=abcdef
+--favoritesNum=4
+
+--email=foxuser500@fox.com --password=abcdef
+--favoritesNum=4 --favorite={"showCode":"21-jump-street_2012"}
+
+--email=foxuser450@fox.com --password=abcdef
+--favorite={"showCode": "21-jump-street_2012"} --favorite={"showCode": "9-1-1"}
+
+--file=testOne.json
+
+--email=foxuser300@fox.com --password=abcdef --getInfo
+
+--email=foxuser350@fox.com --password=abcdef --getInfo
+
+--email=foxuser400@fox.com --password=abcdef --getInfo
+
+--email=foxuser450@fox.com --password=abcdef --getInfo
+
+--email=foxuser500@fox.com --password=abcdef --getInfo
+
+
+
+
+
+

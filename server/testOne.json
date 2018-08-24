@@ -1,0 +1,72 @@
+{
+    "users": [
+        {
+            "email": "foxuser1e@fox.com",
+            "password":"abcdef",
+            "favorites": [
+                {
+                    "showCode": "gotham"
+                },
+                {
+                    "showCode": "how-i-met-your-mother"
+                }
+            ],
+            "bookmarks":[
+                {
+                    "uID": "the-resident_01_02"
+                }, 
+                {
+                    "showCode": "masterchef"
+                }
+            ]
+        },
+        {
+            "email": "foxuser2e@fox.com",
+            "password":"abcdef",
+            "favorites": [
+                {
+                    "showCode": "brooklyn-nine-nine"
+                },
+                {
+                    "showCode": "breaking2"
+                }
+            ],
+            "bookmarks":[
+                {
+                    "uID": "beat-shazam_02_01",
+                    "watched": true
+                },
+                {
+                    "uID": "2018-fifa-world-cup_03_01"
+                }, 
+                {
+                    "showCode": "genius"
+                }
+            ]
+        },
+        {
+            "email": "foxuser3e@fox.com",
+            "password":"abcdef",
+            "favorites": [
+                {
+                    "showCode": "fox-fanfare"
+                },
+                {
+                    "showCode": "american-horror-story"
+                }
+            ],
+            "bookmarks":[
+                {
+                    "showCode": "the-gifted",
+                    "watched": true
+                },
+                {
+                    "uID": "hells-kitchen_17_13"
+                }, 
+                {
+                    "showCode": "hitler-youth"
+                }
+            ]
+        }
+    ]
+}
